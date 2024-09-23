@@ -14,7 +14,7 @@ requisitos:
 
 Grupo Compuesto por:
 1. Sergio Jesús González Castilla - sj.gonzalez.2020@alumnos.urjc.es
-2. Cristina Martines Otto - c.martinez.2021@alumnos.urjc.es
+2. Cristina Martines Otto - c.martinezo.2021@alumnos.urjc.es
 3. David Lozano Varona - d.lozano.2021@alumnos.urjc.es
 4. Luis Antonio González Martínez - la.gonzalez.2021@alumnos.urjc.es
 5. Mario Lopéz García - m.lopezgar.2021@alumnos.urjc.es
