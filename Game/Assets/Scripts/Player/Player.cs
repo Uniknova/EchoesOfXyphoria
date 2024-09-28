@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float radius = 0.3f;
     public float gravity = -9.8f;
     Vector3 velocity;
+    public Vector3 move;
 
     RaycastWeapon weapon;
 
@@ -28,7 +29,15 @@ public class Player : MonoBehaviour
         Vector3 moveH = transform.right * Input.GetAxis("Horizontal");
         Vector3 moveV = transform.forward * Input.GetAxis("Vertical");
 
-        Vector3 move = (moveH * speed) + (moveV * speed);
+        move = (moveH) + (moveV);   // Calculamos el vector resultante
+
+        // Normalizamos el vector de movimiento para evitar ventaja en diagonal
+        if (move.magnitude > 1)
+        {
+            move.Normalize();
+        }
+        // Una vez normalizado aplicamos la velodidad de movimiento
+        move = move * speed;
 
         isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
