@@ -25,26 +25,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Comento los ifs porque es innecesario comprobar si el boton esta pulsado
+        //if (Input.GetButton("Horizontal"))
+        //{
+            Vector3 moveX = transform.right * Input.GetAxis("Horizontal");
 
-        if (Input.GetButton("Horizontal"))
-        {
-            Vector3 move = transform.right * Input.GetAxis("Horizontal");
+            controller.Move(moveX * speed * Time.deltaTime);
+        //}
 
-            controller.Move(move * speed * Time.deltaTime);
-        }
+        //if (Input.GetButton("Vertical"))
+        //{
+            Vector3 moveY = transform.forward * Input.GetAxis("Vertical");
 
-        if (Input.GetButton("Vertical"))
-        {
-            Vector3 move = transform.forward * Input.GetAxis("Vertical");
-
-            controller.Move(move * speed * Time.deltaTime);
-        }
+            controller.Move(moveY * speed * Time.deltaTime);
+        //}
 
         isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
         if (isTouching && velocity.y < 0)
         {
-            velocity.y = -3f;
+            velocity.y = -3f;   // Que significa esto ???
 
         }
 
