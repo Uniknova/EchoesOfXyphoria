@@ -13,7 +13,13 @@ public class Player : MonoBehaviour
     public float radius = 0.3f;
     public float gravity = -9.8f;
     Vector3 velocity;
-    public Vector3 move;
+    public Transform Hand;
+    //public GameObject weaponLobby2;
+    //public GameObject weaponLobby3;
+    //public GameObject weaponLobby4;
+    //public GameObject weaponLobby5;
+    public List<GameObject> weapons;
+    public int indexWeapon;
 
     RaycastWeapon weapon;
 
@@ -21,40 +27,44 @@ public class Player : MonoBehaviour
     void Start()
     {
         weapon = GetComponentInChildren<RaycastWeapon>();
+        weapons = new List<GameObject>();
+        indexWeapon = -1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveH = transform.right * Input.GetAxis("Horizontal");
-        Vector3 moveV = transform.forward * Input.GetAxis("Vertical");
 
-        move = (moveH) + (moveV);   // Calculamos el vector resultante
-
-        // Normalizamos el vector de movimiento para evitar ventaja en diagonal
-        if (move.magnitude > 1)
+        if (Input.GetButton("Horizontal"))
         {
-            move.Normalize();
+            Vector3 move = transform.right * Input.GetAxis("Horizontal");
+
+            controller.Move(move * speed * Time.deltaTime);
         }
-        // Una vez normalizado aplicamos la velodidad de movimiento
-        move = move * speed;
+
+        if (Input.GetButton("Vertical"))
+        {
+            Vector3 move = transform.forward * Input.GetAxis("Vertical");
+
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
         isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
         if (isTouching && velocity.y < 0)
         {
-            velocity.y = -3f;   // Que significa esto ???
+            velocity.y = -3f;
+
         }
 
         velocity.y += gravity * Time.deltaTime;
 
-        move.y = velocity.y;
-
-        controller.Move(move * Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime);
     }
 
     private void LateUpdate()
     {
+        if (weapon == null) return;
         if (Input.GetButtonDown("Fire1"))
         {
             weapon.StartFiring();

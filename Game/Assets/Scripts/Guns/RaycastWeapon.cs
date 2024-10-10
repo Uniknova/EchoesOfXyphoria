@@ -14,6 +14,7 @@ public class RaycastWeapon : MonoBehaviour
     public bool isFiring = false;
     public int fireRate = 25;
     public float bulletSpeed = 1000.0f;
+    public float damage;
     public float bulletDrop = 0.0f;
     public Transform canon;
     public Transform raycastDestination;
@@ -96,7 +97,14 @@ public class RaycastWeapon : MonoBehaviour
         ray.direction = end - start;
         if (Physics.Raycast(ray, out hitInfo, distance))
         {
-
+            if(hitInfo.collider != null)
+            {
+                if (hitInfo.collider.GetComponent<IEnemy>() != null)
+                {
+                    hitInfo.collider.GetComponent<IEnemy>().TakeDamage(damage);
+                    Debug.Log("Siiiiiiiiiii");
+                }
+            }
             //Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1.0f);
             bullet.tracer.transform.position = hitInfo.point;
             bullet.time = maxLifeTime;
