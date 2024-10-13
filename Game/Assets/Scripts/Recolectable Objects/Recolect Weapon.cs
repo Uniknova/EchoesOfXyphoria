@@ -34,7 +34,6 @@ public class RecolectWeapon : MonoBehaviour
                 other.GetComponentInParent<Player>().weapons[index].SetActive(true);
                 other.GetComponentInParent<Player>().indexWeapon = index;
             }
-            Debug.Log("hola");
             //GameObject weaponL = Instantiate(gameObject);
             
             

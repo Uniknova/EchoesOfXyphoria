@@ -14,10 +14,6 @@ public class Player : MonoBehaviour
     public float gravity = -9.8f;
     Vector3 velocity;
     public Transform Hand;
-    //public GameObject weaponLobby2;
-    //public GameObject weaponLobby3;
-    //public GameObject weaponLobby4;
-    //public GameObject weaponLobby5;
     public List<GameObject> weapons;
     public int indexWeapon;
 
@@ -34,9 +30,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetButton("Horizontal"))
-        {
+        { 
             Vector3 move = transform.right * Input.GetAxis("Horizontal");
 
             controller.Move(move * speed * Time.deltaTime);
@@ -48,7 +43,7 @@ public class Player : MonoBehaviour
 
             controller.Move(move * speed * Time.deltaTime);
         }
-
+        
         isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
         if (isTouching && velocity.y < 0)
@@ -56,7 +51,6 @@ public class Player : MonoBehaviour
             velocity.y = -3f;
 
         }
-
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);

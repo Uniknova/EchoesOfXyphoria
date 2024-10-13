@@ -102,7 +102,6 @@ public class RaycastWeapon : MonoBehaviour
                 if (hitInfo.collider.GetComponent<IEnemy>() != null)
                 {
                     hitInfo.collider.GetComponent<IEnemy>().TakeDamage(damage);
-                    Debug.Log("Siiiiiiiiiii");
                 }
             }
             //Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1.0f);

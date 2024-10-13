@@ -892,6 +892,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083dea84575c19b4499b62a209520d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
+  dano: 0
+  speed: 0
 --- !u!65 &848036198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1395,6 +1398,9 @@ MonoBehaviour:
     m_Bits: 64
   radius: 0.3
   gravity: -9.8
+  Hand: {fileID: 0}
+  weapons: []
+  indexWeapon: 0
 --- !u!4 &1378582643
 Transform:
   m_ObjectHideFlags: 0
