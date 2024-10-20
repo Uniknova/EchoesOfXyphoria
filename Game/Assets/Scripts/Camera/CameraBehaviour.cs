@@ -6,6 +6,11 @@ public class CameraBehaviour : MonoBehaviour
 {
     public Transform player;
 
+    public void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void LateUpdate()
     {
 

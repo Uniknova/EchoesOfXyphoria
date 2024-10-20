@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
         indexWeapon = -1;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -72,5 +73,13 @@ public class Player : MonoBehaviour
         {
             weapon.StopFiring();
         }
+    }
+
+    public void PlayerMathc()
+    {
+        transform.position = Vector3.zero;
+        transform.GetChild(0).transform.localPosition = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z);
+        weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
+        weapon.enabled = true;
     }
 }

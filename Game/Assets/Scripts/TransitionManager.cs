@@ -12,6 +12,7 @@ public class TransitionManager : MonoBehaviour
 {
     private static TransitionManager instance;
     public CinemachineVirtualCamera currentCamera;
+    private Player player;
 
     public static TransitionManager Instance
     {
@@ -56,6 +57,7 @@ public class TransitionManager : MonoBehaviour
     private void Init()
     {
         m_Anim = GetComponent<Animator>();
+        player = FindObjectOfType<Player>();
 
         DontDestroyOnLoad(gameObject);
     }
@@ -68,6 +70,8 @@ public class TransitionManager : MonoBehaviour
     IEnumerator LoadCoroutine(string sceneName)
     {
         m_Anim.SetBool("Show", true);
+        player.enabled = false;
+        player.PlayerMathc();
 
         UpdateProgressValue(0);
 
@@ -82,6 +86,7 @@ public class TransitionManager : MonoBehaviour
         }
 
         UpdateProgressValue(1);
+        player.enabled = true;
         m_Anim.SetBool("Show", false);
 
     }
