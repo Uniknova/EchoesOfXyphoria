@@ -58,6 +58,7 @@ public class TransitionManager : MonoBehaviour
     {
         m_Anim = GetComponent<Animator>();
         player = FindObjectOfType<Player>();
+        currentCamera = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<CinemachineVirtualCamera>();
 
         DontDestroyOnLoad(gameObject);
     }
@@ -84,7 +85,7 @@ public class TransitionManager : MonoBehaviour
 
             yield return null;
         }
-
+        currentCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4f, player.transform.localScale.x);
         UpdateProgressValue(1);
         player.enabled = true;
         m_Anim.SetBool("Show", false);
