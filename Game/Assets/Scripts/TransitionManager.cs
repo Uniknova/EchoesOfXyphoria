@@ -85,7 +85,7 @@ public class TransitionManager : MonoBehaviour
 
             yield return null;
         }
-
+        currentCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4f, player.transform.localScale.x);
         UpdateProgressValue(1);
         currentCamera.transform.position = new Vector3(currentCamera.transform.position.x, player.transform.position.y + 6, currentCamera.gameObject.transform.position.z);
         player.enabled = true;
