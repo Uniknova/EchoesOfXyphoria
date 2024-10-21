@@ -5,4 +5,8 @@ using UnityEngine;
 public interface IEnemy
 {
     public void TakeDamage(float damage);
+
+    public void Fire();
+
+    public void SpeedDown();
 }

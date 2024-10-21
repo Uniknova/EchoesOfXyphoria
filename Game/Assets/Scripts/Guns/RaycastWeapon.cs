@@ -20,6 +20,8 @@ public class RaycastWeapon : MonoBehaviour
     public Transform raycastDestination;
     public TrailRenderer tracerEffect;
 
+    public List<IPowerEnemy> powerEnemyList;
+
     Ray ray;
     RaycastHit hitInfo;
     float accumulatedTime;
@@ -47,7 +49,7 @@ public class RaycastWeapon : MonoBehaviour
 
     private void Start()
     {
-
+        powerEnemyList = new List<IPowerEnemy>();
     }
     public void StartFiring()
     {
@@ -75,7 +77,7 @@ public class RaycastWeapon : MonoBehaviour
 
     void SimulateBullets(float delta)
     {
-        foreach(var b in bullets)
+        foreach (var b in bullets)
         {
             Vector3 p0 = GetPosition(b);
             b.time += delta;
@@ -89,7 +91,7 @@ public class RaycastWeapon : MonoBehaviour
         bullets.RemoveAll(bullet => bullet.time >= maxLifeTime);
     }
 
-    void RaycastSegment(Vector3 start,  Vector3 end, Bullet bullet)
+    void RaycastSegment(Vector3 start, Vector3 end, Bullet bullet)
     {
         Vector3 direction = end - start;
         float distance = direction.magnitude;
@@ -97,11 +99,17 @@ public class RaycastWeapon : MonoBehaviour
         ray.direction = end - start;
         if (Physics.Raycast(ray, out hitInfo, distance))
         {
-            if(hitInfo.collider != null)
+            if (hitInfo.collider != null)
             {
                 if (hitInfo.collider.GetComponent<IEnemy>() != null)
                 {
                     hitInfo.collider.GetComponent<IEnemy>().TakeDamage(damage);
+                    foreach (IPowerEnemy e in powerEnemyList)
+                    {
+                        Debug.Log("intento");
+                        e.UpdateEnemy(hitInfo.collider.GetComponent<IEnemy>());
+                    }
+                    //hitInfo.collider.GetComponent<IEnemy>().Fire();
                 }
             }
             //Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1.0f);
@@ -140,5 +148,10 @@ public class RaycastWeapon : MonoBehaviour
     public void StopFiring()
     {
         isFiring = false;
+    }
+
+    public void AddPowerEnemy(IPowerEnemy powerEnemy)
+    {
+        powerEnemyList.Add(powerEnemy);
     }
 }

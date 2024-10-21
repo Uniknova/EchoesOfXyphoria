@@ -336,12 +336,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFiring: 0
-  fireRate: 25
+  fireRate: 1
   bulletSpeed: 1000
-  damage: 0
+  damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
-  raycastDestination: {fileID: 954673102}
+  raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
 --- !u!1 &56026478
 GameObject:
@@ -713,7 +713,7 @@ Transform:
   m_GameObject: {fileID: 254396227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0.28}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0.515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2035,7 +2035,7 @@ GameObject:
   - component: {fileID: 1086709451}
   m_Layer: 0
   m_Name: Virtual Camera
-  m_TagString: Untagged
+  m_TagString: CameraPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
