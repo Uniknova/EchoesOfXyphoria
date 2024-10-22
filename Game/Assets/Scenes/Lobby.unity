@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   controller: {fileID: 1814262471}
+  hp: 100
+  hpMax: 100
   collision: {fileID: 248845230}
   collisionMask:
     serializedVersion: 2
@@ -163,6 +165,7 @@ MonoBehaviour:
   Hand: {fileID: 1031251507}
   weapons: []
   indexWeapon: 0
+  lowHp: 0
 --- !u!4 &8181941
 Transform:
   m_ObjectHideFlags: 0

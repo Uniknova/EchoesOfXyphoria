@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public float speed;
     public CharacterController controller;
+    public float hp;
+    public float hpMax;
     private bool isTouching;
     public Transform collision;
     public LayerMask collisionMask;
@@ -15,7 +17,9 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     public Transform Hand;
     public List<GameObject> weapons;
+    public List<IDeathPower> deathPowers;
     public int indexWeapon;
+    public bool lowHp;
 
     RaycastWeapon weapon;
 
@@ -24,7 +28,9 @@ public class Player : MonoBehaviour
     {
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
+        deathPowers = new List<IDeathPower>();
         indexWeapon = -1;
+        lowHp = false;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -81,5 +87,41 @@ public class Player : MonoBehaviour
         transform.GetChild(0).transform.localPosition = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z);
         weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
         weapon.enabled = true;
+    }
+
+    public void PlayerHealth(float health)
+    {
+        hp = Mathf.Min(100, hp + health);
+        if (hp >= (hpMax * 0.2f) && lowHp)
+        {
+            weapon.fireRate /= 3;
+            speed /= 2;
+            lowHp = false;
+        }
+        Debug.Log("Cura");
+    }
+
+    public void UpdateDeathPowers()
+    {
+        foreach (IDeathPower power in deathPowers)
+        {
+            power.UpdateDeath();
+        }
+    }
+
+    public void AddDeathPower(IDeathPower power)
+    {
+        deathPowers.Add(power);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
+        if (hp <= (hpMax * 0.2f))
+        {
+            weapon.fireRate *= 3;
+            speed *= 2;
+            lowHp = true;
+        }
     }
 }

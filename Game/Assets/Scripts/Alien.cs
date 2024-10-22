@@ -14,12 +14,16 @@ public class Alien : MonoBehaviour, IEnemy
     Coroutine SpeedDownC;
     MeshRenderer render;
     Color color;
+    Player player;
+    RaycastWeapon playerWeapon;
 
     // Start is called before the first frame update
     void Start()
     {
         hp = 100;
         render = GetComponent<MeshRenderer>();
+        player = FindAnyObjectByType<Player>();
+        playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
         color = render.material.color;
     }
 
@@ -29,12 +33,27 @@ public class Alien : MonoBehaviour, IEnemy
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponentInParent<Player>())
+        {
+            other.gameObject.GetComponentInParent<Player>().TakeDamage(dano);
+        }
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.GetComponentInParent<Player>())
+    //    {
+    //        collision.gameObject.GetComponentInParent<Player>().TakeDamage(dano);
+    //    }
+    //}
+
     public void TakeDamage(float damage)
     {
         hp -= damage;
-        if (hp < 0)
+        if (hp <= 0)
         {
-            Debug.Log("siiiiiiii");
+            Death();
         }
     }
 
@@ -75,5 +94,10 @@ public class Alien : MonoBehaviour, IEnemy
         yield return new WaitForSeconds(3);
         speed = 1f;
         render.material.color = color;
+    }
+
+    public void Death()
+    {
+        player.UpdateDeathPowers();
     }
 }
