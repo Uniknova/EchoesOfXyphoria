@@ -203,9 +203,21 @@ La batalla por el futuro del universo ha comenzado, y Terry el terrícola es la 
 
 - **Terry**: Es el protagonista y el personaje jugable de nuestra historia. Aunque es una persona reservada y de pocas palabras, su verdadero carácter brilla en los momentos más tensos. Terry es increíblemente valiente y siempre está dispuesto a enfrentar cualquier desafío, sin importar lo peligroso que sea, si eso significa ayudar a los miembros de la resistencia. Está completamente decidido a hacer frente a los Tyrnaxianos para salvar a Xyphoria, su planeta natal y a todo el universo. No busca gloria ni reconocimiento, solo justicia y paz para sus nuevos amigos alienígenas, ya que este se siente en deuda con ellos. Su determinación silenciosa lo convierte en un pilar fundamental en la lucha contra el imperio Tyrnax.
 
+![Ilustración 1: Beauty Terry](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/BeautyPersonaje.jpg)
+
+Ilustración 1: Beauty de Terry
+
 - **Torko**: Líder indiscutible de la resistencia contra los tiránicos Tyrnaxianos, y el último sobreviviente de su especie. Su imponente presencia y vasto conocimiento del universo lo han convertido en una leyenda viva entre las razas aliadas. Aunque ha sufrido grandes pérdidas, su sabiduría y determinación serán esenciales para guiar al protagonista en la lucha final contra el imperio de Tyrnax. Su deseo de restaurar la paz es tan grande como su fuerza, y su liderazgo inspirará a todo aquel que luche a su lado.
 
+![Ilustración 2: Beauty de Torko](Elementos%20de%20Diseño/Mercader/Beauty-Mercader-Torco.png)
+
+Ilustración 2: Beauty de Torko
+
 - **Nimby**: Pequeño, enérgico y soñador, Nimby es el inseparable aprendiz de Torko. Aunque es torpe y un poco holgazán, su ambición de convertirse en alguien tan fuerte y sabio como su mentor lo mantiene siempre lleno de entusiasmo. Pese a su tendencia a meterse en problemas, Nimby tiene un corazón puro y leal. Siempre dispuesto a ayudar, sus buenas intenciones y su inquebrantable fe en Torko lo convierten en un invaluable compañero, aunque sus travesuras a menudo traigan más problemas que soluciones.
+
+![Ilustración 3: Beauty de Nimby](Elementos%20de%20Diseño/Aprendiz/Concept%20Art%20del%20Aprendiz/BeautyAprendiz.jpg)
+
+Ilustración 3: Beauty de Nimby
 
 ### 2.3 Escenarios y lugares
 
@@ -240,6 +252,10 @@ El Taller de Torko es un lugar clave en el juego, accesible a través de un puen
 En este lugar, podemos ver a Torko trabajando arduamente, organizando piezas de armas, ensamblando mejoras y consultando viejos manuales de tecnología alienígena. Su taller está lleno de herramientas, repuestos y planos esparcidos por las mesas, mientras una tenue luz ilumina su espacio de trabajo. Nimby, aunque algo torpe, corretea intentando ayudar, recogiendo piezas caídas o moviendo objetos de un lado a otro, reflejando su energía incansable y su deseo de ser tan útil como su mentor.
 
 Además de su papel narrativo en la historia, el Taller de Torko es fundamental para el progreso del jugador. Aquí, Torko ofrecerá mejoras generales que los jugadores podrán adquirir usando la moneda del juego, y Nimby será el encargado de presentar los desafíos especiales, con jugosas recompensas para aquellos que se atrevan a superarlos. Es un espacio lleno de vida, ingenio y posibilidades, que promete ser un punto clave en la resistencia contra los Tyrnaxianos.
+
+![Ilustración 4: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
+
+Ilustración 4: Beauty escenario mercader
 
 ## 3. Mecánicas de juego
 
@@ -424,6 +440,10 @@ Esta interfaz muestra las clasificaciones semanales y globales de los jugadores 
 
 ### 5.2. Diagrama de flujo
 En este apartado, abordaremos todas las pantallas principales que componen la experiencia del jugador dentro del juego, detallando sus funcionalidades y cómo interactúan entre sí. Cada pantalla ha sido diseñada con el objetivo de ofrecer una navegación clara, intuitiva y eficiente, permitiendo a los jugadores centrarse en la acción y progresar de manera fluida. Aquí describiremos pantallas clave como la de Inicio, Menú Principal, Opciones, Pantalla de Juego, Pantalla de Pausa, entre otras, explicando cómo cada una cumple su papel dentro del sistema general del juego y qué opciones ofrece al jugador.
+
+![Ilustración 5: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
+
+Ilustración 5: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
@@ -434,8 +454,28 @@ Los personajes, enemigos y escenarios están diseñados con texturas detalladas 
 ### 6.2. Concept Art
 El concept art es la base visual del juego, donde se diseñan los personajes, escenarios y elementos clave. Esta fase sirve para visualizar ideas, definir estilos artísticos y establecer la atmósfera general que tendrá el juego. A continuación, se muestran algunos concepts de personajes, enemigos, armas… 
 
+![Ilustración 6: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
+
+Ilustración 6: Siluetas personaje principal
+
+![Ilustración 7: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
+
+Ilustración 7: Desarrollo concepts personaje principal
+
+![Ilustración 8: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
+
+Ilustración 8: Variación de color del personaje principal
+
+![Ilustración 9: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
+
+Ilustración 9: Concepts Armas
+
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
+
+![Ilustración 10: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
+
+Ilustración 10: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -445,6 +485,10 @@ La animación de escenarios introduce movimiento a los fondos y ambientes del ju
 
 ### 7.1. Personajes
 En la animación de personajes, se diseñan los movimientos y acciones que llevarán a cabo los protagonistas de la historia y enemigos. Desde caminatas hasta combates, esta etapa se enfoca en crear movimientos fluidos y realistas que conecten con la jugabilidad.
+
+![Ilustración 11: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
+
+Ilustración 11: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
@@ -504,13 +548,25 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 - Crear una comunidad estable entre jugadores que ponga en el foco a nuestro juego y anime a los jugadores a seguir jugando. 
 - Fomentar la parte competitiva de los juegos para atraer a todas aquellas personas amantes de los juegos competitivos. 
 - Crear una experiencia entrañable para todo tipo de jugadores, tanto casuales como asiduos, con mecánicas únicas, divertidas y fáciles de entender. 
-- Permitir a los jugadores dar rienda suelta a su imaginación creando cosméticos que alteren el aspecto de partes del juego, actualizando el juego con contenidos nuevos cada vez. 
+- Permitir a los jugadores dar rienda suelta a su imaginación creando cosméticos que alteren el aspecto de partes del juego, actualizando el juego con contenidos nuevos cada vez.
+
+![Ilustración 12: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
+
+Ilustración 12: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
+![Ilustración 13: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
+
+Ilustración 13: Caja de herramientas
+
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
+
+![Ilustración 14: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
+
+Ilustración 14: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -557,6 +613,14 @@ Monitorear el alcance y las interacciones será crucial para ajustar nuestra est
 
 ### 11.6. Resultados
 Mediremos el engagement a través de herramientas de análisis en cada plataforma, evaluando la efectividad de nuestras publicaciones y ajustando la estrategia en función del rendimiento. Esto nos permitirá optimizar el crecimiento de la marca a largo plazo.
+
+![Ilustración 15: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
+
+Ilustración 15: Engagement rate individual
+
+![Ilustración 16: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
+
+Ilustración 16: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
