@@ -1,0 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ChangeSceneMenu : MonoBehaviour
+{
+    [SerializeField] private GameObject pauseBotton; 
+    [SerializeField] private GameObject pauseMenu; 
+    [SerializeField] private GameObject settingsInGame; 
+
+
+
+    public void LoadGame()
+    {
+        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_GAME);
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadProximamente()
+    {
+        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_NEXT);
+        SceneManager.LoadScene(3);
+    }
+    public void LoadMenu ()
+    {
+        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
+        SceneManager.LoadScene(0);
+    }
+
+    public void PauseMenu()
+    {
+        Time.timeScale = 0f;
+        pauseBotton.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
+
+    public void ContinueGame()
+    {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+        pauseBotton.SetActive(true);
+    }
+
+    public void SettingsInGame()
+    {
+        pauseMenu.SetActive(false);
+        settingsInGame.SetActive(true);
+    }
+
+    public void backPause()
+    {
+        pauseMenu.SetActive(true);
+        settingsInGame.SetActive(false);
+    }
+}

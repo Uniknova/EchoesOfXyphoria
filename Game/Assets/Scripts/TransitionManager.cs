@@ -31,6 +31,8 @@ public class TransitionManager : MonoBehaviour
 
     public const string SCENE_LOBBY = "Lobby";
     public const string SCENE_GAME = "SampleScene";
+    public const string SCENE_MENU = "Menu";
+    public const string SCENE_NEXT = "Proximamente";
 
     public Slider progressSlider;
     public TextMeshProUGUI progressLabel;
@@ -72,7 +74,7 @@ public class TransitionManager : MonoBehaviour
     {
         m_Anim.SetBool("Show", true);
         player.enabled = false;
-        player.PlayerMathc();
+       player.PlayerMathc();
 
         UpdateProgressValue(0);
 
