@@ -8,6 +8,8 @@ public class ChangeSceneMenu : MonoBehaviour
     [SerializeField] private GameObject pauseBotton; 
     [SerializeField] private GameObject pauseMenu; 
     [SerializeField] private GameObject settingsInGame; 
+    [SerializeField] private GameObject coinShopInterface; 
+    [SerializeField] private GameObject moreCoins; 
 
 
 
@@ -40,6 +42,8 @@ public class ChangeSceneMenu : MonoBehaviour
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         pauseBotton.SetActive(true);
+        moreCoins.SetActive(true);
+        coinShopInterface.SetActive(false);
     }
 
     public void SettingsInGame()
@@ -52,5 +56,34 @@ public class ChangeSceneMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         settingsInGame.SetActive(false);
+    }
+
+    public void coinShop()
+    {
+        coinShopInterface.SetActive(true);
+        pauseBotton.SetActive(false);
+        moreCoins.SetActive(false);
+        
+    }
+
+    public void buy5Coins ()
+    {
+        //variableCoins  = variableCoins +5
+
+
+    }
+
+    public void buy50Coins()
+    {
+        //variableCoins  = variableCoins +5
+
+
+    }
+
+    public void buy100Coins()
+    {
+        //variableCoins  = variableCoins +5
+
+
     }
 }
