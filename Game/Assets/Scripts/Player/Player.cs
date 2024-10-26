@@ -21,7 +21,34 @@ public class Player : MonoBehaviour
     public int indexWeapon;
     public bool lowHp;
 
+    public bool gravedad;
+
+    private static Player instance;
+
     RaycastWeapon weapon;
+
+    //public static Player Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+
+    //        }
+    //    }
+    //}
+
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,40 +58,49 @@ public class Player : MonoBehaviour
         deathPowers = new List<IDeathPower>();
         indexWeapon = -1;
         lowHp = false;
+        gravedad = false;
         DontDestroyOnLoad(gameObject);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Horizontal"))
-        { 
-            Vector3 move = transform.right * Input.GetAxis("Horizontal");
+            if (Input.GetButton("Horizontal"))
+            {
+                Vector3 move = transform.right * Input.GetAxis("Horizontal");
+                //Debug.Log(move);
 
-            controller.Move(move * speed * Time.deltaTime);
-        }
+                controller.Move(move * speed * Time.deltaTime);
+            }
 
-        if (Input.GetButton("Vertical"))
-        {
-            Vector3 move = transform.forward * Input.GetAxis("Vertical");
+            if (Input.GetButton("Vertical"))
+            {
+                Vector3 move = transform.forward * Input.GetAxis("Vertical");
 
-            controller.Move(move * speed * Time.deltaTime);
-        }
-        
-        isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
+                controller.Move(move * speed * Time.deltaTime);
+            }
 
-        if (isTouching && velocity.y < 0)
-        {
-            velocity.y = -3f;
+            isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
-        }
-        velocity.y += gravity * Time.deltaTime;
+            if (isTouching && velocity.y < 0)
+            {
+                velocity.y = -3f;
 
-        controller.Move(velocity * Time.deltaTime);
+            }
+            velocity.y += gravity * Time.deltaTime;
+
+
+        //controller.Move(velocity * Time.deltaTime);
+
     }
 
     private void LateUpdate()
     {
+        if (gravedad)
+        {
+            controller.Move(velocity * Time.deltaTime);
+        }
         if (weapon == null) return;
         if (Input.GetButtonDown("Fire1"))
         {
@@ -79,14 +115,34 @@ public class Player : MonoBehaviour
         {
             weapon.StopFiring();
         }
+
     }
 
-    public void PlayerMathc()
+    public void PlayerMathc(Transform respawn)
     {
+        controller.enabled = false;
+        Debug.Log(controller.transform.localPosition);
+        //transform.position = new Vector3(respawn.position.x, respawn.position.y, respawn.position.z);
+        //Transform aux = transform;
+        //controller.transform.position = Vector3.zero;
+
         transform.position = Vector3.zero;
-        transform.GetChild(0).transform.localPosition = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z);
-        weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
-        weapon.enabled = true;
+        controller.transform.localPosition = respawn.position;
+        //transform.position = respawn.position;
+        //controller.transform.position = Vector3.zero;
+        //transform.position = Vector3.zero;
+        //controller.transform.position = new Vector3 (respawn.position.x + aux.position.x, respawn.position.y + aux.position.y, respawn.position.z + aux.position.z);
+        //Debug.Log(controller.transform.localPosition);
+
+
+        if (weapons.Count > 0)
+        {
+            weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
+            weapon.enabled = true;
+        }
+        Debug.Log(controller.transform.localPosition);
+        //gravedad = true;
+        Debug.Log(controller.transform.localPosition);
     }
 
     public void PlayerHealth(float health)
@@ -117,7 +173,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         hp -= damage;
-        if (hp <= (hpMax * 0.2f))
+        if (hp <= (hpMax * 0.2f) && !lowHp)
         {
             weapon.fireRate *= 3;
             speed *= 2;

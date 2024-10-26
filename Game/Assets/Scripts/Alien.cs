@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Alien : MonoBehaviour, IEnemy
+
+[RequireComponent(typeof(NavMeshAgent))]
+public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 {
 
     public float hp;
+    public float maxhp;
     public float dano;
     public float speed;
     public float speedDown;
@@ -17,6 +21,23 @@ public class Alien : MonoBehaviour, IEnemy
     Player player;
     RaycastWeapon playerWeapon;
 
+    public IObjectPool pool;
+
+    public NavMeshAgent Agent;
+
+    public bool Active
+    {
+        get
+        {
+            return gameObject.activeSelf;
+        }
+
+        set
+        {
+            gameObject.SetActive(value);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +46,27 @@ public class Alien : MonoBehaviour, IEnemy
         player = FindAnyObjectByType<Player>();
         playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
         color = render.material.color;
+        Agent = GetComponent<NavMeshAgent>();
+        speed = 3.5f;
+        speedDown = 1.5f;
+        Agent.speed = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player != null)
+        {
+            if (Agent.enabled)
+            {
+                Agent.SetDestination(player.transform.GetChild(0).transform.position);
+            }
+        }
 
+        else
+        {
+            player = FindAnyObjectByType<Player>();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,7 +106,7 @@ public class Alien : MonoBehaviour, IEnemy
     {
         if (SpeedDownC != null)
         {
-            StopCoroutine (SpeedDownC);
+            StopCoroutine(SpeedDownC);
         }
         SpeedDownC = StartCoroutine(SpeedDownCoroutine());
     }
@@ -89,15 +125,45 @@ public class Alien : MonoBehaviour, IEnemy
 
     IEnumerator SpeedDownCoroutine()
     {
-        speed = 0.1f;
+        Agent.speed = speedDown;
         render.material.color = Color.cyan;
         yield return new WaitForSeconds(3);
-        speed = 1f;
+        Agent.speed = speed;
         render.material.color = color;
     }
 
     public void Death()
     {
         player.UpdateDeathPowers();
+
+    }
+
+    public void Reset()
+    {
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.Euler(Vector3.zero);
+        hp = maxhp;
+        Agent.speed = speed;
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
+    public IPooleableObject Clone()
+    {
+        GameObject go;
+        go = Instantiate(gameObject);
+
+        Alien alien = go.GetComponent<Alien>();
+        //alien.Agent.enabled = false;
+
+        return alien;
+    }
+
+    public void SetPool(IObjectPool pool)
+    {
+        this.pool = pool;
     }
 }
