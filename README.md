@@ -117,27 +117,34 @@
 
 # **Índice de figuras**
 
-**Ilustración 1: Beauty Terry**  
-**Ilustración 2: Beauty de Torko**  
-**Ilustración 3: Beauty Nimby**  
-**Ilustración 4: Beauty escenario mercader**  
-**Ilustración 5: Diagrama de flujo**  
-**Ilustración 6: Siluetas personaje principal**  
-**Ilustración 7: Desarrollo concepts personaje principal**  
-**Ilustración 8: Variación de color del personaje principal**  
-**Ilustración 9: Concepts Armas**  
-**Ilustración 10: Escenario del mercader**  
-**Ilustración 11: Render modelado final**  
-**Ilustración 12: Mapa de Empatía**  
-**Ilustración 13: Caja de herramientas**  
-**Ilustración 14: Lienzo de modelo de negocio**  
-**Ilustración 15: Engagement rate individual**  
-**Ilustración 16: Engagement rate total**
+- **Ilustración 1**: PEGI 12
+- **Ilustración 2**: Beauty de Terry
+- **Ilustración 3**: Beauty de Torko
+- **Ilustración 4**: Beauty de Nimby
+- **Ilustración 5**: Beauty escenario mercader
+- **Ilustración 6**: Mockup menú principal
+- **Ilustración 7**: Mockup menú de pausa
+- **Ilustración 8**: Mockup juego
+- **Ilustración 9**: Mockup tienda
+- **Ilustración 10**: Diagrama de flujo
+- **Ilustración 11**: Siluetas personaje principal
+- **Ilustración 12**: Desarrollo concepts personaje principal
+- **Ilustración 13**: Variación de color del personaje principal
+- **Ilustración 14**: Concepts Armas
+- **Ilustración 15**: Escenario del mercader
+- **Ilustración 16**: Render modelado final
+- **Ilustración 17**: Skinning
+- **Ilustración 18**: Mapa de Empatía
+- **Ilustración 19**: Caja de herramientas
+- **Ilustración 20**: Lienzo de modelo de negocio
+- **Ilustración 21**: Engagement rate individual
+- **Ilustración 22**: Engagement rate total
+
 
 ## 0. Historial de versiones
 En este apartado se reflejan las versiones del documento de diseño con sus respectivos cambios.
 
-- **Versión 1**: Documento de diseño en el que explicamos en qué consistirá el juego, así como sus mecánicas principales, detalles técnicos y artísticos.
+- **Versión 0.0.1**: Documento de diseño en el que explicamos en qué consistirá el juego, así como sus mecánicas principales, detalles técnicos y artísticos.
 
 ## 1. Introducción
 Este documento de diseño ha sido creado por **Unknova Studios** para detallar la visión, mecánicas y estructura de nuestro próximo videojuego, desarrollado para ser jugado en navegadores web. Actúa como la guía principal para todo el equipo de desarrollo, proporcionando una descripción clara de cada aspecto del juego, desde la jugabilidad y la narrativa hasta los elementos visuales y sonoros.  
@@ -169,7 +176,13 @@ Por último, el estilo **cartoon**, además de ser visualmente atractivo, es má
 
 ### 1.6. Alcance, propósito y público objetivo
 El objetivo principal de **Echoes of Xyphoria** es proporcionar una experiencia de juego divertida y desafiante, combinando acción rápida con elementos de estrategia y rejugabilidad. Queremos que los jugadores se sumerjan en un universo espacial lleno de aventuras, enfrentándose a hordas de enemigos y explorando mundos desconocidos, mientras prueban diferentes builds y perfeccionan sus habilidades. El propósito es crear un juego accesible, pero con suficiente profundidad para mantener el interés a largo plazo.  
-El juego está dirigido para jugadores que disfrutan de géneros como **roguelikes**, acción y aventura, tanto habituales como casuales, que puedan jugar en sesiones cortas o largas y que busquen experiencias accesibles pero desafiantes. Además, el componente competitivo, con la posibilidad de compartir puntuaciones y avances, atraerá a aquellos que disfrutan de medirse contra otros jugadores.  
+El juego está dirigido para jugadores que disfrutan de géneros como **roguelikes**, acción y aventura, tanto habituales como casuales, que puedan jugar en sesiones cortas o largas y que busquen experiencias accesibles pero desafiantes. Además, el componente competitivo, con la posibilidad de compartir puntuaciones y avances, atraerá a aquellos que disfrutan de medirse contra otros jugadores.
+El juego ha sido clasificado como PEGI 12. Esto se debe a que el juego contiene acción, pero en ningún momento violencia extrema o explícita. Además, aunque el juego pueda tener algunos escenarios intimidantes, estos no causan terror extremo. Por último, no existe ningún tipo de contenido para adultos.
+
+![Ilustración 1: PEGI 12](Elementos%20de%20Diseño/ElementosModeloNegocio/PEGI.jpg)
+
+Ilustración 1: PEGI 12
+
 El juego está diseñado para ser jugado en navegadores web, lo que permite un amplio alcance en términos de dispositivos y plataformas. Además, habrá soporte para actualizaciones periódicas, con la inclusión de nuevos enemigos, armas y mejoras.
 
 ### 1.7. Detalles técnicos
@@ -203,21 +216,21 @@ La batalla por el futuro del universo ha comenzado, y Terry el terrícola es la 
 
 - **Terry**: Es el protagonista y el personaje jugable de nuestra historia. Aunque es una persona reservada y de pocas palabras, su verdadero carácter brilla en los momentos más tensos. Terry es increíblemente valiente y siempre está dispuesto a enfrentar cualquier desafío, sin importar lo peligroso que sea, si eso significa ayudar a los miembros de la resistencia. Está completamente decidido a hacer frente a los Tyrnaxianos para salvar a Xyphoria, su planeta natal y a todo el universo. No busca gloria ni reconocimiento, solo justicia y paz para sus nuevos amigos alienígenas, ya que este se siente en deuda con ellos. Su determinación silenciosa lo convierte en un pilar fundamental en la lucha contra el imperio Tyrnax.
 
-![Ilustración 1: Beauty Terry](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/BeautyPersonaje.jpg)
+![Ilustración 2: Beauty Terry](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/BeautyPersonaje.jpg)
 
-Ilustración 1: Beauty de Terry
+Ilustración 2: Beauty de Terry
 
 - **Torko**: Líder indiscutible de la resistencia contra los tiránicos Tyrnaxianos, y el último sobreviviente de su especie. Su imponente presencia y vasto conocimiento del universo lo han convertido en una leyenda viva entre las razas aliadas. Aunque ha sufrido grandes pérdidas, su sabiduría y determinación serán esenciales para guiar al protagonista en la lucha final contra el imperio de Tyrnax. Su deseo de restaurar la paz es tan grande como su fuerza, y su liderazgo inspirará a todo aquel que luche a su lado.
 
-![Ilustración 2: Beauty de Torko](Elementos%20de%20Diseño/Mercader/Beauty-Mercader-Torco.png)
+![Ilustración 3: Beauty de Torko](Elementos%20de%20Diseño/Mercader/Beauty-Mercader-Torco.png)
 
-Ilustración 2: Beauty de Torko
+Ilustración 3: Beauty de Torko
 
 - **Nimby**: Pequeño, enérgico y soñador, Nimby es el inseparable aprendiz de Torko. Aunque es torpe y un poco holgazán, su ambición de convertirse en alguien tan fuerte y sabio como su mentor lo mantiene siempre lleno de entusiasmo. Pese a su tendencia a meterse en problemas, Nimby tiene un corazón puro y leal. Siempre dispuesto a ayudar, sus buenas intenciones y su inquebrantable fe en Torko lo convierten en un invaluable compañero, aunque sus travesuras a menudo traigan más problemas que soluciones.
 
-![Ilustración 3: Beauty de Nimby](Elementos%20de%20Diseño/Aprendiz/Concept%20Art%20del%20Aprendiz/BeautyAprendiz.jpg)
+![Ilustración 4: Beauty de Nimby](Elementos%20de%20Diseño/Aprendiz/Concept%20Art%20del%20Aprendiz/BeautyAprendiz.jpg)
 
-Ilustración 3: Beauty de Nimby
+Ilustración 4: Beauty de Nimby
 
 ### 2.3 Escenarios y lugares
 
@@ -253,9 +266,9 @@ En este lugar, podemos ver a Torko trabajando arduamente, organizando piezas de 
 
 Además de su papel narrativo en la historia, el Taller de Torko es fundamental para el progreso del jugador. Aquí, Torko ofrecerá mejoras generales que los jugadores podrán adquirir usando la moneda del juego, y Nimby será el encargado de presentar los desafíos especiales, con jugosas recompensas para aquellos que se atrevan a superarlos. Es un espacio lleno de vida, ingenio y posibilidades, que promete ser un punto clave en la resistencia contra los Tyrnaxianos.
 
-![Ilustración 4: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
+![Ilustración 5: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
 
-Ilustración 4: Beauty escenario mercader
+Ilustración 5: Beauty escenario mercader
 
 ## 3. Mecánicas de juego
 
@@ -357,22 +370,27 @@ Un enemigo que se desplaza por el aire y ataca al jugador desde la distancia. Es
 Estos enemigos son más grandes, más lentos y mucho más resistentes que otros Tyrnaxianos. Pueden soportar una gran cantidad de daño antes de caer, y su objetivo principal es absorber los ataques del jugador mientras los otros enemigos más débiles lo atacan. Además, los Tanques tienen un ataque cuerpo a cuerpo devastador que puede causar mucho daño si el jugador no lo esquiva.
 
 ## 4. Comportamiento de personajes
-Para dar vida a la zona del mercader, hemos decidido implementar un sistema dinámico que refleje un ecosistema vivo lleno de detalles y comportamientos que aporten realismo y profundidad al entorno.
+Para dar vida a la zona del mercader, hemos decidido implementar un sistema dinámico que refleje un ecosistema vivo lleno de detalles y comportamientos que aporten realismo y profundidad al entorno. Para incluir comportamiento de personajes en nuestro proyecto, hemos pensado usar máquinas de estados finitos, árboles de comportamiento y sistemas de utilidad.
 
-En este espacio, el mercader no será un simple NPC estático, sino un personaje con rutinas. Durante su tiempo libre, estará trabajando activamente en su taller: cogiendo piezas de armas, leyendo manuales, y creando nuevas armas sobre su mesa de trabajo. Este ciclo rutinario no será interrumpido hasta que el jugador decida interactuar con él.
+En este espacio, el mercader no será un simple NPC estático, sino un personaje con rutinas Las acciones que tomará el mercader variarán según sea de día o de noche. 
 
-Cuando el jugador desee hablar con el mercader, deberá tocar una campana. Al oírla, el mercader dejará inmediatamente lo que esté haciendo, irá directamente a atenderte y pondrá en pausa su trabajo. Pero en ese momento entra en acción el aprendiz. Este personaje, que normalmente está descansando, se despertará y continuará la tarea que el mercader estaba realizando en ese momento. De este modo, la actividad del taller nunca se detiene completamente, añadiendo una sensación de continuidad y vida al espacio.
+Por el día realizará ciertas acciones como dibujar planos, fabricar armas (solo podrá hacerlo si hay materiales) y organizar armas (solo si hay armas en el armario). Siempre y cuando la necesidad de limpiar no esté presente, en el caso de que lo esté, el mercader procederá a limpiar. La suciedad irá aumentando a medida que el mercader vaya realizando tareas.
 
-Una vez que el jugador haya terminado de interactuar con el mercader, él volverá a su rutina de trabajo, y el aprendiz, tras completar su tarea temporal, volverá a su lugar de descanso, listo para la siguiente ocasión en que el jugador requiera al mercader.
+En cambio, por la noche, como es su momento de descanso sin trabajar, cambiará la necesidad de limpiar por la de dormir, siempre que no esté cansado, el mercader podrá leer y rezar. Estas dos actividades aumentarán el cansancio y cuando este haya aumentado lo suficiente se irá a dormir.
 
-Además, **Echoes of Xyphoria** cuenta con un ciclo día y noche que también afectará al comportamiento de estos personajes. Cuando llega la noche, el mercader saldrá de su taller para ponerse a rezar cantando a las estrellas del cielo. Mientras este cante, el aprendiz lo escuchará emocionado por la tristeza de su canto.
+Cuando el jugador decide interactuar con él, este deja de hacer la tarea que está haciendo para dar prioridad al jugador, primero caminará hasta donde se encuentre el jugador y una vez llegue se le ofrecerán las mejoras a elegir. Una vez elegidas, el mercader volverá a hacer la tarea que dejó a medias.
 
-Tras terminar su rezo, el mercader comenzará a dar vueltas alrededor de los árboles de la zona buscando frutas nocturnas. Si el jugador pasa cerca suya, este se sorprenderá y lo mirará unos instantes mientras este siga cerca. Mientras todo esto ocurre, el aprendiz estará estudiando dentro del taller para algún día tener los conocimientos de su maestro. Finalmente, cuando llegue la hora de dormir, ambos cesarán su tarea y se irán a la cama.
+Las acciones que tomará el aprendiz variarán según sea de día o de noche, al igual que con el mercader. Por el día, seguirá al mercader hasta que sienta cierto aburrimiento, entonces este empezará a dar saltos por el escenario, rodar por el escenario y cantar. El aburrimiento irá aumentando a medida que vaya pasando el tiempo siguiendo al mercader, y las ganas de aprender aumentarán cuando más tiempo pase haciendo actividades que le entretengan.
+
+En cambio, por la noche, cambiará el sentimiento de aburrimiento por el de cansancio, siempre que no esté cansado, el aprendiz podrá vaciar el armario, ver la tele y estudiar. Estas actividades harán aumentar el dato de cansancio y cuando este haya aumentado lo suficiente se irá a dormir.
+
+Cuando el mercader va a buscar los materiales del arma y no los encuentra, el aprendiz dejará de hacer la tarea que está haciendo para dar prioridad a reponer los materiales, primero caminará hasta donde se encuentren las cajas con los materiales y luego los dejará en el cajón, una vez repuestos el aprendiz volverá a la tarea en la que estaba anteriormente.
 
 Este sistema de comportamiento no solo añade un nivel de detalle visual y narrativo a la experiencia del jugador, sino que también crea un entorno inmersivo que refuerza la sensación de que el mundo está vivo y en constante movimiento, incluso cuando el jugador no está interactuando directamente con él.
 
+
 ## 5. Interfaces
-Las interfaces de usuario (UI) en un videojuego son uno de los elementos más cruciales para brindar una experiencia de juego fluida, accesible y atractiva. En nuestro juego, nos aseguraremos de que las interfaces sean intuitivas, fáciles de navegar y estéticamente coherentes con la temática de ciencia ficción y aventura espacial. A continuación, se describe la estructura de las principales pantallas e interfaces, así como un diagrama de flujo que ilustra el recorrido típico de un jugador a través de las diversas secciones del juego.
+Las interfaces de usuario (UI) en un videojuego son uno de los elementos más cruciales para brindar una experiencia de juego fluida, accesible y atractiva. En nuestro juego, nos aseguraremos de que las interfaces sean intuitivas, fáciles de navegar y estéticamente coherentes con la temática de ciencia ficción y aventura espacial. A continuación, se describe la estructura de las principales pantallas e interfaces junto con algunos mockups que sirvan como referencia visual, así como un diagrama de flujo que ilustra el recorrido típico de un jugador a través de las diversas secciones del juego.
 
 ### 5.1. Interfaces del juego
 En este apartado, abordaremos todas las pantallas principales que componen la experiencia del jugador dentro del juego, detallando sus funcionalidades y cómo interactúan entre sí. Cada pantalla ha sido diseñada con el objetivo de ofrecer una navegación clara, intuitiva y eficiente, permitiendo a los jugadores centrarse en la acción y progresar de manera fluida. Aquí describiremos pantallas clave como la de **Inicio**, **Menú Principal**, **Opciones**, **Pantalla de Juego**, **Pantalla de Pausa**, entre otras, explicando cómo cada una cumple su papel dentro del sistema general del juego y qué opciones ofrece al jugador.
@@ -388,12 +406,20 @@ Esta será la primera interfaz con la que los jugadores interactuarán al abrir 
 - **Tutorial**: Lleva la pantalla del tutorial.
 - **Acceso a Tienda**: Permite al jugador acceder a las compras de cosméticos o moneda del juego (Cristal Tyrnax).
 
+![Ilustración 6: Mockup menú principal](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Menu.jpeg)
+
+Ilustración 6: Mockup menú principal
+
 #### 5.1.3. Menú de pausa
 El menú principal aparece después de la pantalla de inicio o cuando el jugador presiona "pausa" durante el juego. En este menú, el jugador tendrá varias opciones:
 - **Continuar Partida**: Esta opción estará disponible si el jugador ha dejado una partida en curso.
 - **Nueva Partida**: Inicia una nueva sesión de juego, llevando al jugador a la pantalla de selección de armas.
 - **Opciones**: Lleva a la interfaz de ajustes del juego (sonido, controles, gráficos, etc...).
 - **Salir**: Vuelve a la pantalla de inicio o cierra el juego si está en pausa.
+
+![Ilustración 7: Mockup menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_MenuPausa.jpeg)
+
+Ilustración 7: Mockup menú de pausa
 
 #### 5.1.4. Pantalla de opciones
 El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el juego a su gusto. Las opciones estarán divididas en varias secciones:
@@ -421,6 +447,10 @@ Esta es la interfaz con la que los jugadores interactuarán durante la partida. 
 - **Botón de Pausa**: Lleva al menú de pausa para opciones adicionales o salir del juego.
 - **Pantalla de Personalización**: Accesible al inicio de la partida tocando un espejo.
 
+![Ilustración 8: Mockup juego](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Partida.jpeg)
+
+Ilustración 8: Mockup juego
+
 #### 5.1.8. Pantalla de fin de partida
 Al final de cada partida, aparecerá una pantalla de resumen que muestra el progreso del jugador:
 - **Número de Salas Completadas**: La cantidad de salas recorridas antes de ser derrotado.
@@ -432,6 +462,10 @@ Al final de cada partida, aparecerá una pantalla de resumen que muestra el prog
 La tienda es accesible desde el menú principal o en algunos momentos especiales dentro de la partida. Aquí, el jugador puede gastar su moneda Cristal Tyrnax para adquirir cosméticos, mejoras o incluso opciones para la partida:
 - **Skins y Cosméticos**: Opciones de compra para personalización del personaje.
 - **Moneda del Juego**: Opción para comprar Cristal Tyrnax a través de microtransacciones.
+
+![Ilustración 9: Mockup tienda](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Microtransacciones.jpeg)
+
+Ilustración 9: Mockup tienda
   
 #### 5.1.10. Pantalla de ranking
 Esta interfaz muestra las clasificaciones semanales y globales de los jugadores en base a su progreso en las partidas.
@@ -441,9 +475,9 @@ Esta interfaz muestra las clasificaciones semanales y globales de los jugadores 
 ### 5.2. Diagrama de flujo
 En este apartado, abordaremos todas las pantallas principales que componen la experiencia del jugador dentro del juego, detallando sus funcionalidades y cómo interactúan entre sí. Cada pantalla ha sido diseñada con el objetivo de ofrecer una navegación clara, intuitiva y eficiente, permitiendo a los jugadores centrarse en la acción y progresar de manera fluida. Aquí describiremos pantallas clave como la de Inicio, Menú Principal, Opciones, Pantalla de Juego, Pantalla de Pausa, entre otras, explicando cómo cada una cumple su papel dentro del sistema general del juego y qué opciones ofrece al jugador.
 
-![Ilustración 5: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
+![Ilustración 10: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
 
-Ilustración 5: Diagrama de flujo
+Ilustración 10: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
@@ -454,28 +488,28 @@ Los personajes, enemigos y escenarios están diseñados con texturas detalladas 
 ### 6.2. Concept Art
 El concept art es la base visual del juego, donde se diseñan los personajes, escenarios y elementos clave. Esta fase sirve para visualizar ideas, definir estilos artísticos y establecer la atmósfera general que tendrá el juego. A continuación, se muestran algunos concepts de personajes, enemigos, armas… 
 
-![Ilustración 6: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
+![Ilustración 11: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
 
-Ilustración 6: Siluetas personaje principal
+Ilustración 11: Siluetas personaje principal
 
-![Ilustración 7: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
+![Ilustración 12: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
 
-Ilustración 7: Desarrollo concepts personaje principal
+Ilustración 12: Desarrollo concepts personaje principal
 
-![Ilustración 8: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
+![Ilustración 13: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
 
-Ilustración 8: Variación de color del personaje principal
+Ilustración 13: Variación de color del personaje principal
 
-![Ilustración 9: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
+![Ilustración 14: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
 
-Ilustración 9: Concepts Armas
+Ilustración 14: Concepts Armas
 
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
 
-![Ilustración 10: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
+![Ilustración 15: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
 
-Ilustración 10: Escenario del mercader
+Ilustración 15: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -486,15 +520,19 @@ La animación de escenarios introduce movimiento a los fondos y ambientes del ju
 ### 7.1. Personajes
 En la animación de personajes, se diseñan los movimientos y acciones que llevarán a cabo los protagonistas de la historia y enemigos. Desde caminatas hasta combates, esta etapa se enfoca en crear movimientos fluidos y realistas que conecten con la jugabilidad.
 
-![Ilustración 11: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
+![Ilustración 16: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
 
-Ilustración 11: Render modelado final
+Ilustración 16: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
 
 #### 7.2.1. Skinning
 El skinning permite que, al mover los huesos del rig, la malla se deforme correctamente y el personaje se mueva de forma natural, respetando el diseño original y asegurando coherencia visual en los movimientos.
+
+![Ilustración 17: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
+
+Ilustración 17: Skinning
 
 ## 8. Audio
 El audio en **Echoes of Xyphoria** juega un papel fundamental en la inmersión del jugador en el universo espacial. La banda sonora tendrá una mezcla de música electrónica y espacial que acompaña el ritmo frenético de las partidas, intensificándose durante los momentos clave del combate.
@@ -550,23 +588,23 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 - Crear una experiencia entrañable para todo tipo de jugadores, tanto casuales como asiduos, con mecánicas únicas, divertidas y fáciles de entender. 
 - Permitir a los jugadores dar rienda suelta a su imaginación creando cosméticos que alteren el aspecto de partes del juego, actualizando el juego con contenidos nuevos cada vez.
 
-![Ilustración 12: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
+![Ilustración 18: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
 
-Ilustración 12: Mapa de Empatía
+Ilustración 18: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
-![Ilustración 13: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
+![Ilustración 19: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
 
-Ilustración 13: Caja de herramientas
+Ilustración 19: Caja de herramientas
 
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
 
-![Ilustración 14: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
+![Ilustración 20: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
 
-Ilustración 14: Lienzo de modelo de negocio
+Ilustración 20: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -614,13 +652,13 @@ Monitorear el alcance y las interacciones será crucial para ajustar nuestra est
 ### 11.6. Resultados
 Mediremos el engagement a través de herramientas de análisis en cada plataforma, evaluando la efectividad de nuestras publicaciones y ajustando la estrategia en función del rendimiento. Esto nos permitirá optimizar el crecimiento de la marca a largo plazo.
 
-![Ilustración 15: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
+![Ilustración 21: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
 
-Ilustración 15: Engagement rate individual
+Ilustración 21: Engagement rate individual
 
-![Ilustración 16: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
+![Ilustración 22: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
 
-Ilustración 16: Engagement rate total
+Ilustración 22: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
