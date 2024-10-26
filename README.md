@@ -117,29 +117,28 @@
 
 # **Índice de figuras**
 
-- **Ilustración 1**: PEGI 12
-- **Ilustración 2**: Beauty de Terry
-- **Ilustración 3**: Beauty de Torko
-- **Ilustración 4**: Beauty de Nimby
-- **Ilustración 5**: Beauty escenario mercader
-- **Ilustración 6**: Mockup menú principal
-- **Ilustración 7**: Mockup menú de pausa
-- **Ilustración 8**: Mockup juego
-- **Ilustración 9**: Mockup tienda
-- **Ilustración 10**: Diagrama de flujo
-- **Ilustración 11**: Siluetas personaje principal
-- **Ilustración 12**: Desarrollo concepts personaje principal
-- **Ilustración 13**: Variación de color del personaje principal
-- **Ilustración 14**: Concepts Armas
-- **Ilustración 15**: Escenario del mercader
-- **Ilustración 16**: Render modelado final
-- **Ilustración 17**: Skinning
-- **Ilustración 18**: Mapa de Empatía
-- **Ilustración 19**: Caja de herramientas
-- **Ilustración 20**: Lienzo de modelo de negocio
-- **Ilustración 21**: Engagement rate individual
-- **Ilustración 22**: Engagement rate total
-
+- [Ilustración 1: PEGI 12](#ilustración-1-pegi-12)
+- [Ilustración 2: Beauty de Terry](#ilustración-2-beauty-de-terry)
+- [Ilustración 3: Beauty de Torko](#ilustración-3-beauty-de-torko)
+- [Ilustración 4: Beauty de Nimby](#ilustración-4-beauty-de-nimby)
+- [Ilustración 5: Beauty escenario mercader](#ilustración-5-beauty-escenario-mercader)
+- [Ilustración 6: Mockup menú principal](#ilustración-6-mockup-menú-principal)
+- [Ilustración 7: Mockup menú de pausa](#ilustración-7-mockup-menú-de-pausa)
+- [Ilustración 8: Mockup juego](#ilustración-8-mockup-juego)
+- [Ilustración 9: Mockup tienda](#ilustración-9-mockup-tienda)
+- [Ilustración 10: Diagrama de flujo](#ilustración-10-diagrama-de-flujo)
+- [Ilustración 11: Siluetas personaje principal](#ilustración-11-siluetas-personaje-principal)
+- [Ilustración 12: Desarrollo concepts personaje principal](#ilustración-12-desarrollo-concepts-personaje-principal)
+- [Ilustración 13: Variación de color del personaje principal](#ilustración-13-variación-de-color-del-personaje-principal)
+- [Ilustración 14: Concepts Armas](#ilustración-14-concepts-armas)
+- [Ilustración 15: Escenario del mercader](#ilustración-15-escenario-del-mercader)
+- [Ilustración 16: Render modelado final](#ilustración-16-render-modelado-final)
+- [Ilustración 17: Skinning](#ilustración-17-skinning)
+- [Ilustración 18: Mapa de Empatía](#ilustración-18-mapa-de-empatía)
+- [Ilustración 19: Caja de herramientas](#ilustración-19-caja-de-herramientas)
+- [Ilustración 20: Lienzo de modelo de negocio](#ilustración-20-lienzo-de-modelo-de-negocio)
+- [Ilustración 21: Engagement rate individual](#ilustración-21-engagement-rate-individual)
+- [Ilustración 22: Engagement rate total](#ilustración-22-engagement-rate-total)
 
 ## 0. Historial de versiones
 En este apartado se reflejan las versiones del documento de diseño con sus respectivos cambios.
@@ -181,7 +180,7 @@ El juego ha sido clasificado como PEGI 12. Esto se debe a que el juego contiene 
 
 ![Ilustración 1: PEGI 12](Elementos%20de%20Diseño/ElementosModeloNegocio/PEGI.jpg)
 
-Ilustración 1: PEGI 12
+# Ilustración 1: PEGI 12
 
 El juego está diseñado para ser jugado en navegadores web, lo que permite un amplio alcance en términos de dispositivos y plataformas. Además, habrá soporte para actualizaciones periódicas, con la inclusión de nuevos enemigos, armas y mejoras.
 
@@ -218,19 +217,19 @@ La batalla por el futuro del universo ha comenzado, y Terry el terrícola es la 
 
 ![Ilustración 2: Beauty Terry](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/BeautyPersonaje.jpg)
 
-Ilustración 2: Beauty de Terry
+# Ilustración 2: Beauty de Terry
 
 - **Torko**: Líder indiscutible de la resistencia contra los tiránicos Tyrnaxianos, y el último sobreviviente de su especie. Su imponente presencia y vasto conocimiento del universo lo han convertido en una leyenda viva entre las razas aliadas. Aunque ha sufrido grandes pérdidas, su sabiduría y determinación serán esenciales para guiar al protagonista en la lucha final contra el imperio de Tyrnax. Su deseo de restaurar la paz es tan grande como su fuerza, y su liderazgo inspirará a todo aquel que luche a su lado.
 
 ![Ilustración 3: Beauty de Torko](Elementos%20de%20Diseño/Mercader/Beauty-Mercader-Torco.png)
 
-Ilustración 3: Beauty de Torko
+# Ilustración 3: Beauty de Torko
 
 - **Nimby**: Pequeño, enérgico y soñador, Nimby es el inseparable aprendiz de Torko. Aunque es torpe y un poco holgazán, su ambición de convertirse en alguien tan fuerte y sabio como su mentor lo mantiene siempre lleno de entusiasmo. Pese a su tendencia a meterse en problemas, Nimby tiene un corazón puro y leal. Siempre dispuesto a ayudar, sus buenas intenciones y su inquebrantable fe en Torko lo convierten en un invaluable compañero, aunque sus travesuras a menudo traigan más problemas que soluciones.
 
 ![Ilustración 4: Beauty de Nimby](Elementos%20de%20Diseño/Aprendiz/Concept%20Art%20del%20Aprendiz/BeautyAprendiz.jpg)
 
-Ilustración 4: Beauty de Nimby
+# Ilustración 4: Beauty de Nimby
 
 ### 2.3 Escenarios y lugares
 
@@ -268,7 +267,7 @@ Además de su papel narrativo en la historia, el Taller de Torko es fundamental 
 
 ![Ilustración 5: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
 
-Ilustración 5: Beauty escenario mercader
+# Ilustración 5: Beauty escenario mercader
 
 ## 3. Mecánicas de juego
 
@@ -408,7 +407,7 @@ Esta será la primera interfaz con la que los jugadores interactuarán al abrir 
 
 ![Ilustración 6: Mockup menú principal](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Menu.jpeg)
 
-Ilustración 6: Mockup menú principal
+# Ilustración 6: Mockup menú principal
 
 #### 5.1.3. Menú de pausa
 El menú principal aparece después de la pantalla de inicio o cuando el jugador presiona "pausa" durante el juego. En este menú, el jugador tendrá varias opciones:
@@ -419,7 +418,7 @@ El menú principal aparece después de la pantalla de inicio o cuando el jugador
 
 ![Ilustración 7: Mockup menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_MenuPausa.jpeg)
 
-Ilustración 7: Mockup menú de pausa
+# Ilustración 7: Mockup menú de pausa
 
 #### 5.1.4. Pantalla de opciones
 El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el juego a su gusto. Las opciones estarán divididas en varias secciones:
@@ -449,7 +448,7 @@ Esta es la interfaz con la que los jugadores interactuarán durante la partida. 
 
 ![Ilustración 8: Mockup juego](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Partida.jpeg)
 
-Ilustración 8: Mockup juego
+# Ilustración 8: Mockup juego
 
 #### 5.1.8. Pantalla de fin de partida
 Al final de cada partida, aparecerá una pantalla de resumen que muestra el progreso del jugador:
@@ -465,7 +464,7 @@ La tienda es accesible desde el menú principal o en algunos momentos especiales
 
 ![Ilustración 9: Mockup tienda](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Microtransacciones.jpeg)
 
-Ilustración 9: Mockup tienda
+# Ilustración 9: Mockup tienda
   
 #### 5.1.10. Pantalla de ranking
 Esta interfaz muestra las clasificaciones semanales y globales de los jugadores en base a su progreso en las partidas.
@@ -477,7 +476,7 @@ En este apartado, abordaremos todas las pantallas principales que componen la ex
 
 ![Ilustración 10: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
 
-Ilustración 10: Diagrama de flujo
+# Ilustración 10: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
@@ -490,26 +489,26 @@ El concept art es la base visual del juego, donde se diseñan los personajes, es
 
 ![Ilustración 11: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
 
-Ilustración 11: Siluetas personaje principal
+# Ilustración 11: Siluetas personaje principal
 
 ![Ilustración 12: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
 
-Ilustración 12: Desarrollo concepts personaje principal
+# Ilustración 12: Desarrollo concepts personaje principal
 
 ![Ilustración 13: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
 
-Ilustración 13: Variación de color del personaje principal
+# Ilustración 13: Variación de color del personaje principal
 
 ![Ilustración 14: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
 
-Ilustración 14: Concepts Armas
+# Ilustración 14: Concepts Armas
 
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
 
 ![Ilustración 15: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
 
-Ilustración 15: Escenario del mercader
+# Ilustración 15: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -522,7 +521,7 @@ En la animación de personajes, se diseñan los movimientos y acciones que lleva
 
 ![Ilustración 16: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
 
-Ilustración 16: Render modelado final
+# Ilustración 16: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
@@ -532,7 +531,7 @@ El skinning permite que, al mover los huesos del rig, la malla se deforme correc
 
 ![Ilustración 17: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
 
-Ilustración 17: Skinning
+# Ilustración 17: Skinning
 
 ## 8. Audio
 El audio en **Echoes of Xyphoria** juega un papel fundamental en la inmersión del jugador en el universo espacial. La banda sonora tendrá una mezcla de música electrónica y espacial que acompaña el ritmo frenético de las partidas, intensificándose durante los momentos clave del combate.
@@ -590,21 +589,21 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 
 ![Ilustración 18: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
 
-Ilustración 18: Mapa de Empatía
+# Ilustración 18: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
 ![Ilustración 19: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
 
-Ilustración 19: Caja de herramientas
+# Ilustración 19: Caja de herramientas
 
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
 
 ![Ilustración 20: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
 
-Ilustración 20: Lienzo de modelo de negocio
+# Ilustración 20: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -654,11 +653,11 @@ Mediremos el engagement a través de herramientas de análisis en cada plataform
 
 ![Ilustración 21: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
 
-Ilustración 21: Engagement rate individual
+# Ilustración 21: Engagement rate individual
 
 ![Ilustración 22: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
 
-Ilustración 22: Engagement rate total
+# Ilustración 22: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
