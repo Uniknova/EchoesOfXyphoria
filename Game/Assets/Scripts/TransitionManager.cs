@@ -12,6 +12,7 @@ public class TransitionManager : MonoBehaviour
 {
     private static TransitionManager instance;
     public CinemachineVirtualCamera currentCamera;
+    public Camera virtualCamera;
     private Player player;
 
     public static TransitionManager Instance
@@ -60,7 +61,10 @@ public class TransitionManager : MonoBehaviour
     {
         m_Anim = GetComponent<Animator>();
         player = FindObjectOfType<Player>();
-        currentCamera = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<CinemachineVirtualCamera>();
+        if (player != null)
+        {
+            currentCamera = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<CinemachineVirtualCamera>();
+        }
 
         DontDestroyOnLoad(gameObject);
     }
@@ -70,27 +74,76 @@ public class TransitionManager : MonoBehaviour
         StartCoroutine(LoadCoroutine(sceneName));
     }
 
+    public void DestroyObjects()
+    {
+        Debug.Log("hola");
+        if (virtualCamera != null) Destroy(virtualCamera.gameObject);
+        if (currentCamera != null) Destroy(currentCamera.gameObject);
+        if (player != null) Destroy(player.gameObject);
+    }
+
     IEnumerator LoadCoroutine(string sceneName)
     {
         m_Anim.SetBool("Show", true);
-        player.enabled = false;
-       player.PlayerMathc();
+        player = FindObjectOfType<Player>();
+
+        if (player != null)
+        {
+            player.enabled = false;
+            player.controller.enabled = false;
+            player.gravedad = false;
+        }
+        
+        
 
         UpdateProgressValue(0);
+
+        
 
         yield return new WaitForSeconds(2f);
         var sceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
-        while(!sceneAsync.isDone)
+        while (!sceneAsync.isDone)
         {
             UpdateProgressValue(sceneAsync.progress);
 
             yield return null;
         }
-        currentCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4f, player.transform.localScale.x);
+        if (sceneName != SCENE_GAME && sceneName != SCENE_LOBBY) DestroyObjects();
+
+
+        if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY)
+        {
+            if (player == null) player = FindObjectOfType<Player>();
+
+            Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
+            Debug.Log(respawn.position);
+            player.PlayerMathc(respawn);
+            virtualCamera = Camera.main;
+            if (currentCamera == null) currentCamera = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<CinemachineVirtualCamera>();
+            currentCamera.transform.position = new Vector3(currentCamera.transform.position.x, player.transform.GetChild(0).transform.position.y + 6, currentCamera.gameObject.transform.position.z);
+        }
+        //if (currentCamera != null)
+        //{
+        //    currentCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4f, player.transform.localScale.x);
+
+        //}
         UpdateProgressValue(1);
-        currentCamera.transform.position = new Vector3(currentCamera.transform.position.x, player.transform.position.y + 6, currentCamera.gameObject.transform.position.z);
-        player.enabled = true;
+
+        //if (currentCamera != null)
+        //{
+        //    currentCamera.transform.position = new Vector3(currentCamera.transform.position.x, player.transform.position.y + 6, currentCamera.gameObject.transform.position.z);
+
+        //}
+
+        if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY)
+        {
+            player.enabled = true;
+            player.controller.enabled = true;
+            
+            player.gravedad = true;
+        }
+        
         m_Anim.SetBool("Show", false);
 
     }
@@ -109,7 +162,7 @@ public class TransitionManager : MonoBehaviour
 
     //public void UpdateCamera(CinemachineVirtualCamera target)
     //{
-       
+
     //}
 
 }

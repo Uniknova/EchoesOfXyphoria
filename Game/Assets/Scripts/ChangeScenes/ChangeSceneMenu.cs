@@ -16,7 +16,9 @@ public class ChangeSceneMenu : MonoBehaviour
     public void LoadGame()
     {
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_GAME);
-        SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
+        //SceneManager.LoadScene(1);
     }
 
     public void LoadProximamente()
@@ -27,7 +29,9 @@ public class ChangeSceneMenu : MonoBehaviour
     public void LoadMenu ()
     {
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
-        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
+        //SceneManager.LoadScene(0);
     }
 
     public void PauseMenu()

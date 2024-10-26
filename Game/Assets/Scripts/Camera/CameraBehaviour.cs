@@ -8,6 +8,7 @@ public class CameraBehaviour : MonoBehaviour
 
     public void Start()
     {
+        player = FindObjectOfType<Player>().transform.GetChild(0).transform;
         DontDestroyOnLoad(gameObject);
     }
 

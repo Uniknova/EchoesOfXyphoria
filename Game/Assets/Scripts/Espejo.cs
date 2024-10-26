@@ -19,6 +19,7 @@ public class Espejo : MonoBehaviour
     public Transform playerPosition;
     public Transform Head;
     public List<GameObject> skinsList;
+    GameObject skin;
     public int indexSkin;
 
     private void Start()
@@ -30,6 +31,7 @@ public class Espejo : MonoBehaviour
         player = FindObjectOfType<Player>();
         mouse = FindObjectOfType<MouseRotation>();
         indexSkin = 0;
+        skinsList.Add(new GameObject());
 
         foreach(Transform t in transform.GetChild(0).transform)
         {
@@ -73,6 +75,11 @@ public class Espejo : MonoBehaviour
                 player.enabled = false;
                 mouse.enabled = false;
                 UiSkin.GetComponent<Animator>().SetBool("Show", true);
+                foreach(Transform t in UiSkin.transform)
+                {
+                    t.GetComponent<Button>().enabled = true;
+                }
+
                 StartCoroutine(MovePlayer(playerPosition, mouse.transform));
                 //mouse.transform.rotation = new Quaternion(mouse.transform.rotation.x, 180, mouse.transform.rotation.z, mouse.transform.rotation.w);
                 //mouse.transform.Rotate(0, 180, 0);
@@ -88,7 +95,14 @@ public class Espejo : MonoBehaviour
         if (espejo && Input.GetKeyDown(KeyCode.R))
         {
             UiSkin.GetComponent<Animator>().SetBool("Show", false);
-            skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
+            foreach (Transform t in UiSkin.transform)
+            {
+                t.GetComponent<Button>().enabled = false;
+            }
+            skin = Instantiate(skinsList[indexSkin], Head.position, Head.rotation);
+            skin.transform.localScale = new Vector3(skin.transform.localScale.x * transform.parent.localScale.x, skin.transform.localScale.y * transform.parent.localScale.y, skin.transform.localScale.z * transform.parent.localScale.z);
+            skin.transform.SetParent(Head);
+            if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
             espejo = false;
             uiUse.enabled = true;
             player.enabled = true;
@@ -106,15 +120,17 @@ public class Espejo : MonoBehaviour
             previous.position = Vector3.MoveTowards(previous.position, target.position, 2 * Time.deltaTime);
             yield return null;
         }
+        Destroy(skin);
         skinsList[indexSkin].transform.position = Head.position;
-        skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
+        if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
+
     }
 
     public void ChangeSkin(int i)
     {
-        skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
+        if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
         indexSkin = (indexSkin + i + skinsList.Count) % skinsList.Count;
         skinsList[indexSkin].transform.position = Head.position;
-        skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
+        if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
     }
 }

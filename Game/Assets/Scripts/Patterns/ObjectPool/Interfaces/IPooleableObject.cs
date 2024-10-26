@@ -13,4 +13,6 @@ public interface IPooleableObject : IPrototype
     public void Reset();
 
     public void Destroy();
+
+    public void SetPool(IObjectPool pool);
 }
