@@ -116,23 +116,24 @@
 - [Ilustración 3: Beauty de Torko](#ilustración-3-beauty-de-torko)
 - [Ilustración 4: Beauty de Nimby](#ilustración-4-beauty-de-nimby)
 - [Ilustración 5: Beauty escenario mercader](#ilustración-5-beauty-escenario-mercader)
-- [Ilustración 6: Mockup menú principal](#ilustración-6-mockup-menú-principal)
-- [Ilustración 7: Mockup menú de pausa](#ilustración-7-mockup-menú-de-pausa)
-- [Ilustración 8: Mockup juego](#ilustración-8-mockup-juego)
-- [Ilustración 9: Mockup tienda](#ilustración-9-mockup-tienda)
-- [Ilustración 10: Diagrama de flujo](#ilustración-10-diagrama-de-flujo)
-- [Ilustración 11: Siluetas personaje principal](#ilustración-11-siluetas-personaje-principal)
-- [Ilustración 12: Desarrollo concepts personaje principal](#ilustración-12-desarrollo-concepts-personaje-principal)
-- [Ilustración 13: Variación de color del personaje principal](#ilustración-13-variación-de-color-del-personaje-principal)
-- [Ilustración 14: Concepts Armas](#ilustración-14-concepts-armas)
-- [Ilustración 15: Escenario del mercader](#ilustración-15-escenario-del-mercader)
-- [Ilustración 16: Render modelado final](#ilustración-16-render-modelado-final)
-- [Ilustración 17: Skinning](#ilustración-17-skinning)
-- [Ilustración 18: Mapa de Empatía](#ilustración-18-mapa-de-empatía)
-- [Ilustración 19: Caja de herramientas](#ilustración-19-caja-de-herramientas)
-- [Ilustración 20: Lienzo de modelo de negocio](#ilustración-20-lienzo-de-modelo-de-negocio)
-- [Ilustración 21: Engagement rate individual](#ilustración-21-engagement-rate-individual)
-- [Ilustración 22: Engagement rate total](#ilustración-22-engagement-rate-total)
+- [Ilustración 6: Concept primer enemigo](#ilustración-6-concept-primer-enemigo)
+- [Ilustración 7: Mockup menú principal](#ilustración-7-mockup-menú-principal)
+- [Ilustración 8: Mockup menú de pausa](#ilustración-8-mockup-menú-de-pausa)
+- [Ilustración 9: Mockup juego](#ilustración-9-mockup-juego)
+- [Ilustración 10: Mockup tienda](#ilustración-10-mockup-tienda)
+- [Ilustración 11: Diagrama de flujo](#ilustración-11-diagrama-de-flujo)
+- [Ilustración 12: Siluetas personaje principal](#ilustración-12-siluetas-personaje-principal)
+- [Ilustración 13: Desarrollo concepts personaje principal](#ilustración-13-desarrollo-concepts-personaje-principal)
+- [Ilustración 14: Variación de color del personaje principal](#ilustración-14-variación-de-color-del-personaje-principal)
+- [Ilustración 15: Concepts Armas](#ilustración-15-concepts-armas)
+- [Ilustración 16: Escenario del mercader](#ilustración-16-escenario-del-mercader)
+- [Ilustración 17: Render modelado final](#ilustración-17-render-modelado-final)
+- [Ilustración 18: Skinning](#ilustración-18-skinning)
+- [Ilustración 19: Mapa de Empatía](#ilustración-19-mapa-de-empatía)
+- [Ilustración 20: Caja de herramientas](#ilustración-20-caja-de-herramientas)
+- [Ilustración 21: Lienzo de modelo de negocio](#ilustración-21-lienzo-de-modelo-de-negocio)
+- [Ilustración 22: Engagement rate individual](#ilustración-22-engagement-rate-individual)
+- [Ilustración 23: Engagement rate total](#ilustración-23-engagement-rate-total)
 
 ## 0. Historial de versiones
 En este apartado se reflejan las versiones del documento de diseño con sus respectivos cambios.
@@ -350,6 +351,10 @@ En nuestro juego, los jugadores se enfrentarán a una variedad de enemigos Tyrna
 
 El enemigo estándar. Este Tyrnaxiano se acercará directamente al jugador con el único objetivo de golpearlo cuerpo a cuerpo. Aunque no es muy rápido ni resistente, en grandes números puede convertirse en una amenaza considerable si no se le presta atención.
 
+![Ilustración 6: Concept primer enemigo](Elementos%20de%20Diseño/PrimerEnemigo/ConceptArt/bocetoAlienMario_1.png)
+
+#### Ilustración 6: Concept primer enemigo
+
 #### 3.7.2. Tyrnaxiano Rápido
 
 Este enemigo es más ágil que el Tyrnaxiano básico, moviéndose rápidamente hacia el jugador para intentar golpearlo. Aunque tiene menos salud, su velocidad lo convierte en una prioridad para ser eliminado rápidamente antes de que pueda hacer mucho daño.
@@ -406,9 +411,9 @@ Esta será la primera interfaz con la que los jugadores interactuarán al abrir 
 - **Tutorial**: Lleva la pantalla del tutorial.
 - **Acceso a Tienda**: Permite al jugador acceder a las compras de cosméticos o moneda del juego (Cristal Tyrnax).
 
-![Ilustración 6: Mockup menú principal](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Menu.jpeg)
+![Ilustración 7: Mockup menú principal](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Menu.jpeg)
 
-#### Ilustración 6: Mockup menú principal
+#### Ilustración 7: Mockup menú principal
 
 #### 5.1.3. Menú de pausa
 El menú principal aparece después de la pantalla de inicio o cuando el jugador presiona "pausa" durante el juego. En este menú, el jugador tendrá varias opciones:
@@ -417,9 +422,9 @@ El menú principal aparece después de la pantalla de inicio o cuando el jugador
 - **Opciones**: Lleva a la interfaz de ajustes del juego (sonido, controles, gráficos, etc...).
 - **Salir**: Vuelve a la pantalla de inicio o cierra el juego si está en pausa.
 
-![Ilustración 7: Mockup menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_MenuPausa.jpeg)
+![Ilustración 8: Mockup menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_MenuPausa.jpeg)
 
-#### Ilustración 7: Mockup menú de pausa
+#### Ilustración 8: Mockup menú de pausa
 
 #### 5.1.4. Pantalla de opciones
 El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el juego a su gusto. Las opciones estarán divididas en varias secciones:
@@ -447,9 +452,9 @@ Esta es la interfaz con la que los jugadores interactuarán durante la partida. 
 - **Botón de Pausa**: Lleva al menú de pausa para opciones adicionales o salir del juego.
 - **Pantalla de Personalización**: Accesible al inicio de la partida tocando un espejo.
 
-![Ilustración 8: Mockup juego](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Partida.jpeg)
+![Ilustración 9: Mockup juego](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Partida.jpeg)
 
-#### Ilustración 8: Mockup juego
+#### Ilustración 9: Mockup juego
 
 #### 5.1.8. Pantalla de fin de partida
 Al final de cada partida, aparecerá una pantalla de resumen que muestra el progreso del jugador:
@@ -463,9 +468,9 @@ La tienda es accesible desde el menú principal o en algunos momentos especiales
 - **Skins y Cosméticos**: Opciones de compra para personalización del personaje.
 - **Moneda del Juego**: Opción para comprar Cristal Tyrnax a través de microtransacciones.
 
-![Ilustración 9: Mockup tienda](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Microtransacciones.jpeg)
+![Ilustración 10: Mockup tienda](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Microtransacciones.jpeg)
 
-#### Ilustración 9: Mockup tienda
+#### Ilustración 10: Mockup tienda
   
 #### 5.1.10. Pantalla de ranking
 Esta interfaz muestra las clasificaciones semanales y globales de los jugadores en base a su progreso en las partidas.
@@ -475,9 +480,9 @@ Esta interfaz muestra las clasificaciones semanales y globales de los jugadores 
 ### 5.2. Diagrama de flujo
 En este apartado, abordaremos todas las pantallas principales que componen la experiencia del jugador dentro del juego, detallando sus funcionalidades y cómo interactúan entre sí. Cada pantalla ha sido diseñada con el objetivo de ofrecer una navegación clara, intuitiva y eficiente, permitiendo a los jugadores centrarse en la acción y progresar de manera fluida. Aquí describiremos pantallas clave como la de Inicio, Menú Principal, Opciones, Pantalla de Juego, Pantalla de Pausa, entre otras, explicando cómo cada una cumple su papel dentro del sistema general del juego y qué opciones ofrece al jugador.
 
-![Ilustración 10: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
+![Ilustración 11: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
 
-#### Ilustración 10: Diagrama de flujo
+#### Ilustración 11: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
@@ -488,28 +493,28 @@ Los personajes, enemigos y escenarios están diseñados con texturas detalladas 
 ### 6.2. Concept Art
 El concept art es la base visual del juego, donde se diseñan los personajes, escenarios y elementos clave. Esta fase sirve para visualizar ideas, definir estilos artísticos y establecer la atmósfera general que tendrá el juego. A continuación, se muestran algunos concepts de personajes, enemigos, armas… 
 
-![Ilustración 11: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
+![Ilustración 12: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
 
-#### Ilustración 11: Siluetas personaje principal
+#### Ilustración 12: Siluetas personaje principal
 
-![Ilustración 12: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
+![Ilustración 13: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
 
-#### Ilustración 12: Desarrollo concepts personaje principal
+#### Ilustración 13: Desarrollo concepts personaje principal
 
-![Ilustración 13: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
+![Ilustración 14: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
 
-#### Ilustración 13: Variación de color del personaje principal
+#### Ilustración 14: Variación de color del personaje principal
 
-![Ilustración 14: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
+![Ilustración 15: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
 
-#### Ilustración 14: Concepts Armas
+#### Ilustración 15: Concepts Armas
 
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
 
-![Ilustración 15: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
+![Ilustración 16: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
 
-#### Ilustración 15: Escenario del mercader
+#### Ilustración 16: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -520,9 +525,9 @@ La animación de escenarios introduce movimiento a los fondos y ambientes del ju
 ### 7.2. Personajes
 En la animación de personajes, se diseñan los movimientos y acciones que llevarán a cabo los protagonistas de la historia y enemigos. Desde caminatas hasta combates, esta etapa se enfoca en crear movimientos fluidos y realistas que conecten con la jugabilidad.
 
-![Ilustración 16: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
+![Ilustración 17: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
 
-#### Ilustración 16: Render modelado final
+#### Ilustración 17: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
@@ -530,9 +535,9 @@ El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse 
 #### 7.2.2. Skinning
 El skinning permite que, al mover los huesos del rig, la malla se deforme correctamente y el personaje se mueva de forma natural, respetando el diseño original y asegurando coherencia visual en los movimientos.
 
-![Ilustración 17: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
+![Ilustración 18: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
 
-#### Ilustración 17: Skinning
+#### Ilustración 18: Skinning
 
 ## 8. Audio
 El audio en **Echoes of Xyphoria** juega un papel fundamental en la inmersión del jugador en el universo espacial. La banda sonora tendrá una mezcla de música electrónica y espacial que acompaña el ritmo frenético de las partidas, intensificándose durante los momentos clave del combate.
@@ -588,23 +593,23 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 - Crear una experiencia entrañable para todo tipo de jugadores, tanto casuales como asiduos, con mecánicas únicas, divertidas y fáciles de entender. 
 - Permitir a los jugadores dar rienda suelta a su imaginación creando cosméticos que alteren el aspecto de partes del juego, actualizando el juego con contenidos nuevos cada vez.
 
-![Ilustración 18: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
+![Ilustración 19: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
 
-#### Ilustración 18: Mapa de Empatía
+#### Ilustración 19: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
-![Ilustración 19: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
+![Ilustración 20: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
 
-#### Ilustración 19: Caja de herramientas
+#### Ilustración 20: Caja de herramientas
 
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
 
-![Ilustración 20: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
+![Ilustración 21: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
 
-#### Ilustración 20: Lienzo de modelo de negocio
+#### Ilustración 21: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -652,13 +657,13 @@ Monitorear el alcance y las interacciones será crucial para ajustar nuestra est
 ### 11.6. Resultados
 Mediremos el engagement a través de herramientas de análisis en cada plataforma, evaluando la efectividad de nuestras publicaciones y ajustando la estrategia en función del rendimiento. Esto nos permitirá optimizar el crecimiento de la marca a largo plazo.
 
-![Ilustración 21: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
+![Ilustración 22: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
 
-#### Ilustración 21: Engagement rate individual
+#### Ilustración 22: Engagement rate individual
 
-![Ilustración 22: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
+![Ilustración 23: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
 
-#### Ilustración 22: Engagement rate total
+#### Ilustración 23: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
