@@ -1,6 +1,7 @@
 # **GDD (GAME DESIGN DOCUMENT)**
 
-## **Echoes of Xyphoria**
+![Ilustración 0: Título del juego](Elementos%20de%20Diseño/Titulo%20del%20Juego/EchosOfXyphoriaLeteringFINAL.png)
+
 
 *El espacio es un vasto océano de estrellas y misterio, donde la luz viaja por eternidades y los planetas giran en silenciosa armonía. Es un lienzo infinito, salpicado por galaxias lejanas, nebulosas brillantes, y la promesa de lo desconocido.* 
 
@@ -11,6 +12,8 @@
 *Es un lugar donde el tiempo parece detenerse, y a la vez, moverse a una escala inimaginable.* 
 
 *Nos invita a soñar, a preguntarnos sobre nuestro lugar en este inmenso tapiz cósmico y a explorar lo inexplorado, recordándonos que, aunque pequeños frente a su grandeza, nuestras ansias de descubrimiento no tienen límite.*
+
+![Ilustración 0.5: Logo de la empresa](Elementos%20de%20Diseño/Logo%20empresa/invLogo.png)
 
 # **Índice de contenidos**
 
