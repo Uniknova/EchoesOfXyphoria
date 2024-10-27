@@ -14,106 +14,97 @@
 
 # **Índice de contenidos**
 
-**0. Historial de versiones**  
-**1. Introducción**  
-**1.1. Concepto de juego**  
-**1.2. Descripción general**  
-**1.3. Género y ambientación**  
-**1.4. Jugabilidad**  
-**1.5. Estilo visual**  
-**1.6. Alcance, propósito y público objetivo**  
-**1.7. Detalles técnicos**  
-**1.8. Licencia**  
-**1.9. Motor de desarrollo**  
+## Índice de Contenidos
 
-**2. Trasfondo**  
-**2.1. Historia**  
-**2.2. Personajes**  
-**2.3. Escenarios y lugares**  
-**2.3.1. Cuartel de la resistencia**  
-**2.3.2. Ruinas de Xyphoria**  
-**2.3.3. Bahía de Arka**  
-**2.3.4. Ciudad Flotante de Aereth**  
-**2.3.5. Nido Tyrnax**  
-**2.3.6. Taller de Torko**  
+- [0 Historial de versiones](#0-historial-de-versiones)
+- [1 Introducción](#1-introducción)
+  - [1.1 Concepto de juego](#11-concepto-de-juego)
+  - [1.2 Descripción general](#12-descripción-general)
+  - [1.3 Género y ambientación](#13-género-y-ambientación)
+  - [1.4 Jugabilidad](#14-jugabilidad)
+  - [1.5 Estilo visual](#15-estilo-visual)
+  - [1.6 Alcance, propósito y público objetivo](#16-alcance-propósito-y-público-objetivo)
+  - [1.7 Detalles técnicos](#17-detalles-técnicos)
+  - [1.8 Licencia](#18-licencia)
+  - [1.9 Motor de desarrollo](#19-motor-de-desarrollo)
+- [2 Trasfondo](#2-trasfondo)
+  - [2.1 Historia](#21-historia)
+  - [2.2 Personajes](#22-personajes)
+  - [2.3 Escenarios y lugares](#23-escenarios-y-lugares)
+    - [2.3.1 Cuartel de la resistencia](#231-cuartel-de-la-resistencia)
+    - [2.3.2 Ruinas de Xyphoria](#232-ruinas-de-xyphoria)
+    - [2.3.3 Bahía de Arka](#233-bahía-de-arka)
+    - [2.3.4 Ciudad Flotante de Aereth](#234-ciudad-flotante-de-aereth)
+    - [2.3.5 Nido Tyrnax](#235-nido-tyrnax)
+    - [2.3.6 Taller de Torko](#236-taller-de-torko)
+- [3 Mecánicas de juego](#3-mecánicas-de-juego)
+  - [3.1 Flujo de juego (en qué consiste una partida)](#31-flujo-de-juego-en-qué-consiste-una-partida)
+  - [3.2 Cámara](#32-cámara)
+  - [3.3 Controles](#33-controles)
+  - [3.4 Puntuación y competitivo](#34-puntuación-y-competitivo)
+  - [3.5 Ventajas](#35-ventajas)
+    - [3.5.1 Razas y sus ventajas](#351-razas-y-sus-ventajas)
+  - [3.6 Mejoras](#36-mejoras)
+  - [3.7 Enemigos](#37-enemigos)
+    - [3.7.1 Tyrnaxiano Básico](#371-tyrnaxiano-básico)
+    - [3.7.2 Tyrnaxiano Rápido](#372-tyrnaxiano-rápido)
+    - [3.7.3 Tyrnaxiano Pesado](#373-tyrnaxiano-pesado)
+    - [3.7.4 Tyrnaxiano Tóxico](#374-tyrnaxiano-tóxico)
+    - [3.7.5 Jefe Tyrnaxiano](#375-jefe-tyrnaxiano)
+- [4 Comportamiento de personajes](#4-comportamiento-de-personajes)
+- [5 Interfaces](#5-interfaces)
+  - [5.1 Interfaces del juego](#51-interfaces-del-juego)
+    - [5.1.1 Pantalla de Inicio](#511-pantalla-de-inicio)
+    - [5.1.2 Menú principal](#512-menú-principal)
+    - [5.1.3 Menú de pausa](#513-menú-de-pausa)
+    - [5.1.4 Pantalla de opciones](#514-pantalla-de-opciones)
+    - [5.1.5 Pantalla de personalización](#515-pantalla-de-personalización)
+    - [5.1.6 Pantalla de tutorial](#516-pantalla-de-tutorial)
+    - [5.1.7 Pantalla de juego](#517-pantalla-de-juego)
+    - [5.1.8 Pantalla de Fin de Partida](#518-pantalla-de-fin-de-partida)
+    - [5.1.9 Pantalla de Tienda](#519-pantalla-de-tienda)
+    - [5.1.10 Pantalla de Ranking](#5110-pantalla-de-ranking)
+  - [5.2 Diagrama de flujo](#52-diagrama-de-flujo)
+- [6 Arte](#6-arte)
+  - [6.1 Estética general](#61-estética-general)
+  - [6.2 Concept Art](#62-concept-art)
+  - [6.3 Modelado 3D](#63-modelado-3d)
+- [7 Animación](#7-animación)
+  - [7.1 Escenario](#71-escenario)
+  - [7.2 Personajes](#72-personajes)
+    - [7.2.1 Rigging](#721-rigging)
+    - [7.2.2 Skinning](#722-skinning)
+- [8 Audio](#8-audio)
+  - [8.1 Sonido ambiente y música](#81-sonido-ambiente-y-música)
+  - [8.2 Efectos de sonido](#82-efectos-de-sonido)
+- [9 Modelo de negocio y monetización](#9-modelo-de-negocio-y-monetización)
+  - [9.1 Modelo de negocio](#91-modelo-de-negocio)
+  - [9.2 Monetización](#92-monetización)
+  - [9.3 Mapa de empatía](#93-mapa-de-empatía)
+  - [9.4 Caja de herramientas](#94-caja-de-herramientas)
+  - [9.5 Lienzo de modelo de negocio](#95-lienzo-de-modelo-de-negocio)
+- [10 Marketing](#10-marketing)
+  - [10.1 Relación con la competencia](#101-relación-con-la-competencia)
+  - [10.2 Marketing Digital](#102-marketing-digital)
+  - [10.3 Publicidad disruptiva](#103-publicidad-disruptiva)
+  - [10.4 Posicionamiento de la marca y competitividad](#104-posicionamiento-de-la-marca-y-competitividad)
+  - [10.5 Resumen de la estrategia](#105-resumen-de-la-estrategia)
+- [11 Redes sociales](#11-redes-sociales)
+  - [11.1 Misión](#111-misión)
+  - [11.2 Meta](#112-meta)
+  - [11.3 Objetivos](#113-objetivos)
+  - [11.4 Tácticas](#114-tácticas)
+  - [11.5 Control](#115-control)
+  - [11.6 Resultados](#116-resultados)
+- [12 Herramientas utilizadas](#12-herramientas-utilizadas)
+  - [12.1 Herramientas para la comunicación del equipo](#121-herramientas-para-la-comunicación-del-equipo)
+  - [12.2 Herramientas destinadas a la gestión del proyecto](#122-herramientas-destinadas-a-la-gestión-del-proyecto)
+  - [12.3 Herramientas destinadas al diseño](#123-herramientas-destinadas-al-diseño)
+  - [12.4 Herramientas de desarrollo](#124-herramientas-de-desarrollo)
+  - [12.5 Inteligencia Artificial](#125-inteligencia-artificial)
+- [13 Ludografía](#13-ludografía)
+- [14 Webgrafía](#14-webgrafía)
 
-**3. Mecánicas de juego**  
-**3.1. Flujo de juego (en qué consiste una partida)**  
-**3.2. Cámara**  
-**3.3. Controles**  
-**3.4. Puntuación y competitivo**  
-**3.5. Ventajas**  
-**3.5.1. Razas y sus ventajas**  
-**3.6. Mejoras**  
-**3.7. Enemigos**  
-**3.7.1. Tyrnaxiano Básico**  
-**3.7.2. Tyrnaxiano Rápido**  
-**3.7.3. Tyrnaxiano Pesado**  
-**3.7.4. Tyrnaxiano Tóxico**  
-**3.7.5. Jefe Tyrnaxiano**  
-
-**4. Comportamiento de personajes**  
-
-**5. Interfaces**  
-**5.1. Interfaces del juego**  
-**5.1.1. Pantalla de Inicio**  
-**5.1.2. Menú principal**  
-**5.1.3. Menú de pausa**  
-**5.1.4. Pantalla de opciones**  
-**5.1.5. Pantalla de personalización**  
-**5.1.6. Pantalla de tutorial**  
-**5.1.7. Pantalla de juego**  
-**5.1.8. Pantalla de Fin de Partida**  
-**5.1.9. Pantalla de Tienda**  
-**5.1.10. Pantalla de Ranking**  
-**5.2. Diagrama de flujo**  
-
-**6. Arte**  
-**6.1. Estética general**  
-**6.2. Concept Art**  
-**6.3. Modelado 3D**  
-
-**7. Animación**  
-**7.1. Escenario**  
-**7.2. Personajes**  
-**7.2.1. Rigging**  
-**7.2.2. Skinning**  
-
-**8. Audio**  
-**8.1. Sonido ambiente y música**  
-**8.2. Efectos de sonido**  
-
-**9. Modelo de negocio y monetización**  
-**9.1. Modelo de negocio**  
-**9.2. Monetización**  
-**9.3. Mapa de empatía**  
-**9.4. Caja de herramientas**  
-**9.5. Lienzo de modelo de negocio**  
-
-**10. Marketing**  
-**10.1. Relación con la competencia**  
-**10.2. Marketing Digital**  
-**10.3. Publicidad disruptiva**  
-**10.4. Posicionamiento de la marca y competitividad**  
-**10.5. Resumen de la estrategia**  
-
-**11. Redes sociales**  
-**11.1. Misión**  
-**11.2. Meta**  
-**11.3. Objetivos**  
-**11.4. Tácticas**  
-**11.5. Control**  
-**11.6. Resultados**  
-
-**12. Herramientas utilizadas**  
-**12.1. Herramientas para la comunicación del equipo**  
-**12.2. Herramientas destinadas a la gestión del proyecto**  
-**12.3. Herramientas destinadas al diseño**  
-**12.4. Herramientas de desarrollo**  
-**12.5. Inteligencia Artificial**  
-
-**13. Ludografía**  
-**14. Webgrafía**
 
 # **Índice de figuras**
 
@@ -180,7 +171,7 @@ El juego ha sido clasificado como PEGI 12. Esto se debe a que el juego contiene 
 
 ![Ilustración 1: PEGI 12](Elementos%20de%20Diseño/ElementosModeloNegocio/PEGI.jpg)
 
-# Ilustración 1: PEGI 12
+#### Ilustración 1: PEGI 12
 
 El juego está diseñado para ser jugado en navegadores web, lo que permite un amplio alcance en términos de dispositivos y plataformas. Además, habrá soporte para actualizaciones periódicas, con la inclusión de nuevos enemigos, armas y mejoras.
 
@@ -217,19 +208,19 @@ La batalla por el futuro del universo ha comenzado, y Terry el terrícola es la 
 
 ![Ilustración 2: Beauty Terry](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/BeautyPersonaje.jpg)
 
-# Ilustración 2: Beauty de Terry
+#### Ilustración 2: Beauty de Terry
 
 - **Torko**: Líder indiscutible de la resistencia contra los tiránicos Tyrnaxianos, y el último sobreviviente de su especie. Su imponente presencia y vasto conocimiento del universo lo han convertido en una leyenda viva entre las razas aliadas. Aunque ha sufrido grandes pérdidas, su sabiduría y determinación serán esenciales para guiar al protagonista en la lucha final contra el imperio de Tyrnax. Su deseo de restaurar la paz es tan grande como su fuerza, y su liderazgo inspirará a todo aquel que luche a su lado.
 
 ![Ilustración 3: Beauty de Torko](Elementos%20de%20Diseño/Mercader/Beauty-Mercader-Torco.png)
 
-# Ilustración 3: Beauty de Torko
+#### Ilustración 3: Beauty de Torko
 
 - **Nimby**: Pequeño, enérgico y soñador, Nimby es el inseparable aprendiz de Torko. Aunque es torpe y un poco holgazán, su ambición de convertirse en alguien tan fuerte y sabio como su mentor lo mantiene siempre lleno de entusiasmo. Pese a su tendencia a meterse en problemas, Nimby tiene un corazón puro y leal. Siempre dispuesto a ayudar, sus buenas intenciones y su inquebrantable fe en Torko lo convierten en un invaluable compañero, aunque sus travesuras a menudo traigan más problemas que soluciones.
 
 ![Ilustración 4: Beauty de Nimby](Elementos%20de%20Diseño/Aprendiz/Concept%20Art%20del%20Aprendiz/BeautyAprendiz.jpg)
 
-# Ilustración 4: Beauty de Nimby
+#### Ilustración 4: Beauty de Nimby
 
 ### 2.3 Escenarios y lugares
 
@@ -267,7 +258,7 @@ Además de su papel narrativo en la historia, el Taller de Torko es fundamental 
 
 ![Ilustración 5: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
 
-# Ilustración 5: Beauty escenario mercader
+#### Ilustración 5: Beauty escenario mercader
 
 ## 3. Mecánicas de juego
 
@@ -360,13 +351,20 @@ El enemigo estándar. Este Tyrnaxiano se acercará directamente al jugador con e
 
 Este enemigo es más ágil que el Tyrnaxiano básico, moviéndose rápidamente hacia el jugador para intentar golpearlo. Aunque tiene menos salud, su velocidad lo convierte en una prioridad para ser eliminado rápidamente antes de que pueda hacer mucho daño.
 
-#### 3.7.3. Tyrnaxiano Volador
+#### 3.7.3. Tyrnaxiano Pesado
 
-Un enemigo que se desplaza por el aire y ataca al jugador desde la distancia. Estos Tyrnaxianos voladores lanzan proyectiles que pueden ser difíciles de esquivar en situaciones complicadas. Aunque no son muy resistentes, su capacidad de atacar desde lejos los convierte en una amenaza molesta si no se les enfrenta a tiempo.
+Un enemigo corpulento y resistente, este Tyrnaxiano tiene una gran cantidad de salud, lo que lo convierte en un verdadero desafío a la hora de derrotarlo. Aunque es más lento, su capacidad para absorber daño puede desestabilizar al jugador, ya que deberá dedicar más tiempo y esfuerzo en eliminarlo. Representa una barrera que puede complicar la estrategia si no se gestiona bien.
 
-#### 3.7.4. Tyrnaxiano Tanque
+#### 3.7.4. Tyrnaxiano Tóxico
 
-Estos enemigos son más grandes, más lentos y mucho más resistentes que otros Tyrnaxianos. Pueden soportar una gran cantidad de daño antes de caer, y su objetivo principal es absorber los ataques del jugador mientras los otros enemigos más débiles lo atacan. Además, los Tanques tienen un ataque cuerpo a cuerpo devastador que puede causar mucho daño si el jugador no lo esquiva.
+Este enemigo no solo atacará al jugador, sino que dejará un rastro de daño a lo largo del tiempo si logra acertar un golpe. Su ataque envenena al jugador, lo que significa que incluso después de evitar el contacto, el jugador seguirá perdiendo salud durante un corto período de tiempo. Esto añade una capa extra de dificultad, ya que necesitarás mantener la distancia para evitar el veneno y mantener la calma si te alcanza.
+
+#### 3.7.5. Jefe Tyrnaxiano
+El jefe final en algunas salas especiales será una versión mejorada de los Tyrnaxianos. Este boss combina las habilidades de todos los tipos de enemigos anteriores:
+- Tiene la resistencia del Tyrnaxiano Pesado, por lo que será difícil eliminarlo rápidamente.
+- Se moverá con la velocidad del Tyrnaxiano Rápido, acercándose al jugador con rapidez.
+- Infligirá daño de veneno como el Tyrnaxiano Tóxico, obligando al jugador a estar alerta constante.
+- Además, este jefe tendrá la capacidad de disparar proyectiles a distancia, añadiendo un nuevo desafío, ya que el jugador deberá esquivar tanto ataques cuerpo a cuerpo como los disparos.
 
 ## 4. Comportamiento de personajes
 Para dar vida a la zona del mercader, hemos decidido implementar un sistema dinámico que refleje un ecosistema vivo lleno de detalles y comportamientos que aporten realismo y profundidad al entorno. Para incluir comportamiento de personajes en nuestro proyecto, hemos pensado usar máquinas de estados finitos, árboles de comportamiento y sistemas de utilidad.
@@ -407,7 +405,7 @@ Esta será la primera interfaz con la que los jugadores interactuarán al abrir 
 
 ![Ilustración 6: Mockup menú principal](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Menu.jpeg)
 
-# Ilustración 6: Mockup menú principal
+#### Ilustración 6: Mockup menú principal
 
 #### 5.1.3. Menú de pausa
 El menú principal aparece después de la pantalla de inicio o cuando el jugador presiona "pausa" durante el juego. En este menú, el jugador tendrá varias opciones:
@@ -418,7 +416,7 @@ El menú principal aparece después de la pantalla de inicio o cuando el jugador
 
 ![Ilustración 7: Mockup menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_MenuPausa.jpeg)
 
-# Ilustración 7: Mockup menú de pausa
+#### Ilustración 7: Mockup menú de pausa
 
 #### 5.1.4. Pantalla de opciones
 El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el juego a su gusto. Las opciones estarán divididas en varias secciones:
@@ -448,7 +446,7 @@ Esta es la interfaz con la que los jugadores interactuarán durante la partida. 
 
 ![Ilustración 8: Mockup juego](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Partida.jpeg)
 
-# Ilustración 8: Mockup juego
+#### Ilustración 8: Mockup juego
 
 #### 5.1.8. Pantalla de fin de partida
 Al final de cada partida, aparecerá una pantalla de resumen que muestra el progreso del jugador:
@@ -464,7 +462,7 @@ La tienda es accesible desde el menú principal o en algunos momentos especiales
 
 ![Ilustración 9: Mockup tienda](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Microtransacciones.jpeg)
 
-# Ilustración 9: Mockup tienda
+#### Ilustración 9: Mockup tienda
   
 #### 5.1.10. Pantalla de ranking
 Esta interfaz muestra las clasificaciones semanales y globales de los jugadores en base a su progreso en las partidas.
@@ -476,7 +474,7 @@ En este apartado, abordaremos todas las pantallas principales que componen la ex
 
 ![Ilustración 10: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
 
-# Ilustración 10: Diagrama de flujo
+#### Ilustración 10: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
@@ -489,26 +487,26 @@ El concept art es la base visual del juego, donde se diseñan los personajes, es
 
 ![Ilustración 11: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
 
-# Ilustración 11: Siluetas personaje principal
+#### Ilustración 11: Siluetas personaje principal
 
 ![Ilustración 12: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
 
-# Ilustración 12: Desarrollo concepts personaje principal
+#### Ilustración 12: Desarrollo concepts personaje principal
 
 ![Ilustración 13: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
 
-# Ilustración 13: Variación de color del personaje principal
+#### Ilustración 13: Variación de color del personaje principal
 
 ![Ilustración 14: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
 
-# Ilustración 14: Concepts Armas
+#### Ilustración 14: Concepts Armas
 
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
 
 ![Ilustración 15: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
 
-# Ilustración 15: Escenario del mercader
+#### Ilustración 15: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -516,22 +514,22 @@ La animación da vida a los modelos 3D, permitiendo que los personajes y element
 ### 7.1. Escenario
 La animación de escenarios introduce movimiento a los fondos y ambientes del juego, añadiendo dinamismo y profundidad. Elementos como luces, sombras, objetos interactivos y fenómenos naturales ayudan a que el mundo del juego se sienta más vivo.
 
-### 7.1. Personajes
+### 7.2. Personajes
 En la animación de personajes, se diseñan los movimientos y acciones que llevarán a cabo los protagonistas de la historia y enemigos. Desde caminatas hasta combates, esta etapa se enfoca en crear movimientos fluidos y realistas que conecten con la jugabilidad.
 
 ![Ilustración 16: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
 
-# Ilustración 16: Render modelado final
+#### Ilustración 16: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
 
-#### 7.2.1. Skinning
+#### 7.2.2. Skinning
 El skinning permite que, al mover los huesos del rig, la malla se deforme correctamente y el personaje se mueva de forma natural, respetando el diseño original y asegurando coherencia visual en los movimientos.
 
 ![Ilustración 17: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
 
-# Ilustración 17: Skinning
+#### Ilustración 17: Skinning
 
 ## 8. Audio
 El audio en **Echoes of Xyphoria** juega un papel fundamental en la inmersión del jugador en el universo espacial. La banda sonora tendrá una mezcla de música electrónica y espacial que acompaña el ritmo frenético de las partidas, intensificándose durante los momentos clave del combate.
@@ -589,21 +587,21 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 
 ![Ilustración 18: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
 
-# Ilustración 18: Mapa de Empatía
+#### Ilustración 18: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
 ![Ilustración 19: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
 
-# Ilustración 19: Caja de herramientas
+#### Ilustración 19: Caja de herramientas
 
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
 
 ![Ilustración 20: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
 
-# Ilustración 20: Lienzo de modelo de negocio
+#### Ilustración 20: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -653,11 +651,11 @@ Mediremos el engagement a través de herramientas de análisis en cada plataform
 
 ![Ilustración 21: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
 
-# Ilustración 21: Engagement rate individual
+#### Ilustración 21: Engagement rate individual
 
 ![Ilustración 22: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
 
-# Ilustración 22: Engagement rate total
+#### Ilustración 22: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
