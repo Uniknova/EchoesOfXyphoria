@@ -20,7 +20,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     public float dashSpeed;
     public float dashTime;
 
-    public enum type { Normal, Dash}
+    public enum type { Normal, Dash, Poison}
     public type tipo;
     Coroutine FireC;
     Coroutine SpeedDownC;
@@ -95,6 +95,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         if (other.gameObject.GetComponentInParent<Player>())
         {
             other.gameObject.GetComponentInParent<Player>().TakeDamage(damage);
+
+            if (tipo == type.Poison) other.gameObject.GetComponentInParent<Player>().PoisonPlayer(damage);
         }
     }
     //private void OnCollisionEnter(Collision collision)
@@ -210,4 +212,5 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     {
         this.pool = pool;
     }
+
 }

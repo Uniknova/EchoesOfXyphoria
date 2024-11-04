@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEditor;
 using UnityEngine;
+using Color = UnityEngine.Color;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class Player : MonoBehaviour
     public List<IDeathPower> deathPowers;
     public int indexWeapon;
     public bool lowHp;
+    MeshRenderer render;
+    Color color;
+
+    Coroutine PoisonC;
 
     public bool gravedad;
 
@@ -53,6 +59,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        render = GetComponentInChildren<MeshRenderer>();
+        color = render.material.color;
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
         deathPowers = new List<IDeathPower>();
@@ -175,6 +183,26 @@ public class Player : MonoBehaviour
             weapon.fireRate *= 3;
             speed *= 2;
             lowHp = true;
+        }
+    }
+
+    public void PoisonPlayer(float damage)
+    {
+        if (PoisonC != null)
+        {
+            StopCoroutine(PoisonC);
+        }
+        PoisonC = StartCoroutine(PoisonCoroutine(damage * 0.2f));
+    }
+
+    IEnumerator PoisonCoroutine(float damage)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            render.material.color = Color.green;
+            yield return new WaitForSeconds(0.5f);
+            render.material.color = color;
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }
