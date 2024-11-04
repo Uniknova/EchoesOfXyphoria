@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,16 +12,25 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     public float hp;
     public float maxhp;
-    public float dano;
+    public float damage;
     public float speed;
     public float speedDown;
     public float fireDamage;
+
+    public float dashSpeed;
+    public float dashTime;
+
+    public enum type { Normal, Dash}
+    public type tipo;
     Coroutine FireC;
     Coroutine SpeedDownC;
+    Coroutine DashC;
     MeshRenderer render;
     Color color;
     Player player;
-    RaycastWeapon playerWeapon;
+
+    public EnemyScriptableObject enemyScriptableObject;
+    //RaycastWeapon playerWeapon;
 
     public IObjectPool pool;
 
@@ -41,14 +52,24 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     // Start is called before the first frame update
     void Start()
     {
-        hp = 100;
+        maxhp = enemyScriptableObject.health;
+        hp = maxhp;
+        damage = enemyScriptableObject.damage;
+        speed = enemyScriptableObject.speed;
+        speedDown = enemyScriptableObject.speedDown;
+        fireDamage = enemyScriptableObject.fireDamage;
+        tipo = (type)enemyScriptableObject.tipo;
+
+
+
+        //hp = 100;
         render = GetComponent<MeshRenderer>();
         player = FindAnyObjectByType<Player>();
-        playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
+        //playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
         color = render.material.color;
         Agent = GetComponent<NavMeshAgent>();
-        speed = 3.5f;
-        speedDown = 1.5f;
+        //speed = 3.5f;
+        //speedDown = 1.5f;
         Agent.speed = speed;
     }
 
@@ -73,7 +94,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     {
         if (other.gameObject.GetComponentInParent<Player>())
         {
-            other.gameObject.GetComponentInParent<Player>().TakeDamage(dano);
+            other.gameObject.GetComponentInParent<Player>().TakeDamage(damage);
         }
     }
     //private void OnCollisionEnter(Collision collision)
@@ -87,6 +108,16 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     public void TakeDamage(float damage)
     {
         hp -= damage;
+
+        if (tipo == type.Dash)
+        {
+            Debug.Log("Entra");
+            if (DashC == null)
+            {
+                Debug.Log("Dash");
+                DashC = StartCoroutine(DashCoroutine());
+            }
+        }
         if (hp <= 0)
         {
             Death();
@@ -111,7 +142,20 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         SpeedDownC = StartCoroutine(SpeedDownCoroutine());
     }
 
-    IEnumerator FireCoroutine(float damage)
+    IEnumerator DashCoroutine()
+    {
+        float startTime = Time.time;
+
+        while (Time.time < startTime + dashTime)
+        {
+            Debug.Log("Corutina");
+            Agent.Move(Agent.transform.forward * dashSpeed * Time.deltaTime);
+
+            yield return null;
+        }
+    }
+
+    IEnumerator FireCoroutine(float fire)
     {
         for (int i = 0; i < 3; i++)
         {

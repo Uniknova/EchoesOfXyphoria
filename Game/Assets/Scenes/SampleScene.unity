@@ -771,10 +771,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 50
   maxhp: 0
-  dano: 20
+  damage: 0
   speed: 0
   speedDown: 0
   fireDamage: 0
+  dashSpeed: 20
+  dashTime: 0.25
+  tipo: 0
+  enemyScriptableObject: {fileID: 11400000, guid: 39ee87d6ab88fba4db9ba37f4b1710f5, type: 2}
   Agent: {fileID: 0}
 --- !u!65 &848036198
 BoxCollider:
@@ -918,6 +922,7 @@ MonoBehaviour:
   SpawnDelay: 1
   Enemies:
   - {fileID: 3943398568742568109, guid: d255bf8548c083b4fb2ae4377ce1e000, type: 3}
+  - {fileID: 5793087854851444703, guid: 2569edbc331d74242bd6bae5d3b0da08, type: 3}
   EnemySpawn: 1
 --- !u!4 &901900706
 Transform:

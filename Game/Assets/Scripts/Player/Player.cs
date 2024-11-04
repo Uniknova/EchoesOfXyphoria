@@ -140,9 +140,6 @@ public class Player : MonoBehaviour
             weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
             weapon.enabled = true;
         }
-        Debug.Log(controller.transform.localPosition);
-        //gravedad = true;
-        Debug.Log(controller.transform.localPosition);
     }
 
     public void PlayerHealth(float health)
