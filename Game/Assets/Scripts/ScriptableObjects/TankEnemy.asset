@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b710217cd4c6c354094bdc0ef13c1f93, type: 3}
-  m_Name: Normal Enemy
+  m_Name: TankEnemy
   m_EditorClassIdentifier: 
-  health: 100
-  damage: 20
-  speed: 3.5
-  speedDown: 1.5
+  health: 200
+  damage: 40
+  speed: 2.5
+  speedDown: 1
   fireDamage: 0.5
-  armor: 0
-  tipo: 0
+  armor: 10
+  tipo: 3

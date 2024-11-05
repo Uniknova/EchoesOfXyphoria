@@ -12,7 +12,8 @@ public class EnemyScriptableObject : ScriptableObject
     public float speed = 3.5f;
     public float speedDown = 1.5f;
     public float fireDamage = 0.5f;
-    public enum type { Normal, Dash, Poison };
+    public float armor = 0;
+    public enum type { Normal, Dash, Poison, Tank };
     public type tipo = type.Normal;
 
     //Agent Config

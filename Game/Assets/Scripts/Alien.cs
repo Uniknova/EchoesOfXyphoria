@@ -16,11 +16,14 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     public float speed;
     public float speedDown;
     public float fireDamage;
+    public float armor;
+
+    public float dashProb;
 
     public float dashSpeed;
     public float dashTime;
 
-    public enum type { Normal, Dash, Poison}
+    public enum type { Normal, Dash, Poison, Tank }
     public type tipo;
     Coroutine FireC;
     Coroutine SpeedDownC;
@@ -58,6 +61,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         speed = enemyScriptableObject.speed;
         speedDown = enemyScriptableObject.speedDown;
         fireDamage = enemyScriptableObject.fireDamage;
+        armor = enemyScriptableObject.armor;
         tipo = (type)enemyScriptableObject.tipo;
 
 
@@ -109,17 +113,19 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     public void TakeDamage(float damage)
     {
-        hp -= damage;
+
 
         if (tipo == type.Dash)
         {
-            Debug.Log("Entra");
-            if (DashC == null)
+            if (Random.Range(0, 1) <= dashProb && DashC == null)
             {
-                Debug.Log("Dash");
                 DashC = StartCoroutine(DashCoroutine());
+                return;
             }
         }
+
+        float aux = Mathf.Max(1, damage - armor);
+        hp -= aux;
         if (hp <= 0)
         {
             Death();
@@ -155,6 +161,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
             yield return null;
         }
+
+        DashC = null;
     }
 
     IEnumerator FireCoroutine(float fire)

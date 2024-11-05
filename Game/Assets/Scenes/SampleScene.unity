@@ -775,6 +775,8 @@ MonoBehaviour:
   speed: 0
   speedDown: 0
   fireDamage: 0
+  armor: 0
+  dashProb: 0
   dashSpeed: 20
   dashTime: 0.25
   tipo: 0
@@ -923,6 +925,8 @@ MonoBehaviour:
   Enemies:
   - {fileID: 3943398568742568109, guid: d255bf8548c083b4fb2ae4377ce1e000, type: 3}
   - {fileID: 5793087854851444703, guid: 2569edbc331d74242bd6bae5d3b0da08, type: 3}
+  - {fileID: 1497513146223758179, guid: d118bb17c0a18204bb52e445167e8ed4, type: 3}
+  - {fileID: 8379689144794349005, guid: 6c2e829eebb36e34ebb06f3391b5333a, type: 3}
   EnemySpawn: 1
 --- !u!4 &901900706
 Transform:
