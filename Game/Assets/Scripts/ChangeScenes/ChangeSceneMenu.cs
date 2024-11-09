@@ -26,6 +26,15 @@ public class ChangeSceneMenu : MonoBehaviour
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_NEXT);
         SceneManager.LoadScene(3);
     }
+
+    public void LoadTutorial()
+    {
+        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_NEXT);
+        Time.timeScale = 1f;
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_TUTORIAL);
+
+    }
+
     public void LoadMenu ()
     {
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);

@@ -33,8 +33,9 @@ public class TransitionManager : MonoBehaviour
     public const string SCENE_LOBBY = "Lobby";
     public const string SCENE_GAME = "SampleScene";
     //public const string SCENE_GAME = "Procedural";
-    public const string SCENE_MENU = "Menu";
+    public const string SCENE_MENU = "Menu3D";
     public const string SCENE_NEXT = "Proximamente";
+    public const string SCENE_TUTORIAL = "Tutorial";
 
     public Slider progressSlider;
     public TextMeshProUGUI progressLabel;
