@@ -71,6 +71,7 @@ public class ObjectPool : IObjectPool
     {
         IPooleableObject obj = prefab.Clone();
         obj.Active = false;
+        obj.SetPool(this);
         return obj;
     }
 

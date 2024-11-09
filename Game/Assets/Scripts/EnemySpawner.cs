@@ -69,8 +69,8 @@ public class EnemySpawner : MonoBehaviour
         if (alien != null)
         {
             //Alien alien = (Alien)pooleableObject;
-            
 
+            //alien.SetPool(EnemyObjectPools[index]);
             int VertexIndex = Random.Range(0, Triangulation.vertices.Length);
 
             NavMeshHit Hit;

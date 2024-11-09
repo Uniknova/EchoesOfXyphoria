@@ -188,6 +188,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     public void Death()
     {
+        pool?.Release(this);
         player.UpdateDeathPowers();
 
     }
@@ -196,7 +197,14 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     {
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
+        maxhp = enemyScriptableObject.health;
         hp = maxhp;
+        damage = enemyScriptableObject.damage;
+        speed = enemyScriptableObject.speed;
+        speedDown = enemyScriptableObject.speedDown;
+        fireDamage = enemyScriptableObject.fireDamage;
+        armor = enemyScriptableObject.armor;
+        tipo = (type)enemyScriptableObject.tipo;
         Agent.speed = speed;
     }
 
