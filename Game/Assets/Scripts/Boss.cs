@@ -6,6 +6,27 @@ using UnityEngine.AI;
 
 public class Boss : MonoBehaviour, IEnemy
 {
+    public float hp;
+    public float maxhp;
+    public float damage;
+    public float speed;
+    public float speedDown;
+    public float fireDamage;
+    public float armor;
+
+    public float dashProb;
+
+    public float dashSpeed;
+    public float dashTime;
+
+    Coroutine FireC;
+    Coroutine SpeedDownC;
+    Coroutine DashC;
+    MeshRenderer render;
+    Color color;
+
+    public EnemyScriptableObject enemyScriptableObject;
+
 
     public NavMeshAgent agent;
     public Bullet bulletPrefab;
@@ -34,11 +55,6 @@ public class Boss : MonoBehaviour, IEnemy
         throw new System.NotImplementedException();
     }
 
-    public void Fire()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void Reset()
     {
         return;
@@ -50,18 +66,34 @@ public class Boss : MonoBehaviour, IEnemy
         throw new System.NotImplementedException();
     }
 
-    public void SpeedDown()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void TakeDamage(float damage)
     {
-        throw new System.NotImplementedException();
+        if (Random.Range(0, 1) <= dashProb && DashC == null)
+        {
+            DashC = StartCoroutine(DashCoroutine());
+            return;
+        }
+
+        float aux = Mathf.Max(1, damage - armor);
+        hp -= aux;
+        if (hp <= 0)
+        {
+            Death();
+        }
     }
 
     private void Awake()
     {
+        maxhp = enemyScriptableObject.health;
+        hp = maxhp;
+        damage = enemyScriptableObject.damage;
+        speed = enemyScriptableObject.speed;
+        speedDown = enemyScriptableObject.speedDown;
+        fireDamage = enemyScriptableObject.fireDamage;
+        armor = enemyScriptableObject.armor;
+        render = GetComponent<MeshRenderer>();
+        color = render.material.color;
+
         bulletPool = new ObjectPool(bulletPrefab, 0, true, 30);
         player = FindAnyObjectByType<Player>();
         col = GetComponent<SphereCollider>();
@@ -96,6 +128,70 @@ public class Boss : MonoBehaviour, IEnemy
 
             yield return Wait;
         }
+    }
+    public void Fire()
+    {
+        if (FireC != null)
+        {
+            StopCoroutine(FireC);
+        }
+        FireC = StartCoroutine(FireCoroutine(fireDamage));
+    }
+    public void SpeedDown()
+    {
+        if (SpeedDownC != null)
+        {
+            StopCoroutine(SpeedDownC);
+        }
+        SpeedDownC = StartCoroutine(SpeedDownCoroutine());
+    }
+
+    IEnumerator DashCoroutine()
+    {
+        float startTime = Time.time;
+
+        Vector3 direction;
+
+        int idx = Random.Range(0, 3);
+
+        if (idx == 0) direction = -agent.transform.forward;
+        else if (idx == 1) direction = agent.transform.right;
+        else direction = -agent.transform.right;
+
+        while (Time.time < startTime + dashTime)
+        {
+            agent.Move(direction * dashSpeed * Time.deltaTime);
+
+            yield return null;
+        }
+
+        DashC = null;
+    }
+
+    IEnumerator FireCoroutine(float fire)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Debug.Log("Hola");
+            render.material.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            render.material.color = color;
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    IEnumerator SpeedDownCoroutine()
+    {
+        agent.speed = speedDown;
+        render.material.color = Color.cyan;
+        yield return new WaitForSeconds(3);
+        agent.speed = speed;
+        render.material.color = color;
+    }
+
+    public void Death()
+    {
+        player.UpdateDeathPowers();
     }
 
     public void StartRotating()
@@ -164,7 +260,12 @@ public class Boss : MonoBehaviour, IEnemy
         }
         if (player != null)
         {
-            if (agent.enabled)
+            if (agent.enabled && Vector3.Distance(player.transform.GetChild(0).transform.position, agent.transform.position) < (agent.stoppingDistance - 0.5f))
+            {
+                Vector3 direction = player.transform.GetChild(0).transform.position - agent.transform.position;
+                agent.velocity = Vector3.Lerp(agent.desiredVelocity, -direction.normalized * agent.speed, 1);
+            }
+            else if (agent.enabled)
             {
                 agent.SetDestination(player.transform.GetChild(0).transform.position);
             }
