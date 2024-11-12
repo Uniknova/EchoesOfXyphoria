@@ -60,7 +60,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         render = GetComponentInChildren<MeshRenderer>();
-        color = render.material.color;
+        if (render!=null)
+            color = render.material.color;
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
         deathPowers = new List<IDeathPower>();

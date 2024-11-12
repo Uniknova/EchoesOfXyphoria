@@ -1054,6 +1054,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133f790b67a71cd4098d48c514b3cd7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseBotton: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  settingsInGame: {fileID: 0}
+  coinShopInterface: {fileID: 0}
+  moreCoins: {fileID: 0}
 --- !u!1 &964516465
 GameObject:
   m_ObjectHideFlags: 0

@@ -73,7 +73,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         player = FindAnyObjectByType<Player>();
         match = FindAnyObjectByType<MatchInfo>();
         //playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
-        color = render.material.color;
+        if (render!=null)
+            color = render.material.color;
         Agent = GetComponent<NavMeshAgent>();
         //speed = 3.5f;
         //speedDown = 1.5f;
@@ -173,9 +174,11 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         for (int i = 0; i < 3; i++)
         {
             Debug.Log("Hola");
-            render.material.color = Color.red;
+            if (render != null)
+                render.material.color = Color.red;
             yield return new WaitForSeconds(0.5f);
-            render.material.color = color;
+            if (render != null)
+                render.material.color = color;
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -183,10 +186,12 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     IEnumerator SpeedDownCoroutine()
     {
         Agent.speed = speedDown;
-        render.material.color = Color.cyan;
+        if (render != null)
+            render.material.color = Color.cyan;
         yield return new WaitForSeconds(3);
         Agent.speed = speed;
-        render.material.color = color;
+        if (render != null)
+            render.material.color = color;
     }
 
     public void Death()
