@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
+
 public class TransitionManager : MonoBehaviour
 {
     private static TransitionManager instance;
