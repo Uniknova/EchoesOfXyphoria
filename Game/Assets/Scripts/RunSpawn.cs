@@ -11,8 +11,10 @@ public class RunSpawn : MonoBehaviour
     [SerializeField] List<GameObject> roomPrefabs;
     [SerializeField] GameObject roomInit;
     [SerializeField] GameObject roomBoss;
+    Vector2Int actualRoom;
     public Transform world;
     public List<GameObject> rooms;
+    public Dictionary<Vector2Int, GameObject> roomsDictionary;
 
     [HideInInspector] public HashSet<Vector2Int> roomsToSpawn;
     Vector2Int furthestRoom; //habitacion mas lejana para el boss
@@ -34,6 +36,7 @@ public class RunSpawn : MonoBehaviour
         runnersDirection = new List<Vector2Int>();
         roomsToSpawn = new HashSet<Vector2Int> ();
         rooms = new List<GameObject>();
+        roomsDictionary = new Dictionary<Vector2Int, GameObject>();
     }
 
     void Start()
@@ -103,13 +106,102 @@ public class RunSpawn : MonoBehaviour
             else if (v == furthestRoom)
             {
                 roomInstance = Instantiate(roomBoss, new Vector3(v.x * ROOM_SIZE, 0, v.y * ROOM_SIZE), Quaternion.identity, transform);
+                roomInstance.SetActive(false);
             }
             else
             {
                 roomInstance = Instantiate(roomPrefabs[roomID], new Vector3(v.x * ROOM_SIZE, 0, v.y * ROOM_SIZE), Quaternion.identity, transform);
+                roomInstance.SetActive(false);
             }
+            if (roomInstance.GetComponent<Room>())
+            {
+                roomInstance.GetComponent<Room>().SetX(v.x);
+                roomInstance.GetComponent<Room>().SetY(v.y);
+            }
+
             rooms.Add(roomInstance);
+            //rooms[rooms.IndexOf(roomInstance)].SetActive(false);
+            roomsDictionary.Add(v, roomInstance);
         }
+        ActiveRoom(new Vector2Int(0, 0));
+        
+    }
+
+    public void ActiveRoom(Vector2Int room)
+    {
+        if (actualRoom != null) DisableRoom();
+
+        Vector2Int aux = room;
+        aux.x += 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(true);
+        }
+
+        aux = room;
+        aux.x -= 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(true);
+        }
+
+        aux = room;
+        aux.y += 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(true);
+        }
+
+        aux = room;
+        aux.y -= 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(true);
+        }
+
+        if (roomsDictionary.ContainsKey(room))
+        {
+            roomsDictionary[room].SetActive(true);
+        }
+
         world.GetComponent<NavMeshSurface>().BuildNavMesh();
+
+        actualRoom = room;
+    }
+
+    public void DisableRoom()
+    {
+        Vector2Int aux = actualRoom;
+        aux.x += 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(false);
+        }
+
+        aux = actualRoom;
+        aux.x -= 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(false);
+        }
+
+        aux = actualRoom;
+        aux.y += 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(false);
+        }
+
+        aux = actualRoom;
+        aux.y -= 1;
+        if (roomsDictionary.ContainsKey(aux))
+        {
+            roomsDictionary[aux].SetActive(false);
+        }
+
+        //if (roomsDictionary.ContainsKey(actualRoom))
+        //{
+        //    roomsDictionary[aux].SetActive(false);
+        //}
     }
 }

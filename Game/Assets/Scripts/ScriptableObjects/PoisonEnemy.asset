@@ -18,4 +18,5 @@ MonoBehaviour:
   speedDown: 1.5
   fireDamage: 0.5
   armor: 0
+  score: 20
   tipo: 2

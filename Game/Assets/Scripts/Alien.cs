@@ -32,6 +32,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     Color color;
     Player player;
 
+    MatchInfo match;
+
     public EnemyScriptableObject enemyScriptableObject;
     //RaycastWeapon playerWeapon;
 
@@ -69,6 +71,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         //hp = 100;
         render = GetComponent<MeshRenderer>();
         player = FindAnyObjectByType<Player>();
+        match = FindAnyObjectByType<MatchInfo>();
         //playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
         color = render.material.color;
         Agent = GetComponent<NavMeshAgent>();
@@ -190,6 +193,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     {
         pool?.Release(this);
         player.UpdateDeathPowers();
+        match.score += enemyScriptableObject.score;
 
     }
 
