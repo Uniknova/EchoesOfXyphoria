@@ -10,11 +10,11 @@ public class UITransitionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentCamera.Priority++;
+        //currentCamera.Priority++;
     }
 
     // Update is called once per frame
-    void UpdateCamera(CinemachineVirtualCamera target)
+    public void UpdateCamera(CinemachineVirtualCamera target)
     {
         currentCamera.Priority--;
         currentCamera = target;
