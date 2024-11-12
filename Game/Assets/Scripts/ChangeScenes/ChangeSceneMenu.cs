@@ -7,9 +7,10 @@ public class ChangeSceneMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseBotton; 
     [SerializeField] private GameObject pauseMenu; 
-    [SerializeField] private GameObject settingsInGame; 
-    [SerializeField] private GameObject coinShopInterface; 
     [SerializeField] private GameObject moreCoins; 
+    [SerializeField] private GameObject coinShopInterface; 
+    [SerializeField] private GameObject settingsInGame; 
+
 
 
 
