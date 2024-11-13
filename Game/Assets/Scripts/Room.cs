@@ -5,10 +5,18 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     RunSpawn runSpawn;
+    public EnemySpawner spawner;
+    public Transform respawn;
     int x, y;
     public void Start()
     {
         runSpawn = FindAnyObjectByType<RunSpawn>();
+        spawner = GetComponentInChildren<EnemySpawner>();
+    }
+
+    public void StartRespawn()
+    {
+        spawner.StartRespawn();
     }
     public void ChangeRoom(int newX, int newY)
     {
