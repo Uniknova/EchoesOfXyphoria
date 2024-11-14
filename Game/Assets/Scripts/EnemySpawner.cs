@@ -11,11 +11,13 @@ public class EnemySpawner : MonoBehaviour
     public List<Alien> Enemies = new List<Alien>();
     public SpawnMethod EnemySpawn = SpawnMethod.Random;
     NavMeshTriangulation Triangulation;
+    public bool spawn;
 
     private Dictionary<int, ObjectPool> EnemyObjectPools = new Dictionary<int, ObjectPool>();
 
     private void Awake()
     {
+        spawn = false;
         for (int i = 0; i < Enemies.Count; i++)
         {
             EnemyObjectPools.Add(i, new ObjectPool(Enemies[i], 0, true, 20));
@@ -26,9 +28,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Triangulation = NavMesh.CalculateTriangulation();
-        StartCoroutine(SpawnEnemies());
-        player = FindAnyObjectByType<Player>().transform.GetChild(0).transform;
+
 
     }
 
@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
 
         while (SpawnedEnemies < NumberOfEnemies)
         {
-
+            Debug.Log("Enemigo");
             if (EnemySpawn == SpawnMethod.Random)
             {
                 SpawnRandom();
@@ -55,6 +55,15 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(SpawnDelay);
         }
 
+    }
+
+    public void StartRespawn()
+    {
+        if (spawn == true) return;
+        spawn = true;
+        Triangulation = NavMesh.CalculateTriangulation();
+        StartCoroutine(SpawnEnemies());
+        player = FindAnyObjectByType<Player>().transform.GetChild(0).transform;
     }
 
     private void SpawnRandom()

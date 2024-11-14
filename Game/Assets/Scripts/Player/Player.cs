@@ -151,6 +151,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Respawn(Transform respawn)
+    {
+        controller.Move(Vector3.zero);
+        controller.enabled = false;
+        transform.position = Vector3.zero;
+        controller.transform.localPosition = respawn.position;
+
+        if (weapons.Count > 0)
+        {
+            weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
+            weapon.enabled = true;
+        }
+        controller.enabled = true;
+    }
+
     public void PlayerHealth(float health)
     {
         hp = Mathf.Min(100, hp + health);

@@ -16,6 +16,9 @@ public class RunSpawn : MonoBehaviour
     public List<GameObject> rooms;
     public Dictionary<Vector2Int, GameObject> roomsDictionary;
 
+    public MatchInfo matchInfo;
+    
+
     [HideInInspector] public HashSet<Vector2Int> roomsToSpawn;
     Vector2Int furthestRoom; //habitacion mas lejana para el boss
     float distAux = 0;
@@ -23,11 +26,12 @@ public class RunSpawn : MonoBehaviour
     List<Vector2Int> runnersPositions;
     List<Vector2Int> runnersDirection;
 
-    int ROOM_SIZE = 10; //grande de cada room
+    int ROOM_SIZE = 50; //grande de cada room
 
 
     private void Awake()
     {
+        Instantiate(matchInfo);
         if(seed != -1)
         {
             Random.InitState(seed); //con -1 generamos siempre cosas aleatorias
@@ -47,6 +51,7 @@ public class RunSpawn : MonoBehaviour
 
     void run()
     {
+        
         //inicializamos runners
         for (int i = 0; i < runners.Count; i++)
         {
@@ -162,9 +167,12 @@ public class RunSpawn : MonoBehaviour
         if (roomsDictionary.ContainsKey(room))
         {
             roomsDictionary[room].SetActive(true);
+            if (roomsDictionary[room].GetComponent<NavMeshModifier>() != null) roomsDictionary[room].GetComponent<NavMeshModifier>().enabled = false;
         }
 
         world.GetComponent<NavMeshSurface>().BuildNavMesh();
+        matchInfo.Respawn(roomsDictionary[room].GetComponent<Room>().respawn);
+        if (roomsDictionary[room].GetComponent<Room>().spawner != null)roomsDictionary[room].GetComponent<Room>().StartRespawn();
 
         actualRoom = room;
     }
@@ -199,6 +207,7 @@ public class RunSpawn : MonoBehaviour
             roomsDictionary[aux].SetActive(false);
         }
 
+        roomsDictionary[actualRoom].GetComponent<NavMeshModifier>().enabled = true;
         //if (roomsDictionary.ContainsKey(actualRoom))
         //{
         //    roomsDictionary[aux].SetActive(false);
