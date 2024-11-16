@@ -13,14 +13,21 @@ public class EnemySpawner : MonoBehaviour
     NavMeshTriangulation Triangulation;
     public bool spawn;
 
+    private List<Transform> respawns;
     private Dictionary<int, ObjectPool> EnemyObjectPools = new Dictionary<int, ObjectPool>();
 
     private void Awake()
     {
+        respawns = new List<Transform>();
         spawn = false;
         for (int i = 0; i < Enemies.Count; i++)
         {
             EnemyObjectPools.Add(i, new ObjectPool(Enemies[i], 0, true, 20));
+        }
+
+        foreach(Transform t in gameObject.transform)
+        {
+            respawns.Add(t);
         }
     }
 
@@ -45,7 +52,6 @@ public class EnemySpawner : MonoBehaviour
 
         while (SpawnedEnemies < NumberOfEnemies)
         {
-            Debug.Log("Enemigo");
             if (EnemySpawn == SpawnMethod.Random)
             {
                 SpawnRandom();
@@ -80,14 +86,22 @@ public class EnemySpawner : MonoBehaviour
             //Alien alien = (Alien)pooleableObject;
 
             //alien.SetPool(EnemyObjectPools[index]);
-            int VertexIndex = Random.Range(0, Triangulation.vertices.Length);
+            int idxRespawn = Random.Range(0, respawns.Count);
+            Transform pos = respawns[idxRespawn];
+            //int VertexIndex = Random.Range(0, Triangulation.vertices.Length);
 
             NavMeshHit Hit;
-            if (NavMesh.SamplePosition(Triangulation.vertices[VertexIndex], out Hit, 2f, -1))
+
+            if (NavMesh.SamplePosition(pos.position, out Hit, 2f, -1))
             {
                 alien.Agent.Warp(Hit.position);
                 alien.Agent.enabled = true;
             }
+            //if (NavMesh.SamplePosition(Triangulation.vertices[VertexIndex], out Hit, 2f, -1))
+            //{
+            //    alien.Agent.Warp(Hit.position);
+            //    alien.Agent.enabled = true;
+            //}
         }
     }
 

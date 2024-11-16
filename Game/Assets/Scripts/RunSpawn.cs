@@ -31,7 +31,7 @@ public class RunSpawn : MonoBehaviour
 
     private void Awake()
     {
-        Instantiate(matchInfo);
+        //Instantiate(matchInfo);
         if(seed != -1)
         {
             Random.InitState(seed); //con -1 generamos siempre cosas aleatorias
@@ -171,6 +171,7 @@ public class RunSpawn : MonoBehaviour
         }
 
         world.GetComponent<NavMeshSurface>().BuildNavMesh();
+        matchInfo.SetRoom(roomsDictionary[room].GetComponent<Room>());
         matchInfo.Respawn(roomsDictionary[room].GetComponent<Room>().respawn);
         if (roomsDictionary[room].GetComponent<Room>().spawner != null)roomsDictionary[room].GetComponent<Room>().StartRespawn();
 

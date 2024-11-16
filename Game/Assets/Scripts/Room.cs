@@ -7,6 +7,7 @@ public class Room : MonoBehaviour
     RunSpawn runSpawn;
     public EnemySpawner spawner;
     public Transform respawn;
+    public Transform triggers;
     int x, y;
     public void Start()
     {
@@ -31,5 +32,15 @@ public class Room : MonoBehaviour
     public void SetY(int newY)
     {
         y = newY;
+    }
+
+    public int GetEnemies()
+    {
+        return spawner.NumberOfEnemies;
+    }
+
+    public void ActiveTriggers()
+    {
+        triggers.gameObject.SetActive(true);
     }
 }
