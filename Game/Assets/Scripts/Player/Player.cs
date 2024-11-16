@@ -22,8 +22,9 @@ public class Player : MonoBehaviour
     public List<GameObject> weapons;
     public List<IDeathPower> deathPowers;
     public int indexWeapon;
+    public int indexMelee;
 
-    public List<GameObject> meleeWeapons;
+    public List<Melee> meleeWeapons;
     public bool lowHp;
     private bool andar;
     private const string andarAnimator = "Andar";
@@ -39,6 +40,9 @@ public class Player : MonoBehaviour
     private static Player instance;
 
     RaycastWeapon weapon;
+
+    Melee melee;
+    //Melee meleeR;
 
     //public static Player Instance
     //{
@@ -71,8 +75,10 @@ public class Player : MonoBehaviour
             color = render.material.color;
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
+        meleeWeapons = new List<Melee>();
         deathPowers = new List<IDeathPower>();
         indexWeapon = -1;
+        indexMelee = -1;
         lowHp = false;
         gravedad = false;
         DontDestroyOnLoad(gameObject);
@@ -158,7 +164,7 @@ public class Player : MonoBehaviour
 
         if (weapons.Count > 0)
         {
-            weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
+            weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
             weapon.enabled = true;
         }
     }
@@ -172,7 +178,7 @@ public class Player : MonoBehaviour
 
         if (weapons.Count > 0)
         {
-            weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
+            weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
             weapon.enabled = true;
         }
         controller.enabled = true;
