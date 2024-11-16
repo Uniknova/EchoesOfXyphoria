@@ -18,12 +18,19 @@ public class Player : MonoBehaviour
     public float gravity = -9.8f;
     Vector3 velocity;
     public Transform Hand;
+    public Transform HandL;
     public List<GameObject> weapons;
     public List<IDeathPower> deathPowers;
     public int indexWeapon;
+
+    public List<GameObject> meleeWeapons;
     public bool lowHp;
+    private bool andar;
+    private const string andarAnimator = "Andar";
     MeshRenderer render;
     Color color;
+
+    public Animator animatorPlayer;
 
     Coroutine PoisonC;
 
@@ -60,7 +67,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         render = GetComponentInChildren<MeshRenderer>();
-        if (render!=null)
+        if (render != null)
             color = render.material.color;
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
@@ -69,35 +76,40 @@ public class Player : MonoBehaviour
         lowHp = false;
         gravedad = false;
         DontDestroyOnLoad(gameObject);
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetButton("Horizontal"))
-            {
-                Vector3 move = transform.right * Input.GetAxis("Horizontal");
-                //Debug.Log(move);
+        andar = false;
+        if (Input.GetButton("Horizontal"))
+        {
+            andar = true;
+            Vector3 move = transform.right * Input.GetAxis("Horizontal");
+            //Debug.Log(move);
 
-                controller.Move(move * speed * Time.deltaTime);
-            }
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
-            if (Input.GetButton("Vertical"))
-            {
-                Vector3 move = transform.forward * Input.GetAxis("Vertical");
+        if (Input.GetButton("Vertical"))
+        {
+            andar = true;
+            Vector3 move = transform.forward * Input.GetAxis("Vertical");
 
-                controller.Move(move * speed * Time.deltaTime);
-            }
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
-            isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
-            if (isTouching && velocity.y < 0)
-            {
-                velocity.y = -3f;
+        animatorPlayer.SetBool(andarAnimator, andar);
+        isTouching = Physics.CheckSphere(collision.position, radius, collisionMask);
 
-            }
-            velocity.y += gravity * Time.deltaTime;
+        if (isTouching && velocity.y < 0)
+        {
+            velocity.y = -3f;
+
+        }
+        velocity.y += gravity * Time.deltaTime;
 
 
         //controller.Move(velocity * Time.deltaTime);

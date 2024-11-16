@@ -160,7 +160,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
         while (Time.time < startTime + dashTime)
         {
-            Debug.Log("Corutina");
+            //Debug.Log("Corutina");
             Agent.Move(Agent.transform.forward * dashSpeed * Time.deltaTime);
 
             yield return null;
@@ -198,7 +198,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     {
         pool?.Release(this);
         player.UpdateDeathPowers();
-        match.score += enemyScriptableObject.score;
+        match.AddScore(enemyScriptableObject.score);
+        //match.score += enemyScriptableObject.score;
 
     }
 
