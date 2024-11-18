@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     private bool andar;
     private const string andarAnimator = "Andar";
     private const string meleeAnimator = "Melee";
+    private const string armaAnimator = "Arma";
     MeshRenderer render;
     Color color;
 
@@ -190,6 +191,7 @@ public class Player : MonoBehaviour
         {
             if (weapons[indexWeapon].activeSelf == true)
             {
+                animatorPlayer.SetBool(armaAnimator, true);
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
                 weapon.enabled = true;
             }
@@ -215,6 +217,7 @@ public class Player : MonoBehaviour
         {
             if (weapons[indexWeapon].activeSelf == true)
             {
+                animatorPlayer.SetBool(armaAnimator, true);
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
                 weapon.enabled = true;
             }

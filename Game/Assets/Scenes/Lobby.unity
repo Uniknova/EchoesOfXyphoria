@@ -493,8 +493,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!1 &39545179
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,8 +753,10 @@ MonoBehaviour:
   damage: 0
   bulletDrop: 0
   canon: {fileID: 1613759326}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!1 &75519989
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,8 +943,11 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 176944502}
+  canons:
+  - {fileID: 176944502}
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!114 &178552133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1280,8 +1287,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!114 &260425306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,8 +1577,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!65 &391903449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1748,7 +1759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &420819498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1835,6 +1846,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &429467039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429467040}
+  m_Layer: 0
+  m_Name: canon (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429467040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429467039}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000008940696, y: 0.29390138, z: 0.000000119209275, w: 0.9558357}
+  m_LocalPosition: {x: -0.606, y: 0.807, z: 2.231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049364499}
+  m_LocalEulerAnglesHint: {x: 0, y: 34.183, z: 0}
 --- !u!1 &434573326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,8 +2041,10 @@ MonoBehaviour:
   damage: 0
   bulletDrop: 0
   canon: {fileID: 1393008183}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!1 &443652689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &461157832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2914,8 +2958,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!114 &683629892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2999,8 +3045,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 1458134006}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!114 &717188844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,8 +3391,10 @@ MonoBehaviour:
   damage: 0
   bulletDrop: 0
   canon: {fileID: 1642641877}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!1001 &849805682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3840,8 +3890,13 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 1953001428}
+  canons:
+  - {fileID: 1953001428}
+  - {fileID: 429467040}
+  - {fileID: 2034559568}
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 1
 --- !u!114 &1049364501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4512,8 +4567,10 @@ MonoBehaviour:
   damage: 0
   bulletDrop: 0
   canon: {fileID: 1101479942}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!1 &1164039422
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,8 +4668,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 921982980}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!95 &1185493682
 Animator:
   serializedVersion: 5
@@ -4697,7 +4756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1193671347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5186,7 +5245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1279415693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6550,7 +6609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1815680161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7000,8 +7059,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!114 &1952846122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7138,7 +7199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1978930670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7331,6 +7392,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2034559567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034559568}
+  m_Layer: 0
+  m_Name: canon (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2034559568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034559567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.2938985, z: 0, w: 0.95583665}
+  m_LocalPosition: {x: -0.83091927, y: 0.83655417, z: 2.214435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049364499}
+  m_LocalEulerAnglesHint: {x: 0, y: -34.183, z: 0}
 --- !u!1 &2058000574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7598,6 +7690,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8228589994467278982, guid: 0dd88912f7196d24d83a14100666290e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1953001428}
+    - targetCorrespondingSourceObject: {fileID: 8228589994467278982, guid: 0dd88912f7196d24d83a14100666290e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 429467040}
+    - targetCorrespondingSourceObject: {fileID: 8228589994467278982, guid: 0dd88912f7196d24d83a14100666290e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2034559568}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8753312864564812348, guid: 0dd88912f7196d24d83a14100666290e, type: 3}
       insertIndex: -1
@@ -7769,8 +7867,10 @@ MonoBehaviour:
   damage: 40
   bulletDrop: 0
   canon: {fileID: 254396228}
+  canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  maxLifeTime: 6
 --- !u!114 &2073779643750710380
 MonoBehaviour:
   m_ObjectHideFlags: 0
