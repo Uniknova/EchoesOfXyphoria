@@ -21,6 +21,7 @@ public class Espejo : MonoBehaviour
     public List<GameObject> skinsList;
     GameObject skin;
     public int indexSkin;
+    public Transform TargetLookAt;
 
     private void Start()
     {
@@ -100,7 +101,8 @@ public class Espejo : MonoBehaviour
                 t.GetComponent<Button>().enabled = false;
             }
             skin = Instantiate(skinsList[indexSkin], Head.position, Head.rotation);
-            skin.transform.localScale = new Vector3(skin.transform.localScale.x * transform.parent.localScale.x, skin.transform.localScale.y * transform.parent.localScale.y, skin.transform.localScale.z * transform.parent.localScale.z);
+            //skin.transform.localScale = new Vector3(skin.transform.localScale.x * transform.parent.localScale.x, skin.transform.localScale.y * transform.parent.localScale.y, skin.transform.localScale.z * transform.parent.localScale.z);
+            skin.transform.localScale = skin.transform.lossyScale;
             skin.transform.SetParent(Head);
             if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
             espejo = false;
@@ -122,6 +124,10 @@ public class Espejo : MonoBehaviour
         }
         Destroy(skin);
         skinsList[indexSkin].transform.position = Head.position;
+        float x = previous.rotation.x;
+        float z = previous.rotation.x;
+        previous.LookAt(TargetLookAt);
+        previous.rotation = new Quaternion(x, previous.rotation.y, z, previous.rotation.w);
         if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
 
     }

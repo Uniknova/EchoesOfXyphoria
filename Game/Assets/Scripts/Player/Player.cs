@@ -22,11 +22,14 @@ public class Player : MonoBehaviour
     public List<GameObject> weapons;
     public List<IDeathPower> deathPowers;
     public int indexWeapon;
+    public int indexMelee;
 
-    public List<GameObject> meleeWeapons;
+    public List<Melee> meleeWeapons;
     public bool lowHp;
     private bool andar;
     private const string andarAnimator = "Andar";
+    private const string meleeAnimator = "Melee";
+    private const string armaAnimator = "Arma";
     MeshRenderer render;
     Color color;
 
@@ -39,6 +42,9 @@ public class Player : MonoBehaviour
     private static Player instance;
 
     RaycastWeapon weapon;
+
+    public Melee melee;
+    //Melee meleeR;
 
     //public static Player Instance
     //{
@@ -71,10 +77,12 @@ public class Player : MonoBehaviour
             color = render.material.color;
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
+        meleeWeapons = new List<Melee>();
         deathPowers = new List<IDeathPower>();
         indexWeapon = -1;
+        indexMelee = -1;
         lowHp = false;
-        gravedad = false;
+        //gravedad = false;
         DontDestroyOnLoad(gameObject);
 
     }
@@ -122,19 +130,42 @@ public class Player : MonoBehaviour
         {
             controller.Move(velocity * Time.deltaTime);
         }
-        if (weapon == null) return;
+        if (weapon == null && melee == null) return;
         if (Input.GetButtonDown("Fire1"))
         {
-            weapon.StartFiring();
+            if (weapon != null)
+            {
+                weapon.StartFiring();
+            }
+
+            else
+            {
+                melee.Attack();
+                animatorPlayer.SetTrigger(meleeAnimator);
+            }
         }
-        if (weapon.isFiring)
+
+        if (weapon != null)
         {
-            weapon.UpdateFiring(Time.deltaTime);
+            if (weapon.isFiring)
+            {
+                weapon.UpdateFiring(Time.deltaTime);
+            }
+            weapon.UpdateBullets(Time.deltaTime);
         }
-        weapon.UpdateBullets(Time.deltaTime);
+        
         if (Input.GetButtonUp("Fire1"))
         {
-            weapon.StopFiring();
+            if (weapon != null)
+            {
+                weapon.StopFiring();
+            }
+
+            else
+            {
+                //animatorPlayer.SetBool(meleeAnimator, false);
+            }
+            
         }
 
     }
@@ -158,8 +189,20 @@ public class Player : MonoBehaviour
 
         if (weapons.Count > 0)
         {
-            weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
-            weapon.enabled = true;
+            if (weapons[indexWeapon].activeSelf == true)
+            {
+                animatorPlayer.SetBool(armaAnimator, true);
+                weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
+                weapon.enabled = true;
+            }
+        }
+
+        if (meleeWeapons.Count > 0)
+        {
+            if (meleeWeapons[indexMelee].meleeL.activeSelf == true)
+            {
+                melee = meleeWeapons[indexMelee];
+            }
         }
     }
 
@@ -172,9 +215,27 @@ public class Player : MonoBehaviour
 
         if (weapons.Count > 0)
         {
-            weapon = weapons[indexWeapon].GetComponent<RaycastWeapon>();
-            weapon.enabled = true;
+            if (weapons[indexWeapon].activeSelf == true)
+            {
+                animatorPlayer.SetBool(armaAnimator, true);
+                weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
+                weapon.enabled = true;
+            }
         }
+
+        if (meleeWeapons.Count > 0)
+        {
+            if (meleeWeapons[indexMelee].meleeL.activeSelf == true)
+            {
+                melee = meleeWeapons[indexMelee];
+            }
+        }
+
+        //if (weapons.Count > 0)
+        //{
+        //    weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
+        //    weapon.enabled = true;
+        //}
         controller.enabled = true;
     }
 

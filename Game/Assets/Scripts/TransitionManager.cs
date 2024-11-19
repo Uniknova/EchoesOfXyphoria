@@ -38,6 +38,7 @@ public class TransitionManager : MonoBehaviour
     public const string SCENE_NEXT = "Proximamente";
     public const string SCENE_TUTORIAL = "Tutorial";
 
+    public Image imageProgress;
     public Slider progressSlider;
     public TextMeshProUGUI progressLabel;
     [Multiline]
@@ -156,6 +157,10 @@ public class TransitionManager : MonoBehaviour
         if (progressSlider != null)
         {
             progressSlider.value = progressValue;
+        }
+        if (imageProgress != null)
+        {
+            imageProgress.fillAmount = progressValue;
         }
         if (progressLabel.text != null)
         {
