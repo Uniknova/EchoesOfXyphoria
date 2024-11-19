@@ -41,6 +41,7 @@ public class Boss : MonoBehaviour, IEnemy
     public Coroutine AttackC;
     public Coroutine LookC;
     public float attackDelay = 1f;
+    public MatchInfo matchInfo;
 
     public float speedRotation = 1f;
     public bool Active { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
@@ -68,7 +69,7 @@ public class Boss : MonoBehaviour, IEnemy
 
     public void TakeDamage(float damage)
     {
-        if (Random.Range(0, 1) <= dashProb && DashC == null)
+        if (Random.Range(0.0f, 1) <= dashProb && DashC == null)
         {
             DashC = StartCoroutine(DashCoroutine());
             return;
@@ -98,6 +99,7 @@ public class Boss : MonoBehaviour, IEnemy
         player = FindAnyObjectByType<Player>();
         col = GetComponent<SphereCollider>();
         agent = GetComponent<NavMeshAgent>();
+        matchInfo = FindObjectOfType<MatchInfo>();
     }
 
     private IEnumerator Attack()
@@ -192,6 +194,8 @@ public class Boss : MonoBehaviour, IEnemy
     public void Death()
     {
         player.UpdateDeathPowers();
+        matchInfo.AddScore(enemyScriptableObject.score);
+        matchInfo.EndLevel();
     }
 
     public void StartRotating()

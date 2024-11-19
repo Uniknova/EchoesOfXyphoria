@@ -17,7 +17,7 @@ public class RunSpawn : MonoBehaviour
     public Dictionary<Vector2Int, GameObject> roomsDictionary;
 
     public MatchInfo matchInfo;
-    
+
 
     [HideInInspector] public HashSet<Vector2Int> roomsToSpawn;
     Vector2Int furthestRoom; //habitacion mas lejana para el boss
@@ -32,18 +32,34 @@ public class RunSpawn : MonoBehaviour
     private void Awake()
     {
         //Instantiate(matchInfo);
-        if(seed != -1)
+        if (matchInfo == null)
+        {
+            matchInfo = FindAnyObjectByType<MatchInfo>();
+        }
+        if (matchInfo != null)
+        {
+            matchInfo.runSpawn = this;
+        }
+        if (seed != -1)
         {
             Random.InitState(seed); //con -1 generamos siempre cosas aleatorias
         }
         runnersPositions = new List<Vector2Int>();
         runnersDirection = new List<Vector2Int>();
-        roomsToSpawn = new HashSet<Vector2Int> ();
+        roomsToSpawn = new HashSet<Vector2Int>();
         rooms = new List<GameObject>();
         roomsDictionary = new Dictionary<Vector2Int, GameObject>();
     }
 
     void Start()
+    {
+        //run();
+        //spawn();
+
+        Init();
+    }
+
+    public void Init()
     {
         run();
         spawn();
@@ -51,7 +67,7 @@ public class RunSpawn : MonoBehaviour
 
     void run()
     {
-        
+
         //inicializamos runners
         for (int i = 0; i < runners.Count; i++)
         {
@@ -68,7 +84,7 @@ public class RunSpawn : MonoBehaviour
             for (int j = 0; j < runners.Count; j++)
             {
                 bool turn = (Random.value < runners[j]);
-                if(turn)
+                if (turn)
                 {
                     runnersDirection[j] = turnDir(runnersDirection[j]);
                 }
@@ -76,7 +92,7 @@ public class RunSpawn : MonoBehaviour
                 roomsToSpawn.Add(runnersPositions[j]);
 
                 float distToCentre = Vector2Int.Distance(Vector2Int.zero, runnersPositions[j]);
-                if(distToCentre > distAux)
+                if (distToCentre > distAux)
                 {
                     distAux = distToCentre;
                     furthestRoom = runnersPositions[j];
@@ -86,8 +102,8 @@ public class RunSpawn : MonoBehaviour
     }
     Vector2Int turnDir(Vector2Int dir)
     {
-        int turnSign = (Random.value < 0.5f)? 1 : -1;  //si giramos para un lado o otro
-        if(dir.x == 0)
+        int turnSign = (Random.value < 0.5f) ? 1 : -1;  //si giramos para un lado o otro
+        if (dir.x == 0)
         {
             return new Vector2Int(turnSign, 0);
         }
@@ -100,11 +116,11 @@ public class RunSpawn : MonoBehaviour
     //Creamos las rooms, si es la mas lejana es la del boss
     void spawn()
     {
-        foreach(Vector2Int v in roomsToSpawn)
+        foreach (Vector2Int v in roomsToSpawn)
         {
             int roomID = Random.Range(0, roomPrefabs.Count);
             GameObject roomInstance;
-            if(v == Vector2Int.zero)
+            if (v == Vector2Int.zero)
             {
                 roomInstance = Instantiate(roomInit, new Vector3(v.x * ROOM_SIZE, 0, v.y * ROOM_SIZE), Quaternion.identity, transform);
             }
@@ -129,7 +145,7 @@ public class RunSpawn : MonoBehaviour
             roomsDictionary.Add(v, roomInstance);
         }
         ActiveRoom(new Vector2Int(0, 0));
-        
+
     }
 
     public void ActiveRoom(Vector2Int room)
@@ -173,7 +189,13 @@ public class RunSpawn : MonoBehaviour
         world.GetComponent<NavMeshSurface>().BuildNavMesh();
         matchInfo.SetRoom(roomsDictionary[room].GetComponent<Room>());
         matchInfo.Respawn(roomsDictionary[room].GetComponent<Room>().respawn);
-        if (roomsDictionary[room].GetComponent<Room>().spawner != null)roomsDictionary[room].GetComponent<Room>().StartRespawn();
+        if (roomsDictionary[room].GetComponent<Room>().spawner != null) roomsDictionary[room].GetComponent<Room>().StartRespawn();
+        
+        if (roomsDictionary[room].GetComponentInChildren<Room>().boss != null)
+        {
+            Debug.Log("hola");
+            roomsDictionary[room].GetComponentInChildren<Room>().RespawnBoss();
+        }
 
         actualRoom = room;
     }

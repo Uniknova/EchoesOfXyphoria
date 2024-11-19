@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
+using UnityEngine.AI;
 
 public class Room : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class Room : MonoBehaviour
     public EnemySpawner spawner;
     public Transform respawn;
     public Transform triggers;
+    public Boss boss;
+    public Transform bossRespawn;
     int x, y;
     public void Start()
     {
@@ -36,11 +40,37 @@ public class Room : MonoBehaviour
 
     public int GetEnemies()
     {
-        return spawner.NumberOfEnemies;
+        if (spawner != null)
+        {
+            return spawner.NumberOfEnemies;
+        }
+        return 0;
     }
 
     public void ActiveTriggers()
     {
-        triggers.gameObject.SetActive(true);
+        if (triggers != null)
+        {
+            triggers.gameObject.SetActive(true);
+        }
+    }
+
+    public void SetEnemies(int newEnemies)
+    {
+        if (spawner != null)
+        {
+            spawner.NumberOfEnemies = newEnemies;
+        }
+    }
+    public void RespawnBoss()
+    {
+        NavMeshHit Hit;
+
+        if (NavMesh.SamplePosition(bossRespawn.position, out Hit, 2f, -1))
+        {
+            Boss bossI = Instantiate(boss);
+            bossI.agent.Warp(Hit.position);
+            bossI.agent.enabled = true;
+        }
     }
 }

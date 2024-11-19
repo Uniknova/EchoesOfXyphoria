@@ -105,6 +105,7 @@ public class TransitionManager : MonoBehaviour
         
 
         yield return new WaitForSeconds(2f);
+        
         var sceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
         while (!sceneAsync.isDone)

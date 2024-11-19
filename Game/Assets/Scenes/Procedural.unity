@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed: -1
-  iterations: 100
+  iterations: 3
   runners:
   - 0.3
   - 0.7
@@ -369,6 +369,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   player: {fileID: 0}
+  killedEnemies: 0
+  remainEnemies: 0
+  enemiesToSpawn: 0
+  salasSuperadas: 0
+  actualRoom: {fileID: 0}
+  runSpawn: {fileID: 0}
 --- !u!4 &1726468395
 Transform:
   m_ObjectHideFlags: 0

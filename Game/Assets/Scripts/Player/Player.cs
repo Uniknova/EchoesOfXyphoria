@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
         lowHp = false;
         //gravedad = false;
         DontDestroyOnLoad(gameObject);
+        
 
     }
 
@@ -133,26 +134,36 @@ public class Player : MonoBehaviour
         if (weapon == null && melee == null) return;
         if (Input.GetButtonDown("Fire1"))
         {
-            if (weapon != null)
-            {
-                weapon.StartFiring();
-            }
+            //if (weapon != null)
+            //{
+            //    weapon.StartFiring();
+            //}
 
-            else
+            if(melee != null) 
             {
                 melee.Attack();
                 animatorPlayer.SetTrigger(meleeAnimator);
             }
         }
 
-        if (weapon != null)
+        if (Input.GetButton("Fire1"))
         {
-            if (weapon.isFiring)
+            if (weapon != null)
             {
                 weapon.UpdateFiring(Time.deltaTime);
+                weapon.UpdateBullets(Time.deltaTime);
             }
-            weapon.UpdateBullets(Time.deltaTime);
+            
         }
+
+        //if (weapon != null)
+        //{
+        //    if (weapon.isFiring)
+        //    {
+        //        weapon.UpdateFiring(Time.deltaTime);
+        //    }
+        //    weapon.UpdateBullets(Time.deltaTime);
+        //}
         
         if (Input.GetButtonUp("Fire1"))
         {

@@ -12,6 +12,7 @@ public class RaycastWeapon : MonoBehaviour
         public TrailRenderer tracer;
         public Transform canon;
     }
+    public bool escopeta;
     public bool isFiring = false;
     public int fireRate = 25;
     public float bulletSpeed = 1000.0f;
@@ -27,8 +28,11 @@ public class RaycastWeapon : MonoBehaviour
     Ray ray;
     RaycastHit hitInfo;
     float accumulatedTime;
+    public float reloadTime;
+    float acumulatedReloadTime;
     List<Bullet> bullets = new List<Bullet>();
     public float maxLifeTime = 6f;
+    public bool entra;
 
     Vector3 GetPosition(Bullet bullet)
     {
@@ -53,23 +57,46 @@ public class RaycastWeapon : MonoBehaviour
     private void Start()
     {
         powerEnemyList = new List<IPowerEnemy>();
+        acumulatedReloadTime = reloadTime;
+        entra = false;
+
+    }
+
+    private void Update()
+    {
+        acumulatedReloadTime += Time.deltaTime;
     }
     public void StartFiring()
     {
-        isFiring = true;
-        accumulatedTime = 0.0f;
-        FireBullet();
+        
+        
+        if (acumulatedReloadTime >= reloadTime)
+        {
+            isFiring = true;
+            acumulatedReloadTime = 0.0f;
+            accumulatedTime = 0.0f;
+            FireBullet();
+        }
     }
 
     public void UpdateFiring(float delta)
     {
-        accumulatedTime += delta;
-        float fireInterval = 1.0f / fireRate;
-        while (accumulatedTime >= 0.0f)
+        //acumulatedReloadTime += delta;
+        
+
+        if (acumulatedReloadTime >= reloadTime || entra)
         {
-            FireBullet();
-            accumulatedTime -= fireInterval;
+            entra = true;
+            accumulatedTime += delta;
+            float fireInterval = 1.0f / fireRate;
+            while (accumulatedTime >= 0.0f)
+            {
+                FireBullet();
+                accumulatedTime -= fireInterval;
+            }
+            acumulatedReloadTime = 0.0f;
         }
+
     }
 
     public void UpdateBullets(float delta)
@@ -96,12 +123,22 @@ public class RaycastWeapon : MonoBehaviour
 
     void RaycastSegment(Vector3 start, Vector3 end, Bullet bullet)
     {
-        //Vector3 direction = end - start;
-        Vector3 direction = bullet.canon.forward;
+        Vector3 direction;
+        direction = end - start;
+
+        if (escopeta)
+        {
+            direction = bullet.canon.forward;
+        }
         float distance = direction.magnitude;
         ray.origin = start;
-        //ray.direction = end - start;
-        ray.direction = bullet.canon.forward;
+        ray.direction = end - start;
+
+        if (escopeta)
+        {
+            ray.direction = bullet.canon.forward;
+
+        }
         if (Physics.Raycast(ray, out hitInfo, distance))
         {
             if (hitInfo.collider != null)
@@ -118,27 +155,41 @@ public class RaycastWeapon : MonoBehaviour
                 }
             }
             //Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1.0f);
-            bullet.tracer.transform.position = hitInfo.point;
+            if (bullet.tracer != null)
+            {
+                bullet.tracer.transform.position = hitInfo.point;
+            }
             bullet.time = maxLifeTime;
         }
 
         else
         {
-            bullet.tracer.transform.position = end;
+            if (bullet.tracer != null)
+            {
+                bullet.tracer.transform.position = end;
+            }
         }
     }
 
     private void FireBullet()
     {
-        foreach (Transform t in canons)
+        if (escopeta)
         {
-            Vector3 velocity = (t.forward).normalized * bulletSpeed;
-            var bullet = CreateBullet(canon.position, velocity, t);
+            foreach (Transform t in canons)
+            {
+                Vector3 velocity = (t.forward).normalized * bulletSpeed;
+                var bullet = CreateBullet(canon.position, velocity, t);
+                bullets.Add(bullet);
+            }
+
+        }
+
+        else
+        {
+            Vector3 velocity = (raycastDestination.position - canon.position).normalized * bulletSpeed;
+            var bullet = CreateBullet(canon.position, velocity, canon);
             bullets.Add(bullet);
         }
-        //Vector3 velocity = (raycastDestination.position - canon.position).normalized * bulletSpeed;
-        //var bullet = CreateBullet(canon.position, velocity);
-        //bullets.Add(bullet);
 
 
         //ray.origin = canon.position;
@@ -159,6 +210,9 @@ public class RaycastWeapon : MonoBehaviour
     public void StopFiring()
     {
         isFiring = false;
+        entra = false;
+        accumulatedTime = 0.0f;
+        //acumulatedReloadTime = 0;
     }
 
     public void AddPowerEnemy(IPowerEnemy powerEnemy)

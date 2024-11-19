@@ -89,6 +89,13 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
             if (Agent.enabled)
             {
                 Agent.SetDestination(player.transform.GetChild(0).transform.position);
+                if (tipo == type.Dash)
+                {
+                    //if (Random.Range(0, 10) <= 1 && DashC == null)
+                    //{
+                    //    DashC = StartCoroutine(DashCoroutine());
+                    //}
+                }
             }
         }
 
@@ -121,7 +128,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
         if (tipo == type.Dash)
         {
-            if (Random.Range(0, 1) <= dashProb && DashC == null)
+            if (Random.Range(0.0f,1) <= dashProb && DashC == null)
             {
                 DashC = StartCoroutine(DashCoroutine());
                 return;

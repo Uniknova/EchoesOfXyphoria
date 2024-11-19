@@ -9,10 +9,31 @@ public class MatchInfo : MonoBehaviour
     public Player player;
     public int killedEnemies;
     public int remainEnemies;
+    public int enemiesToSpawn;
+    public int salasSuperadas;
     public Room actualRoom;
+    private static MatchInfo instance;
+    public RunSpawn runSpawn;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
+        salasSuperadas = 0;
+        enemiesToSpawn = 5;
         Init();
     }
 
@@ -33,14 +54,25 @@ public class MatchInfo : MonoBehaviour
         score += scoreEnemy;
         killedEnemies++;
 
-        if (killedEnemies >= remainEnemies) actualRoom.ActiveTriggers();
+        if (killedEnemies >= remainEnemies)
+        {
+            salasSuperadas++;
+            enemiesToSpawn++;
+            actualRoom.ActiveTriggers();
+        }
     }
 
     public void SetRoom(Room room)
     {
         actualRoom = room;
         killedEnemies = 0;
+        actualRoom.SetEnemies(enemiesToSpawn);
         remainEnemies = room.GetEnemies();
+    }
+
+    public void EndLevel()
+    {
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
     }
 
 

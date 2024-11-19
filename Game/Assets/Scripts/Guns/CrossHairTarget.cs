@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrossHairTarget : MonoBehaviour
 {
     public Camera Camera;
+    public float distance = 5;
 
     Ray ray;
     RaycastHit hitInfo;
@@ -20,7 +21,14 @@ public class CrossHairTarget : MonoBehaviour
         ray.origin = Camera.transform.position;
         ray.direction = Camera.transform.forward;
 
-        Physics.Raycast(ray, out hitInfo);
-        transform.position = hitInfo.point;
+        if (Physics.Raycast(ray, out hitInfo))
+        {
+            transform.position = hitInfo.point;
+        }
+
+        else
+        {
+            transform.position = Camera.transform.forward * distance;
+        }
     }
 }

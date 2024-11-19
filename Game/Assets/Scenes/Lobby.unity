@@ -487,6 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
   bulletSpeed: 1000
@@ -496,7 +497,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!1 &39545179
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 25
   bulletSpeed: 1000
@@ -756,7 +760,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!1 &75519989
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,9 +943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
-  fireRate: 1
-  bulletSpeed: 1000
+  fireRate: 3
+  bulletSpeed: 150
   damage: 40
   bulletDrop: 0
   canon: {fileID: 176944502}
@@ -947,7 +954,9 @@ MonoBehaviour:
   - {fileID: 176944502}
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0.5
   maxLifeTime: 6
+  entra: 0
 --- !u!114 &178552133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
   bulletSpeed: 1000
@@ -1290,7 +1300,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!114 &260425306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,6 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
   bulletSpeed: 1000
@@ -1580,7 +1593,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!65 &391903449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2035,6 +2050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 25
   bulletSpeed: 1000
@@ -2044,7 +2060,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!1 &443652689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,6 +2970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
   bulletSpeed: 1000
@@ -2961,7 +2980,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!114 &683629892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,16 +3060,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
-  bulletSpeed: 1000
-  damage: 40
+  bulletSpeed: 200
+  damage: 80
   bulletDrop: 0
   canon: {fileID: 1458134006}
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 1.7
   maxLifeTime: 6
+  entra: 0
 --- !u!114 &717188844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3385,6 +3409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 25
   bulletSpeed: 1000
@@ -3394,7 +3419,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!1001 &849805682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3738,7 +3765,7 @@ Transform:
   m_GameObject: {fileID: 954673099}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.020000458, y: 0.85999966, z: 0.132}
+  m_LocalPosition: {x: -0.020000458, y: 0.85999966, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3884,9 +3911,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 1
   isFiring: 0
   fireRate: 1
-  bulletSpeed: 1000
+  bulletSpeed: 75
   damage: 40
   bulletDrop: 0
   canon: {fileID: 1953001428}
@@ -3896,7 +3924,9 @@ MonoBehaviour:
   - {fileID: 2034559568}
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 1
+  entra: 0
 --- !u!114 &1049364501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4383,7 +4413,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -4561,6 +4591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 25
   bulletSpeed: 1000
@@ -4570,7 +4601,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!1 &1164039422
 GameObject:
   m_ObjectHideFlags: 0
@@ -4657,21 +4690,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185493678}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
-  fireRate: 1
-  bulletSpeed: 1000
-  damage: 40
+  fireRate: 5
+  bulletSpeed: 50
+  damage: 5
   bulletDrop: 0
   canon: {fileID: 921982980}
-  canons: []
+  canons:
+  - {fileID: 0}
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0.3
   maxLifeTime: 6
+  entra: 0
 --- !u!95 &1185493682
 Animator:
   serializedVersion: 5
@@ -4738,6 +4775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 954673100}
+  distance: 5
 --- !u!1 &1193671346
 GameObject:
   m_ObjectHideFlags: 0
@@ -5885,10 +5923,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.020000003, y: 0.057363078, z: 0.0113407355}
-  m_Center: {x: 8.400604e-10, y: -0.018681535, z: -0.005658248}
+  m_Size: {x: 0.020000003, y: 0.08305744, z: 0.011340735}
+  m_Center: {x: 0.0000000012255861, y: -0.03152877, z: -0.00565835}
 --- !u!114 &1545739845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7053,6 +7091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
   bulletSpeed: 1000
@@ -7062,7 +7101,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!114 &1952846122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7756,6 +7797,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.455
       objectReference: {fileID: 0}
+    - target: {fileID: 6501392404798593249, guid: 01c5fee11217a7e4da7efab8fc5297f4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.093473755
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501392404798593249, guid: 01c5fee11217a7e4da7efab8fc5297f4, type: 3}
+      propertyPath: m_Size.z
+      value: 0.01134073
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501392404798593249, guid: 01c5fee11217a7e4da7efab8fc5297f4, type: 3}
+      propertyPath: m_Center.x
+      value: -0.00000002948364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501392404798593249, guid: 01c5fee11217a7e4da7efab8fc5297f4, type: 3}
+      propertyPath: m_Center.y
+      value: -0.036736567
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501392404798593249, guid: 01c5fee11217a7e4da7efab8fc5297f4, type: 3}
+      propertyPath: m_Center.z
+      value: -0.005658378
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 830081675300127512, guid: 01c5fee11217a7e4da7efab8fc5297f4, type: 3}
     m_RemovedGameObjects: []
@@ -7861,6 +7922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5ede10def5e4f43b0b2a813b3faae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escopeta: 0
   isFiring: 0
   fireRate: 1
   bulletSpeed: 1000
@@ -7870,7 +7932,9 @@ MonoBehaviour:
   canons: []
   raycastDestination: {fileID: 1188877932}
   tracerEffect: {fileID: 3936080308516199142, guid: 4b0f2c84258828342a58775dec3a8d27, type: 3}
+  reloadTime: 0
   maxLifeTime: 6
+  entra: 0
 --- !u!114 &2073779643750710380
 MonoBehaviour:
   m_ObjectHideFlags: 0
