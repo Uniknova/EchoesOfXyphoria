@@ -34,6 +34,11 @@ public class Espejo : MonoBehaviour
         indexSkin = 0;
         skinsList.Add(new GameObject());
 
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            UiSkin.GetComponent<Animator>().SetBool("Show", true);
+        }
+
         foreach(Transform t in transform.GetChild(0).transform)
         {
             skinsList.Add(t.gameObject);

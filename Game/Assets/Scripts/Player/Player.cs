@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using Color = UnityEngine.Color;
@@ -57,6 +58,19 @@ public class Player : MonoBehaviour
     //    }
     //}
 
+    public static Player Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new Player();
+            }
+
+            return instance;
+        }
+    }
+
     public void Awake()
     {
         if (instance == null)
@@ -72,6 +86,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DataInfo.Instance.GetPlatform();
         render = GetComponentInChildren<MeshRenderer>();
         if (render != null)
             color = render.material.color;

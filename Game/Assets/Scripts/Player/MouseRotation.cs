@@ -8,7 +8,8 @@ public class MouseRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (DataInfo.Instance.GetPlatform() == 0) this.enabled = false;
+        else this.enabled = true;
     }
 
     // Update is called once per frame
