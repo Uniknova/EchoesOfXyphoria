@@ -4642,7 +4642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232395169}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.008455359, y: 0.09384186, z: 0.00079701265, w: 0.99555093}
+  m_LocalRotation: {x: -0.008455346, y: 0.09384189, z: 0.00079701154, w: 0.99555093}
   m_LocalPosition: {x: 0.0298, y: 0.0161, z: 0.0539}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5570,7 +5570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437723039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007964167, y: 0.97827053, z: -0.038263854, w: 0.20361543}
+  m_LocalRotation: {x: 0.007964167, y: 0.97827053, z: -0.038263842, w: 0.20361546}
   m_LocalPosition: {x: -0.0152, y: 0.0253, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5975,7 +5975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1563554928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5990,9 +5990,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseBotton: {fileID: 0}
   pauseMenu: {fileID: 0}
-  moreCoins: {fileID: 0}
-  coinShopInterface: {fileID: 0}
   settingsInGame: {fileID: 0}
+  screenSettings: {fileID: 0}
+  soundSettings: {fileID: 0}
+  creditSettings: {fileID: 0}
+  generalSound: {fileID: 0}
+  sound: {fileID: 0}
+  full: {fileID: 0}
+  quality: {fileID: 0}
 --- !u!4 &1563554929
 Transform:
   m_ObjectHideFlags: 0

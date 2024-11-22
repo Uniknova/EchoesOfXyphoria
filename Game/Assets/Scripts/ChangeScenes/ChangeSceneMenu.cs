@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -24,11 +25,16 @@ public class ChangeSceneMenu : MonoBehaviour
     [SerializeField] private Toggle full;
     [SerializeField] private TMP_Dropdown quality;
 
+    [SerializeField] private GameObject high;
+    [SerializeField] private GameObject medium;
+    [SerializeField] private GameObject low;
+
 
 
     public void Start()
     {
-        QualitySettings.SetQualityLevel( PlayerPrefs.GetInt("Quality"));
+        QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
+        loadQuality(PlayerPrefs.GetInt("Quality"));
         generalSound.SetFloat("GeneralSound", PlayerPrefs.GetFloat("General"));
         sound.value = PlayerPrefs.GetFloat("General");
 
@@ -39,7 +45,7 @@ public class ChangeSceneMenu : MonoBehaviour
 
         full.isOn = Screen.fullScreen;
 
-        quality.value = PlayerPrefs.GetInt("Quality");
+        //quality.value = PlayerPrefs.GetInt("Quality");
     }
 
     public void Update()
@@ -66,11 +72,37 @@ public class ChangeSceneMenu : MonoBehaviour
             PlayerPrefs.SetInt("FullScreen", 1);
     }
 
-    public void ChangeQuality(int index)
+    public void ChangeQuality (int index)
     {
-        QualitySettings.SetQualityLevel(index);
         PlayerPrefs.SetInt("Quality", index);
+        QualitySettings.SetQualityLevel(index);
+
+        loadQuality(index);
+
     }
+
+    public void loadQuality(int index)
+    {
+        if (index == 0)
+        {
+            low.SetActive(true);
+            high.SetActive(false);
+            medium.SetActive(false);
+        }
+        else if (index == 1)
+        {
+            low.SetActive(false);
+            high.SetActive(false);
+            medium.SetActive(true);
+        }
+        else
+        {
+            low.SetActive(false);
+            high.SetActive(true);
+            medium.SetActive(false);
+        }
+    }
+
 
     public void SoundSettings()
     {

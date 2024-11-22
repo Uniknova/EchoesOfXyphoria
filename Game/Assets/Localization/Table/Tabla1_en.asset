@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tabla1_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: ef8780a9d395e474b9a1a547503ff264, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5669917499392
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5982397341696
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6125301473280
+    m_Localized: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6201050603520
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6283217018880
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6288858357760
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6291119087616
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6612100784128
+    m_Localized: Buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6613963055104
+    m_Localized: Turn Off
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6614655115264
+    m_Localized: Obtained
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6615393312768
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6833480343552
+    m_Localized: Give Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6834549891072
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6835267117056
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6835946594304
+    m_Localized: Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6836600905728
+    m_Localized: Full Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6837204885504
+    m_Localized: Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6837875974144
+    m_Localized: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7405105258496
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7406107697152
+    m_Localized: Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7406883643392
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7407584092160
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7408200654848
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
