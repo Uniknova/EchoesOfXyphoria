@@ -34,7 +34,7 @@ public class RunSpawn : MonoBehaviour
         //Instantiate(matchInfo);
         if (matchInfo == null)
         {
-            matchInfo = FindAnyObjectByType<MatchInfo>();
+            matchInfo = MatchInfo.Instance;
         }
         if (matchInfo != null)
         {
@@ -61,6 +61,26 @@ public class RunSpawn : MonoBehaviour
 
     public void Init()
     {
+        //if (matchInfo == null)
+        //{
+        //    Debug.Log("entra");
+        //    matchInfo = MatchInfo.Instance;
+        //}
+        matchInfo = MatchInfo.Instance;
+        if (matchInfo != null)
+        {
+            Debug.Log("sisisisi");
+            matchInfo.runSpawn = this;
+        }
+        if (seed != -1)
+        {
+            Random.InitState(seed); //con -1 generamos siempre cosas aleatorias
+        }
+        runnersPositions = new List<Vector2Int>();
+        runnersDirection = new List<Vector2Int>();
+        roomsToSpawn = new HashSet<Vector2Int>();
+        rooms = new List<GameObject>();
+        roomsDictionary = new Dictionary<Vector2Int, GameObject>();
         run();
         spawn();
     }

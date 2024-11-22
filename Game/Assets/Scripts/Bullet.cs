@@ -92,4 +92,11 @@ public class Bullet : MonoBehaviour, IPooleableObject
     {
 
     }
+
+    public IEnumerator BulletCoroutine(Bullet b)
+    {
+        yield return new WaitForSeconds(5f);
+
+        b.pool?.Release(b);
+    }
 }

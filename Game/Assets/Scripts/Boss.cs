@@ -114,13 +114,14 @@ public class Boss : MonoBehaviour, IEnemy
             //if (HasLineOfSightTo(player.gameObject.transform.GetChild(0).transform))
             //{
 
-                //agent.enabled = false;
+            //agent.enabled = false;
 
-                Bullet bullet = (Bullet)bulletPool.Get();
+            Bullet bullet = (Bullet)bulletPool.Get();
 
-                bullet.transform.position = transform.position + BulletSpawnOffset;
-                bullet.transform.rotation = agent.transform.rotation;
-                bullet.GetComponent<Rigidbody>().AddForce(agent.transform.forward * bulletPrefab.MoveSpeed, ForceMode.VelocityChange);
+            bullet.transform.position = transform.position + BulletSpawnOffset;
+            bullet.transform.rotation = agent.transform.rotation;
+            bullet.GetComponent<Rigidbody>().AddForce(agent.transform.forward * bulletPrefab.MoveSpeed, ForceMode.VelocityChange);
+            bullet.BulletCoroutine(bullet);
             //}
 
             //else

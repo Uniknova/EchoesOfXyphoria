@@ -123,7 +123,8 @@ public class TransitionManager : MonoBehaviour
 
             Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
             Debug.Log(respawn.position);
-            player.PlayerMathc(respawn);
+            player.Respawn(respawn);
+            //player.PlayerMathc(respawn);
             virtualCamera = Camera.main;
             if (currentCamera == null) currentCamera = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<CinemachineVirtualCamera>();
             currentCamera.transform.position = new Vector3(currentCamera.transform.position.x, player.transform.GetChild(0).transform.position.y + 6, currentCamera.gameObject.transform.position.z);

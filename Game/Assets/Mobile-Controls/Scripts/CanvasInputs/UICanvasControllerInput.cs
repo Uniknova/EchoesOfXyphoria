@@ -8,7 +8,7 @@ public class UICanvasControllerInput : MonoBehaviour
 
     public void Awake()
     {
-        //if (DataInfo.Instance.GetPlatform() == 1) this.gameObject.SetActive(false);
+        if (DataInfo.Instance.GetPlatform() == 1) this.gameObject.SetActive(false);
     }
     public void VirtualMoveInput(Vector2 virtualMoveDirection)
     {

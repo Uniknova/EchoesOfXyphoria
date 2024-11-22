@@ -14,8 +14,20 @@ public class MatchInfo : MonoBehaviour
     public Room actualRoom;
     private static MatchInfo instance;
     public RunSpawn runSpawn;
+    public EnemyScriptableObject normalEnemy;
+    public EnemyScriptableObject poisonEnemy;
+    public EnemyScriptableObject dashEnemy;
+    public EnemyScriptableObject tankEnemy;
     // Start is called before the first frame update
 
+
+    public static MatchInfo Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
     private void Awake()
     {
         if (instance == null)
@@ -45,7 +57,10 @@ public class MatchInfo : MonoBehaviour
 
     public void Respawn(Transform respawn)
     {
-        player.Respawn(respawn);
+        if (respawn != null)
+        {
+            player.Respawn(respawn);
+        }
     }
 
     public void AddScore(int scoreEnemy)
@@ -72,7 +87,17 @@ public class MatchInfo : MonoBehaviour
 
     public void EndLevel()
     {
-        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
+        LevelStats(normalEnemy);
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_GAME);
+    }
+
+    public void LevelStats(EnemyScriptableObject enemy)
+    {
+        enemy.health += 20;
+        enemy.damage += 5;
+        enemy.speed += 0.1f;
+        enemy.armor += 0.5f;
+        enemy.score += 10;
     }
 
 

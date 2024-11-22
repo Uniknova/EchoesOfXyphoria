@@ -375,6 +375,10 @@ MonoBehaviour:
   salasSuperadas: 0
   actualRoom: {fileID: 0}
   runSpawn: {fileID: 0}
+  normalEnemy: {fileID: 11400000, guid: 39ee87d6ab88fba4db9ba37f4b1710f5, type: 2}
+  poisonEnemy: {fileID: 0}
+  dashEnemy: {fileID: 0}
+  tankEnemy: {fileID: 0}
 --- !u!4 &1726468395
 Transform:
   m_ObjectHideFlags: 0

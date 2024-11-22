@@ -45,18 +45,7 @@ public class Player : MonoBehaviour
     RaycastWeapon weapon;
 
     public Melee melee;
-    //Melee meleeR;
 
-    //public static Player Instance
-    //{
-    //    get
-    //    {
-    //        if (instance == null)
-    //        {
-
-    //        }
-    //    }
-    //}
 
     public static Player Instance
     {
@@ -97,7 +86,6 @@ public class Player : MonoBehaviour
         indexWeapon = -1;
         indexMelee = -1;
         lowHp = false;
-        //gravedad = false;
         DontDestroyOnLoad(gameObject);
         
 
