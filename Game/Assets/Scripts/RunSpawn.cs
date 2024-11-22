@@ -26,7 +26,7 @@ public class RunSpawn : MonoBehaviour
     List<Vector2Int> runnersPositions;
     List<Vector2Int> runnersDirection;
 
-    int ROOM_SIZE = 50; //grande de cada room
+    int ROOM_SIZE = 60; //grande de cada room
 
 
     private void Awake()
@@ -67,6 +67,7 @@ public class RunSpawn : MonoBehaviour
         //    matchInfo = MatchInfo.Instance;
         //}
         matchInfo = MatchInfo.Instance;
+        iterations = matchInfo.GetSalas();
         if (matchInfo != null)
         {
             Debug.Log("sisisisi");

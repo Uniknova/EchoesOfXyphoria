@@ -558,6 +558,8 @@ MonoBehaviour:
   spawner: {fileID: 0}
   respawn: {fileID: 4971659630634876828}
   triggers: {fileID: 4967931746549028021}
+  boss: {fileID: 0}
+  bossRespawn: {fileID: 0}
 --- !u!114 &5995181972747620615
 MonoBehaviour:
   m_ObjectHideFlags: 0

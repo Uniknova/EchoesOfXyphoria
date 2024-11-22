@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     public List<Melee> meleeWeapons;
     public bool lowHp;
+    public bool lowPower;
     private bool andar;
     private const string andarAnimator = "Andar";
     private const string meleeAnimator = "Melee";
@@ -53,7 +54,8 @@ public class Player : MonoBehaviour
         {
             if (instance == null)
             {
-                instance = new Player();
+                instance = Instantiate(Resources.Load<Player>("Player"));
+                //instance = new Player();
             }
 
             return instance;
@@ -76,6 +78,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         DataInfo.Instance.GetPlatform();
+        lowPower = false;
         render = GetComponentInChildren<MeshRenderer>();
         if (render != null)
             color = render.material.color;
@@ -87,7 +90,7 @@ public class Player : MonoBehaviour
         indexMelee = -1;
         lowHp = false;
         DontDestroyOnLoad(gameObject);
-        
+
 
     }
 
@@ -142,7 +145,7 @@ public class Player : MonoBehaviour
             //    weapon.StartFiring();
             //}
 
-            if(melee != null) 
+            if (melee != null)
             {
                 melee.Attack();
                 animatorPlayer.SetTrigger(meleeAnimator);
@@ -156,7 +159,7 @@ public class Player : MonoBehaviour
                 weapon.UpdateFiring(Time.deltaTime);
                 weapon.UpdateBullets(Time.deltaTime);
             }
-            
+
         }
 
         //if (weapon != null)
@@ -167,7 +170,7 @@ public class Player : MonoBehaviour
         //    }
         //    weapon.UpdateBullets(Time.deltaTime);
         //}
-        
+
         if (Input.GetButtonUp("Fire1"))
         {
             if (weapon != null)
@@ -179,7 +182,7 @@ public class Player : MonoBehaviour
             {
                 //animatorPlayer.SetBool(meleeAnimator, false);
             }
-            
+
         }
 
     }
@@ -256,7 +259,7 @@ public class Player : MonoBehaviour
     public void PlayerHealth(float health)
     {
         hp = Mathf.Min(100, hp + health);
-        if (hp >= (hpMax * 0.2f) && lowHp)
+        if (hp >= (hpMax * 0.2f) && lowHp && lowPower)
         {
             weapon.fireRate /= 3;
             speed /= 2;
@@ -278,10 +281,23 @@ public class Player : MonoBehaviour
         deathPowers.Add(power);
     }
 
+    public void RemoveAllPowers()
+    {
+        foreach (var power in deathPowers)
+        {
+            deathPowers.Remove(power);
+        }
+        lowPower = false;
+    }
+
     public void TakeDamage(float damage)
     {
         hp -= damage;
-        if (hp <= (hpMax * 0.2f) && !lowHp)
+        if (hp <= 0)
+        {
+            Death();
+        }
+        if (hp <= (hpMax * 0.2f) && !lowHp && lowPower)
         {
             weapon.fireRate *= 3;
             speed *= 2;
@@ -307,5 +323,58 @@ public class Player : MonoBehaviour
             render.material.color = color;
             yield return new WaitForSeconds(0.5f);
         }
+    }
+    public void DeleteWeapons()
+    {
+        foreach (var weapon in weapons)
+        {
+            if (weapon != null) Destroy(weapon);
+        }
+
+        if (meleeWeapons != null)
+        {
+            foreach (var me in meleeWeapons)
+            {
+                if (me != null)
+                {
+                    //meleeWeapons.Remove(me);
+                    Destroy(me.meleeL);
+                    Destroy(me.meleeR);
+
+                }
+            }
+        }
+
+        if (weapon != null) Destroy(weapon);
+        if (melee != null)
+        {
+            Destroy(melee.meleeL);
+            Destroy(melee.meleeR);
+            melee = null;
+        }
+    }
+
+    public void RestartPlayer()
+    {
+        animatorPlayer.SetBool(armaAnimator, false);
+        hp = hpMax;
+        
+        DeleteWeapons();
+        lowPower = false;
+        render = GetComponentInChildren<MeshRenderer>();
+        if (render != null)
+            color = render.material.color;
+        weapon = GetComponentInChildren<RaycastWeapon>();
+        weapons = new List<GameObject>();
+        meleeWeapons = new List<Melee>();
+        deathPowers = new List<IDeathPower>();
+        indexWeapon = -1;
+        indexMelee = -1;
+        lowHp = false;
+    }
+
+    public void Death()
+    {
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
     }
 }

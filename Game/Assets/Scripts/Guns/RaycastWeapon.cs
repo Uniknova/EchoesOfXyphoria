@@ -219,4 +219,12 @@ public class RaycastWeapon : MonoBehaviour
     {
         powerEnemyList.Add(powerEnemy);
     }
+
+    public void RemoveAllPowers()
+    {
+        foreach(IPowerEnemy powerEnemy in powerEnemyList)
+        {
+            powerEnemyList.Remove(powerEnemy);
+        }
+    }
 }
