@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MatchInfo : MonoBehaviour
@@ -11,6 +12,7 @@ public class MatchInfo : MonoBehaviour
     public int remainEnemies;
     public int enemiesToSpawn;
     public int salasSuperadas;
+    public int instanciaSalas;
     public Room actualRoom;
     private static MatchInfo instance;
     public RunSpawn runSpawn;
@@ -25,6 +27,13 @@ public class MatchInfo : MonoBehaviour
     {
         get
         {
+            if ( instance == null)
+            {
+                instance = Instantiate(Resources.Load<MatchInfo>("MatchManager"));
+                instance.salasSuperadas = 0;
+                instance.enemiesToSpawn = 5;
+                instance.instanciaSalas = 10;
+            }
             return instance;
         }
     }
@@ -33,6 +42,7 @@ public class MatchInfo : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            instanciaSalas = 3;
         }
 
         else
@@ -46,6 +56,7 @@ public class MatchInfo : MonoBehaviour
     {
         salasSuperadas = 0;
         enemiesToSpawn = 5;
+        instanciaSalas = 10;
         Init();
     }
 
@@ -87,6 +98,7 @@ public class MatchInfo : MonoBehaviour
 
     public void EndLevel()
     {
+        instanciaSalas++;
         LevelStats(normalEnemy);
         TransitionManager.Instance.LoadScene(TransitionManager.SCENE_GAME);
     }
@@ -98,6 +110,11 @@ public class MatchInfo : MonoBehaviour
         enemy.speed += 0.1f;
         enemy.armor += 0.5f;
         enemy.score += 10;
+    }
+
+    public int GetSalas()
+    {
+        return instanciaSalas;
     }
 
 

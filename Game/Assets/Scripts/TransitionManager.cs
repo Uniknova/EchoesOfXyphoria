@@ -89,7 +89,8 @@ public class TransitionManager : MonoBehaviour
     IEnumerator LoadCoroutine(string sceneName)
     {
         m_Anim.SetBool("Show", true);
-        player = FindObjectOfType<Player>();
+        player = Player.Instance;
+        //player = FindObjectOfType<Player>();
 
         if (player != null)
         {
@@ -117,9 +118,13 @@ public class TransitionManager : MonoBehaviour
         if (sceneName != SCENE_GAME && sceneName != SCENE_LOBBY) DestroyObjects();
 
 
+        if (sceneName == SCENE_LOBBY)
+        {
+            Player.Instance.RestartPlayer();
+        }
         if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY)
         {
-            if (player == null) player = FindObjectOfType<Player>();
+            if (player == null) player = Player.Instance;
 
             Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
             Debug.Log(respawn.position);
