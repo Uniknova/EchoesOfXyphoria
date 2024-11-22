@@ -17,19 +17,28 @@ public class ChangeSceneMenu : MonoBehaviour
     [SerializeField] private GameObject settingsInGame; 
     [SerializeField] private GameObject screenSettings; 
     [SerializeField] private GameObject soundSettings; 
-    [SerializeField] private GameObject creditSettings; 
+    [SerializeField] private GameObject creditSettings;
+    [SerializeField] private GameObject languageSettings;
 
-    [SerializeField] private AudioMixer generalSound;
+    [SerializeField] public AudioMixer generalSound;
 
     [SerializeField] private Slider sound;
-    [SerializeField] private Toggle full;
+    [SerializeField] public Toggle full;
     [SerializeField] private TMP_Dropdown quality;
+    
 
     [SerializeField] private GameObject high;
     [SerializeField] private GameObject medium;
     [SerializeField] private GameObject low;
 
 
+    [SerializeField] private GameObject spanish;
+    [SerializeField] private GameObject english;
+
+
+
+
+    private bool active = false; 
 
     public void Start()
     {
@@ -45,21 +54,20 @@ public class ChangeSceneMenu : MonoBehaviour
 
         full.isOn = Screen.fullScreen;
 
-        //quality.value = PlayerPrefs.GetInt("Quality");
+        ChangeLanguage(PlayerPrefs.GetInt("Language"));
+        LoadLanguage(PlayerPrefs.GetInt("Language"));
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            PauseMenu();
-        }
-    }
+
+
+    // Settings 
 
     public void ScreenSettings()
     {
         soundSettings.SetActive(false);
         creditSettings.SetActive(false);
         screenSettings.SetActive(true);
+        languageSettings.SetActive(false);
     }
 
     public void FullScreen(bool fullScreen)
@@ -109,7 +117,9 @@ public class ChangeSceneMenu : MonoBehaviour
         screenSettings.SetActive(false);
         creditSettings.SetActive(false);
         soundSettings.SetActive(true);
+        languageSettings.SetActive(false);
     }
+
 
     public void CambiarVolumen(float volum)
     {
@@ -117,12 +127,57 @@ public class ChangeSceneMenu : MonoBehaviour
         PlayerPrefs.SetFloat("General", volum);
     }
 
+    public void LanguageSettings()
+    {
+        screenSettings.SetActive(false);
+        creditSettings.SetActive(false);
+        soundSettings.SetActive(false);
+        languageSettings.SetActive(true);
+    }
+
+    public void ChangeLanguage(int language)
+    {
+        if (active)
+            return;
+
+        StartCoroutine(SetLanguage(language));
+
+    }
+
+    private IEnumerator SetLanguage(int language)
+    {
+        active = true;
+        yield return LocalizationSettings.InitializationOperation; 
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[language];
+        PlayerPrefs.SetInt("Language", language);
+        LoadLanguage(language);
+        active = false; 
+
+    }
+
+    public void LoadLanguage(int index)
+    {
+        if (index == 0)
+        {
+            spanish.SetActive(false);
+            english.SetActive(true);
+        }
+        else
+        {
+            spanish.SetActive(true);
+            english.SetActive(false);
+        }
+    }
+
     public void CreditSettings()
     {
         screenSettings.SetActive(false);
         creditSettings.SetActive(true);
         soundSettings.SetActive(false);
+        languageSettings.SetActive(false);
     }
+
+    // Change Scene
 
     public void LoadGame()
     {

@@ -1356,7 +1356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7890795602862994828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4380,7 +4380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3243069943107597457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2194263537898791994}
+        m_TargetAssemblyTypeName: ChangeSceneMenu, Assembly-CSharp
+        m_MethodName: ChangeLanguage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4613629707023327963
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,7 +5776,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6486605173117800135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2194263537898791994}
+        m_TargetAssemblyTypeName: ChangeSceneMenu, Assembly-CSharp
+        m_MethodName: LanguageSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5358684299913193785
 GameObject:
   m_ObjectHideFlags: 0
@@ -7601,7 +7625,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3097474034645597929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2194263537898791994}
+        m_TargetAssemblyTypeName: ChangeSceneMenu, Assembly-CSharp
+        m_MethodName: ChangeLanguage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6908905177527176368
 GameObject:
   m_ObjectHideFlags: 0
@@ -10454,6 +10490,7 @@ MonoBehaviour:
   screenSettings: {fileID: 8807266996831949172}
   soundSettings: {fileID: 4466090600943907647}
   creditSettings: {fileID: 484616155990565776}
+  languageSettings: {fileID: 8992813882211021300}
   generalSound: {fileID: 24100000, guid: 86bf49a4da34e2e45a00bc5654957dc4, type: 2}
   sound: {fileID: 4643975968300652962}
   full: {fileID: 1674002553382879624}
@@ -10461,6 +10498,8 @@ MonoBehaviour:
   high: {fileID: 3321191480621364808}
   medium: {fileID: 4914897868273456493}
   low: {fileID: 7388904845493214734}
+  spanish: {fileID: 1800051333724075886}
+  english: {fileID: 5831103286685328660}
 --- !u!1 &8966542110914429709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,7 +10729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2092304082046357134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10712,7 +10751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480.00006, y: -134}
+  m_AnchoredPosition: {x: -480.00006, y: -114}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9174144599144300504
