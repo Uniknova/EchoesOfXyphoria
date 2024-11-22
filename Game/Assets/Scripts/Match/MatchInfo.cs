@@ -57,7 +57,7 @@ public class MatchInfo : MonoBehaviour
 
     public void Respawn(Transform respawn)
     {
-        if (respawn != null)
+        if (respawn != null && player != null)
         {
             player.Respawn(respawn);
         }
