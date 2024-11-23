@@ -62,6 +62,8 @@ MonoBehaviour:
   indexWeapon: 0
   indexMelee: 0
   lowHp: 0
+  lowPower: 0
+  Target: {fileID: 8521794364238513206}
   animatorPlayer: {fileID: 5718342744995376875}
   gravedad: 1
 --- !u!1 &1813385257492762742

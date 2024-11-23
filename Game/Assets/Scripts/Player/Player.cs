@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     MeshRenderer render;
     Color color;
 
+    public Transform Target;
+
     public Animator animatorPlayer;
 
     Coroutine PoisonC;
@@ -210,6 +212,7 @@ public class Player : MonoBehaviour
             {
                 animatorPlayer.SetBool(armaAnimator, true);
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
+                weapon.SetRaycastDestination(Target);
                 weapon.enabled = true;
             }
         }
@@ -236,6 +239,7 @@ public class Player : MonoBehaviour
             {
                 animatorPlayer.SetBool(armaAnimator, true);
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
+                weapon.SetRaycastDestination(Target);
                 weapon.enabled = true;
             }
         }

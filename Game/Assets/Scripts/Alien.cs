@@ -22,6 +22,9 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     public float dashSpeed;
     public float dashTime;
+    public float distanceAttack = 2f;
+
+    public GameObject trigger;
 
     public enum type { Normal, Dash, Poison, Tank }
     public type tipo;
@@ -41,6 +44,9 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     public NavMeshAgent Agent;
 
+    public Animator animator;
+    public const string animatorAtacar = "Atacar";
+
     public bool Active
     {
         get
@@ -57,6 +63,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         maxhp = enemyScriptableObject.health;
         hp = maxhp;
         damage = enemyScriptableObject.damage;
@@ -88,7 +95,20 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         {
             if (Agent.enabled)
             {
-                Agent.SetDestination(player.transform.GetChild(0).transform.position);
+                if (Vector3.Distance(Agent.transform.position, player.transform.GetChild(0).transform.position) < distanceAttack)
+                {
+                    Agent.isStopped = true;
+                    if (animator != null)
+                    {
+                        animator.SetBool(animatorAtacar, true);
+                    }
+                }
+
+                else
+                {
+                    Agent.isStopped = false;
+                    Agent.SetDestination(player.transform.GetChild(0).transform.position);
+                }
                 if (tipo == type.Dash)
                 {
                     //if (Random.Range(0, 10) <= 1 && DashC == null)

@@ -41,6 +41,11 @@ public class RaycastWeapon : MonoBehaviour
         return (bullet.initialPosition) + (bullet.initialVelocity * bullet.time) + (0.5f * gravity * bullet.time * bullet.time);
     }
 
+    public void SetRaycastDestination(Transform target)
+    {
+        raycastDestination = target;
+    }
+
     Bullet CreateBullet(Vector3 position, Vector3 velocity, Transform can)
     {
         Bullet bullet = new Bullet();

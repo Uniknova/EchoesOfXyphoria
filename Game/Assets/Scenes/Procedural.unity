@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,14 +315,13 @@ MonoBehaviour:
   - 0.3
   - 0.7
   roomPrefabs:
-  - {fileID: 2065516122416468308, guid: 26465f411a674a74fbf51876a96f4343, type: 3}
-  - {fileID: 2065516122416468308, guid: 2fa58637fdc7748469555e98532fbb63, type: 3}
-  - {fileID: 2065516122416468308, guid: d1212f521533c71439c5d75fe07145e7, type: 3}
+  - {fileID: 4860610023773369545, guid: f1c9e04f0ad4869439f358d2a128af70, type: 3}
+  - {fileID: 4195390960313716086, guid: c2266512becfee24099fab641f88265a, type: 3}
   roomInit: {fileID: 2065516122416468308, guid: 7c0d983060247194ba4b4387f5f02ff1, type: 3}
   roomBoss: {fileID: 2065516122416468308, guid: faa9400d86ed61d4b9ecf0d4ab60a616, type: 3}
   world: {fileID: 1348960232}
   rooms: []
-  matchInfo: {fileID: 1726468394}
+  matchInfo: {fileID: 0}
 --- !u!4 &1481582895
 Transform:
   m_ObjectHideFlags: 0
@@ -333,62 +332,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.210447, y: 7.5771394, z: -27.027514}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1726468393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1726468395}
-  - component: {fileID: 1726468394}
-  m_Layer: 0
-  m_Name: MatchManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1726468394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726468393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 176309257b0d34042ad60de653675d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  player: {fileID: 0}
-  killedEnemies: 0
-  remainEnemies: 0
-  enemiesToSpawn: 0
-  salasSuperadas: 0
-  actualRoom: {fileID: 0}
-  runSpawn: {fileID: 0}
-  normalEnemy: {fileID: 11400000, guid: 39ee87d6ab88fba4db9ba37f4b1710f5, type: 2}
-  poisonEnemy: {fileID: 0}
-  dashEnemy: {fileID: 0}
-  tankEnemy: {fileID: 0}
---- !u!4 &1726468395
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726468393}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.423107, y: -22.223612, z: 60.803185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -498,5 +441,4 @@ SceneRoots:
   - {fileID: 1407640960}
   - {fileID: 1481582895}
   - {fileID: 1348960232}
-  - {fileID: 1726468395}
   - {fileID: 1869372350}
