@@ -390,7 +390,8 @@ public class Player : MonoBehaviour
 
     public void Death()
     {
-        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
+        MatchInfo.Instance.SetGameOver();
+        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
     }
 
     public void SetMaterial(Material material)

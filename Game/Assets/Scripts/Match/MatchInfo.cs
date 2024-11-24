@@ -14,6 +14,7 @@ public class MatchInfo : MonoBehaviour
     public int enemiesToSpawn;
     public int salasSuperadas;
     public int instanciaSalas;
+    public int totalEnemies;
     public Room actualRoom;
     private static MatchInfo instance;
     public RunSpawn runSpawn;
@@ -34,6 +35,7 @@ public class MatchInfo : MonoBehaviour
                 instance.salasSuperadas = 0;
                 instance.enemiesToSpawn = 5;
                 instance.instanciaSalas = 3;
+                instance.totalEnemies = 0;
             }
             return instance;
         }
@@ -80,6 +82,7 @@ public class MatchInfo : MonoBehaviour
         Debug.Log("killed enemies " + killedEnemies);
         score += scoreEnemy;
         killedEnemies++;
+        totalEnemies++;
 
         if (killedEnemies >= remainEnemies)
         {
@@ -128,6 +131,11 @@ public class MatchInfo : MonoBehaviour
     public int GetSalas()
     {
         return instanciaSalas;
+    }
+
+    public void SetGameOver()
+    {
+        GameOver.Instance.SetStats(score, totalEnemies, salasSuperadas);
     }
 
 

@@ -81,6 +81,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7181094658858398772}
     - target: {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
+      propertyPath: dashProb
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
+      propertyPath: dashTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
+      propertyPath: dashSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
       propertyPath: enemyScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: 00706cb78508dc244bb97628ec745aa1, type: 2}
