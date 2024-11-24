@@ -1754,8 +1754,8 @@ CanvasGroup:
   m_GameObject: {fileID: 8444858171109036928}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &8346364236756709997
 Animator:
@@ -1834,6 +1834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health
       objectReference: {fileID: 0}
+    - target: {fileID: 7901518865030258690, guid: f4ad5f40bf26905438a7761ffc370a05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1866,6 +1870,10 @@ PrefabInstance:
     - target: {fileID: 2849349227709908137, guid: a94d9451d60edc846b3dee675cf51cdc, type: 3}
       propertyPath: m_Name
       value: Fuego
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849349227709908137, guid: a94d9451d60edc846b3dee675cf51cdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5824325599686851108, guid: a94d9451d60edc846b3dee675cf51cdc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1955,6 +1963,10 @@ PrefabInstance:
     - target: {fileID: 4728400816150335875, guid: 6c92af85809c8e14db3f787af25eed70, type: 3}
       propertyPath: m_Name
       value: Speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728400816150335875, guid: 6c92af85809c8e14db3f787af25eed70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5536992523252160760, guid: 6c92af85809c8e14db3f787af25eed70, type: 3}
       propertyPath: m_LocalPosition.x

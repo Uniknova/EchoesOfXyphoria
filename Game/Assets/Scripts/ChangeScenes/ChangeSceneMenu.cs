@@ -196,7 +196,8 @@ public class ChangeSceneMenu : MonoBehaviour
     public void LoadTutorial()
     {
         Time.timeScale = 1f;
-        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_TUTORIAL);
+        SceneManager.LoadScene(3);
+        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_TUTORIAL);
 
     }
 
@@ -275,5 +276,10 @@ public class ChangeSceneMenu : MonoBehaviour
         //variableCoins  = variableCoins +5
 
 
+    }
+
+    public void loadMenu() {
+
+        SceneManager.LoadScene(5);
     }
 }
