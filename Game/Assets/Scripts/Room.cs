@@ -9,6 +9,15 @@ public class Room : MonoBehaviour
     public EnemySpawner spawner;
     public Transform respawn;
     public Transform triggers;
+    public Transform triggerLeft;
+    public Transform triggerRight;
+    public Transform triggerUp;
+    public Transform triggerDown;
+
+    public GameObject wallLeft;
+    public GameObject wallRight;
+    public GameObject wallUp;
+    public GameObject wallDown;
     public Boss boss;
     public Transform bossRespawn;
     int x, y;
@@ -48,10 +57,33 @@ public class Room : MonoBehaviour
 
     public void ActiveTriggers()
     {
-        if (triggers != null)
+        if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x + 1, y)))
         {
-            triggers.gameObject.SetActive(true);
+            triggerRight.gameObject.SetActive(true);
+            wallRight.SetActive(false);
         }
+
+        if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x - 1, y)))
+        {
+            triggerLeft.gameObject.SetActive(true);
+            wallLeft.SetActive(false);
+        }
+
+        if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x, y + 1)))
+        {
+            triggerUp.gameObject.SetActive(true);
+            wallUp.SetActive(false);
+        }
+
+        if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x, y - 1)))
+        {
+            triggerDown.gameObject.SetActive(true);
+            wallDown.SetActive(false);
+        }
+        //if (triggers != null)
+        //{
+        //    triggers.gameObject.SetActive(true);
+        //}
     }
 
     public void SetEnemies(int newEnemies)

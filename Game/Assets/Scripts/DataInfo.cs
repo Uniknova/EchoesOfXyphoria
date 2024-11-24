@@ -53,19 +53,30 @@ public class DataInfo
 
     public int GetPlatform()
     {
-        Debug.Log(Application.platform);
-        if (Application.platform == RuntimePlatform.Android ||
-            Application.platform == RuntimePlatform.IPhonePlayer)
+        Debug.Log(Application.isMobilePlatform);
+
+        if (Application.isMobilePlatform)
         {
-            Debug.Log("Android");
+            Debug.Log("Estás jugando en un dispositivo móvil.");
             return 0;
         }
-
         else
         {
-            Debug.Log("Pc");
+            Debug.Log("Estás jugando en una PC.");
             return 1;
         }
+        //if (Application.platform == RuntimePlatform.Android ||
+        //    Application.platform == RuntimePlatform.IPhonePlayer)
+        //{
+        //    Debug.Log("Android");
+        //    return 0;
+        //}
+
+        //else
+        //{
+        //    Debug.Log("Pc");
+        //    return 1;
+        //}
     }
 
    
