@@ -9,6 +9,7 @@ public class UICanvasControllerInput : MonoBehaviour
     public void Awake()
     {
         if (DataInfo.Instance.GetPlatform() == 1) this.gameObject.SetActive(false);
+        DontDestroyOnLoad(gameObject);
         inputs = Player.Instance;
     }
     public void VirtualMoveInput(Vector2 virtualMoveDirection)
@@ -30,10 +31,10 @@ public class UICanvasControllerInput : MonoBehaviour
         //inputs.look = virtualLookDirection;
     }
 
-    //public void VirtualJumpInput(bool virtualJumpState)
-    //{
-    //    inputs.jump = virtualJumpState;
-    //}
+    public void VirtualJumpInput(bool virtualJumpState)
+    {
+        inputs.disparoMovil = virtualJumpState;
+    }
 
     //public void VirtualSprintInput(bool virtualSprintState)
     //{

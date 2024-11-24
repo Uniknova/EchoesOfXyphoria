@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     MeshRenderer render;
     Color color;
 
+    public bool disparoMovil;
+
     public Transform Target;
 
     public Animator animatorPlayer;
@@ -45,9 +47,11 @@ public class Player : MonoBehaviour
 
     private static Player instance;
 
-    RaycastWeapon weapon;
+    public RaycastWeapon weapon;
 
     public Melee melee;
+
+    public SkinnedMeshRenderer playerMaterial;
 
 
     public static Player Instance
@@ -80,6 +84,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         DataInfo.Instance.GetPlatform();
+        disparoMovil = false;
         lowPower = false;
         render = GetComponentInChildren<MeshRenderer>();
         if (render != null)
@@ -140,7 +145,7 @@ public class Player : MonoBehaviour
             controller.Move(velocity * Time.deltaTime);
         }
         if (weapon == null && melee == null) return;
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || disparoMovil)
         {
             //if (weapon != null)
             //{
@@ -154,7 +159,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") || disparoMovil)
         {
             if (weapon != null)
             {
@@ -380,5 +385,10 @@ public class Player : MonoBehaviour
     public void Death()
     {
         TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
+    }
+
+    public void SetMaterial(Material material)
+    {
+        playerMaterial.material = material;
     }
 }

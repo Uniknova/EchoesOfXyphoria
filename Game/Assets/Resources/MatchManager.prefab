@@ -54,6 +54,6 @@ MonoBehaviour:
   actualRoom: {fileID: 0}
   runSpawn: {fileID: 0}
   normalEnemy: {fileID: 11400000, guid: 39ee87d6ab88fba4db9ba37f4b1710f5, type: 2}
-  poisonEnemy: {fileID: 0}
-  dashEnemy: {fileID: 0}
-  tankEnemy: {fileID: 0}
+  poisonEnemy: {fileID: 11400000, guid: ac0e005622d19a545848f5b74fcc5448, type: 2}
+  dashEnemy: {fileID: 11400000, guid: 00706cb78508dc244bb97628ec745aa1, type: 2}
+  tankEnemy: {fileID: 11400000, guid: a01194d5c64fa7843b5efeae5d0bd827, type: 2}

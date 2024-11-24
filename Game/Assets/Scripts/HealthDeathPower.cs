@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class HealthDeathPower : IDeathPower
 {
-    Player player;
     float hp;
     float umbral = 0.5f;
-    public HealthDeathPower(Player player, float hp)
+    public HealthDeathPower(float hp)
     {
-        this.player = player;
         this.hp = hp;
     }
     public void UpdateDeath()
     {
         float random = Random.Range(0f, 1f);
-        if (random <= umbral) player.PlayerHealth(hp);
+        if (random <= umbral) Player.Instance.PlayerHealth(hp);
 
+    }
+
+    public void AddPower()
+    {
+        Debug.Log("Health seleccionado");
+        Player.Instance.AddDeathPower(this);
     }
 }

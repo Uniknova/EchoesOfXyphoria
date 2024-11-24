@@ -66,6 +66,7 @@ MonoBehaviour:
   Target: {fileID: 8521794364238513206}
   animatorPlayer: {fileID: 5718342744995376875}
   gravedad: 1
+  playerMaterial: {fileID: 4884035707401574166}
 --- !u!1 &1813385257492762742
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +462,11 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.09, z: 0}
+--- !u!137 &4884035707401574166 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5303476838424815507, guid: 96b81259f9c5dc3498668e4eb4407929, type: 3}
+  m_PrefabInstance: {fileID: 747079172184879237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5401261988600540522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4659831046441197039, guid: 96b81259f9c5dc3498668e4eb4407929, type: 3}

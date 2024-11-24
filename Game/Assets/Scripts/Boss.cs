@@ -196,7 +196,9 @@ public class Boss : MonoBehaviour, IEnemy
     {
         player.UpdateDeathPowers();
         matchInfo.AddScore(enemyScriptableObject.score);
-        matchInfo.EndLevel();
+        PowerUpsCanvas.Instance.Init();
+        Destroy(gameObject);
+        //matchInfo.EndLevel();
     }
 
     public void StartRotating()

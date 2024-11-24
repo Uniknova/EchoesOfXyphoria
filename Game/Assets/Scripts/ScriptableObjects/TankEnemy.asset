@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: TankEnemy
   m_EditorClassIdentifier: 
   health: 200
-  damage: 40
+  damage: 20
   speed: 2.5
   speedDown: 1
   fireDamage: 0.5
-  armor: 10
+  armor: 5
   score: 30
   tipo: 3
+  defaulthealth: 200
+  defaultdamage: 20
+  defaultspeed: 2.5
+  defaultspeedDown: 1
+  defaultfireDamage: 0.5
+  defaultarmor: 5
+  defaultscore: 30

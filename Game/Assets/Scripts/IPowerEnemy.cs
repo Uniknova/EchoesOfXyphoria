@@ -5,4 +5,6 @@ using UnityEngine;
 public interface IPowerEnemy
 {
     void UpdateEnemy(IEnemy enemy);
+
+    void AddPower();
 }

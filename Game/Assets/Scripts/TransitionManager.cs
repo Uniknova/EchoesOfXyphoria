@@ -46,6 +46,7 @@ public class TransitionManager : MonoBehaviour
 
 
     private Animator m_Anim;
+    private PowerUpsCanvas _PowerUpsCanvas;
     private int HashShowAnim = Animator.StringToHash("Show");
 
     private void Awake()
@@ -120,7 +121,16 @@ public class TransitionManager : MonoBehaviour
 
         if (sceneName == SCENE_LOBBY)
         {
+            MatchInfo match = MatchInfo.Instance;
+            match.ResetEnemies();
+            Destroy(match.gameObject);
             Player.Instance.RestartPlayer();
+            if (_PowerUpsCanvas != null) Destroy(_PowerUpsCanvas.gameObject);
+        }
+
+        if (sceneName == SCENE_GAME)
+        {
+            _PowerUpsCanvas = PowerUpsCanvas.Instance;
         }
         if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY)
         {

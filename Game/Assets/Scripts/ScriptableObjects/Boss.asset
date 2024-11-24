@@ -17,6 +17,13 @@ MonoBehaviour:
   speed: 5.5
   speedDown: 3.5
   fireDamage: 0.5
-  armor: 10
+  armor: 3
   score: 100
   tipo: 0
+  defaulthealth: 500
+  defaultdamage: 10
+  defaultspeed: 5.5
+  defaultspeedDown: 3.5
+  defaultfireDamage: 0.5
+  defaultarmor: 3
+  defaultscore: 100

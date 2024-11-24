@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: PoisonEnemy
   m_EditorClassIdentifier: 
   health: 100
-  damage: 20
+  damage: 15
   speed: 3.5
   speedDown: 1.5
   fireDamage: 0.5
   armor: 0
   score: 20
   tipo: 2
+  defaulthealth: 100
+  defaultdamage: 15
+  defaultspeed: 3.5
+  defaultspeedDown: 1.5
+  defaultfireDamage: 0.5
+  defaultarmor: 0
+  defaultscore: 20

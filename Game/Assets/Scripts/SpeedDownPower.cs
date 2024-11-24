@@ -11,4 +11,10 @@ public class SpeedDownPower : IPowerEnemy
         if (random <= umbral) enemy.SpeedDown();
     }
 
+    public void AddPower()
+    {
+        Debug.Log("Speed seleccionado");
+        Player.Instance.weapon.AddPowerEnemy(this);
+    }
+
 }

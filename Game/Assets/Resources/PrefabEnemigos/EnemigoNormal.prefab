@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6640304971794213495
 Transform:
   m_ObjectHideFlags: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   distanceAttack: 2
   trigger: {fileID: 3759732468153184797}
   tipo: 0
+  rend: {fileID: 3734024474991151178}
   enemyScriptableObject: {fileID: 11400000, guid: 39ee87d6ab88fba4db9ba37f4b1710f5, type: 2}
   Agent: {fileID: 1745369862046140130}
   animator: {fileID: 0}
@@ -253,10 +254,15 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.35
+  m_Radius: 0.69324213
+  m_Height: 1.8130295
   m_Direction: 1
-  m_Center: {x: 0, y: 1.02, z: 0}
+  m_Center: {x: 0.030868573, y: 0.7515147, z: 0}
+--- !u!137 &3734024474991151178 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -8162758049801888361, guid: a76f98d40296dc146876583bd7ef014c, type: 3}
+  m_PrefabInstance: {fileID: 4425320672950965725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4243337295875420726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a76f98d40296dc146876583bd7ef014c, type: 3}

@@ -35,6 +35,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     Color color;
     Player player;
 
+    public SkinnedMeshRenderer rend;
+
     MatchInfo match;
 
     public EnemyScriptableObject enemyScriptableObject;
@@ -80,8 +82,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         player = FindAnyObjectByType<Player>();
         match = FindAnyObjectByType<MatchInfo>();
         //playerWeapon = player.GetComponentInChildren<RaycastWeapon>();
-        if (render!=null)
-            color = render.material.color;
+        if (rend != null)
+            color = rend.material.color;
         Agent = GetComponent<NavMeshAgent>();
         //speed = 3.5f;
         //speedDown = 1.5f;
@@ -155,7 +157,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
             }
         }
 
-        float aux = Mathf.Max(1, damage - armor);
+        float aux = Mathf.Max(5, damage - armor);
         hp -= aux;
         if (hp <= 0)
         {
@@ -201,11 +203,11 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         for (int i = 0; i < 3; i++)
         {
             Debug.Log("Hola");
-            if (render != null)
-                render.material.color = Color.red;
+            if (rend != null)
+                rend.material.color = Color.red;
             yield return new WaitForSeconds(0.5f);
-            if (render != null)
-                render.material.color = color;
+            if (rend != null)
+                rend.material.color = color;
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -213,12 +215,12 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     IEnumerator SpeedDownCoroutine()
     {
         Agent.speed = speedDown;
-        if (render != null)
-            render.material.color = Color.cyan;
+        if (rend != null)
+            rend.material.color = Color.cyan;
         yield return new WaitForSeconds(3);
         Agent.speed = speed;
-        if (render != null)
-            render.material.color = color;
+        if (rend != null)
+            rend.material.color = color;
     }
 
     public void Death()

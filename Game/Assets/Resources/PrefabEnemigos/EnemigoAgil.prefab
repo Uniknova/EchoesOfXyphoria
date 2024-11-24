@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e6ef43400f556c748a130765ff6b2324, type: 2}
+    - target: {fileID: 3759732468153184797, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4243337295875420726, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.3
@@ -73,12 +77,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 7181094658858398772}
+    - target: {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
       propertyPath: enemyScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: 00706cb78508dc244bb97628ec745aa1, type: 2}
     - target: {fileID: 9177620012966100489, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -110,9 +118,14 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2.35
   m_Direction: 1
   m_Center: {x: 0, y: 1.02, z: 0}
+--- !u!137 &7181094658858398772 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3734024474991151178, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
+  m_PrefabInstance: {fileID: 5798864948331543678}
+  m_PrefabAsset: {fileID: 0}

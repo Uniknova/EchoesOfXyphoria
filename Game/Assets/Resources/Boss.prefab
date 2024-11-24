@@ -160,6 +160,6 @@ MonoBehaviour:
     m_Bits: 0
   SpherecastRadius: 0.5
   col: {fileID: 0}
-  attackDelay: 1
+  attackDelay: 0.2
   matchInfo: {fileID: 0}
   speedRotation: 120

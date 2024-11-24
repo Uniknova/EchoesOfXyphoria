@@ -18,7 +18,9 @@ public class Espejo : MonoBehaviour
     public bool espejo;
     public Transform playerPosition;
     public Transform Head;
-    public List<GameObject> skinsList;
+    //public List<GameObject> skinsList;
+
+    public List<Material> skinList;
     GameObject skin;
     public int indexSkin;
     public Transform TargetLookAt;
@@ -29,20 +31,23 @@ public class Espejo : MonoBehaviour
         espejo = false;
         uiUse = Instantiate(prefabUi, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
         uiUse.enabled = false;
-        player = FindObjectOfType<Player>();
+        //player = FindObjectOfType<Player>();
+        player = Player.Instance;
         mouse = FindObjectOfType<MouseRotation>();
         indexSkin = 0;
-        skinsList.Add(new GameObject());
+
+
+        //skinsList.Add(new GameObject());
 
         if (Application.platform == RuntimePlatform.Android)
         {
             UiSkin.GetComponent<Animator>().SetBool("Show", true);
         }
 
-        foreach(Transform t in transform.GetChild(0).transform)
-        {
-            skinsList.Add(t.gameObject);
-        }
+        //foreach(Transform t in transform.GetChild(0).transform)
+        //{
+        //    skinsList.Add(t.gameObject);
+        //}
     }
     void OnTriggerEnter(Collider other)
     {
@@ -105,11 +110,11 @@ public class Espejo : MonoBehaviour
             {
                 t.GetComponent<Button>().enabled = false;
             }
-            skin = Instantiate(skinsList[indexSkin], Head.position, Head.rotation);
+            //skin = Instantiate(skinsList[indexSkin], Head.position, Head.rotation);
             //skin.transform.localScale = new Vector3(skin.transform.localScale.x * transform.parent.localScale.x, skin.transform.localScale.y * transform.parent.localScale.y, skin.transform.localScale.z * transform.parent.localScale.z);
-            skin.transform.localScale = skin.transform.lossyScale;
-            skin.transform.SetParent(Head);
-            if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
+            //skin.transform.localScale = skin.transform.lossyScale;
+            //skin.transform.SetParent(Head);
+            //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
             espejo = false;
             uiUse.enabled = true;
             player.enabled = true;
@@ -127,21 +132,23 @@ public class Espejo : MonoBehaviour
             previous.position = Vector3.MoveTowards(previous.position, target.position, 2 * Time.deltaTime);
             yield return null;
         }
-        Destroy(skin);
-        skinsList[indexSkin].transform.position = Head.position;
+        //Destroy(skin);
+        //skinsList[indexSkin].transform.position = Head.position;
         float x = previous.rotation.x;
         float z = previous.rotation.x;
         previous.LookAt(TargetLookAt);
         previous.rotation = new Quaternion(x, previous.rotation.y, z, previous.rotation.w);
-        if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
+        //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
 
     }
 
     public void ChangeSkin(int i)
     {
-        if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
-        indexSkin = (indexSkin + i + skinsList.Count) % skinsList.Count;
-        skinsList[indexSkin].transform.position = Head.position;
-        if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
+        //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
+
+        indexSkin = (indexSkin + i + skinList.Count) % skinList.Count;
+        player.SetMaterial(skinList[indexSkin]);
+        //skinsList[indexSkin].transform.position = Head.position;
+        //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
     }
 }

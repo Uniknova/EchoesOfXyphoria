@@ -32,7 +32,7 @@ public class MatchInfo : MonoBehaviour
                 instance = Instantiate(Resources.Load<MatchInfo>("MatchManager"));
                 instance.salasSuperadas = 0;
                 instance.enemiesToSpawn = 5;
-                instance.instanciaSalas = 10;
+                instance.instanciaSalas = 3;
             }
             return instance;
         }
@@ -56,7 +56,7 @@ public class MatchInfo : MonoBehaviour
     {
         salasSuperadas = 0;
         enemiesToSpawn = 5;
-        instanciaSalas = 10;
+        instanciaSalas = 3;
         Init();
     }
 
@@ -110,6 +110,14 @@ public class MatchInfo : MonoBehaviour
         enemy.speed += 0.1f;
         enemy.armor += 0.5f;
         enemy.score += 10;
+    }
+
+    public void ResetEnemies()
+    {
+        normalEnemy.ResetStats();
+        poisonEnemy.ResetStats();
+        dashEnemy.ResetStats();
+        tankEnemy.ResetStats();
     }
 
     public int GetSalas()
