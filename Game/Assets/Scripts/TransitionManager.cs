@@ -49,6 +49,8 @@ public class TransitionManager : MonoBehaviour
     private PowerUpsCanvas _PowerUpsCanvas;
     private int HashShowAnim = Animator.StringToHash("Show");
 
+    private UICanvasControllerInput _UICanvasControllerInput;
+
     private void Awake()
     {
         if (instance == null)
@@ -72,11 +74,14 @@ public class TransitionManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        
     }
 
     public void LoadScene(string sceneName)
     {
+        gameObject.SetActive(true);
         StartCoroutine(LoadCoroutine(sceneName));
+        //gameObject.SetActive(false);
     }
 
     public void DestroyObjects()
@@ -85,6 +90,7 @@ public class TransitionManager : MonoBehaviour
         if (virtualCamera != null) Destroy(virtualCamera.gameObject);
         if (currentCamera != null) Destroy(currentCamera.gameObject);
         if (player != null) Destroy(player.gameObject);
+        if (_UICanvasControllerInput != null) Destroy(_UICanvasControllerInput.gameObject);
     }
 
     IEnumerator LoadCoroutine(string sceneName)
@@ -122,6 +128,10 @@ public class TransitionManager : MonoBehaviour
         if (sceneName == SCENE_LOBBY)
         {
             MatchInfo match = MatchInfo.Instance;
+            if (_UICanvasControllerInput == null)
+            {
+                _UICanvasControllerInput = UICanvasControllerInput.Instance;
+            }
             match.ResetEnemies();
             Destroy(match.gameObject);
             Player.Instance.RestartPlayer();
@@ -166,6 +176,7 @@ public class TransitionManager : MonoBehaviour
         }
         
         m_Anim.SetBool("Show", false);
+        
 
     }
 

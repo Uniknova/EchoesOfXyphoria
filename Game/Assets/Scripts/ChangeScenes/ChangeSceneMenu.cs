@@ -207,7 +207,8 @@ public class ChangeSceneMenu : MonoBehaviour
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
         Time.timeScale = 1f;
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
-        SceneManager.LoadScene(0);
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
+        //SceneManager.LoadScene(TransitionManager.SCENE_MENU);
     }
 
     public void PauseMenu()
