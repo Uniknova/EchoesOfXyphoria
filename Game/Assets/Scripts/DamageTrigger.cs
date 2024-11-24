@@ -8,7 +8,7 @@ public class DamageTrigger : MonoBehaviour
     {
         if (other.GetComponent<IEnemy>() != null)
         {
-            other.GetComponent<IEnemy>().TakeDamage(10);
+            other.GetComponent<IEnemy>().TakeDamage(70);
         }
 
     }

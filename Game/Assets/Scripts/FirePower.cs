@@ -17,6 +17,9 @@ public class FirePower : IPowerEnemy
     public void UpdateEnemy(IEnemy enemy)
     {
         float random = Random.Range(0f, 1f);
-        if (random <= umbral) enemy.Fire();
+        if (Player.Instance.weapon != null)
+        {
+            if (random <= umbral) enemy.Fire();
+        }
     }
 }

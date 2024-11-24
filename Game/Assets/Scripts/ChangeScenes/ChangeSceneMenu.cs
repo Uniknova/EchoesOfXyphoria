@@ -291,6 +291,6 @@ public class ChangeSceneMenu : MonoBehaviour
     public void loadMenu()
     {
 
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(0);
     }
 }

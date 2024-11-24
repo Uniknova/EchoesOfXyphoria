@@ -129,7 +129,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponentInParent<Player>())
+        if (other.gameObject.GetComponentInParent<Player>() && other.gameObject.GetComponent<DamageTrigger>() == null)
         {
             other.gameObject.GetComponentInParent<Player>().TakeDamage(damage);
 

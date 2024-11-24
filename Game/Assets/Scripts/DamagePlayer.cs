@@ -11,7 +11,7 @@ public class DamagePlayer : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Player>() != null)
+        if (other.GetComponentInParent<Player>() != null && other.GetComponent<DamageTrigger>() == null)
         {
             Debug.Log("Dano enemigo");
             other.GetComponentInParent<Player>().TakeDamage(damage);

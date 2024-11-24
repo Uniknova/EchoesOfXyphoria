@@ -26,7 +26,7 @@ public class RunSpawn : MonoBehaviour
     List<Vector2Int> runnersPositions;
     List<Vector2Int> runnersDirection;
 
-    int ROOM_SIZE = 60; //grande de cada room
+    int ROOM_SIZE = 120; //grande de cada room
 
 
     private void Awake()

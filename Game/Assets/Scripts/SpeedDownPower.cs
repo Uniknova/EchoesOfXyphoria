@@ -14,7 +14,10 @@ public class SpeedDownPower : IPowerEnemy
     public void AddPower()
     {
         Debug.Log("Speed seleccionado");
-        Player.Instance.weapon.AddPowerEnemy(this);
+        if (Player.Instance.weapon != null)
+        {
+            Player.Instance.weapon.AddPowerEnemy(this);
+        }
     }
 
 }

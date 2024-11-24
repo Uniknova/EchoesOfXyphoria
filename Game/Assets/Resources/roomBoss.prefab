@@ -530,7 +530,15 @@ MonoBehaviour:
   spawner: {fileID: 0}
   respawn: {fileID: 29031315808309233}
   triggers: {fileID: 0}
-  boss: {fileID: 8774214497305521193, guid: 904d2ec49ddc08040a7d7bec9b4aec2a, type: 3}
+  triggerLeft: {fileID: 0}
+  triggerRight: {fileID: 0}
+  triggerUp: {fileID: 0}
+  triggerDown: {fileID: 0}
+  wallLeft: {fileID: 0}
+  wallRight: {fileID: 0}
+  wallUp: {fileID: 0}
+  wallDown: {fileID: 0}
+  boss: {fileID: -5850420701585912626, guid: aa0fc9574574b0448b3b2589b424aa39, type: 3}
   bossRespawn: {fileID: 3294256963665276255}
 --- !u!1 &2232799315114573702
 GameObject:
