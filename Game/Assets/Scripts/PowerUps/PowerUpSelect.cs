@@ -19,6 +19,11 @@ public class PowerUpSelect : IPowerSelect
         
     }
 
+    public override void Init()
+    {
+        powerEnemy = new FirePower();
+    }
+
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
         button.onClick.AddListener(powerEnemy.AddPower);

@@ -12,11 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b710217cd4c6c354094bdc0ef13c1f93, type: 3}
   m_Name: Normal Enemy
   m_EditorClassIdentifier: 
-  health: 100
-  damage: 20
-  speed: 3.5
+  health: 220
+  damage: 13
+  speed: 4.6999993
   speedDown: 1.5
   fireDamage: 0.5
-  armor: 0
-  score: 10
+  armor: 3
+  score: 61
   tipo: 0
+  defaulthealth: 100
+  defaultdamage: 1
+  defaultspeed: 3.5
+  defaultspeedDown: 1.5
+  defaultfireDamage: 0.5
+  defaultarmor: 0
+  defaultscore: 1

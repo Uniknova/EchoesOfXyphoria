@@ -18,6 +18,11 @@ public class PowerUpHealthSelect : IPowerSelect
 
     }
 
+    public override void Init()
+    {
+        powerEnemy = new HealthDeathPower(10);
+    }
+
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
         button.onClick.AddListener(powerEnemy.AddPower);

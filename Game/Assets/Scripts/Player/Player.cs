@@ -83,12 +83,13 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //PowerUpsCanvas.Instance.Init();
         DataInfo.Instance.GetPlatform();
         disparoMovil = false;
         lowPower = false;
         render = GetComponentInChildren<MeshRenderer>();
-        if (render != null)
-            color = render.material.color;
+        if (playerMaterial != null)
+            color = playerMaterial.material.color;
         weapon = GetComponentInChildren<RaycastWeapon>();
         weapons = new List<GameObject>();
         meleeWeapons = new List<Melee>();
@@ -327,9 +328,9 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            render.material.color = Color.green;
+            playerMaterial.material.color = Color.green;
             yield return new WaitForSeconds(0.5f);
-            render.material.color = color;
+            playerMaterial.material.color = color;
             yield return new WaitForSeconds(0.5f);
         }
     }
