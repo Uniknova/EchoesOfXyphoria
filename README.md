@@ -115,26 +115,36 @@
 - [Ilustración 2: Beauty de Terry](#ilustración-2-beauty-de-terry)
 - [Ilustración 3: Beauty de Torko](#ilustración-3-beauty-de-torko)
 - [Ilustración 4: Beauty de Nimby](#ilustración-4-beauty-de-nimby)
-- [Ilustración 5: Beauty escenario mercader](#ilustración-5-beauty-escenario-mercader)
-- [Ilustración 6: Concept primer enemigo](#ilustración-6-concept-primer-enemigo)
-- [Ilustración 7: Mockup menú principal](#ilustración-7-mockup-menú-principal)
-- [Ilustración 8: Menú de pausa](#ilustración-8-menú-de-pausa)
-- [Ilustración 9: Menú de ajustes](#ilustración-9-menú-de-ajustes)
-- [Ilustración 10: Mockup juego](#ilustración-10-mockup-juego)
-- [Ilustración 11: Mockup tienda](#ilustración-11-mockup-tienda)
-- [Ilustración 12: Diagrama de flujo](#ilustración-12-diagrama-de-flujo)
-- [Ilustración 13: Siluetas personaje principal](#ilustración-13-siluetas-personaje-principal)
-- [Ilustración 14: Desarrollo concepts personaje principal](#ilustración-14-desarrollo-concepts-personaje-principal)
-- [Ilustración 15: Variación de color del personaje principal](#ilustración-15-variación-de-color-del-personaje-principal)
-- [Ilustración 16: Concepts Armas](#ilustración-16-concepts-armas)
-- [Ilustración 17: Escenario del mercader](#ilustración-17-escenario-del-mercader)
-- [Ilustración 18: Render modelado final](#ilustración-18-render-modelado-final)
-- [Ilustración 19: Skinning](#ilustración-19-skinning)
-- [Ilustración 20: Mapa de Empatía](#ilustración-20-mapa-de-empatía)
-- [Ilustración 21: Caja de herramientas](#ilustración-21-caja-de-herramientas)
-- [Ilustración 22: Lienzo de modelo de negocio](#ilustración-22-lienzo-de-modelo-de-negocio)
-- [Ilustración 23: Engagement rate individual](#ilustración-23-engagement-rate-individual)
-- [Ilustración 24: Engagement rate total](#ilustración-24-engagement-rate-total)
+- [Ilustración 5: Escenario Lobby] (#ilustración-5-escenario-lobby)
+- [Ilustración 6: Escenario Ruinas] (#ilustración-5-escenario-lobby)
+- [Ilustración 7: Escenario Ciudad Flotante] (#ilustración-5-escenario-lobby)
+- 
+- [Ilustración 8: Beauty escenario mercader](#ilustración-8-beauty-escenario-mercader)
+- [Ilustración 9: Concept primer enemigo](#ilustración-9-concept-primer-enemigo)
+- [Ilustración 10: Enemigo Rápido]()
+- [Ilustración 11: Enemigo Pesado]()
+- [Ilustración 12: Enemigo Tóxico]()
+- [Ilustración 13: Enemigo Jefe]()
+- 
+- [Ilustración 14: Mockup menú principal](#ilustración-14-mockup-menú-principal)
+- [Ilustración 15: Menú de pausa](#ilustración-15-menú-de-pausa)
+- [Ilustración 16: Menú de ajustes](#ilustración-16-menú-de-ajustes)
+- [Ilustración 17: Mockup juego](#ilustración-17-mockup-juego)
+- [Ilustración 18: Pantalla Eleccioón de Mejoras]()
+- 
+- [Ilustración 19: Diagrama de flujo](#ilustración-19-diagrama-de-flujo)
+- [Ilustración 20: Siluetas personaje principal](#ilustración-20-siluetas-personaje-principal)
+- [Ilustración 21: Desarrollo concepts personaje principal](#ilustración-21-desarrollo-concepts-personaje-principal)
+- [Ilustración 22: Variación de color del personaje principal](#ilustración-22-variación-de-color-del-personaje-principal)
+- [Ilustración 23: Concepts Armas](#ilustración-23-concepts-armas)
+- [Ilustración 24: Escenario del mercader](#ilustración-24-escenario-del-mercader)
+- [Ilustración 25: Render modelado final](#ilustración-25-render-modelado-final)
+- [Ilustración 26: Skinning](#ilustración-26-skinning)
+- [Ilustración 27: Mapa de Empatía](#ilustración-27-mapa-de-empatía)
+- [Ilustración 28: Caja de herramientas](#ilustración-28-caja-de-herramientas)
+- [Ilustración 29: Lienzo de modelo de negocio](#ilustración-29-lienzo-de-modelo-de-negocio)
+- [Ilustración 30: Engagement rate individual](#ilustración-30-engagement-rate-individual)
+- [Ilustración 31: Engagement rate total](#ilustración-31-engagement-rate-total)
 
 ## 0. Historial de versiones
 En este apartado se reflejan las versiones del documento de diseño con sus respectivos cambios.
@@ -227,7 +237,7 @@ La batalla por el futuro del universo ha comenzado, y Terry el terrícola es la 
 
 - **Torko**: Líder indiscutible de la resistencia contra los tiránicos Tyrnaxianos, y el último sobreviviente de su especie. Su imponente presencia y vasto conocimiento del universo lo han convertido en una leyenda viva entre las razas aliadas. Aunque ha sufrido grandes pérdidas, su sabiduría y determinación serán esenciales para guiar al protagonista en la lucha final contra el imperio de Tyrnax. Su deseo de restaurar la paz es tan grande como su fuerza, y su liderazgo inspirará a todo aquel que luche a su lado.
 
-![Ilustración 3: Beauty de Torko](Elementos%20de%20Diseño/Mercader/Beauty-Mercader-Torco.png)
+![Ilustración 3: Beauty de Torko](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Mercader%20Beauty.png)
 
 #### Ilustración 3: Beauty de Torko
 
@@ -247,9 +257,18 @@ Este escenario actúa como el lobby jugable del juego, donde los jugadores comen
 
 Además, en una pequeña sala lateral habrá un espejo interactivo donde el jugador podrá acceder a un menú para cambiar la skin de su personaje. Este espacio también ofrece la posibilidad de interactuar con otros personajes, que aportan detalles adicionales sobre la historia o ayudan a preparar al jugador para la misión. El Cuartel de la Resistencia es una sala bien organizada y minimalista, con un ambiente industrial y futurista, caracterizado por maquinaria, pantallas holográficas, y zonas de armamento.
 
+![Ilustración 5: Escenario Lobby](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/LobbyEscenario.JPG)
+
+#### Ilustración 5: Escenario Lobby
+
+
 #### 2.3.2 Ruinas de Xyphoria
 
 Las Ruinas de Xyphoria son los restos de una avanzada civilización, ahora en decadencia. Aquí, el jugador explorará un entorno lleno de edificios futuristas derruidos, con estructuras que alguna vez fueron majestuosas pero que ahora están parcialmente destruidas y cubiertas de vegetación alienígena. Las calles están llenas de escombros, y los enemigos se esconderán entre las ruinas, aprovechando el terreno. La atmósfera del lugar es sombría y melancólica, evocando una época pasada de esplendor que ya no existe.
+
+![Ilustración 6: Escenario Ruinas](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Ruinas_Escenario.JPG)
+
+#### Ilustración 6: Escenario Ruinas
 
 #### 2.3.3 Bahía de Arka
 
@@ -258,6 +277,10 @@ La Bahía de Arka es una tranquila y enigmática zona costera en la que predomin
 #### 2.3.4 Ciudad Flotante de Aereth
 
 La Ciudad Flotante de Aereth es un misterioso lugar suspendido en los cielos, una reliquia de una civilización extinta. Las estructuras que el jugador encontrará en este escenario incluyen hogares flotantes, plazas abandonadas y plataformas suspendidas, todas conectadas por puentes y caminos de piedra. Los edificios tienen una arquitectura elegante, con líneas curvas y detalles dorados que insinúan un tiempo de opulencia. La atmósfera es casi etérea, con nubes se divisan por debajo de la ciudad, pero también desierta, dándole al lugar una sensación de soledad y misterio.
+
+![Ilustración 7: Escenario Ciudad Flotante](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Ciudad_FlotanteEscenario.JPG)
+
+#### Ilustración 7: Escenario Ciudad Flotante
 
 #### 2.3.5 Nido Tyrnax
 
@@ -268,9 +291,9 @@ En este lugar, podemos ver a Torko trabajando arduamente, organizando piezas de 
 Además de su papel narrativo en la historia, el Taller de Torko es fundamental para el progreso del jugador. Aquí, Torko ofrecerá mejoras generales que los jugadores podrán adquirir usando la moneda del juego, la Xyphorita. Estas mejoras abarcan áreas como vida, armadura y daño, y son cruciales para que el jugador pueda mantenerse vivo durante más tiempo en el campo de batalla, ya que los enemigos escalan en poder de forma constante a lo largo de la partida. Torko, con su gran sabiduría, te ayudará a prepararte mejor para las inminentes luchas, ofreciéndote las herramientas necesarias para sobrevivir más tiempo y enfrentarte a los bosses y hordas de enemigos.
 
 
-![Ilustración 5: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
+![Ilustración 8: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
 
-#### Ilustración 5: Beauty escenario mercader
+#### Ilustración 8: Beauty escenario mercader
 
 ## 3. Mecánicas de juego
 
@@ -362,21 +385,34 @@ En nuestro juego, los jugadores se enfrentarán a una variedad de enemigos Tyrna
 
 El enemigo estándar. Este Tyrnaxiano se acercará directamente al jugador con el único objetivo de golpearlo cuerpo a cuerpo. Aunque no es muy rápido ni resistente, en grandes números puede convertirse en una amenaza considerable si no se le presta atención.
 
-![Ilustración 6: Concept primer enemigo](Elementos%20de%20Diseño/PrimerEnemigo/ConceptArt/bocetoAlienMario_1.png)
+![Ilustración 9: Concept primer enemigo](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Enemigo%20B%C3%A1sico.jpeg)
 
-#### Ilustración 6: Concept primer enemigo
+#### Ilustración 9: Concept primer enemigo
 
 #### 3.7.2. Tyrnaxiano Rápido
 
 Este enemigo es más ágil que el Tyrnaxiano básico, moviéndose rápidamente hacia el jugador para intentar golpearlo. Aunque tiene menos salud, su velocidad lo convierte en una prioridad para ser eliminado rápidamente antes de que pueda hacer mucho daño.
 
+![Ilustración 10: Enemigo Rápido](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Enemigo%20%C3%81gil.jpeg)
+
+#### Ilustración 10: Enemigo Rápido
+
+
 #### 3.7.3. Tyrnaxiano Pesado
 
 Un enemigo corpulento y resistente, este Tyrnaxiano tiene una gran cantidad de salud, lo que lo convierte en un verdadero desafío a la hora de derrotarlo. Aunque es más lento, su capacidad para absorber daño puede desestabilizar al jugador, ya que deberá dedicar más tiempo y esfuerzo en eliminarlo. Representa una barrera que puede complicar la estrategia si no se gestiona bien.
 
+![Ilustración 11: Enemigo Pesado](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoTanque.JPG)
+
+#### Ilustración 11: Enemigo Pesado
+
 #### 3.7.4. Tyrnaxiano Tóxico
 
 Este enemigo no solo atacará al jugador, sino que dejará un rastro de daño a lo largo del tiempo si logra acertar un golpe. Su ataque envenena al jugador, lo que significa que incluso después de evitar el contacto, el jugador seguirá perdiendo salud durante un corto período de tiempo. Esto añade una capa extra de dificultad, ya que necesitarás mantener la distancia para evitar el veneno y mantener la calma si te alcanza.
+
+![Ilustración 12: Enemigo Tóxico](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoToxico.JPG)
+
+#### Ilustración 12: Enemigo Tóxico
 
 #### 3.7.5. Jefe Tyrnaxiano
 El jefe final en algunas salas especiales será una versión mejorada de los Tyrnaxianos. Este boss combina las habilidades de todos los tipos de enemigos anteriores:
@@ -384,6 +420,10 @@ El jefe final en algunas salas especiales será una versión mejorada de los Tyr
 - Se moverá con la velocidad del Tyrnaxiano Rápido, acercándose al jugador con rapidez.
 - Infligirá daño de veneno como el Tyrnaxiano Tóxico, obligando al jugador a estar alerta constante.
 - Además, este jefe tendrá la capacidad de disparar proyectiles a distancia, añadiendo un nuevo desafío, ya que el jugador deberá esquivar tanto ataques cuerpo a cuerpo como los disparos.
+
+![Ilustración 13: Enemigo Jefe](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoBoss.JPG)
+
+#### Ilustración 13: Enemigo Jefe
 
 ## 4. Comportamiento de personajes
 Para dar vida a la zona del mercader, hemos decidido implementar un sistema dinámico que refleje un ecosistema vivo lleno de detalles y comportamientos que aporten realismo y profundidad al entorno. Para incluir comportamiento de personajes en nuestro proyecto, hemos pensado usar máquinas de estados finitos, árboles de comportamiento y sistemas de utilidad.
@@ -422,9 +462,9 @@ Esta será la primera interfaz con la que los jugadores interactuarán al abrir 
 - **Tutorial**: Lleva la pantalla del tutorial.
 - **Acceso a Tienda**: Permite al jugador acceder a las compras de cosméticos o moneda del juego (Cristal Tyrnax).
 
-![Ilustración 7: Mockup menú principal](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Menu.jpeg)
+![Ilustración 14: Mockup menú principal](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/InterfazMenu.JPG)
 
-#### Ilustración 7: Mockup menú principal
+#### Ilustración 14: Mockup menú principal
 
 #### 5.1.3. Menú de pausa
 El menú principal aparece después de la pantalla de inicio o cuando el jugador presiona "pausa" durante el juego. En este menú, el jugador tendrá varias opciones:
@@ -433,9 +473,9 @@ El menú principal aparece después de la pantalla de inicio o cuando el jugador
 - **Opciones**: Lleva a la interfaz de ajustes del juego (sonido, controles, gráficos, etc...).
 - **Salir**: Vuelve a la pantalla de inicio o cierra el juego si está en pausa.
 
-![Ilustración 8: Menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/MenúDePausa/MenuDePausaFinal.png)
+![Ilustración 15: Menú de pausa](Elementos%20de%20Diseño/Interfaces/Mockups/MenúDePausa/MenuDePausaFinal.png)
 
-#### Ilustración 8: Menú de pausa
+#### Ilustración 15: Menú de pausa
 
 #### 5.1.4. Pantalla de opciones
 El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el juego a su gusto. Las opciones estarán divididas en varias secciones:
@@ -444,9 +484,8 @@ El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el
 - **Salir**: Vuelve al menú principal o a la partida.
 Esta pantalla será accesible tanto desde el menú principal como dentro del juego.
 
-![Ilustración 9: Menú de ajustes](Elementos%20de%20Diseño/Interfaces/Mockups/MenúDeAjustes.Volumen/MenuDeAjustes.png)
-
-### Ilustración 9: Menú de ajustes
+![Ilustración 16: Menú de ajustes](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/ajustesinterfaz.JPG)
+### Ilustración 16: Menú de ajustes
 
 #### 5.1.5. Pantalla de personalización
 Interfaz desde la que los jugadores pueden personalizar a su personaje. Accesible desde el inicio de la propia partida. Los jugadores pueden elegir que aspecto usar antes de comenzar. Las opciones de este menú son:
@@ -467,9 +506,13 @@ Esta es la interfaz con la que los jugadores interactuarán durante la partida. 
 - **Botón de Pausa**: Lleva al menú de pausa para opciones adicionales o salir del juego.
 - **Pantalla de Personalización**: Accesible al inicio de la partida tocando un espejo.
 
-![Ilustración 10: Mockup juego](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Partida.jpeg)
+![Ilustración 17: Mockup juego](https://github.com/Uniknova/EchoesOfXyphoria/blob/475cfcc8c0e07a128dea039f6129adb94f0a685a/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/PartidaInterfaz.JPG)
 
-#### Ilustración 10: Mockup juego
+#### Ilustración 17: Mockup juego
+
+![Ilustración 18: Pantalla Elección de Mejoras](https://github.com/Uniknova/EchoesOfXyphoria/blob/475cfcc8c0e07a128dea039f6129adb94f0a685a/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/MejorasInterfaz.png)
+
+#### Ilustración 18: Pantalla de Elección de Mejoras
 
 #### 5.1.8. Pantalla de fin de partida
 Al final de cada partida, aparecerá una pantalla de resumen que muestra el progreso del jugador:
@@ -482,10 +525,6 @@ Al final de cada partida, aparecerá una pantalla de resumen que muestra el prog
 La tienda es accesible desde el menú principal o en algunos momentos especiales dentro de la partida. Aquí, el jugador puede gastar su moneda Cristal Tyrnax para adquirir cosméticos, mejoras o incluso opciones para la partida:
 - **Skins y Cosméticos**: Opciones de compra para personalización del personaje.
 - **Moneda del Juego**: Opción para comprar Cristal Tyrnax a través de microtransacciones.
-
-![Ilustración 11: Mockup tienda](Elementos%20de%20Diseño/Interfaces/Mockups/Interfaz_Microtransacciones.jpeg)
-
-#### Ilustración 11: Mockup tienda
   
 #### 5.1.10. Pantalla de ranking
 Esta interfaz muestra las clasificaciones semanales y globales de los jugadores en base a su progreso en las partidas.
@@ -495,9 +534,9 @@ Esta interfaz muestra las clasificaciones semanales y globales de los jugadores 
 ### 5.2. Diagrama de flujo
 En este apartado, abordaremos todas las pantallas principales que componen la experiencia del jugador dentro del juego, detallando sus funcionalidades y cómo interactúan entre sí. Cada pantalla ha sido diseñada con el objetivo de ofrecer una navegación clara, intuitiva y eficiente, permitiendo a los jugadores centrarse en la acción y progresar de manera fluida. Aquí describiremos pantallas clave como la de Inicio, Menú Principal, Opciones, Pantalla de Juego, Pantalla de Pausa, entre otras, explicando cómo cada una cumple su papel dentro del sistema general del juego y qué opciones ofrece al jugador.
 
-![Ilustración 12: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
+![Ilustración 19: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
 
-#### Ilustración 12: Diagrama de flujo
+#### Ilustración 19: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
@@ -508,28 +547,28 @@ Los personajes, enemigos y escenarios están diseñados con texturas detalladas 
 ### 6.2. Concept Art
 El concept art es la base visual del juego, donde se diseñan los personajes, escenarios y elementos clave. Esta fase sirve para visualizar ideas, definir estilos artísticos y establecer la atmósfera general que tendrá el juego. A continuación, se muestran algunos concepts de personajes, enemigos, armas… 
 
-![Ilustración 13: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
+![Ilustración 20: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
 
-#### Ilustración 13: Siluetas personaje principal
+#### Ilustración 20: Siluetas personaje principal
 
-![Ilustración 14: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
+![Ilustración 21: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
 
-#### Ilustración 14: Desarrollo concepts personaje principal
+#### Ilustración 21: Desarrollo concepts personaje principal
 
-![Ilustración 15: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
+![Ilustración 22: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
 
-#### Ilustración 15: Variación de color del personaje principal
+#### Ilustración 22: Variación de color del personaje principal
 
-![Ilustración 16: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
+![Ilustración 23: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
 
-#### Ilustración 16: Concepts Armas
+#### Ilustración 23: Concepts Armas
 
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
 
-![Ilustración 17: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
+![Ilustración 24: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
 
-#### Ilustración 17: Escenario del mercader
+#### Ilustración 24: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -540,9 +579,9 @@ La animación de escenarios introduce movimiento a los fondos y ambientes del ju
 ### 7.2. Personajes
 En la animación de personajes, se diseñan los movimientos y acciones que llevarán a cabo los protagonistas de la historia y enemigos. Desde caminatas hasta combates, esta etapa se enfoca en crear movimientos fluidos y realistas que conecten con la jugabilidad.
 
-![Ilustración 18: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
+![Ilustración 25: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
 
-#### Ilustración 18: Render modelado final
+#### Ilustración 25: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
@@ -550,9 +589,9 @@ El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse 
 #### 7.2.2. Skinning
 El skinning permite que, al mover los huesos del rig, la malla se deforme correctamente y el personaje se mueva de forma natural, respetando el diseño original y asegurando coherencia visual en los movimientos.
 
-![Ilustración 19: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
+![Ilustración 26: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
 
-#### Ilustración 19: Skinning
+#### Ilustración 26: Skinning
 
 ## 8. Audio
 El audio en **Echoes of Xyphoria** juega un papel fundamental en la inmersión del jugador en el universo espacial. La banda sonora tendrá una mezcla de música electrónica y espacial que acompaña el ritmo frenético de las partidas, intensificándose durante los momentos clave del combate.
@@ -608,23 +647,23 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 - Crear una experiencia entrañable para todo tipo de jugadores, tanto casuales como asiduos, con mecánicas únicas, divertidas y fáciles de entender. 
 - Permitir a los jugadores dar rienda suelta a su imaginación creando cosméticos que alteren el aspecto de partes del juego, actualizando el juego con contenidos nuevos cada vez.
 
-![Ilustración 20: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
+![Ilustración 27: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
 
-#### Ilustración 20: Mapa de Empatía
+#### Ilustración 27: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
-![Ilustración 21: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
+![Ilustración 28: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
 
-#### Ilustración 21: Caja de herramientas
+#### Ilustración 28: Caja de herramientas
 
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
 
-![Ilustración 22: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
+![Ilustración 29: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
 
-#### Ilustración 22: Lienzo de modelo de negocio
+#### Ilustración 29: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -672,13 +711,13 @@ Monitorear el alcance y las interacciones será crucial para ajustar nuestra est
 ### 11.6. Resultados
 Mediremos el engagement a través de herramientas de análisis en cada plataforma, evaluando la efectividad de nuestras publicaciones y ajustando la estrategia en función del rendimiento. Esto nos permitirá optimizar el crecimiento de la marca a largo plazo.
 
-![Ilustración 23: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
+![Ilustración 30: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
 
-#### Ilustración 23: Engagement rate individual
+#### Ilustración 30: Engagement rate individual
 
-![Ilustración 24: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
+![Ilustración 31: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
 
-#### Ilustración 24: Engagement rate total
+#### Ilustración 31: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
