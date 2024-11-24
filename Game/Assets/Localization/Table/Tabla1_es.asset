@@ -110,6 +110,49 @@ MonoBehaviour:
     m_Localized: Idioma
     m_Metadata:
       m_Items: []
+  - m_Id: 628331501002752
+    m_Localized: "Disparo Lum\xEDnico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628339864444928
+    m_Localized: "Los disparos infligen da\xF1o de fuego prolongado a los enemigos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629750765395968
+    m_Localized: Disparo Tranquilizante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629783812317184
+    m_Localized: 'Los disparos realentizan a los enemigos, se reduce su velocidad
+      de ataque y de movimiento. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630738368798720
+    m_Localized: En Racha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630741954928640
+    m_Localized: 'Con cada disparo acertado ganas acumulaciones que aumentan la velocidad
+      de ataque y de movimiento. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631722339934208
+    m_Localized: "Despertar On\xEDrico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631724781019136
+    m_Localized: "La velocidad de movimiento y el da\xF1o aumentan cuando la salud
+      es baja. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632780529278976
+    m_Localized: Baja Revitalizadora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632783318491136
+    m_Localized: Recuperas salud cuando un enemigo es eliminado.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

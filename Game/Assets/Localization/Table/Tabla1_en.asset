@@ -110,6 +110,48 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 628331501002752
+    m_Localized: Luminous Shot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628339864444928
+    m_Localized: The shots deal prolonged fire damage to enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629750765395968
+    m_Localized: Tranquilizer shot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629783812317184
+    m_Localized: The shots slow down enemies, reducing their attack speed and movement
+      speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630738368798720
+    m_Localized: On a streak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630741954928640
+    m_Localized: With each successful shot, you gain stacks that increase attack
+      speed and movement speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631722339934208
+    m_Localized: Dreamlike Awakening
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631724781019136
+    m_Localized: Movement speed and damage increase when health is low.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632780529278976
+    m_Localized: Revitalizing Kill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632783318491136
+    m_Localized: You recover health when an enemy is eliminated.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
