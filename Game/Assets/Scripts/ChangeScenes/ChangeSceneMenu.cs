@@ -10,13 +10,13 @@ using UnityEngine.UI;
 
 public class ChangeSceneMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject pauseBotton; 
-    [SerializeField] private GameObject pauseMenu; 
+    [SerializeField] private GameObject pauseBotton;
+    [SerializeField] private GameObject pauseMenu;
     //[SerializeField] private GameObject moreCoins; 
     //[SerializeField] private GameObject coinShopInterface; 
-    [SerializeField] private GameObject settingsInGame; 
-    [SerializeField] private GameObject screenSettings; 
-    [SerializeField] private GameObject soundSettings; 
+    [SerializeField] private GameObject settingsInGame;
+    [SerializeField] private GameObject screenSettings;
+    [SerializeField] private GameObject soundSettings;
     [SerializeField] private GameObject creditSettings;
     [SerializeField] private GameObject languageSettings;
 
@@ -25,7 +25,7 @@ public class ChangeSceneMenu : MonoBehaviour
     [SerializeField] private Slider sound;
     [SerializeField] public Toggle full;
     [SerializeField] private TMP_Dropdown quality;
-    
+
 
     [SerializeField] private GameObject high;
     [SerializeField] private GameObject medium;
@@ -49,7 +49,7 @@ public class ChangeSceneMenu : MonoBehaviour
         generalSound.SetFloat("GeneralSound", PlayerPrefs.GetFloat("General"));
         sound.value = PlayerPrefs.GetFloat("General");
 
-        if ( PlayerPrefs.GetInt("FullScreen") == 0)
+        if (PlayerPrefs.GetInt("FullScreen") == 0)
             Screen.fullScreen = false;
         else
             Screen.fullScreen = true;
@@ -77,12 +77,12 @@ public class ChangeSceneMenu : MonoBehaviour
         Screen.fullScreen = fullScreen;
 
         if (fullScreen == false)
-            PlayerPrefs.SetInt("FullScreen",0);
+            PlayerPrefs.SetInt("FullScreen", 0);
         else
             PlayerPrefs.SetInt("FullScreen", 1);
     }
 
-    public void ChangeQuality (int index)
+    public void ChangeQuality(int index)
     {
         PlayerPrefs.SetInt("Quality", index);
         QualitySettings.SetQualityLevel(index);
@@ -149,11 +149,11 @@ public class ChangeSceneMenu : MonoBehaviour
     private IEnumerator SetLanguage(int language)
     {
         active = true;
-        yield return LocalizationSettings.InitializationOperation; 
+        yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[language];
         PlayerPrefs.SetInt("Language", language);
         LoadLanguage(language);
-        active = false; 
+        active = false;
 
     }
 
@@ -203,7 +203,7 @@ public class ChangeSceneMenu : MonoBehaviour
 
     }
 
-    public void LoadMenu ()
+    public void LoadMenu()
     {
         pauseMenu.SetActive(false);
         pauseBotton.SetActive(true);
@@ -216,6 +216,10 @@ public class ChangeSceneMenu : MonoBehaviour
 
     public void PauseMenu()
     {
+        if (DataInfo.Instance.GetPlatform() == 0)
+        {
+            UICanvasControllerInput.Instance.gameObject.SetActive(false);
+        }
         Time.timeScale = 0f;
         pauseBotton.SetActive(false);
         pauseMenu.SetActive(true);
@@ -224,6 +228,10 @@ public class ChangeSceneMenu : MonoBehaviour
     public void ContinueGame()
     {
         Time.timeScale = 1f;
+        if (DataInfo.Instance.GetPlatform() == 0)
+        {
+            UICanvasControllerInput.Instance.gameObject.SetActive(true);
+        }
         pauseMenu.SetActive(false);
         pauseBotton.SetActive(true);
         //moreCoins.SetActive(true);
@@ -250,7 +258,7 @@ public class ChangeSceneMenu : MonoBehaviour
         //coinShopInterface.SetActive(true);
         pauseBotton.SetActive(false);
         //moreCoins.SetActive(false);
-        
+
     }
     public void closeGame()
     {
@@ -259,7 +267,7 @@ public class ChangeSceneMenu : MonoBehaviour
 
     }
 
-    public void buy5Coins ()
+    public void buy5Coins()
     {
         //variableCoins  = variableCoins +5
 
@@ -280,7 +288,8 @@ public class ChangeSceneMenu : MonoBehaviour
 
     }
 
-    public void loadMenu() {
+    public void loadMenu()
+    {
 
         SceneManager.LoadScene(5);
     }

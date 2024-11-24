@@ -55,6 +55,8 @@ public class Player : MonoBehaviour
 
     public Uivida vidaUi;
 
+    public int movil;
+
 
     public static Player Instance
     {
@@ -87,6 +89,7 @@ public class Player : MonoBehaviour
     {
         //vidaUi = Uivida.Instance;
         //PowerUpsCanvas.Instance.Init();
+        movil = DataInfo.Instance.GetPlatform();
         DataInfo.Instance.GetPlatform();
         disparoMovil = false;
         lowPower = false;
@@ -149,28 +152,51 @@ public class Player : MonoBehaviour
             controller.Move(velocity * Time.deltaTime);
         }
         if (weapon == null && melee == null) return;
-        if (Input.GetButtonDown("Fire1") || disparoMovil)
-        {
-            //if (weapon != null)
-            //{
-            //    weapon.StartFiring();
-            //}
 
-            if (melee != null)
+        if (movil == 1)
+        {
+            if (Input.GetButtonDown("Fire1"))
             {
-                melee.Attack();
-                animatorPlayer.SetTrigger(meleeAnimator);
+                //if (weapon != null)
+                //{
+                //    weapon.StartFiring();
+                //}
+
+                if (melee != null)
+                {
+                    melee.Attack();
+                    animatorPlayer.SetTrigger(meleeAnimator);
+                }
             }
+
+            if (Input.GetButton("Fire1"))
+            {
+                if (weapon != null)
+                {
+                    weapon.UpdateFiring(Time.deltaTime);
+                    weapon.UpdateBullets(Time.deltaTime);
+                }
+
+            }
+
         }
 
-        if (Input.GetButton("Fire1") || disparoMovil)
+        else
         {
-            if (weapon != null)
+            if (disparoMovil)
             {
-                weapon.UpdateFiring(Time.deltaTime);
-                weapon.UpdateBullets(Time.deltaTime);
-            }
+                if (melee != null)
+                {
+                    melee.Attack();
+                    animatorPlayer.SetTrigger(meleeAnimator);
+                }
 
+                if (weapon != null)
+                {
+                    weapon.UpdateFiring(Time.deltaTime);
+                    weapon.UpdateBullets(Time.deltaTime);
+                }
+            }
         }
 
         //if (weapon != null)
