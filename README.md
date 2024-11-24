@@ -161,7 +161,7 @@ La esencia del juego se basa en los siguientes puntos clave:
 La ambientación del juego es espacial y futurista, sumergiendo a los jugadores en un universo lleno de tecnologías desconocidas y razas alienígenas. Cada nivel ofrece no solo combates, sino también la oportunidad de descubrir recursos y secretos, creando una experiencia única en cada partida mientras luchan por derrotar al imperio Tyrnaxx.
 
 ### 1.4. Jugabilidad
-En **Echoes of Xyphoria**, cada partida es infinita, es decir, la partida no acaba hasta que el jugador pierde. Cada nivel está compuesto por 7 salas. El jugador deberá eliminar a todos los enemigos de una sala para elegir una ventaja para su arma. En las salas 3 y 6 aparecerá un mercader que ofrecerá mejoras más generales a los jugadores. Finalmente, en cada séptima sala habrá un jefe de nivel que los jugadores tendrán que derrotar para conseguir una mejora especial.
+En **Echoes of Xyphoria**, cada partida es infinita, es decir, la partida no acaba hasta que el jugador pierde. El primer nivel está compuesto por 4 salas. Con cada nuevo nivel, el número de salas aumentará en uno. El jugador deberá eliminar a todos los enemigos de una sala para elegir una ventaja para su arma. Finalmente, en cada sala más lejana al punto de aparición habrá un jefe de nivel que los jugadores tendrán que derrotar para conseguir una mejora especial.
 
 ### 1.5. Estilo visual
 El estilo visual predominante en **Echoes of Xyphoria** es **cartoon** con ligeros detalles artísticos, creando una experiencia atractiva y visualmente llamativa.  
@@ -176,6 +176,15 @@ El juego ha sido clasificado como PEGI 12. Esto se debe a que el juego contiene 
 ![Ilustración 1: PEGI 12](Elementos%20de%20Diseño/ElementosModeloNegocio/PEGI.jpg)
 
 #### Ilustración 1: PEGI 12
+
+La clasificación por edades para videojuegos varía según la región del mundo, y es importante asegurarse de que el juego esté clasificado correctamente para cada mercado. A continuación, se muestran algunas de las clasificaciones por edad de otros países o regiones:
+- **Japón:** Según su sistema CERO, Echoes of Xyphoria sería CERO B, es decir, juego para personas de 12 años o más ya que incluye contenido que incluye acción moderada, enfrentamientos, y temáticas algo intensas, pero no gráficas.
+- **América del Norte:** Según la escala ESRB, Echoes of Xyphoria sería E10+, es decir, recomendado para mayores de 10 años. Contenido con más acción, violencia animada moderada o lenguaje leve.
+ 
+- **Australia:** Según la escala ACB, Echoes of Xyphoria sería PG, es decir, contenido moderado, puede no ser adecuado para niños pequeños sin supervisión.
+
+- **Alemania:** Según la escala USK, Echoes of Xyphoria sería USK 6, es decir, contenido recomendado para mayores de 6 años. Puede incluir acción leve.
+
 
 El juego está diseñado para ser jugado en navegadores web, lo que permite un amplio alcance en términos de dispositivos y plataformas. Además, habrá soporte para actualizaciones periódicas, con la inclusión de nuevos enemigos, armas y mejoras.
 
@@ -250,15 +259,12 @@ La Ciudad Flotante de Aereth es un misterioso lugar suspendido en los cielos, un
 
 #### 2.3.5 Nido Tyrnax
 
-El Nido Tyrnax es el lugar donde habitan los terribles Tyrnaxianos, los principales enemigos del juego. Este escenario será especialmente hostil, con cavernas oscuras llenas de huevos alienígenas pegados a las paredes y túneles de aspecto orgánico. Las luces tenues y el ambiente asfixiante añaden una sensación de peligro inminente. Aquí, el jugador enfrentará a un temible boss que combina todas las características de los Tyrnaxianos normales, además de tener la capacidad de disparar proyectiles. La estética del Nido Tyrnax es sucia, viscosa y claustrofóbica, con paredes cubiertas de sustancia biológica y un ambiente de completa hostilidad.
-
-#### 2.3.6 Taller de Torko
-
-El Taller de Torko es un lugar clave en el juego, accesible a través de un puente que lleva a una pequeña estructura ubicada en una zona elevada, casi como un refugio en medio del caos que gobierna Xyphoria. Este escenario no solo ofrece un respiro entre las batallas, sino que es donde habitan Torko, el líder de la resistencia, y su fiel aprendiz Nimby. El entorno está lleno de actividad y parece tener vida propia, gracias a la implementación de comportamientos dinámicos de los personajes, lo que da la sensación de un ecosistema en constante movimiento.
+El Taller de Torko es un lugar clave en el juego, accesible a través de un puente que lleva a una pequeña estructura ubicada en una zona elevada, casi como un refugio en medio del caos que gobierna Xyphoria. Este escenario no solo ofrece un respiro entre las partidas, sino que es donde habitan Torko, el líder de la resistencia, y su fiel aprendiz Nimby. El entorno está lleno de actividad y parece tener vida propia, gracias a la implementación de comportamientos dinámicos de los personajes, lo que da la sensación de un ecosistema en constante movimiento.
 
 En este lugar, podemos ver a Torko trabajando arduamente, organizando piezas de armas, ensamblando mejoras y consultando viejos manuales de tecnología alienígena. Su taller está lleno de herramientas, repuestos y planos esparcidos por las mesas, mientras una tenue luz ilumina su espacio de trabajo. Nimby, aunque algo torpe, corretea intentando ayudar, recogiendo piezas caídas o moviendo objetos de un lado a otro, reflejando su energía incansable y su deseo de ser tan útil como su mentor.
 
-Además de su papel narrativo en la historia, el Taller de Torko es fundamental para el progreso del jugador. Aquí, Torko ofrecerá mejoras generales que los jugadores podrán adquirir usando la moneda del juego, y Nimby será el encargado de presentar los desafíos especiales, con jugosas recompensas para aquellos que se atrevan a superarlos. Es un espacio lleno de vida, ingenio y posibilidades, que promete ser un punto clave en la resistencia contra los Tyrnaxianos.
+Además de su papel narrativo en la historia, el Taller de Torko es fundamental para el progreso del jugador. Aquí, Torko ofrecerá mejoras generales que los jugadores podrán adquirir usando la moneda del juego, la Xyphorita. Estas mejoras abarcan áreas como vida, armadura y daño, y son cruciales para que el jugador pueda mantenerse vivo durante más tiempo en el campo de batalla, ya que los enemigos escalan en poder de forma constante a lo largo de la partida. Torko, con su gran sabiduría, te ayudará a prepararte mejor para las inminentes luchas, ofreciéndote las herramientas necesarias para sobrevivir más tiempo y enfrentarte a los bosses y hordas de enemigos.
+
 
 ![Ilustración 5: Beauty escenario mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/ConceptArt-Escenario%20del%20Mercader/Beauty_EscenarioMercader.jpg)
 
@@ -272,13 +278,16 @@ A continuación, se describen en detalle las principales mecánicas que definen 
 
 Al pulsar el botón para comenzar la partida, los jugadores aparecerán en una sala inicial tranquila donde se les presentarán cinco armas distintas, cada una con características únicas. El jugador debe seleccionar un arma para esa partida, que no podrá cambiar durante el transcurso del juego.
 
+Además, se puede acceder al taller de Torko, lugar donde el jugador puede usar las monedas obtenidas en las partidas para aumentar estadísticas generales que permitan aumentar el tiempo que dura cada partida.
+
 Una vez elegida el arma, se desbloqueará una puerta que llevará al jugador a la primera sala de combate. Al entrar, los enemigos atacarán al jugador de inmediato. El objetivo es eliminar a todos los enemigos de la sala, quienes al morir dejarán caer monedas (Xyphorita), las cuales podrán utilizarse más adelante en la partida.
 
 Después de derrotar a los enemigos de cada sala, aparecerán tres alienígenas, seleccionados aleatoriamente entre cinco posibles razas, que ofrecerán al jugador una mejora especial. Si el jugador ya ha obtenido una mejora previamente, esta podrá aparecer nuevamente en forma de potenciación. Por ejemplo, si ya posee una mejora de quemadura, futuras mejoras podrían aumentar el daño de esa quemadura.
 
-Cada tres salas, el jugador accederá a una sala especial, donde un alienígena amistoso ofrecerá mejoras generales como más vida, armadura o aumento de daño. Además, cada cinco salas, el jugador enfrentará a un **boss** o jefe más desafiante. Tras derrotar al jefe, y si el jugador ha conseguido cinco mejoras de una misma raza, recibirá una súper mejora, y no podrá obtener más mejoras relacionadas con ese *perk* en esa partida. Si el jugador logra obtener dos súper mejoras de razas distintas, podrá elegir una **mejora dual** que combinará las ventajas de ambas razas para crear una nueva habilidad.
+Además, en cada nivel, el jugador enfrentará a un boss o jefe más desafiante que aparece en la sala más alejada al punto de aparición. Tras derrotar al jefe, y si el jugador ha conseguido cinco mejoras de una misma raza, recibirá una súper mejora, y no podrá obtener más mejoras relacionadas con ese perk en esa partida. Si el jugador logra obtener dos súper mejoras de razas distintas, podrá elegir una mejora dual que combinará las ventajas de ambas razas para crear una nueva habilidad.
 
 El juego está diseñado sin un final definido; los enemigos aumentarán su dificultad de manera progresiva, y la partida continuará hasta que el jugador muera. Al finalizar, se registrará el récord de salas completadas.
+
 
 ### 3.2. Cámara
 
