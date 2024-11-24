@@ -115,22 +115,22 @@
 - [Ilustración 2: Beauty de Terry](#ilustración-2-beauty-de-terry)
 - [Ilustración 3: Beauty de Torko](#ilustración-3-beauty-de-torko)
 - [Ilustración 4: Beauty de Nimby](#ilustración-4-beauty-de-nimby)
-- [Ilustración 5: Escenario Lobby] (#ilustración-5-escenario-lobby)
-- [Ilustración 6: Escenario Ruinas] (#ilustración-5-escenario-lobby)
-- [Ilustración 7: Escenario Ciudad Flotante] (#ilustración-5-escenario-lobby)
+- [Ilustración 5: Escenario Lobby](#ilustración-5-escenario-lobby)
+- [Ilustración 6: Escenario Ruinas](#ilustración-6-escenario-ruinas)
+- [Ilustración 7: Escenario Ciudad Flotante](#ilustración-7-escenario-ciudad-flotante)
 - 
 - [Ilustración 8: Beauty escenario mercader](#ilustración-8-beauty-escenario-mercader)
 - [Ilustración 9: Concept primer enemigo](#ilustración-9-concept-primer-enemigo)
-- [Ilustración 10: Enemigo Rápido]()
-- [Ilustración 11: Enemigo Pesado]()
-- [Ilustración 12: Enemigo Tóxico]()
-- [Ilustración 13: Enemigo Jefe]()
+- [Ilustración 10: Enemigo Rápido](#ilustración-10-enemigo-rápido)
+- [Ilustración 11: Enemigo Pesado](#ilustración-11-enemigo-pesado)
+- [Ilustración 12: Enemigo Tóxico](#ilustración-12-enemigo-tóxico)
+- [Ilustración 13: Enemigo Jefe](#ilustración-13-enemigo-jefe)
 - 
 - [Ilustración 14: Mockup menú principal](#ilustración-14-mockup-menú-principal)
 - [Ilustración 15: Menú de pausa](#ilustración-15-menú-de-pausa)
 - [Ilustración 16: Menú de ajustes](#ilustración-16-menú-de-ajustes)
 - [Ilustración 17: Mockup juego](#ilustración-17-mockup-juego)
-- [Ilustración 18: Pantalla Eleccioón de Mejoras]()
+- [Ilustración 18: Pantalla Elección de Mejoras](#ilustración-18-pantalla-de-elección-de-mejoras)
 - 
 - [Ilustración 19: Diagrama de flujo](#ilustración-19-diagrama-de-flujo)
 - [Ilustración 20: Siluetas personaje principal](#ilustración-20-siluetas-personaje-principal)
@@ -237,7 +237,7 @@ La batalla por el futuro del universo ha comenzado, y Terry el terrícola es la 
 
 - **Torko**: Líder indiscutible de la resistencia contra los tiránicos Tyrnaxianos, y el último sobreviviente de su especie. Su imponente presencia y vasto conocimiento del universo lo han convertido en una leyenda viva entre las razas aliadas. Aunque ha sufrido grandes pérdidas, su sabiduría y determinación serán esenciales para guiar al protagonista en la lucha final contra el imperio de Tyrnax. Su deseo de restaurar la paz es tan grande como su fuerza, y su liderazgo inspirará a todo aquel que luche a su lado.
 
-![Ilustración 3: Beauty de Torko](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Mercader%20Beauty.png)
+![Ilustración 3: Beauty de Torko](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Mercader%20Beauty.png)
 
 #### Ilustración 3: Beauty de Torko
 
@@ -257,7 +257,7 @@ Este escenario actúa como el lobby jugable del juego, donde los jugadores comen
 
 Además, en una pequeña sala lateral habrá un espejo interactivo donde el jugador podrá acceder a un menú para cambiar la skin de su personaje. Este espacio también ofrece la posibilidad de interactuar con otros personajes, que aportan detalles adicionales sobre la historia o ayudan a preparar al jugador para la misión. El Cuartel de la Resistencia es una sala bien organizada y minimalista, con un ambiente industrial y futurista, caracterizado por maquinaria, pantallas holográficas, y zonas de armamento.
 
-![Ilustración 5: Escenario Lobby](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/LobbyEscenario.JPG)
+![Ilustración 5: Escenario Lobby](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/LobbyEscenario.JPG)
 
 #### Ilustración 5: Escenario Lobby
 
@@ -266,7 +266,7 @@ Además, en una pequeña sala lateral habrá un espejo interactivo donde el juga
 
 Las Ruinas de Xyphoria son los restos de una avanzada civilización, ahora en decadencia. Aquí, el jugador explorará un entorno lleno de edificios futuristas derruidos, con estructuras que alguna vez fueron majestuosas pero que ahora están parcialmente destruidas y cubiertas de vegetación alienígena. Las calles están llenas de escombros, y los enemigos se esconderán entre las ruinas, aprovechando el terreno. La atmósfera del lugar es sombría y melancólica, evocando una época pasada de esplendor que ya no existe.
 
-![Ilustración 6: Escenario Ruinas](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Ruinas_Escenario.JPG)
+![Ilustración 6: Escenario Ruinas](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Ruinas_Escenario.JPG)
 
 #### Ilustración 6: Escenario Ruinas
 
@@ -278,7 +278,7 @@ La Bahía de Arka es una tranquila y enigmática zona costera en la que predomin
 
 La Ciudad Flotante de Aereth es un misterioso lugar suspendido en los cielos, una reliquia de una civilización extinta. Las estructuras que el jugador encontrará en este escenario incluyen hogares flotantes, plazas abandonadas y plataformas suspendidas, todas conectadas por puentes y caminos de piedra. Los edificios tienen una arquitectura elegante, con líneas curvas y detalles dorados que insinúan un tiempo de opulencia. La atmósfera es casi etérea, con nubes se divisan por debajo de la ciudad, pero también desierta, dándole al lugar una sensación de soledad y misterio.
 
-![Ilustración 7: Escenario Ciudad Flotante](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Ciudad_FlotanteEscenario.JPG)
+![Ilustración 7: Escenario Ciudad Flotante](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Ciudad_FlotanteEscenario.JPG)
 
 #### Ilustración 7: Escenario Ciudad Flotante
 
@@ -385,7 +385,7 @@ En nuestro juego, los jugadores se enfrentarán a una variedad de enemigos Tyrna
 
 El enemigo estándar. Este Tyrnaxiano se acercará directamente al jugador con el único objetivo de golpearlo cuerpo a cuerpo. Aunque no es muy rápido ni resistente, en grandes números puede convertirse en una amenaza considerable si no se le presta atención.
 
-![Ilustración 9: Concept primer enemigo](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Enemigo%20B%C3%A1sico.jpeg)
+![Ilustración 9: Concept primer enemigo](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Enemigo%20B%C3%A1sico.jpeg)
 
 #### Ilustración 9: Concept primer enemigo
 
@@ -393,7 +393,7 @@ El enemigo estándar. Este Tyrnaxiano se acercará directamente al jugador con e
 
 Este enemigo es más ágil que el Tyrnaxiano básico, moviéndose rápidamente hacia el jugador para intentar golpearlo. Aunque tiene menos salud, su velocidad lo convierte en una prioridad para ser eliminado rápidamente antes de que pueda hacer mucho daño.
 
-![Ilustración 10: Enemigo Rápido](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Enemigo%20%C3%81gil.jpeg)
+![Ilustración 10: Enemigo Rápido](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/Enemigo%20%C3%81gil.jpeg)
 
 #### Ilustración 10: Enemigo Rápido
 
@@ -402,7 +402,7 @@ Este enemigo es más ágil que el Tyrnaxiano básico, moviéndose rápidamente h
 
 Un enemigo corpulento y resistente, este Tyrnaxiano tiene una gran cantidad de salud, lo que lo convierte en un verdadero desafío a la hora de derrotarlo. Aunque es más lento, su capacidad para absorber daño puede desestabilizar al jugador, ya que deberá dedicar más tiempo y esfuerzo en eliminarlo. Representa una barrera que puede complicar la estrategia si no se gestiona bien.
 
-![Ilustración 11: Enemigo Pesado](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoTanque.JPG)
+![Ilustración 11: Enemigo Pesado](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoTanque.JPG)
 
 #### Ilustración 11: Enemigo Pesado
 
@@ -410,7 +410,7 @@ Un enemigo corpulento y resistente, este Tyrnaxiano tiene una gran cantidad de s
 
 Este enemigo no solo atacará al jugador, sino que dejará un rastro de daño a lo largo del tiempo si logra acertar un golpe. Su ataque envenena al jugador, lo que significa que incluso después de evitar el contacto, el jugador seguirá perdiendo salud durante un corto período de tiempo. Esto añade una capa extra de dificultad, ya que necesitarás mantener la distancia para evitar el veneno y mantener la calma si te alcanza.
 
-![Ilustración 12: Enemigo Tóxico](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoToxico.JPG)
+![Ilustración 12: Enemigo Tóxico](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoToxico.JPG)
 
 #### Ilustración 12: Enemigo Tóxico
 
@@ -421,7 +421,7 @@ El jefe final en algunas salas especiales será una versión mejorada de los Tyr
 - Infligirá daño de veneno como el Tyrnaxiano Tóxico, obligando al jugador a estar alerta constante.
 - Además, este jefe tendrá la capacidad de disparar proyectiles a distancia, añadiendo un nuevo desafío, ya que el jugador deberá esquivar tanto ataques cuerpo a cuerpo como los disparos.
 
-![Ilustración 13: Enemigo Jefe](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoBoss.JPG)
+![Ilustración 13: Enemigo Jefe](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/EnemigoBoss.JPG)
 
 #### Ilustración 13: Enemigo Jefe
 
@@ -462,7 +462,7 @@ Esta será la primera interfaz con la que los jugadores interactuarán al abrir 
 - **Tutorial**: Lleva la pantalla del tutorial.
 - **Acceso a Tienda**: Permite al jugador acceder a las compras de cosméticos o moneda del juego (Cristal Tyrnax).
 
-![Ilustración 14: Mockup menú principal](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/InterfazMenu.JPG)
+![Ilustración 14: Mockup menú principal](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/InterfazMenu.JPG)
 
 #### Ilustración 14: Mockup menú principal
 
@@ -484,7 +484,7 @@ El apartado de "Opciones" será fundamental para que el jugador pueda ajustar el
 - **Salir**: Vuelve al menú principal o a la partida.
 Esta pantalla será accesible tanto desde el menú principal como dentro del juego.
 
-![Ilustración 16: Menú de ajustes](https://github.com/Uniknova/EchoesOfXyphoria/blob/74ff06e6007a05fe74f2c7119e99e29faacd39fb/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/ajustesinterfaz.JPG)
+![Ilustración 16: Menú de ajustes](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/ajustesinterfaz.JPG)
 ### Ilustración 16: Menú de ajustes
 
 #### 5.1.5. Pantalla de personalización
@@ -506,11 +506,11 @@ Esta es la interfaz con la que los jugadores interactuarán durante la partida. 
 - **Botón de Pausa**: Lleva al menú de pausa para opciones adicionales o salir del juego.
 - **Pantalla de Personalización**: Accesible al inicio de la partida tocando un espejo.
 
-![Ilustración 17: Mockup juego](https://github.com/Uniknova/EchoesOfXyphoria/blob/475cfcc8c0e07a128dea039f6129adb94f0a685a/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/PartidaInterfaz.JPG)
+![Ilustración 17: Mockup juego](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/PartidaInterfaz.jpg)
 
 #### Ilustración 17: Mockup juego
 
-![Ilustración 18: Pantalla Elección de Mejoras](https://github.com/Uniknova/EchoesOfXyphoria/blob/475cfcc8c0e07a128dea039f6129adb94f0a685a/Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/MejorasInterfaz.png)
+![Ilustración 18: Pantalla Elección de Mejoras](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/MejorasInterfaz.png)
 
 #### Ilustración 18: Pantalla de Elección de Mejoras
 
