@@ -777,3 +777,5 @@ A continuación, se muestran listados enlaces de importancia usados en la creaci
 - [Archero](https://archero.fandom.com/wiki/Archero_Wiki)
 - [ChatGPT](https://chatgpt.com/)
 - [Copilot](https://copilot.microsoft.com/)
+- [Script de rotación y translación](https://gamedevtraum.com/es/descargar-assets/paquetes-unity-para-descargar/script-de-rotacion-y-traslacion-para-gameobjects-en-unity/)
+- [Controles de móvil](https://youtu.be/wdsLDogAALI?si=U3WXnpei01f1TV67)
