@@ -140,6 +140,8 @@ public class TransitionManager : MonoBehaviour
 
         if (sceneName == SCENE_GAME)
         {
+            player.vidaUi = Uivida.Instance;
+            player.vidaUi.fill.fillAmount = player.hp / player.hpMax;
             _PowerUpsCanvas = PowerUpsCanvas.Instance;
         }
         if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY)
