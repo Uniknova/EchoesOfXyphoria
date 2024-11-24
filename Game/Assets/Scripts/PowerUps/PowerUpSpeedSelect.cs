@@ -18,6 +18,11 @@ public class PowerUpSpeedSelect : IPowerSelect
 
     }
 
+    public override void Init()
+    {
+        powerEnemy = new SpeedDownPower();
+    }
+
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
         button.onClick.AddListener(powerEnemy.AddPower);

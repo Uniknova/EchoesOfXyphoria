@@ -7,7 +7,7 @@ public class PowerUpsCanvas : MonoBehaviour
 {
 
     public List<IPowerSelect> powerUpsTexture;
-    public List<Image> powerUpsImage;
+    public List<ImagenPowerUp> powerUpsImage;
     public List<bool> powerSelected;
     public List<IPowerSelect> allPowers;
     private Animator animator;
@@ -66,6 +66,7 @@ public class PowerUpsCanvas : MonoBehaviour
         for (int i = 0; i < powerUpsTexture.Count; i++)
         {
             powerSelected.Add(false);
+            powerUpsTexture[i].Init();
         }
 
         for (int i = 0; i < powerUpsTexture.Count; i++)
@@ -76,7 +77,11 @@ public class PowerUpsCanvas : MonoBehaviour
 
     public void Init()
     {
-        if (powerUpsTexture.Count <= 0) MatchInfo.Instance.EndLevel();
+        if (powerUpsTexture.Count <= 0)
+        {
+            MatchInfo.Instance.EndLevel();
+            return;
+        }
         gameObject.SetActive(true);
         int idx;
         for (int i = 0; i < 3; i++)
@@ -84,7 +89,9 @@ public class PowerUpsCanvas : MonoBehaviour
             if (powerUpsTexture.Count > 0)
             {
                 idx = Random.Range(0, powerUpsTexture.Count);
-                powerUpsImage[i].sprite = powerUpsTexture[idx].sprite;
+                powerUpsImage[i].imagen.sprite = powerUpsTexture[idx].sprite;
+                powerUpsImage[i].titulo.text = powerUpsTexture[idx].titulo.text;
+                powerUpsImage[i].descripcion.text = powerUpsTexture[idx].descripcion.text;
                 powerUpsTexture[idx].SetButt(powerUpsImage[i].GetComponent<Button>(), powerSelected, allPowers.IndexOf(powerUpsTexture[idx]), this);
                 powerUpsTexture.RemoveAt(idx);
             }
@@ -104,7 +111,9 @@ public class PowerUpsCanvas : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             powerUpsImage[i].gameObject.SetActive(true);
-            powerUpsImage[i].sprite = null;
+            powerUpsImage[i].imagen.sprite = null;
+            powerUpsImage[i].titulo.text = null;
+            powerUpsImage[i].descripcion.text = null;
             powerUpsImage[i].GetComponent<Button>().onClick.RemoveAllListeners();
         }
 

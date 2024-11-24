@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -84,6 +85,7 @@ public class MatchInfo : MonoBehaviour
         {
             salasSuperadas++;
             enemiesToSpawn++;
+            if (actualRoom.bossRespawn != null) return;
             actualRoom.ActiveTriggers();
         }
     }
@@ -99,17 +101,20 @@ public class MatchInfo : MonoBehaviour
     public void EndLevel()
     {
         instanciaSalas++;
-        LevelStats(normalEnemy);
+        LevelStats(normalEnemy, 20, 2, 0.2f, 0.5f, 10);
+        LevelStats(poisonEnemy, 20, 3, 0.2f, 0.5f, 10);
+        LevelStats(dashEnemy, 10, 2, 0.3f, 0.2f, 15);
+        LevelStats(tankEnemy, 30, 4, 0.1f, 0.7f, 20);
         TransitionManager.Instance.LoadScene(TransitionManager.SCENE_GAME);
     }
 
-    public void LevelStats(EnemyScriptableObject enemy)
+    public void LevelStats(EnemyScriptableObject enemy, float health, float damage, float speed, float armor, int score)
     {
-        enemy.health += 20;
-        enemy.damage += 5;
-        enemy.speed += 0.1f;
-        enemy.armor += 0.5f;
-        enemy.score += 10;
+        enemy.health += health;
+        enemy.damage += damage;
+        enemy.speed += speed;
+        enemy.armor += armor;
+        enemy.score += score;
     }
 
     public void ResetEnemies()
