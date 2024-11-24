@@ -6,7 +6,32 @@ public class UICanvasControllerInput : MonoBehaviour
     //[Header("Output")]
     public Player inputs;
 
+    private static UICanvasControllerInput instance;
+
+    public static UICanvasControllerInput Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = Instantiate(Resources.Load<UICanvasControllerInput>("UI_Canvas_StarterAssetsInputs_Joysticks"));
+                instance.Init();
+            }
+
+            return instance;
+        }
+    }
+
+
+
     public void Awake()
+    {
+        if (DataInfo.Instance.GetPlatform() == 1) this.gameObject.SetActive(false);
+        DontDestroyOnLoad(gameObject);
+        inputs = Player.Instance;
+    }
+
+    public void Init()
     {
         if (DataInfo.Instance.GetPlatform() == 1) this.gameObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
