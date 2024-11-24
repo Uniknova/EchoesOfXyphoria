@@ -53,6 +53,8 @@ public class Player : MonoBehaviour
 
     public SkinnedMeshRenderer playerMaterial;
 
+    public Uivida vidaUi;
+
 
     public static Player Instance
     {
@@ -83,6 +85,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //vidaUi = Uivida.Instance;
         //PowerUpsCanvas.Instance.Init();
         DataInfo.Instance.GetPlatform();
         disparoMovil = false;
@@ -307,6 +310,7 @@ public class Player : MonoBehaviour
         {
             Death();
         }
+        if (vidaUi != null) vidaUi.fill.fillAmount = hp/hpMax;
         if (hp <= (hpMax * 0.2f) && !lowHp && lowPower)
         {
             weapon.fireRate *= 3;
@@ -328,6 +332,7 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
+            TakeDamage(damage);
             playerMaterial.material.color = Color.green;
             yield return new WaitForSeconds(0.5f);
             playerMaterial.material.color = color;
