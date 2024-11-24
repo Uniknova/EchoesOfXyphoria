@@ -1013,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0116, y: -0.024}
+  m_AnchoredPosition: {x: -0.0116, y: -0.0228}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218783053
@@ -2595,6 +2595,7 @@ GameObject:
   - component: {fileID: 634322590}
   - component: {fileID: 634322589}
   - component: {fileID: 634322593}
+  - component: {fileID: 634322594}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2713,6 +2714,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCamera: {fileID: 366994166}
+--- !u!114 &634322594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634322588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3ff797623c7c64dbcb2de71df18ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generalSound: {fileID: 24100000, guid: 86bf49a4da34e2e45a00bc5654957dc4, type: 2}
 --- !u!1 &684560645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,7 +3149,7 @@ AudioSource:
   m_GameObject: {fileID: 702777232}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: e7605cae206a2cd4d8b1fa809c783f77, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 86bf49a4da34e2e45a00bc5654957dc4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4639c1bd3aa765f4baa7a1b36fbd7e6e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4599,7 +4613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1049503360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4608,17 +4622,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049503359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1.36, y: 1.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1753077012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.99, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0021, y: -0.0591}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0598, y: -0.0461}
+  m_SizeDelta: {x: 0.099, y: -0.0000000027939677}
+  m_Pivot: {x: 0.53, y: 0.5}
 --- !u!114 &1049503361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,14 +4680,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.01
-  m_fontSizeBase: 0.01
+  m_fontSize: 0.009
+  m_fontSizeBase: 0.009
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5252,7 +5266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232395169}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.008455346, y: 0.09384186, z: 0.00079701137, w: 0.99555093}
+  m_LocalRotation: {x: -0.008455346, y: 0.09384189, z: 0.00079701154, w: 0.99555093}
   m_LocalPosition: {x: 0.0298, y: 0.0161, z: 0.0539}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6221,7 +6235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437723039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007964173, y: 0.97827053, z: -0.038263876, w: 0.20361546}
+  m_LocalRotation: {x: 0.007964167, y: 0.97827053, z: -0.038263854, w: 0.20361543}
   m_LocalPosition: {x: -0.0152, y: 0.0253, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6287,7 +6301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1489111317
 RectTransform:
   m_ObjectHideFlags: 0

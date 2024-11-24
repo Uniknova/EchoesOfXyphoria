@@ -153,6 +153,22 @@ MonoBehaviour:
     m_Localized: Recuperas salud cuando un enemigo es eliminado.
     m_Metadata:
       m_Items: []
+  - m_Id: 731538306834432
+    m_Localized: Has Perdido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731561245483008
+    m_Localized: "Puantuaci\xF3n:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731586902040576
+    m_Localized: 'Enemigos eliminados: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731918025564160
+    m_Localized: 'Salas completadas: '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
