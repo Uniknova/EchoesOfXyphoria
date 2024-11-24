@@ -39,7 +39,7 @@
     - [2.3.3 Bahía de Arka](#233-bahía-de-arka)
     - [2.3.4 Ciudad Flotante de Aereth](#234-ciudad-flotante-de-aereth)
     - [2.3.5 Nido Tyrnax](#235-nido-tyrnax)
-    - [2.3.6 Taller de Torko](#236-taller-de-torko)
+    - [2.3.6 Taller de Torko (Asignatura de comportamientos)](#236-taller-de-torko)
 - [3 Mecánicas de juego](#3-mecánicas-de-juego)
   - [3.1 Flujo de juego (en qué consiste una partida)](#31-flujo-de-juego-en-qué-consiste-una-partida)
   - [3.2 Cámara](#32-cámara)
@@ -125,13 +125,11 @@
 - [Ilustración 11: Enemigo Pesado](#ilustración-11-enemigo-pesado)
 - [Ilustración 12: Enemigo Tóxico](#ilustración-12-enemigo-tóxico)
 - [Ilustración 13: Enemigo Jefe](#ilustración-13-enemigo-jefe)
-- 
 - [Ilustración 14: Mockup menú principal](#ilustración-14-mockup-menú-principal)
 - [Ilustración 15: Menú de pausa](#ilustración-15-menú-de-pausa)
 - [Ilustración 16: Menú de ajustes](#ilustración-16-menú-de-ajustes)
 - [Ilustración 17: Mockup juego](#ilustración-17-mockup-juego)
 - [Ilustración 18: Pantalla Elección de Mejoras](#ilustración-18-pantalla-de-elección-de-mejoras)
-- 
 - [Ilustración 19: Diagrama de flujo](#ilustración-19-diagrama-de-flujo)
 - [Ilustración 20: Siluetas personaje principal](#ilustración-20-siluetas-personaje-principal)
 - [Ilustración 21: Desarrollo concepts personaje principal](#ilustración-21-desarrollo-concepts-personaje-principal)
