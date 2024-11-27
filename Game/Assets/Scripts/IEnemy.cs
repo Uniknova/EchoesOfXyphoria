@@ -8,5 +8,5 @@ public interface IEnemy: IPooleableObject
 
     public void Fire(float fire);
 
-    public void SpeedDown();
+    public void SpeedDown(int duration, float downSpeed);
 }

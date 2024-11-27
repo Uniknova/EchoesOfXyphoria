@@ -4,6 +4,7 @@ using System.Drawing;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 using Color = UnityEngine.Color;
 
 public class Player : MonoBehaviour
@@ -34,6 +35,14 @@ public class Player : MonoBehaviour
     private const string armaAnimator = "Arma";
     MeshRenderer render;
     Color color;
+
+    public float damageMultiplier;
+    public float speedMultiplier;
+    public float hpMultiplier;
+    public int level;
+
+    private float defaultspeed;
+    private float defaultdamage;
 
     public bool disparoMovil;
 
@@ -89,6 +98,7 @@ public class Player : MonoBehaviour
     {
         //vidaUi = Uivida.Instance;
         //PowerUpsCanvas.Instance.Init();
+        defaultspeed = speed;
         movil = DataInfo.Instance.GetPlatform();
         DataInfo.Instance.GetPlatform();
         disparoMovil = false;
@@ -103,6 +113,10 @@ public class Player : MonoBehaviour
         indexWeapon = -1;
         indexMelee = -1;
         lowHp = false;
+        level = 1;
+        damageMultiplier = 1.5f;
+        speedMultiplier = 1.2f;
+        hpMultiplier = 0.15f;
         DontDestroyOnLoad(gameObject);
 
 
@@ -272,10 +286,12 @@ public class Player : MonoBehaviour
         {
             if (weapons[indexWeapon].activeSelf == true)
             {
+                
                 animatorPlayer.SetBool(armaAnimator, true);
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
                 weapon.SetRaycastDestination(Target);
                 weapon.enabled = true;
+                defaultdamage = weapon.damage;
             }
         }
 
@@ -298,10 +314,11 @@ public class Player : MonoBehaviour
     public void PlayerHealth(float health)
     {
         hp = Mathf.Min(100, hp + health);
-        if (hp >= (hpMax * 0.2f) && lowHp && lowPower)
+        if (vidaUi != null) vidaUi.fill.fillAmount = hp / hpMax;
+        if (hp >= (hpMax * hpMultiplier) && lowHp && lowPower)
         {
-            weapon.fireRate /= 3;
-            speed /= 2;
+            weapon.damage = defaultdamage;
+            speed = defaultspeed;
             lowHp = false;
         }
         Debug.Log("Cura");
@@ -337,10 +354,10 @@ public class Player : MonoBehaviour
             Death();
         }
         if (vidaUi != null) vidaUi.fill.fillAmount = hp/hpMax;
-        if (hp <= (hpMax * 0.2f) && !lowHp && lowPower)
+        if (hp <= (hpMax * hpMultiplier) && !lowHp && lowPower)
         {
-            weapon.fireRate *= 3;
-            speed *= 2;
+            weapon.damage = defaultdamage * damageMultiplier;
+            speed = defaultspeed * speedMultiplier;
             lowHp = true;
         }
     }
@@ -399,7 +416,10 @@ public class Player : MonoBehaviour
     {
         animatorPlayer.SetBool(armaAnimator, false);
         hp = hpMax;
-        
+        damageMultiplier = 1.5f;
+        speedMultiplier = 1.2f;
+        hpMultiplier = 0.15f;
+
         DeleteWeapons();
         lowPower = false;
         render = GetComponentInChildren<MeshRenderer>();
@@ -423,5 +443,47 @@ public class Player : MonoBehaviour
     public void SetMaterial(Material material)
     {
         playerMaterial.material = material;
+    }
+
+    public void LevelUp()
+    {
+        level++;
+        switch (level)
+        {
+            case 2:
+                hpMultiplier += 0.05f;
+                damageMultiplier += 0.2f;
+                speedMultiplier += 0.1f;
+                break;
+            case 3:
+                damageMultiplier += 0.3f;
+                speedMultiplier += 0.15f;
+                break;
+            case 4:
+                hpMultiplier += 0.05f;
+                damageMultiplier += 0.1f;
+                speedMultiplier += 0.15f;
+                break;
+            case 5:
+                hpMultiplier += 0.1f;
+                damageMultiplier += 0.3f;
+                speedMultiplier += 0.15f;
+                break;
+        }
+    }
+
+    public int GetLevel()
+    {
+        return level;
+    }
+
+    public HealthDeathPower GetHealthDeath()
+    {
+        foreach (IDeathPower h in deathPowers)
+        {
+            if (h.GetType() == typeof(HealthDeathPower)) return (HealthDeathPower)h;
+        }
+
+        return null;
     }
 }

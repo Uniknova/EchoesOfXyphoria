@@ -25,11 +25,37 @@ public class PowerUpSpeedSelect : IPowerSelect
 
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
-        button.onClick.AddListener(powerEnemy.AddPower);
-        button.onClick.AddListener(() =>
+        SpeedDownPower power = Player.Instance.weapon.GetSpeed();
+        if (power == null)
         {
-            select[idx] = true;
-            p.Restart();
-        });
+            button.onClick.AddListener(powerEnemy.AddPower);
+            button.onClick.AddListener(() =>
+            {
+                p.Restart();
+            });
+        }
+
+        else
+        {
+            button.onClick.AddListener(power.LevelUp);
+
+            if (power.GetLevel() >= 2)
+            {
+
+                button.onClick.AddListener(() =>
+                {
+                    select[idx] = true;
+                    p.Restart();
+                });
+            }
+
+            else
+            {
+                button.onClick.AddListener(() =>
+                {
+                    p.Restart();
+                });
+            }
+        }
     }
 }

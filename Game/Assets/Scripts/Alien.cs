@@ -174,13 +174,13 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         FireC = StartCoroutine(FireCoroutine(fire));
     }
 
-    public void SpeedDown()
+    public void SpeedDown(int duration, float downSpeed)
     {
         if (SpeedDownC != null)
         {
             StopCoroutine(SpeedDownC);
         }
-        SpeedDownC = StartCoroutine(SpeedDownCoroutine());
+        SpeedDownC = StartCoroutine(SpeedDownCoroutine(duration, downSpeed));
     }
 
     IEnumerator DashCoroutine()
@@ -212,12 +212,12 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         }
     }
 
-    IEnumerator SpeedDownCoroutine()
+    IEnumerator SpeedDownCoroutine(int duration, float downSpeed)
     {
-        Agent.speed = speedDown;
+        Agent.speed = speed * downSpeed;
         if (rend != null)
             rend.material.color = Color.cyan;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(duration);
         Agent.speed = speed;
         if (rend != null)
             rend.material.color = color;

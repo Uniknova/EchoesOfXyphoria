@@ -20,11 +20,38 @@ public class PowerUpLowSelect : IPowerSelect
 
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
-        button.onClick.AddListener(() => Player.Instance.lowPower = true);
-        button.onClick.AddListener(() =>
+        if (!Player.Instance.lowPower)
         {
-            select[idx] = true;
-            p.Restart();
-        });
+            button.onClick.AddListener(() => Player.Instance.lowPower = true);
+
+            button.onClick.AddListener(() =>
+            {
+                p.Restart();
+            });
+        }
+
+        else
+        {
+            button.onClick.AddListener(Player.Instance.LevelUp);
+
+            if (Player.Instance.GetLevel() >= 2)
+            {
+
+                button.onClick.AddListener(() =>
+                {
+                    select[idx] = true;
+                    p.Restart();
+                });
+            }
+
+            else
+            {
+                button.onClick.AddListener(() =>
+                {
+                    p.Restart();
+                });
+            }
+        }
+        
     }
 }

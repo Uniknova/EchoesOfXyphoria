@@ -134,6 +134,19 @@ public class RaycastWeapon : MonoBehaviour
         return null;
     }
 
+    public SpeedDownPower GetSpeed()
+    {
+        foreach (IPowerEnemy e in powerEnemyList)
+        {
+            if (e.GetType() == typeof(SpeedDownPower))
+            {
+                return (SpeedDownPower)e;
+            }
+        }
+
+        return null;
+    }
+
     void DestroyBullets()
     {
         bullets.RemoveAll(bullet => bullet.time >= maxLifeTime);

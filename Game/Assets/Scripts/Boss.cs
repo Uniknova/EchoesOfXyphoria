@@ -140,13 +140,13 @@ public class Boss : MonoBehaviour, IEnemy
         }
         FireC = StartCoroutine(FireCoroutine(fire));
     }
-    public void SpeedDown()
+    public void SpeedDown(int duration, float downSpeed)
     {
         if (SpeedDownC != null)
         {
             StopCoroutine(SpeedDownC);
         }
-        SpeedDownC = StartCoroutine(SpeedDownCoroutine());
+        SpeedDownC = StartCoroutine(SpeedDownCoroutine(duration, downSpeed));
     }
 
     IEnumerator DashCoroutine()
@@ -185,11 +185,11 @@ public class Boss : MonoBehaviour, IEnemy
         }
     }
 
-    IEnumerator SpeedDownCoroutine()
+    IEnumerator SpeedDownCoroutine(int duration, float downSpeed)
     {
-        agent.speed = speedDown;
+        agent.speed = speed * downSpeed;
         render.material.color = Color.cyan;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(duration);
         agent.speed = speed;
         render.material.color = color;
     }

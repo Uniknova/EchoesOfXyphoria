@@ -9,6 +9,7 @@ public abstract class IPowerSelect : MonoBehaviour
     public Sprite sprite;
     public TextMeshProUGUI titulo;
     public TextMeshProUGUI descripcion;
+    public List<string> levels = new List<string>();
 
     public virtual void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
