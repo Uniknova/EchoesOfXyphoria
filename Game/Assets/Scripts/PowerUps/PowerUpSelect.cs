@@ -26,11 +26,38 @@ public class PowerUpSelect : IPowerSelect
 
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
     {
-        button.onClick.AddListener(powerEnemy.AddPower);
-        button.onClick.AddListener(() =>
+        FirePower firepower = Player.Instance.weapon.GetFire();
+        if (firepower == null)
         {
-            select[idx] = true;
-            p.Restart();
-        });
+            button.onClick.AddListener(powerEnemy.AddPower);
+            button.onClick.AddListener(() =>
+            {
+                p.Restart();
+            });
+        }
+
+        else
+        {
+            button.onClick.AddListener(firepower.LevelUp);
+
+            if (firepower.Level >= 2)
+            {
+
+                button.onClick.AddListener(() =>
+                {
+                    select[idx] = true;
+                    p.Restart();
+                });
+            }
+
+            else
+            {
+                button.onClick.AddListener(() =>
+                {
+                    p.Restart();
+                });
+            }
+        }
+
     }
 }

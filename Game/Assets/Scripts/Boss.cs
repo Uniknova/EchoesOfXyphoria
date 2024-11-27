@@ -132,13 +132,13 @@ public class Boss : MonoBehaviour, IEnemy
             yield return Wait;
         }
     }
-    public void Fire()
+    public void Fire(float fire)
     {
         if (FireC != null)
         {
             StopCoroutine(FireC);
         }
-        FireC = StartCoroutine(FireCoroutine(fireDamage));
+        FireC = StartCoroutine(FireCoroutine(fire));
     }
     public void SpeedDown()
     {
@@ -175,10 +175,12 @@ public class Boss : MonoBehaviour, IEnemy
     {
         for (int i = 0; i < 3; i++)
         {
-            Debug.Log("Hola");
-            render.material.color = Color.red;
+            if (render != null)
+                render.material.color = Color.red;
+            TakeDamage(fire);
             yield return new WaitForSeconds(0.5f);
-            render.material.color = color;
+            if (render != null)
+                render.material.color = color;
             yield return new WaitForSeconds(0.5f);
         }
     }

@@ -165,13 +165,13 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         }
     }
 
-    public void Fire()
+    public void Fire(float fire)
     {
         if (FireC != null)
         {
             StopCoroutine(FireC);
         }
-        FireC = StartCoroutine(FireCoroutine(fireDamage));
+        FireC = StartCoroutine(FireCoroutine(fire));
     }
 
     public void SpeedDown()
@@ -202,9 +202,9 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     {
         for (int i = 0; i < 3; i++)
         {
-            Debug.Log("Hola");
             if (rend != null)
                 rend.material.color = Color.red;
+            TakeDamage(fire);
             yield return new WaitForSeconds(0.5f);
             if (rend != null)
                 rend.material.color = color;

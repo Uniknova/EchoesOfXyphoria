@@ -6,7 +6,7 @@ public interface IEnemy: IPooleableObject
 {
     public void TakeDamage(float damage);
 
-    public void Fire();
+    public void Fire(float fire);
 
     public void SpeedDown();
 }
