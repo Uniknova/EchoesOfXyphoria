@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 2359097795966937616}
   - component: {fileID: 7827093146572961412}
   - component: {fileID: 577506355350423874}
+  - component: {fileID: 5379891465387557401}
   m_Layer: 0
   m_Name: WallLeft
   m_TagString: Untagged
@@ -829,8 +830,8 @@ Transform:
   m_GameObject: {fileID: 4058151233474226855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.842, y: 2.14, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.10473, y: 2.13609, z: 0.05208}
+  m_LocalScale: {x: 0.19534446, y: 1.4098226, z: 1.4104742}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4126932291959277147}
@@ -863,7 +864,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -8980945244042432692, guid: 57d82979f893e7d4e980e2ee08035558, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -906,6 +907,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5379891465387557401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058151233474226855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.0834125, g: 1, b: 0.06132078, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4195390960313716086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &484401381432336236
 Transform:
   m_ObjectHideFlags: 0
@@ -2208,7 +2227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6056860691711827808
 Transform:
   m_ObjectHideFlags: 0

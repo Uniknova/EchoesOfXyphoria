@@ -2,9 +2,10 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Espejo : MonoBehaviour
+public class Espejo : MonoBehaviour,IPointerClickHandler
 {
     public CinemachineVirtualCamera currentCamera;
     public CinemachineVirtualCamera targetCamera;
@@ -53,7 +54,7 @@ public class Espejo : MonoBehaviour
     {
         if (!enter)
         {
-            uiUse.enabled = true;
+            //uiUse.enabled = true;
             enter = true;
         }
         
@@ -116,7 +117,7 @@ public class Espejo : MonoBehaviour
             //skin.transform.SetParent(Head);
             //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
             espejo = false;
-            uiUse.enabled = true;
+            //uiUse.enabled = true;
             player.enabled = true;
             mouse.enabled = true;
             currentCamera.Priority--;
@@ -127,11 +128,19 @@ public class Espejo : MonoBehaviour
 
     IEnumerator MovePlayer(Transform target, Transform previous)
     {
-        while (!previous.position.Equals(target.position))
+        while (Vector3.Distance(previous.position, target.position) >0.2f)
         {
-            previous.position = Vector3.MoveTowards(previous.position, target.position, 2 * Time.deltaTime);
+            
+            previous.position = Vector3.Lerp(previous.position, target.position, 1.6f * Time.deltaTime);
             yield return null;
+            previous.rotation = Quaternion.Lerp(previous.rotation, target.rotation, 2 * Time.deltaTime);
+
         }
+        previous.position = target.position;
+
+        
+
+        //previous.position = Vector3.Lerp(previous.position, target.position, 1);
         //Destroy(skin);
         //skinsList[indexSkin].transform.position = Head.position;
         float x = previous.rotation.x;
@@ -150,5 +159,27 @@ public class Espejo : MonoBehaviour
         player.SetMaterial(skinList[indexSkin]);
         //skinsList[indexSkin].transform.position = Head.position;
         //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("Click");
+        player.enabled = false;
+        mouse.enabled = false;
+        UiSkin.GetComponent<Animator>().SetBool("Show", true);
+        foreach (Transform t in UiSkin.transform)
+        {
+            t.GetComponent<Button>().enabled = true;
+        }
+
+        StartCoroutine(MovePlayer(playerPosition, mouse.transform));
+        //mouse.transform.rotation = new Quaternion(mouse.transform.rotation.x, 180, mouse.transform.rotation.z, mouse.transform.rotation.w);
+        //mouse.transform.Rotate(0, 180, 0);
+        uiUse.enabled = false;
+
+        currentCamera.Priority--;
+        currentCamera = targetCamera;
+        currentCamera.Priority++;
+        espejo = true;
     }
 }

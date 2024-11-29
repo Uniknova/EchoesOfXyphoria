@@ -17,9 +17,9 @@ public class CameraBehaviour : MonoBehaviour
 
         Vector3 newPosition = player.position;
         //newPosition.y = transform.position.y;
-        newPosition.y += 6.89f;
+        newPosition.y += 21f;
         
-        newPosition.z = newPosition.z - 7.87f;
+        newPosition.x = newPosition.x - 20f;
 
         transform.position = newPosition;
 

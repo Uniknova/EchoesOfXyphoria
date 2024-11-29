@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
     {
         //vidaUi = Uivida.Instance;
         //PowerUpsCanvas.Instance.Init();
+        MiniMap.Instance.Init();
         defaultspeed = speed;
         movil = DataInfo.Instance.GetPlatform();
         DataInfo.Instance.GetPlatform();
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour
         if (Input.GetButton("Horizontal"))
         {
             andar = true;
-            Vector3 move = transform.right * Input.GetAxis("Horizontal");
+            Vector3 move = -transform.forward * Input.GetAxis("Horizontal");
             //Debug.Log(move);
 
             controller.Move(move * speed * Time.deltaTime);
@@ -138,7 +139,7 @@ public class Player : MonoBehaviour
         if (Input.GetButton("Vertical"))
         {
             andar = true;
-            Vector3 move = transform.forward * Input.GetAxis("Vertical");
+            Vector3 move = transform.right * Input.GetAxis("Vertical");
 
             controller.Move(move * speed * Time.deltaTime);
         }
