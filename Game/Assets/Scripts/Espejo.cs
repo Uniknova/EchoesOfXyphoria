@@ -40,11 +40,6 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
 
         //skinsList.Add(new GameObject());
 
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            UiSkin.GetComponent<Animator>().SetBool("Show", true);
-        }
-
         //foreach(Transform t in transform.GetChild(0).transform)
         //{
         //    skinsList.Add(t.gameObject);
@@ -54,14 +49,9 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     {
         if (!enter)
         {
-            //uiUse.enabled = true;
             enter = true;
         }
-        
-
-        //currentCamera.Priority--;
-        //currentCamera = targetCamera;
-        //currentCamera.Priority++;
+       
     }
 
 
@@ -70,60 +60,11 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
 
         uiUse.enabled = false;
         enter = false;
-        //currentCamera.Priority--;
-        //currentCamera = previousCamera;
-        //currentCamera.Priority++;
     }
 
     private void Update()
     {
-        if (enter && !espejo)
-        {
-            
-            uiUse.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //Debug.Log("Hola");
-                player.enabled = false;
-                mouse.enabled = false;
-                UiSkin.GetComponent<Animator>().SetBool("Show", true);
-                foreach(Transform t in UiSkin.transform)
-                {
-                    t.GetComponent<Button>().enabled = true;
-                }
 
-                StartCoroutine(MovePlayer(playerPosition, mouse.transform));
-                //mouse.transform.rotation = new Quaternion(mouse.transform.rotation.x, 180, mouse.transform.rotation.z, mouse.transform.rotation.w);
-                //mouse.transform.Rotate(0, 180, 0);
-                uiUse.enabled = false;
-                
-                currentCamera.Priority--;
-                currentCamera = targetCamera;
-                currentCamera.Priority++;
-                espejo = true;
-            }
-        }
-
-        if (espejo && Input.GetKeyDown(KeyCode.R))
-        {
-            UiSkin.GetComponent<Animator>().SetBool("Show", false);
-            foreach (Transform t in UiSkin.transform)
-            {
-                t.GetComponent<Button>().enabled = false;
-            }
-            //skin = Instantiate(skinsList[indexSkin], Head.position, Head.rotation);
-            //skin.transform.localScale = new Vector3(skin.transform.localScale.x * transform.parent.localScale.x, skin.transform.localScale.y * transform.parent.localScale.y, skin.transform.localScale.z * transform.parent.localScale.z);
-            //skin.transform.localScale = skin.transform.lossyScale;
-            //skin.transform.SetParent(Head);
-            //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
-            espejo = false;
-            //uiUse.enabled = true;
-            player.enabled = true;
-            mouse.enabled = true;
-            currentCamera.Priority--;
-            currentCamera = previousCamera;
-            currentCamera.Priority++;
-        }
     }
 
     IEnumerator MovePlayer(Transform target, Transform previous)
@@ -139,31 +80,22 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
         previous.position = target.position;
 
         
-
-        //previous.position = Vector3.Lerp(previous.position, target.position, 1);
-        //Destroy(skin);
-        //skinsList[indexSkin].transform.position = Head.position;
         float x = previous.rotation.x;
-        float z = previous.rotation.x;
+        float z = previous.rotation.z;
         previous.LookAt(TargetLookAt);
         previous.rotation = new Quaternion(x, previous.rotation.y, z, previous.rotation.w);
-        //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
 
     }
 
     public void ChangeSkin(int i)
     {
-        //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = false;
 
         indexSkin = (indexSkin + i + skinList.Count) % skinList.Count;
         player.SetMaterial(skinList[indexSkin]);
-        //skinsList[indexSkin].transform.position = Head.position;
-        //if (skinsList[indexSkin].GetComponent<MeshRenderer>()) skinsList[indexSkin].GetComponent<MeshRenderer>().enabled = true;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Click");
         player.enabled = false;
         mouse.enabled = false;
         UiSkin.GetComponent<Animator>().SetBool("Show", true);
@@ -173,13 +105,31 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
         }
 
         StartCoroutine(MovePlayer(playerPosition, mouse.transform));
-        //mouse.transform.rotation = new Quaternion(mouse.transform.rotation.x, 180, mouse.transform.rotation.z, mouse.transform.rotation.w);
-        //mouse.transform.Rotate(0, 180, 0);
+
         uiUse.enabled = false;
 
-        currentCamera.Priority--;
-        currentCamera = targetCamera;
-        currentCamera.Priority++;
+
+        ChangeCamera(targetCamera);
         espejo = true;
+    }
+
+    public void ChangeCamera(CinemachineVirtualCamera camara)
+    {
+        currentCamera.Priority--;
+        currentCamera = camara;
+        currentCamera.Priority++;
+    }
+
+    public void ExitCanvas()
+    {
+        UiSkin.GetComponent<Animator>().SetBool("Show", false);
+        foreach (Transform t in UiSkin.transform)
+        {
+            t.GetComponent<Button>().enabled = false;
+        }
+        espejo = false;
+        player.enabled = true;
+        mouse.enabled = true;
+        ChangeCamera(previousCamera);
     }
 }

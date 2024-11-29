@@ -41,7 +41,7 @@ public class UICanvasControllerInput : MonoBehaviour
     {
         if (inputs != null)
         {
-            Vector3 move = new Vector3(virtualMoveDirection.x, 0, virtualMoveDirection.y);
+            Vector3 move = new Vector3(virtualMoveDirection.y, 0, -virtualMoveDirection.x);
             inputs.controller.Move(move * inputs.speed * Time.deltaTime);
         }
         //inputs.move = virtualMoveDirection;
@@ -52,7 +52,7 @@ public class UICanvasControllerInput : MonoBehaviour
 
         float angle = Mathf.Atan2(-virtualLookDirection.y , virtualLookDirection.x) * Mathf.Rad2Deg - 90.0f;
 
-        inputs.transform.GetChild(0).transform.rotation = Quaternion.Euler(new Vector3(0, -angle, 0));
+        inputs.transform.GetChild(0).transform.rotation = Quaternion.Euler(new Vector3(0, -angle + 90, 0));
         //inputs.look = virtualLookDirection;
     }
 

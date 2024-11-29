@@ -16,7 +16,7 @@ public class MiniMap : MonoBehaviour
             if (instance == null)
             {
                 instance = Instantiate(Resources.Load<MiniMap>("MiniMapPrefab"));
-                
+                instance.SetLobbySize();
             }
 
             return instance;
@@ -35,5 +35,15 @@ public class MiniMap : MonoBehaviour
         newPosition.y = miniMapCamera.transform.position.y;
 
         miniMapCamera.transform.position = newPosition;
+    }
+
+    public void SetMatchSize()
+    {
+        miniMapCamera.orthographicSize = 143.9f;
+    }
+
+    public void SetLobbySize()
+    {
+        miniMapCamera.orthographicSize = 50f;
     }
 }

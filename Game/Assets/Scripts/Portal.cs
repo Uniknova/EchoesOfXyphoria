@@ -7,7 +7,7 @@ public class Portal : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Player>() != null)
+        if (other.GetComponentInParent<Player>() != null && (other.GetComponentInParent<Player>().weapons.Count > 0 || other.GetComponentInParent<Player>().meleeWeapons.Count>0))
         {
             LoadGameScene();
         }

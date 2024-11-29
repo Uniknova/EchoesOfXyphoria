@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 5847270646154910434}
   - component: {fileID: 6155728799153073429}
   - component: {fileID: 837008250360302538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IconoImagen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 8709306476972491386}
   - component: {fileID: 7073935031859754832}
   - component: {fileID: 4006499849902199161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icono
   m_TagString: Untagged
   m_Icon: {fileID: 0}
