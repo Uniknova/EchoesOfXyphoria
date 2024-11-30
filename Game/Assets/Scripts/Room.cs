@@ -60,25 +60,37 @@ public class Room : MonoBehaviour
         if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x + 1, y)))
         {
             triggerRight.gameObject.SetActive(true);
-            wallRight.SetActive(false);
+            //wallRight.SetActive(false);
+
+            wallRight.GetComponent<Outline>().enabled = true;
+            //wallRight.GetComponent<BoxCollider>().isTrigger = true;
         }
 
         if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x - 1, y)))
         {
             triggerLeft.gameObject.SetActive(true);
-            wallLeft.SetActive(false);
+            //wallLeft.SetActive(false);
+
+            wallLeft.GetComponent<Outline>().enabled = true;
+            //wallLeft.GetComponent<BoxCollider>().isTrigger = true;
         }
 
         if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x, y + 1)))
         {
             triggerUp.gameObject.SetActive(true);
-            wallUp.SetActive(false);
+            //wallUp.SetActive(false);
+
+            wallUp.GetComponent<Outline>().enabled = true;
+            //wallUp.GetComponent<BoxCollider>().isTrigger = true;
         }
 
         if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x, y - 1)))
         {
             triggerDown.gameObject.SetActive(true);
-            wallDown.SetActive(false);
+            //wallDown.SetActive(false);
+
+            wallDown.GetComponent<Outline>().enabled = true;
+            //wallDown.GetComponent<BoxCollider>().isTrigger = true;
         }
         //if (triggers != null)
         //{
