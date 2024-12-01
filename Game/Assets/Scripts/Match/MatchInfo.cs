@@ -12,9 +12,11 @@ public class MatchInfo : MonoBehaviour
     public int killedEnemies;
     public int remainEnemies;
     public int enemiesToSpawn;
-    public int salasSuperadas;
-    public int instanciaSalas;
+    public int surprassedRooms;
+    public int instancerooms;
     public int totalEnemies;
+    public int moreEnemiesPerRoom;
+    public int moreRoomsPerLevel;
     public Room actualRoom;
     private static MatchInfo instance;
     public RunSpawn runSpawn;
@@ -32,9 +34,9 @@ public class MatchInfo : MonoBehaviour
             if ( instance == null)
             {
                 instance = Instantiate(Resources.Load<MatchInfo>("MatchManager"));
-                instance.salasSuperadas = 0;
+                instance.surprassedRooms = 0;
                 instance.enemiesToSpawn = 5;
-                instance.instanciaSalas = 3;
+                instance.instancerooms = 10;
                 instance.totalEnemies = 0;
             }
             return instance;
@@ -45,7 +47,7 @@ public class MatchInfo : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            instanciaSalas = 3;
+            instancerooms = 3;
         }
 
         else
@@ -57,9 +59,9 @@ public class MatchInfo : MonoBehaviour
     }
     void Start()
     {
-        salasSuperadas = 0;
+        surprassedRooms = 0;
         enemiesToSpawn = 5;
-        instanciaSalas = 3;
+        instancerooms = 10;
         Init();
     }
 
@@ -86,8 +88,8 @@ public class MatchInfo : MonoBehaviour
 
         if (killedEnemies >= remainEnemies)
         {
-            salasSuperadas++;
-            enemiesToSpawn++;
+            surprassedRooms++;
+            enemiesToSpawn += moreEnemiesPerRoom;
             if (actualRoom.bossRespawn != null) return;
             actualRoom.ActiveTriggers();
         }
@@ -103,7 +105,7 @@ public class MatchInfo : MonoBehaviour
 
     public void EndLevel()
     {
-        instanciaSalas++;
+        instancerooms += moreRoomsPerLevel;
         LevelStats(normalEnemy, 20, 2, 0.2f, 0.5f, 10);
         LevelStats(poisonEnemy, 20, 3, 0.2f, 0.5f, 10);
         LevelStats(dashEnemy, 10, 2, 0.3f, 0.2f, 15);
@@ -131,12 +133,12 @@ public class MatchInfo : MonoBehaviour
 
     public int GetSalas()
     {
-        return instanciaSalas;
+        return instancerooms;
     }
 
     public void SetGameOver()
     {
-        GameOver.Instance.SetStats(score, totalEnemies, salasSuperadas);
+        GameOver.Instance.SetStats(score, totalEnemies, surprassedRooms);
     }
 
 

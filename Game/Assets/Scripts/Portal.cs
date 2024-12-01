@@ -11,6 +11,8 @@ public class Portal : MonoBehaviour
         {
             LoadGameScene();
         }
+
+
         
     }
     public void LoadGameScene()

@@ -10,8 +10,8 @@ public class EnemyScriptableObject : ScriptableObject
     public float health = 100;
     public float damage = 1.0f;
     public float speed = 3.5f;
-    public float speedDown = 1.5f;
-    public float fireDamage = 0.5f;
+    //public float speedDown = 1.5f;
+    //public float fireDamage = 0.5f;
     public float armor = 0;
 
     public int score = 1;
@@ -22,8 +22,8 @@ public class EnemyScriptableObject : ScriptableObject
     public float defaulthealth = 100;
     public float defaultdamage = 1.0f;
     public float defaultspeed = 3.5f;
-    public float defaultspeedDown = 1.5f;
-    public float defaultfireDamage = 0.5f;
+    //public float defaultspeedDown = 1.5f;
+    //public float defaultfireDamage = 0.5f;
     public float defaultarmor = 0;
 
     public int defaultscore = 1;
@@ -33,8 +33,8 @@ public class EnemyScriptableObject : ScriptableObject
         health = defaulthealth;
         damage = defaultdamage;
         speed = defaultspeed;
-        speedDown = defaultspeedDown;
-        fireDamage = defaultfireDamage;
+        //speedDown = defaultspeedDown;
+        //fireDamage = defaultfireDamage;
         armor = defaultarmor;
         score = defaultscore;
     }

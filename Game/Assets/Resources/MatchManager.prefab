@@ -51,6 +51,9 @@ MonoBehaviour:
   enemiesToSpawn: 0
   salasSuperadas: 0
   instanciaSalas: 0
+  totalEnemies: 0
+  moreEnemiesPerRoom: 1
+  moreRoomsPerLevel: 1
   actualRoom: {fileID: 0}
   runSpawn: {fileID: 0}
   normalEnemy: {fileID: 11400000, guid: 39ee87d6ab88fba4db9ba37f4b1710f5, type: 2}

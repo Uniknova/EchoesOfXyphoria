@@ -14,8 +14,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     public float maxhp;
     public float damage;
     public float speed;
-    public float speedDown;
-    public float fireDamage;
+    //public float speedDown;
+    //public float fireDamage;
     public float armor;
 
     public float dashProb;
@@ -70,8 +70,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         hp = maxhp;
         damage = enemyScriptableObject.damage;
         speed = enemyScriptableObject.speed;
-        speedDown = enemyScriptableObject.speedDown;
-        fireDamage = enemyScriptableObject.fireDamage;
+        //speedDown = enemyScriptableObject.speedDown;
+        //fireDamage = enemyScriptableObject.fireDamage;
         armor = enemyScriptableObject.armor;
         tipo = (type)enemyScriptableObject.tipo;
 
@@ -240,8 +240,8 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         hp = maxhp;
         damage = enemyScriptableObject.damage;
         speed = enemyScriptableObject.speed;
-        speedDown = enemyScriptableObject.speedDown;
-        fireDamage = enemyScriptableObject.fireDamage;
+        //speedDown = enemyScriptableObject.speedDown;
+        //fireDamage = enemyScriptableObject.fireDamage;
         armor = enemyScriptableObject.armor;
         tipo = (type)enemyScriptableObject.tipo;
         Agent.speed = speed;
