@@ -34,6 +34,8 @@ public class RaycastWeapon : MonoBehaviour
     public float maxLifeTime = 6f;
     public bool entra;
 
+    public SoundType soundType;
+
     Vector3 GetPosition(Bullet bullet)
     {
         // p + v * t + 0.5 * g * t * t
@@ -217,6 +219,7 @@ public class RaycastWeapon : MonoBehaviour
 
         else
         {
+
             Vector3 velocity = (raycastDestination.position - canon.position).normalized * bulletSpeed;
             var bullet = CreateBullet(canon.position, velocity, canon);
             bullets.Add(bullet);
