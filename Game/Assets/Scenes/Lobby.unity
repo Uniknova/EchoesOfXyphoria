@@ -2626,9 +2626,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundList:
-  - name: MUERTE
+  - name: MUERTEPJ
     sounds:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: c136a3dd84077e14c809e0511f082065, type: 3}
   - name: ESCOPETA
     sounds:
     - {fileID: 8300000, guid: 1b1492bd0e60c0b4b85d0ad7aa0a785f, type: 3}
@@ -2642,7 +2642,13 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: f5f062329f4c4b04d8859c1d18b58913, type: 3}
   - name: BOTON
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 46239104e9cb90145ba243e850971761, type: 3}
+  - name: MUERTEA
+    sounds:
+    - {fileID: 8300000, guid: 3b5e864bd07c5354d9309966703dcd98, type: 3}
+    - {fileID: 8300000, guid: ffacabc375f071a46b6781d4205853bf, type: 3}
+    - {fileID: 8300000, guid: f68fb394a7cdc8245bf0eca2f4647da5, type: 3}
   audioSource: {fileID: 366905447}
   audioSourceLoopMercader: {fileID: 0}
   audioSourceLoopNimby: {fileID: 0}
@@ -4293,7 +4299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528630327}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0185048, y: 0.70284903, z: -0.01829619, w: 0.710863}
+  m_LocalRotation: {x: 0.018504778, y: 0.70284903, z: -0.018296165, w: 0.710863}
   m_LocalPosition: {x: -4.18, y: -16.42, z: 77.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
