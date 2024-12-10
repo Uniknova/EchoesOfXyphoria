@@ -1,7 +1,6 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,7 +12,6 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     public CinemachineVirtualCamera previousCamera;
     public Image prefabUi;
     private Image uiUse;
-    [SerializeField] private GameObject candado;
     public GameObject UiSkin;
     private bool enter;
     private Player player;
@@ -24,9 +22,6 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     //public List<GameObject> skinsList;
 
     public List<Material> skinList;
-    [SerializeField] private List<Material> lockedSkinList;
-    [SerializeField] private List<bool> unlockedSkin;
-    [SerializeField, Range(20,500)] private List<int> precios;
     GameObject skin;
     public int indexSkin;
     public Transform TargetLookAt;
@@ -96,24 +91,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     {
 
         indexSkin = (indexSkin + i + skinList.Count) % skinList.Count;
-        Material mat;
-        if (unlockedSkin[indexSkin] == false)
-        {
-            mat = lockedSkinList[indexSkin];
-            candado.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = precios[indexSkin].ToString();
-            Debug.Log(candado.transform.GetChild(1).GetComponent<TextMeshProUGUI>().preferredWidth + 58.11f);
-            candado.transform.GetChild(2).GetComponent<RectTransform>().localPosition = new Vector3(candado.transform.GetChild(1).GetComponent<TextMeshProUGUI>().preferredWidth + 58.11f
-                , candado.transform.GetChild(2).GetComponent<RectTransform>().localPosition.y, candado.transform.GetChild(2).GetComponent<RectTransform>().localPosition.z);
-            candado.SetActive(true);
-        }
-
-        else
-        {
-            mat = skinList[indexSkin];
-            candado.SetActive(false);
-        }
-        player.SetMaterial(mat);
-        //player.SetMaterial(skinList[indexSkin]);
+        player.SetMaterial(skinList[indexSkin]);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -121,9 +99,8 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
         player.enabled = false;
         mouse.enabled = false;
         UiSkin.GetComponent<Animator>().SetBool("Show", true);
-        foreach (Transform t in UiSkin.transform.GetChild(0))
+        foreach (Transform t in UiSkin.transform)
         {
-            if (t.GetComponent<Button>() != null)
             t.GetComponent<Button>().enabled = true;
         }
 
@@ -146,7 +123,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     public void ExitCanvas()
     {
         UiSkin.GetComponent<Animator>().SetBool("Show", false);
-        foreach (Transform t in UiSkin.transform.GetChild(0))
+        foreach (Transform t in UiSkin.transform)
         {
             t.GetComponent<Button>().enabled = false;
         }
@@ -154,15 +131,5 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
         player.enabled = true;
         mouse.enabled = true;
         ChangeCamera(previousCamera);
-    }
-
-    public void Comprar()
-    {
-        if (DataInfo.GetMoney() >= precios[indexSkin])
-        {
-            player.SetMaterial(skinList[indexSkin]);
-            candado.SetActive(false);
-            Monedas.AddMoney(-precios[indexSkin]);
-        }
     }
 }

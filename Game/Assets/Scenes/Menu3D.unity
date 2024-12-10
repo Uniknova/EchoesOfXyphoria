@@ -2787,7 +2787,6 @@ GameObject:
   - component: {fileID: 634322589}
   - component: {fileID: 634322593}
   - component: {fileID: 634322594}
-  - component: {fileID: 634322595}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2919,23 +2918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalSound: {fileID: 24100000, guid: 86bf49a4da34e2e45a00bc5654957dc4, type: 2}
---- !u!114 &634322595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 634322588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921ee69e7b06af34faed58a318ab687d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 773016603}
-  - {fileID: 2117393644}
-  - {fileID: 1692974056}
-  precios: 0a0000003200000064000000
 --- !u!1 &684560645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,7 +4018,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &773016604
 MonoBehaviour:
