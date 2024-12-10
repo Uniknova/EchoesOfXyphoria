@@ -9,6 +9,7 @@ public class DataInfo
     private GameObject go = new GameObject();
     private static RuntimePlatform platform;
     private static int dinero = 0;
+    private static List<bool> desbloqueado = new List<bool>();
 
 
     public static DataInfo Instance
@@ -40,6 +41,22 @@ public class DataInfo
     private void Init()
     {
         platform = Application.platform;
+        desbloqueado.Add(true);
+
+        for (int i = 0; i < 5; i++)
+        {
+            desbloqueado.Add(false);
+        }
+    }
+
+    public static List<bool> GetDesbloqueado()
+    {
+        return desbloqueado;
+    }
+
+    public static void SetUnlocked(int idx)
+    {
+        desbloqueado[idx] = true;
     }
     //// Start is called before the first frame update
     //void Start()

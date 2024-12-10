@@ -30,9 +30,11 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     GameObject skin;
     public int indexSkin;
     public Transform TargetLookAt;
+    private int lastindex;
 
     private void Start()
     {
+        unlockedSkin = DataInfo.GetDesbloqueado();
         enter = false;
         espejo = false;
         uiUse = Instantiate(prefabUi, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
@@ -41,6 +43,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
         player = Player.Instance;
         mouse = FindObjectOfType<MouseRotation>();
         indexSkin = 0;
+        lastindex = 0;
 
 
         //skinsList.Add(new GameObject());
@@ -109,6 +112,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
 
         else
         {
+            lastindex = indexSkin;
             mat = skinList[indexSkin];
             candado.SetActive(false);
         }
@@ -119,6 +123,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         player.enabled = false;
+        player.animatorPlayer.SetBool("Andar", false);
         mouse.enabled = false;
         UiSkin.GetComponent<Animator>().SetBool("Show", true);
         foreach (Transform t in UiSkin.transform.GetChild(0))
@@ -145,6 +150,9 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
 
     public void ExitCanvas()
     {
+        player.SetMaterial(skinList[lastindex]);
+        indexSkin = lastindex;
+        candado.SetActive(false);
         UiSkin.GetComponent<Animator>().SetBool("Show", false);
         foreach (Transform t in UiSkin.transform.GetChild(0))
         {
@@ -160,9 +168,12 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     {
         if (DataInfo.GetMoney() >= precios[indexSkin])
         {
+            lastindex = indexSkin;
+            unlockedSkin[indexSkin] = true;
             player.SetMaterial(skinList[indexSkin]);
             candado.SetActive(false);
             Monedas.AddMoney(-precios[indexSkin]);
+            DataInfo.SetUnlocked(indexSkin);
         }
     }
 }
