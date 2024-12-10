@@ -206,6 +206,7 @@ public class RaycastWeapon : MonoBehaviour
 
     private void FireBullet()
     {
+        AudioManager.PlaySound(soundType, 1f);
         if (escopeta)
         {
             foreach (Transform t in canons)

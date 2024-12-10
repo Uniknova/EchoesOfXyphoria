@@ -1242,7 +1242,7 @@ MonoBehaviour:
   reloadTime: 0.5
   maxLifeTime: 2
   entra: 0
-  soundType: 1
+  soundType: 3
 --- !u!114 &178552133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2503,11 +2503,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundList:
   - name: MUERTE
-    sounds: []
+    sounds:
+    - {fileID: 0}
   - name: ESCOPETA
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 1b1492bd0e60c0b4b85d0ad7aa0a785f, type: 3}
   - name: RIFLE
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 967691dc6ee82ad4c98811b982f7ec86, type: 3}
+  - name: PISTOLA
+    sounds:
+    - {fileID: 8300000, guid: 9e6ba83feedd030499b80560a91837e6, type: 3}
+  - name: FRANCOTIRADOR
+    sounds:
+    - {fileID: 8300000, guid: f5f062329f4c4b04d8859c1d18b58913, type: 3}
   audioSource: {fileID: 366905447}
   audioSourceLoopMercader: {fileID: 0}
   audioSourceLoopNimby: {fileID: 0}
@@ -4026,7 +4035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528630327}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0185048, y: 0.70284903, z: -0.01829619, w: 0.710863}
+  m_LocalRotation: {x: 0.018504778, y: 0.70284903, z: -0.018296165, w: 0.710863}
   m_LocalPosition: {x: -4.18, y: -16.42, z: 77.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4873,7 +4882,7 @@ MonoBehaviour:
   reloadTime: 1.7
   maxLifeTime: 6
   entra: 0
-  soundType: 0
+  soundType: 4
 --- !u!114 &717188844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5947,7 +5956,7 @@ MonoBehaviour:
   reloadTime: 0.5
   maxLifeTime: 0.5
   entra: 0
-  soundType: 0
+  soundType: 1
 --- !u!114 &1049364501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6693,7 +6702,7 @@ MonoBehaviour:
   reloadTime: 0.3
   maxLifeTime: 3
   entra: 0
-  soundType: 0
+  soundType: 2
 --- !u!95 &1185493682
 Animator:
   serializedVersion: 5

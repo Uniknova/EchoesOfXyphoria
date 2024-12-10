@@ -9,7 +9,9 @@ public enum SoundType
 {
     MUERTE,
     ESCOPETA,
-    RIFLE
+    RIFLE,
+    PISTOLA,
+    FRANCOTIRADOR
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
@@ -29,7 +31,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
         //audioSource = GetComponent<AudioSource>();
     }
 
