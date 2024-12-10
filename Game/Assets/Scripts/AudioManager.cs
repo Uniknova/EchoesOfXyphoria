@@ -11,7 +11,8 @@ public enum SoundType
     ESCOPETA,
     RIFLE,
     PISTOLA,
-    FRANCOTIRADOR
+    FRANCOTIRADOR,
+    BOTON,
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
