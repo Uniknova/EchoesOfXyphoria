@@ -196,6 +196,7 @@ public class Boss : MonoBehaviour, IEnemy
 
     public void Death()
     {
+        AudioManager.PlaySound(SoundType.MUERTEA, 2f);
         player.UpdateDeathPowers();
         matchInfo.AddScore(enemyScriptableObject.score);
         PowerUpsCanvas.Instance.Init();

@@ -225,6 +225,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
 
     public void Death()
     {
+        AudioManager.PlaySound(SoundType.MUERTEA, 2f);
         pool?.Release(this);
         player.UpdateDeathPowers();
         match.AddScore(enemyScriptableObject.score);

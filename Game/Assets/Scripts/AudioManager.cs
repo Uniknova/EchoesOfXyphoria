@@ -7,12 +7,13 @@ using Random = UnityEngine.Random;
 
 public enum SoundType
 {
-    MUERTE,
+    MUERTEPJ,
     ESCOPETA,
     RIFLE,
     PISTOLA,
     FRANCOTIRADOR,
     BOTON,
+    MUERTEA
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]

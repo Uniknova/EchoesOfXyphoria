@@ -437,7 +437,7 @@ public class Player : MonoBehaviour
 
     public void Death()
     {
-        //AudioManager.PlaySound(SoundType.MUERTE, 1f);
+        AudioManager.PlaySound(SoundType.MUERTEPJ, 2f);
         MatchInfo.Instance.SetGameOver();
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
     }
