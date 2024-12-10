@@ -17,14 +17,19 @@ public class MouseRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 positionOnScreen = VirtualCamera.WorldToViewportPoint(transform.position);
-        Vector3 mouseOnScreen = (Vector2)VirtualCamera.ScreenToViewportPoint(Input.mousePosition);
 
-        Vector3 direction = mouseOnScreen - positionOnScreen;
+        if (VirtualCamera != null)
+        {
+            Vector3 positionOnScreen = VirtualCamera.WorldToViewportPoint(transform.position);
+            Vector3 mouseOnScreen = (Vector2)VirtualCamera.ScreenToViewportPoint(Input.mousePosition);
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180f;
+            Vector3 direction = mouseOnScreen - positionOnScreen;
 
-        transform.rotation = Quaternion.Euler(new Vector3(0, -angle, 0));
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180f;
+
+            transform.rotation = Quaternion.Euler(new Vector3(0, -angle, 0));
+
+        }
 
         //ray.origin = ma
     }

@@ -8,6 +8,7 @@ public class DataInfo
     private static DataInfo instance;
     private GameObject go = new GameObject();
     private static RuntimePlatform platform;
+    private static int dinero = 0;
 
 
     public static DataInfo Instance
@@ -23,6 +24,17 @@ public class DataInfo
             return instance;
         }
 
+    }
+
+    public static void AddMoney(int money)
+    {
+        dinero += money;
+        Debug.Log(dinero);
+    }
+
+    public static int GetMoney()
+    {
+        return dinero;
     }
 
     private void Init()
