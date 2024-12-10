@@ -32,7 +32,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        //audioSource = GetComponent<AudioSource>();
     }
 
     public static void PlaySound(SoundType sound, float volume)
