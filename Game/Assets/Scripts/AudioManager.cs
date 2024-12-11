@@ -13,7 +13,13 @@ public enum SoundType
     PISTOLA,
     FRANCOTIRADOR,
     BOTON,
-    MUERTEA
+    MUERTEA,
+    CAMPANA,
+    PASOS,
+    PASOS2,
+    SONIDO_NOCHE,
+    SONIDO_DIA,
+    DIBUJAR
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
@@ -33,7 +39,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
     }
 
     public static void PlaySound(SoundType sound, float volume)
@@ -98,6 +104,24 @@ public class AudioManager : MonoBehaviour
     //    instance.audioAmbiente.Play();
     //    instance.StartCoroutine(instance.Fade(true, instance.audioAmbiente, 2f, 0.2f));
     //}
+
+    public static void PlayDia()
+    {
+        AudioClip[] clips = instance.soundList[(int)SoundType.SONIDO_DIA].Sounds;
+        AudioClip randomClip = clips[Random.Range(0, clips.Length)];
+        instance.audioAmbiente.clip = randomClip;
+        instance.audioAmbiente.Play();
+        instance.StartCoroutine(instance.Fade(true, instance.audioAmbiente, 2f, 0.5f));
+    }
+
+    public static void PlayNoche()
+    {
+        AudioClip[] clips = instance.soundList[(int)SoundType.SONIDO_NOCHE].Sounds;
+        AudioClip randomClip = clips[Random.Range(0, clips.Length)];
+        instance.audioAmbiente.clip = randomClip;
+        instance.audioAmbiente.Play();
+        instance.StartCoroutine(instance.Fade(true, instance.audioAmbiente, 2f, 0.2f));
+    }
 
     public static void StopAmbientSound()
     {
