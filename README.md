@@ -130,25 +130,28 @@
 - [Ilustración 16: Menú de ajustes](#ilustración-16-menú-de-ajustes)
 - [Ilustración 17: Mockup juego](#ilustración-17-mockup-juego)
 - [Ilustración 18: Pantalla Elección de Mejoras](#ilustración-18-pantalla-de-elección-de-mejoras)
-- [Ilustración 19: Diagrama de flujo](#ilustración-19-diagrama-de-flujo)
-- [Ilustración 20: Siluetas personaje principal](#ilustración-20-siluetas-personaje-principal)
-- [Ilustración 21: Desarrollo concepts personaje principal](#ilustración-21-desarrollo-concepts-personaje-principal)
-- [Ilustración 22: Variación de color del personaje principal](#ilustración-22-variación-de-color-del-personaje-principal)
-- [Ilustración 23: Concepts Armas](#ilustración-23-concepts-armas)
-- [Ilustración 24: Escenario del mercader](#ilustración-24-escenario-del-mercader)
-- [Ilustración 25: Render modelado final](#ilustración-25-render-modelado-final)
-- [Ilustración 26: Skinning](#ilustración-26-skinning)
-- [Ilustración 27: Mapa de Empatía](#ilustración-27-mapa-de-empatía)
-- [Ilustración 28: Caja de herramientas](#ilustración-28-caja-de-herramientas)
-- [Ilustración 29: Lienzo de modelo de negocio](#ilustración-29-lienzo-de-modelo-de-negocio)
-- [Ilustración 30: Engagement rate individual](#ilustración-30-engagement-rate-individual)
-- [Ilustración 31: Engagement rate total](#ilustración-31-engagement-rate-total)
+- [Ilustración 19: Pantalla Fin de Partida](#ilustración-19-pantalla-fin-de-partida)
+- [Ilustración 20: Pantalla de Ranking](#ilustración-20-pantalla-de-ranking)
+- [Ilustración 21: Diagrama de flujo](#ilustración-21-diagrama-de-flujo)
+- [Ilustración 22: Siluetas personaje principal](#ilustración-20-siluetas-personaje-principal)
+- [Ilustración 23: Desarrollo concepts personaje principal](#ilustración-21-desarrollo-concepts-personaje-principal)
+- [Ilustración 24: Variación de color del personaje principal](#ilustración-22-variación-de-color-del-personaje-principal)
+- [Ilustración 25: Concepts Armas](#ilustración-23-concepts-armas)
+- [Ilustración 26: Escenario del mercader](#ilustración-24-escenario-del-mercader)
+- [Ilustración 27: Render modelado final](#ilustración-25-render-modelado-final)
+- [Ilustración 28: Skinning](#ilustración-26-skinning)
+- [Ilustración 29: Mapa de Empatía](#ilustración-27-mapa-de-empatía)
+- [Ilustración 30: Caja de herramientas](#ilustración-28-caja-de-herramientas)
+- [Ilustración 31: Lienzo de modelo de negocio](#ilustración-29-lienzo-de-modelo-de-negocio)
+- [Ilustración 32: Engagement rate individual](#ilustración-30-engagement-rate-individual)
+- [Ilustración 33: Engagement rate total](#ilustración-31-engagement-rate-total)
 
 ## 0. Historial de versiones
 En este apartado se reflejan las versiones del documento de diseño con sus respectivos cambios.
 
 - **Versión 0.0.1**: Documento de diseño en el que explicamos en qué consistirá el juego, así como sus mecánicas principales, detalles técnicos y artísticos.
 - **Versión 0.1.1**: Actualización del GDD. Se introducen cambios en el PEGI, ajustes en jugabilidad, ajustes en el funcionamiento del taller de Torko y nuevas imágenes.
+- **versión 0.2.1**: Actualización previa a la Gold Máster. Muestra de resultados finales.
 
 ## 1. Introducción
 Este documento de diseño ha sido creado por **Unknova Studios** para detallar la visión, mecánicas y estructura de nuestro próximo videojuego, desarrollado para ser jugado en navegadores web. Actúa como la guía principal para todo el equipo de desarrollo, proporcionando una descripción clara de cada aspecto del juego, desde la jugabilidad y la narrativa hasta los elementos visuales y sonoros.  
@@ -171,7 +174,7 @@ La esencia del juego se basa en los siguientes puntos clave:
 La ambientación del juego es espacial y futurista, sumergiendo a los jugadores en un universo lleno de tecnologías desconocidas y razas alienígenas. Cada nivel ofrece no solo combates, sino también la oportunidad de descubrir recursos y secretos, creando una experiencia única en cada partida mientras luchan por derrotar al imperio Tyrnaxx.
 
 ### 1.4. Jugabilidad
-En **Echoes of Xyphoria**, cada partida es infinita, es decir, la partida no acaba hasta que el jugador pierde. El primer nivel está compuesto por 4 salas. Con cada nuevo nivel, el número de salas aumentará en uno. El jugador deberá eliminar a todos los enemigos de una sala para elegir una ventaja para su arma. Finalmente, en cada sala más lejana al punto de aparición habrá un jefe de nivel que los jugadores tendrán que derrotar para conseguir una mejora especial.
+En **Echoes of Xyphoria**, cada partida es infinita, es decir, la partida no acaba hasta que el jugador pierde. El primer nivel está compuesto por 4 salas. Con cada nuevo nivel, el número de salas aumentará en uno. El jugador deberá eliminar a todos los enemigos de una sala para elegir una ventaja para su arma. Finalmente, en cada sala más lejana al punto de aparición habrá un jefe de nivel que los jugadores tendrán que derrotar para conseguir pasar al siguiente nivel.
 
 ### 1.5. Estilo visual
 El estilo visual predominante en **Echoes of Xyphoria** es **cartoon** con ligeros detalles artísticos, creando una experiencia atractiva y visualmente llamativa.  
@@ -253,7 +256,8 @@ En nuestro juego, utilizaremos generación procedimental para diseñar las salas
 
 Este escenario actúa como el lobby jugable del juego, donde los jugadores comenzarán su aventura. Se trata de una sala bien organizada y funcional, donde el jugador podrá elegir su arma entre varias opciones disponibles para la partida. Una vez que el arma sea seleccionada, las otras desaparecerán hasta el inicio de una nueva partida. En el centro de la sala se encuentra una puerta que, al cruzarla, iniciará el primer nivel de combate.
 
-Además, en una pequeña sala lateral habrá un espejo interactivo donde el jugador podrá acceder a un menú para cambiar la skin de su personaje. Este espacio también ofrece la posibilidad de interactuar con otros personajes, que aportan detalles adicionales sobre la historia o ayudan a preparar al jugador para la misión. El Cuartel de la Resistencia es una sala bien organizada y minimalista, con un ambiente industrial y futurista, caracterizado por maquinaria, pantallas holográficas, y zonas de armamento.
+Además, en una pequeña sala lateral habrá un armario interactivo donde el jugador podrá acceder a un menú para cambiar la skin de su personaje. Este espacio también ofrece la posibilidad de comprar skins que aportan aspectos únicos al protagonista. El Cuartel de la Resistencia es una sala bien organizada y minimalista, con un ambiente industrial y futurista, caracterizado por maquinaria, pantallas holográficas, y zonas de armamento.
+
 
 ![Ilustración 5: Escenario Lobby](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/LobbyEscenario.JPG)
 
@@ -305,11 +309,12 @@ Además, se puede acceder al taller de Torko, lugar donde el jugador puede usar 
 
 Una vez elegida el arma, se desbloqueará una puerta que llevará al jugador a la primera sala de combate. Al entrar, los enemigos atacarán al jugador de inmediato. El objetivo es eliminar a todos los enemigos de la sala, quienes al morir dejarán caer monedas (Xyphorita), las cuales podrán utilizarse más adelante en la partida.
 
-Después de derrotar a los enemigos de cada sala, aparecerán tres alienígenas, seleccionados aleatoriamente entre cinco posibles razas, que ofrecerán al jugador una mejora especial. Si el jugador ya ha obtenido una mejora previamente, esta podrá aparecer nuevamente en forma de potenciación. Por ejemplo, si ya posee una mejora de quemadura, futuras mejoras podrían aumentar el daño de esa quemadura.
+Después de derrotar a los enemigos de cada sala, aparecerán tres alienígenas, seleccionados aleatoriamente entre cuatro posibles razas, que ofrecerán al jugador una mejora especial. Si el jugador ya ha obtenido una mejora previamente, esta podrá aparecer nuevamente en forma de potenciación. Por ejemplo, si ya posee una mejora de quemadura, futuras mejoras podrían aumentar el daño de esa quemadura.
 
-Además, en cada nivel, el jugador enfrentará a un boss o jefe más desafiante que aparece en la sala más alejada al punto de aparición. Tras derrotar al jefe, y si el jugador ha conseguido cinco mejoras de una misma raza, recibirá una súper mejora, y no podrá obtener más mejoras relacionadas con ese perk en esa partida. Si el jugador logra obtener dos súper mejoras de razas distintas, podrá elegir una mejora dual que combinará las ventajas de ambas razas para crear una nueva habilidad.
+Además, en cada nivel, el jugador enfrentará a un boss o jefe más desafiante que aparece en la sala más alejada al punto de aparición. Tras derrotar al jefe, el jugador podrá pasar al siguiente nivel.
 
 El juego está diseñado sin un final definido; los enemigos aumentarán su dificultad de manera progresiva, y la partida continuará hasta que el jugador muera. Al finalizar, se registrará el récord de salas completadas.
+
 
 
 ### 3.2. Cámara
@@ -326,8 +331,8 @@ Los controles están pensados para que el jugador se centre en la acción rápid
   - **S**: Moverse hacia abajo.
   - **D**: Moverse hacia la derecha.
 - **Disparo**: Para atacar, el jugador disparará con el clic izquierdo del ratón en la dirección del cursor. Esto permite disparar en cualquier dirección mientras se mueve con las teclas.
-- **Interacción**: Para interactuar con personajes, objetos o elementos del entorno (como tiendas o NPCs), se utilizará la tecla **E**.
-- **Elección de mejoras/tienda**: Para elegir qué mejora escoger o comprar, el jugador usará el movimiento del ratón y el click izquierdo para decidir.
+- **Interacción**: Para interactuar con objetos o elementos del entorno (como tiendas o NPCs), se utilizará un botón. 
+- **Elección de mejoras/tienda**: Para elegir que mejora escoger o comprar, el jugador usará el movimiento del ratón y el click izquierdo para decidir.
 
 ### 3.4. Puntuación y competitivo
 
@@ -339,41 +344,31 @@ Esto nos permite asegurarnos de que siempre habrá un ganador.
 
 ### 3.5. Ventajas
 
-En nuestro juego, después de completar cada sala de enemigos, el jugador tendrá la oportunidad de obtener una mejora de combate ofrecida por una de las razas alienígenas que habitan en Xyphoria. De un conjunto de cinco razas posibles, aparecerán tres de manera aleatoria para ofrecer sus mejoras únicas. Cada raza tiene un poder específico que puede potenciarse a lo largo de la partida, lo que permite a los jugadores personalizar su estilo de juego y adaptarse a los desafíos que enfrenten.
+En nuestro juego, después de completar cada sala de enemigos, el jugador tendrá la oportunidad de obtener una mejora de combate ofrecida por una de las razas alienígenas que habitan en Xyphoria. De un conjunto de cinco razas posibles, aparecerán tres de manera aleatoria para ofrecer sus mejoras únicas. Cada raza tiene un poder específico que puede potenciarse a lo largo de la partida, lo que permite a los jugadores personalizar su estilo de juego y adaptarse a los desafíos que enfrenten. 
 
-Si un jugador logra adquirir cinco mejoras consecutivas de una misma raza, desbloqueará una **Súper mejora**, una versión mucho más poderosa de la habilidad original que tendrá un impacto significativo en el juego. Estas super mejoras ofrecen al jugador un gran poder, pero también bloquean cualquier mejora adicional en esa habilidad específica.
+Este sistema de mejoras da lugar a partidas dinámicas, donde cada decisión puede cambiar radicalmente el curso del juego, permitiendo a los jugadores experimentar diferentes combinaciones y estrategias.
 
-Este sistema de mejoras y súper mejoras da lugar a partidas dinámicas, donde cada decisión puede cambiar radicalmente el curso del juego, permitiendo a los jugadores experimentar diferentes combinaciones y estrategias.
 
 #### 3.5.1. Razas y sus ventajas
 
 - **Lumii**: Las mejoras de los Lumii otorgan la capacidad de quemar a los enemigos, infligiendo daño prolongado con el tiempo. A medida que se mejora esta habilidad, aumentará la probabilidad de quemado, la duración del efecto o el daño que inflige.
 
-  - **Super mejora**: “Lumi Lumi Naa”. Los disparos del jugador tienen una probabilidad del 100% de infligir quemaduras a todos los enemigos en una sala al inicio del combate, con un daño masivo de quemadura durante un periodo extendido.
-
 - **Valkii**: Esta raza ralentiza a los enemigos, reduciendo su velocidad de movimiento y ataque. Al mejorar esta habilidad, aumentará la probabilidad de ralentización, la duración del efecto o la reducción de velocidad.
-
-  - **Super mejora**: "Kii Val Kii". Los disparos del jugador tienen una probabilidad del 100% de paralizar por completo a los enemigos durante unos segundos, dejándolos vulnerables a los ataques.
 
 - **Oranii**: Con cada disparo acertado, el jugador aumenta su velocidad de ataque y movimiento hasta cierto límite. Mejorar esta habilidad permite ganar más velocidad por cada golpe.
 
-  - **Super mejora**: "Ora Ora Ora". La mejora permite fallar hasta cinco disparos sin perder las acumulaciones obtenidas de dar a todos los enemigos.
-
 - **Lyraxii**: Aumenta el daño y la velocidad de movimiento del jugador cuando su salud es baja. Mejorar esta habilidad incrementa el porcentaje de salud que el jugador debe perder para activar el efecto, así como la cantidad de daño y velocidad ganados.
-
-  - **Super mejora**: "Lyr Linry Xii". Cuando la salud del jugador cae por debajo de un umbral crítico, el jugador se vuelve invulnerable durante un corto periodo de tiempo.
 
 - **Xenrii**: Esta raza proporciona la oportunidad de recuperar salud al eliminar enemigos. Al mejorar esta habilidad, se incrementa la probabilidad de recuperar salud y la cantidad de salud obtenida.
 
-  - **Super mejora**: "Zen Xen Rii". Cada enemigo derrotado garantiza una recuperación de salud, pero, además, si el jugador mata a un enemigo mientras su salud está completa, la salud ganada se convierte en una sobrecarga de salud temporal (vida extra).
-
 ### 3.6. Mejoras
 
-En nuestro juego, dado que las partidas son infinitas, los enemigos se vuelven cada vez más fuertes a medida que avanzas. Para equilibrar este aumento de dificultad, hemos creado la **zona del mercader**, donde el jugador también puede escalar en poder. Aquí podrás gastar las monedas obtenidas al derrotar enemigos, conocidas como Xyphorita, para adquirir mejoras permanentes que te ayudarán a sobrevivir más tiempo.
+En nuestro juego, dado que las partidas son infinitas, los enemigos se vuelven cada vez más fuertes a medida que avanzas. Para equilibrar este aumento de dificultad, hemos creado la zona del mercader, donde el jugador también puede escalar en poder. Aquí podrás gastar las monedas obtenidas al derrotar enemigos, conocidas como Xyphorita, para adquirir mejoras permanentes que te ayudarán a sobrevivir más tiempo.
 
-El mercader ofrece una serie de mejoras generales, que se centran en tres aspectos clave: **vida, armadura, daño**… Estas mejoras son esenciales para que el jugador pueda hacer frente a los enemigos más poderosos y prolongar su partida, permitiendo que, con cada compra, el personaje se vuelva más resistente y letal.
+El mercader ofrece una serie de mejoras generales, que se centran en cuatro aspectos clave: vida, armadura, daño y recolección mejorada. Estas mejoras son esenciales para que el jugador pueda hacer frente a los enemigos más poderosos y prolongar su partida, permitiendo que, con cada compra, el personaje se vuelva más resistente y letal.
 
 La implementación de la zona del mercader añade una capa estratégica, ya que los jugadores deberán gestionar sus recursos y decidir qué mejoras priorizar para adaptarse a la dificultad creciente del juego.
+
 
 ### 3.7. Enemigos
 
@@ -518,6 +513,10 @@ Al final de cada partida, aparecerá una pantalla de resumen que muestra el prog
 - **Mejoras Obtenidas**: Un resumen de todas las mejoras conseguidas durante la partida.
 - **Monedas Acumuladas**: Total de monedas recolectadas y disponibles para usar en la tienda.
 - **Opciones de Reintento**: Permite al jugador comenzar una nueva partida o regresar al menú principal.
+
+![Ilustración 19: Pantalla Fin de Partida](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/InterfazDerrota.png)
+
+#### Ilustración 19: Pantalla de Fin de Partida
   
 #### 5.1.9. Pantalla de tienda
 La tienda es accesible desde el menú principal o en algunos momentos especiales dentro de la partida. Aquí, el jugador puede gastar su moneda Cristal Tyrnax para adquirir cosméticos, mejoras o incluso opciones para la partida:
@@ -529,44 +528,49 @@ Esta interfaz muestra las clasificaciones semanales y globales de los jugadores 
 - **Ranking Semanal**: Un ranking que se resetea cada semana, con recompensas para los jugadores que ocupen los primeros lugares.
 - **Ranking Mundial**: Un ranking global de todos los tiempos.
 
+![Ilustración 20: Pantalla de Ranking](Elementos%20de%20Dise%C3%B1o/ElementosNuevoGDD/InterfazRanking.png)
+
+#### Ilustración 20: Pantalla de Ranking
+
 ### 5.2. Diagrama de flujo
 En este apartado, abordaremos todas las pantallas principales que componen la experiencia del jugador dentro del juego, detallando sus funcionalidades y cómo interactúan entre sí. Cada pantalla ha sido diseñada con el objetivo de ofrecer una navegación clara, intuitiva y eficiente, permitiendo a los jugadores centrarse en la acción y progresar de manera fluida. Aquí describiremos pantallas clave como la de Inicio, Menú Principal, Opciones, Pantalla de Juego, Pantalla de Pausa, entre otras, explicando cómo cada una cumple su papel dentro del sistema general del juego y qué opciones ofrece al jugador.
 
-![Ilustración 19: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
+![Ilustración 21: Diagrama de flujo](Elementos%20de%20Diseño/DiagramadeFlujo.jpg)
 
-#### Ilustración 19: Diagrama de flujo
+#### Ilustración 21: Diagrama de flujo
   
 ## 6. Arte
 ### 6.1. Estética general
-El arte de **Echoes of Xyphoria** sigue un estilo 2.5D chibi, que combina gráficos en 2D con una sensación de profundidad y perspectiva propia de los juegos en 3D. Esta elección estética ofrece lo mejor de ambos mundos: la claridad visual y el encanto estilizado de los gráficos 2D, junto con una mayor inmersión visual gracias al uso de capas, sombras y efectos tridimensionales.
+El arte de Echoes of Xyphoria sigue un estilo 3D chibi, que combina gráficos en 2D con una sensación de profundidad y perspectiva propia de los juegos en 3D. Esta elección estética ofrece una claridad visual, junto con una mayor inmersión visual gracias al uso de capas, sombras y efectos tridimensionales.
 
 Los personajes, enemigos y escenarios están diseñados con texturas detalladas y colores vibrantes que resaltan en pantalla, manteniendo la fluidez necesaria para un juego de acción rápida. Este enfoque visual permite un diseño creativo y estilizado, ideal para destacar la diversidad de razas alienígenas y paisajes espaciales.
+
 
 ### 6.2. Concept Art
 El concept art es la base visual del juego, donde se diseñan los personajes, escenarios y elementos clave. Esta fase sirve para visualizar ideas, definir estilos artísticos y establecer la atmósfera general que tendrá el juego. A continuación, se muestran algunos concepts de personajes, enemigos, armas… 
 
-![Ilustración 20: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
+![Ilustración 22: Siluetas personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/SiluetasPersonaje.jpg)
 
-#### Ilustración 20: Siluetas personaje principal
+#### Ilustración 22: Siluetas personaje principal
 
-![Ilustración 21: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
+![Ilustración 23: Desarrollo concepts personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/DesarrolloPersonaje.jpg)
 
-#### Ilustración 21: Desarrollo concepts personaje principal
+#### Ilustración 23: Desarrollo concepts personaje principal
 
-![Ilustración 22: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
+![Ilustración 24: Variación de color del personaje principal](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Concept%20Art/EstudioColoresPersonaje.jpg)
 
-#### Ilustración 22: Variación de color del personaje principal
+#### Ilustración 24: Variación de color del personaje principal
 
-![Ilustración 23: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
+![Ilustración 25: Concepts Armas](Elementos%20de%20Diseño/ConceptArmas.JPG)
 
-#### Ilustración 23: Concepts Armas
+#### Ilustración 25: Concepts Armas
 
 ### 6.3. Modelado 3D
 En la etapa de modelado 3D, las ideas del concept art toman forma tridimensional. Aquí, se crean los modelos de personajes, objetos y escenarios con detalles precisos para ser usados en el juego. Cada modelo refleja las características definidas previamente en los conceptos visuales. Estos son algunos renders de modelos 3D que se están desarrollando.
 
-![Ilustración 24: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
+![Ilustración 26: Escenario del mercader](Elementos%20de%20Diseño/Escenario%20del%20Mercader/Modelos3D-%20Escenario%20del%20Mercader/ModeladoEscenarioMercader.jpg)
 
-#### Ilustración 24: Escenario del mercader
+#### Ilustración 26: Escenario del mercader
 
 ## 7. Animación
 La animación da vida a los modelos 3D, permitiendo que los personajes y elementos del juego se muevan e interactúen con el entorno. Los movimientos, ataques y acciones son creados para transmitir fluidez y dinamismo durante el juego. Queremos crear animaciones perfectamente pulidas para que el jugador se sienta dentro de la historia y del juego.
@@ -577,9 +581,9 @@ La animación de escenarios introduce movimiento a los fondos y ambientes del ju
 ### 7.2. Personajes
 En la animación de personajes, se diseñan los movimientos y acciones que llevarán a cabo los protagonistas de la historia y enemigos. Desde caminatas hasta combates, esta etapa se enfoca en crear movimientos fluidos y realistas que conecten con la jugabilidad.
 
-![Ilustración 25: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
+![Ilustración 27: Render modelado final](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Modelado/RenderModeladoFinal.jpg)
 
-#### Ilustración 25: Render modelado final
+#### Ilustración 27: Render modelado final
 
 #### 7.2.1. Rigging
 El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse de manera articulada, estableciendo una base para las animaciones y los movimientos complejos.
@@ -587,9 +591,9 @@ El esqueleto de los personajes y algunos objetos hacen que estos puedan moverse 
 #### 7.2.2. Skinning
 El skinning permite que, al mover los huesos del rig, la malla se deforme correctamente y el personaje se mueva de forma natural, respetando el diseño original y asegurando coherencia visual en los movimientos.
 
-![Ilustración 26: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
+![Ilustración 28: Skinning](Elementos%20de%20Diseño/PersonajePrincipal/Personaje%20Principal%20Skinning%20y%20Animaciones/PersonajePrincipal_Esqueleto.JPG)
 
-#### Ilustración 26: Skinning
+#### Ilustración 28: Skinning
 
 ## 8. Audio
 El audio en **Echoes of Xyphoria** juega un papel fundamental en la inmersión del jugador en el universo espacial. La banda sonora tendrá una mezcla de música electrónica y espacial que acompaña el ritmo frenético de las partidas, intensificándose durante los momentos clave del combate.
@@ -645,23 +649,23 @@ Tras tener todo esto en cuenta, queremos conseguir los siguientes resultados:
 - Crear una experiencia entrañable para todo tipo de jugadores, tanto casuales como asiduos, con mecánicas únicas, divertidas y fáciles de entender. 
 - Permitir a los jugadores dar rienda suelta a su imaginación creando cosméticos que alteren el aspecto de partes del juego, actualizando el juego con contenidos nuevos cada vez.
 
-![Ilustración 27: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
+![Ilustración 29: Mapa de Empatía](Elementos%20de%20Diseño/ElementosModeloNegocio/MapadeEmpatia.jpg)
 
-#### Ilustración 27: Mapa de Empatía
+#### Ilustración 29: Mapa de Empatía
 
 ### 9.4. Caja de herramientas
 A continuación, se muestra la caja de herramientas de Unknova:
 
-![Ilustración 28: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
+![Ilustración 30: Caja de herramientas](Elementos%20de%20Diseño/ElementosModeloNegocio/CajadeHerramientas.jpg)
 
-#### Ilustración 28: Caja de herramientas
+#### Ilustración 30: Caja de herramientas
 
 ### 9.5. Lienzo de modelo de negocio
 A continuación, se muestra el lienzo de modelo de Unknova:
 
-![Ilustración 29: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
+![Ilustración 31: Lienzo de modelo de negocio](Elementos%20de%20Diseño/ElementosModeloNegocio/LienzoModeloNegocio.jpg)
 
-#### Ilustración 29: Lienzo de modelo de negocio
+#### Ilustración 31: Lienzo de modelo de negocio
 
 ## 10. Marketing
 El marketing será clave para destacar en un mercado competitivo. El foco estará en la exploración de mercado, el análisis de los requisitos de los usuarios y una estrategia de entrada disruptiva que permita que **Echoes of Xyphoria** sobresalga desde el inicio. El objetivo es crear una imagen de marca sólida y generar interés antes de su lanzamiento.
@@ -709,13 +713,13 @@ Monitorear el alcance y las interacciones será crucial para ajustar nuestra est
 ### 11.6. Resultados
 Mediremos el engagement a través de herramientas de análisis en cada plataforma, evaluando la efectividad de nuestras publicaciones y ajustando la estrategia en función del rendimiento. Esto nos permitirá optimizar el crecimiento de la marca a largo plazo.
 
-![Ilustración 30: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
+![Ilustración 32: Engagement rate individual](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateIndividual.jpg)
 
-#### Ilustración 30: Engagement rate individual
+#### Ilustración 32: Engagement rate individual
 
-![Ilustración 31: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
+![Ilustración 33: Engagement rate total](Elementos%20de%20Diseño/ElementosModeloNegocio/EngagementRateTotal.jpg)
 
-#### Ilustración 31: Engagement rate total
+#### Ilustración 33: Engagement rate total
 
 **Enlace a redes sociales:** https://bento.me/unknova
 
