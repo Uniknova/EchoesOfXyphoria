@@ -168,6 +168,22 @@ MonoBehaviour:
     m_Localized: 'Completed rooms: '
     m_Metadata:
       m_Items: []
+  - m_Id: 6787080427085824
+    m_Localized: Interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6787094599639040
+    m_Localized: Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6787098601005056
+    m_Localized: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6787102312964096
+    m_Localized: Armor
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

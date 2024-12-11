@@ -169,6 +169,22 @@ MonoBehaviour:
     m_Localized: 'Salas completadas: '
     m_Metadata:
       m_Items: []
+  - m_Id: 6787080427085824
+    m_Localized: Interactuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6787094599639040
+    m_Localized: "Da\xF1o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6787098601005056
+    m_Localized: Vida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6787102312964096
+    m_Localized: Armadura
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
