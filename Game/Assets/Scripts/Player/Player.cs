@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public CharacterController controller;
     public float hp;
     public static float hpMax = 100;
+    public static float extraDamage = 0;
     [SerializeField] private static float armor = 0;
     private bool isTouching;
     public Transform collision;
@@ -91,7 +92,14 @@ public class Player : MonoBehaviour
     public static void SetHp()
     {
         hpMax = 100 + DataInfo.GetHp();
+        instance.hp = hpMax;
         Debug.Log(hpMax);
+    }
+
+    public static void SetDamage()
+    {
+        extraDamage = DataInfo.GetDamage();
+        Debug.Log(extraDamage);
     }
 
     public void Awake()
@@ -277,6 +285,7 @@ public class Player : MonoBehaviour
                 animatorPlayer.SetBool(armaAnimator, true);
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
                 weapon.SetRaycastDestination(Target);
+                weapon.totalDamage = weapon.damage + weapon.damage * extraDamage;
                 weapon.enabled = true;
             }
         }
@@ -306,7 +315,8 @@ public class Player : MonoBehaviour
                 weapon = weapons[indexWeapon].GetComponentInChildren<RaycastWeapon>();
                 weapon.SetRaycastDestination(Target);
                 weapon.enabled = true;
-                defaultdamage = weapon.damage;
+                weapon.totalDamage = weapon.damage + weapon.damage * (extraDamage/100f);
+                defaultdamage = weapon.totalDamage;
             }
         }
 
@@ -332,7 +342,7 @@ public class Player : MonoBehaviour
         if (vidaUi != null) vidaUi.fill.fillAmount = hp / hpMax;
         if (hp >= (hpMax * hpMultiplier) && lowHp && lowPower)
         {
-            weapon.damage = defaultdamage;
+            weapon.totalDamage = defaultdamage;
             speed = defaultspeed;
             lowHp = false;
         }
@@ -373,7 +383,7 @@ public class Player : MonoBehaviour
         if (vidaUi != null) vidaUi.fill.fillAmount = hp/hpMax;
         if (hp <= (hpMax * hpMultiplier) && !lowHp && lowPower)
         {
-            weapon.damage = defaultdamage * damageMultiplier;
+            weapon.totalDamage = defaultdamage * damageMultiplier;
             speed = defaultspeed * speedMultiplier;
             lowHp = true;
         }

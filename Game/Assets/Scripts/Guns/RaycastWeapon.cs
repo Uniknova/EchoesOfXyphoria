@@ -17,6 +17,7 @@ public class RaycastWeapon : MonoBehaviour
     public int fireRate = 25;
     public float bulletSpeed = 1000.0f;
     public float damage;
+    public float totalDamage;
     public float bulletDrop = 0.0f;
     public Transform canon;
     public List<Transform> canons = new List<Transform>();
@@ -178,7 +179,7 @@ public class RaycastWeapon : MonoBehaviour
             {
                 if (hitInfo.collider.GetComponent<IEnemy>() != null)
                 {
-                    hitInfo.collider.GetComponent<IEnemy>().TakeDamage(damage);
+                    hitInfo.collider.GetComponent<IEnemy>().TakeDamage(totalDamage);
                     foreach (IPowerEnemy e in powerEnemyList)
                     {
                         Debug.Log("intento");

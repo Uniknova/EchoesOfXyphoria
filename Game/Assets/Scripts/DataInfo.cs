@@ -203,11 +203,13 @@ public class DataInfo
 
     public static void AddDamageLevel()
     {
+        Player.SetDamage();
         damageLevel++;
     }
 
     public static void AddHpLevel()
     {
+        Player.SetHp();
         hpLevel++;
     }
 
