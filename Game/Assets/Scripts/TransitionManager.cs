@@ -37,6 +37,7 @@ public class TransitionManager : MonoBehaviour
     public const string SCENE_MENU = "Menu3D";
     public const string SCENE_NEXT = "Proximamente";
     public const string SCENE_TUTORIAL = "Tutorial";
+    public const string SCENE_MERCADER = "Mercader_Interior 1";
 
     public Image imageProgress;
     public Slider progressSlider;
@@ -91,6 +92,8 @@ public class TransitionManager : MonoBehaviour
         if (currentCamera != null) Destroy(currentCamera.gameObject);
         if (player != null) Destroy(player.gameObject);
         if (_UICanvasControllerInput != null) Destroy(_UICanvasControllerInput.gameObject);
+        Destroy(MiniMap.Instance.gameObject);
+        if (MainCameraS.Instance) Destroy(MainCameraS.Instance.gameObject);
     }
 
     IEnumerator LoadCoroutine(string sceneName)
@@ -122,7 +125,19 @@ public class TransitionManager : MonoBehaviour
 
             yield return null;
         }
-        if (sceneName != SCENE_GAME && sceneName != SCENE_LOBBY) DestroyObjects();
+        if (sceneName != SCENE_GAME && sceneName != SCENE_LOBBY && sceneName != SCENE_MERCADER) DestroyObjects();
+
+        if (sceneName == SCENE_MERCADER)
+        {
+            if (virtualCamera != null) Destroy(virtualCamera.gameObject);
+            if (currentCamera != null) Destroy(currentCamera.gameObject);
+            Destroy(MiniMap.Instance.gameObject);
+            if (MainCameraS.Instance) Destroy(MainCameraS.Instance.gameObject);
+
+            Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
+            Debug.Log(respawn.position);
+            player.Respawn(respawn);
+        }
 
 
         if (sceneName == SCENE_LOBBY)
@@ -142,7 +157,7 @@ public class TransitionManager : MonoBehaviour
         if (sceneName == SCENE_GAME)
         {
             player.vidaUi = Uivida.Instance;
-            player.vidaUi.fill.fillAmount = player.hp / player.hpMax;
+            player.vidaUi.fill.fillAmount = player.hp / Player.hpMax;
             _PowerUpsCanvas = PowerUpsCanvas.Instance;
             MiniMap.Instance.SetMatchSize();
         }
@@ -153,10 +168,12 @@ public class TransitionManager : MonoBehaviour
             Transform respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
             Debug.Log(respawn.position);
             player.Respawn(respawn);
+            
             //player.PlayerMathc(respawn);
             virtualCamera = Camera.main;
             if (currentCamera == null) currentCamera = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<CinemachineVirtualCamera>();
             currentCamera.transform.position = new Vector3(currentCamera.transform.position.x, player.transform.GetChild(0).transform.position.y + 6, currentCamera.gameObject.transform.position.z);
+            //player.GetComponentInChildren<MouseRotation>().enabled = true;
         }
         //if (currentCamera != null)
         //{
@@ -171,7 +188,7 @@ public class TransitionManager : MonoBehaviour
 
         //}
 
-        if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY)
+        if (sceneName == SCENE_GAME || sceneName == SCENE_LOBBY || sceneName == SCENE_MERCADER)
         {
             player.enabled = true;
             player.controller.enabled = true;

@@ -31,6 +31,11 @@ public class MouseRotation : MonoBehaviour
 
         }
 
+        else if (VirtualCameraS.Instance != null)
+        {
+            VirtualCamera = VirtualCameraS.Instance.GetComponent<Camera>();
+        }
+
         //ray.origin = ma
     }
 }

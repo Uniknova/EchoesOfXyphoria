@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     public float speed;
     public CharacterController controller;
     public float hp;
-    public float hpMax;
+    public static float hpMax = 100;
+    [SerializeField] private static float armor = 0;
     private bool isTouching;
     public Transform collision;
     public LayerMask collisionMask;
@@ -81,6 +82,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    public static void SetArmor()
+    {
+        armor = DataInfo.GetArmor();
+        Debug.Log(armor);
+    }
+
+    public static void SetHp()
+    {
+        hpMax = 100 + DataInfo.GetHp();
+        Debug.Log(hpMax);
+    }
+
     public void Awake()
     {
         if (instance == null)
@@ -98,6 +111,7 @@ public class Player : MonoBehaviour
     {
         //vidaUi = Uivida.Instance;
         //PowerUpsCanvas.Instance.Init();
+        //armor = DataInfo.GetArmor();
         MiniMap.Instance.Init();
         defaultspeed = speed;
         movil = DataInfo.Instance.GetPlatform();
@@ -349,7 +363,9 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        hp -= damage;
+        float aux = Mathf.Max(2, damage - armor);
+        hp -= aux;
+        //hp -= damage;
         if (hp <= 0)
         {
             Death();
@@ -439,6 +455,7 @@ public class Player : MonoBehaviour
     {
         AudioManager.PlaySound(SoundType.MUERTEPJ, 2f);
         MatchInfo.Instance.SetGameOver();
+        
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
     }
 

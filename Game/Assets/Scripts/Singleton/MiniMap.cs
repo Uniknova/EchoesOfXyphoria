@@ -6,7 +6,7 @@ public class MiniMap : MonoBehaviour
 {
 
     private static MiniMap instance;
-    private Transform target;
+    private static Transform target;
     [SerializeField] private Camera miniMapCamera;
 
     public static MiniMap Instance
@@ -25,16 +25,25 @@ public class MiniMap : MonoBehaviour
 
     public void Init()
     {
-        instance.target = Player.Instance.gameObject.transform.GetChild(0);
+        target = Player.Instance.gameObject.transform.GetChild(0);
         DontDestroyOnLoad(gameObject);
     }
 
     private void LateUpdate()
     {
-        Vector3 newPosition = target.position;
-        newPosition.y = miniMapCamera.transform.position.y;
+        if (target != null)
+        {
+            Vector3 newPosition = target.position;
+            newPosition.y = miniMapCamera.transform.position.y;
 
-        miniMapCamera.transform.position = newPosition;
+            miniMapCamera.transform.position = newPosition;
+
+        }
+
+        else
+        {
+            target = Player.Instance.gameObject.transform.GetChild(0);
+        }
     }
 
     public void SetMatchSize()

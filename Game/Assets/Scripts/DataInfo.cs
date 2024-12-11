@@ -9,8 +9,13 @@ public class DataInfo
     private GameObject go = new GameObject();
     private static RuntimePlatform platform;
     private static int dinero = 0;
+    private static int coin = 0;
     private static List<bool> desbloqueado = new List<bool>();
     private static List<Ranking> rankings = new List<Ranking>();
+    private static int armorLevel = 1;
+    private static int damageLevel = 1;
+    private static int hpLevel = 1;
+    private static int coinLevel = 1;
 
     public static DataInfo Instance
     {
@@ -69,9 +74,20 @@ public class DataInfo
         Debug.Log(dinero);
     }
 
+    public static void AddCoins(int money)
+    {
+        coin += money;
+        Debug.Log(coin);
+    }
+
     public static int GetMoney()
     {
         return dinero;
+    }
+
+    public static int GetCoins()
+    {
+        return coin;
     }
 
     private void Init()
@@ -157,6 +173,67 @@ public class DataInfo
         //    Debug.Log("Pc");
         //    return 1;
         //}
+    }
+
+    public static int GetArmorLevel()
+    {
+        return armorLevel;
+    }
+
+    public static int GetDamageLevel()
+    {
+        return damageLevel;
+    }
+
+    public static int GetHpLevel()
+    {
+        return hpLevel;
+    }
+
+    public static int GetCoinLevel()
+    {
+        return coinLevel;
+    }
+
+    public static void AddArmorLevel()
+    {
+        Player.SetArmor();
+        armorLevel++;
+    }
+
+    public static void AddDamageLevel()
+    {
+        damageLevel++;
+    }
+
+    public static void AddHpLevel()
+    {
+        hpLevel++;
+    }
+
+    public static void AddCoinLevel()
+    {
+        coinLevel++;
+    }
+
+    public static float GetArmor()
+    {
+        return 0.5f * armorLevel;
+    }
+
+    public static float GetDamage()
+    {
+        return (float)damageLevel;
+    }
+
+    public static float GetHp()
+    {
+        return 10f * hpLevel;
+    }
+
+    public static float GetCoin()
+    {
+        return 10f * coinLevel;
     }
 
     public struct Ranking

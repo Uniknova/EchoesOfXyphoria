@@ -110,7 +110,7 @@ public class MatchInfo : MonoBehaviour
         LevelStats(poisonEnemy, 20, 3, 0.2f, 0.5f, 10);
         LevelStats(dashEnemy, 10, 2, 0.3f, 0.2f, 15);
         LevelStats(tankEnemy, 30, 4, 0.1f, 0.7f, 20);
-        Player.Instance.PlayerHealth(Player.Instance.hpMax / 2);
+        Player.Instance.PlayerHealth(Player.hpMax / 2);
         TransitionManager.Instance.LoadScene(TransitionManager.SCENE_GAME);
     }
 

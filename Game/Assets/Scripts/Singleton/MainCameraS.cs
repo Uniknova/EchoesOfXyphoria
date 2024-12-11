@@ -7,6 +7,14 @@ public class MainCameraS : MonoBehaviour
 
     private static MainCameraS instance;
 
+    public static MainCameraS Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
     private void Start()
     {
         if (instance == null)
