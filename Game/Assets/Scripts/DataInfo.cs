@@ -49,7 +49,7 @@ public class DataInfo
         List<Ranking> rank = new List<Ranking>();
 
 
-        for (int i = orden.Count - 1; i >= orden.Count - 10 && i>= 0; i--)
+        for (int i = orden.Count - 1; i >= orden.Count - 5 && i>= 0; i--)
         {
             int o = orden[i];
             rank.Add(rankings.Find((x) => x.score == o));
