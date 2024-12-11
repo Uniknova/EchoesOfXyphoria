@@ -226,6 +226,14 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     public void Death()
     {
         AudioManager.PlaySound(SoundType.MUERTEA, 2f);
+        int coin = Random.Range(enemyScriptableObject.minCoin,enemyScriptableObject.maxCoin + 1);
+        Coins.AddCoins(coin);
+        float rand = Random.Range(0f, 100f);
+        if (rand <= Player.coinProbability)
+        {
+            coin = Random.Range(enemyScriptableObject.minCoin, enemyScriptableObject.maxCoin + 1);
+            Coins.AddCoins(coin);
+        }
         pool?.Release(this);
         player.UpdateDeathPowers();
         match.AddScore(enemyScriptableObject.score);

@@ -9,7 +9,7 @@ public class DataInfo
     private GameObject go = new GameObject();
     private static RuntimePlatform platform;
     private static int dinero = 0;
-    private static int coin = 0;
+    private static int coin = 500;
     private static List<bool> desbloqueado = new List<bool>();
     private static List<Ranking> rankings = new List<Ranking>();
     private static int armorLevel = 1;
@@ -215,6 +215,7 @@ public class DataInfo
 
     public static void AddCoinLevel()
     {
+        Player.SetCoin();
         coinLevel++;
     }
 

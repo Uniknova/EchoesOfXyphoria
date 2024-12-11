@@ -2,6 +2,7 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -158,6 +159,8 @@ public class TransitionManager : MonoBehaviour
         {
             player.vidaUi = Uivida.Instance;
             player.vidaUi.fill.fillAmount = player.hp / Player.hpMax;
+            player.vidaUi.Text.text = player.hp.ToString() + "/" + Player.hpMax.ToString();
+            player.vidaUi.armadura.text = Player.GetArmor().ToString();
             _PowerUpsCanvas = PowerUpsCanvas.Instance;
             MiniMap.Instance.SetMatchSize();
         }

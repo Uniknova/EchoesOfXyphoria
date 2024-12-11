@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float hp;
     public static float hpMax = 100;
     public static float extraDamage = 0;
+    public static float coinProbability = 0;
     [SerializeField] private static float armor = 0;
     private bool isTouching;
     public Transform collision;
@@ -89,6 +90,11 @@ public class Player : MonoBehaviour
         Debug.Log(armor);
     }
 
+    public static float GetArmor()
+    {
+        return armor;
+    }
+
     public static void SetHp()
     {
         hpMax = 100 + DataInfo.GetHp();
@@ -100,6 +106,12 @@ public class Player : MonoBehaviour
     {
         extraDamage = DataInfo.GetDamage();
         Debug.Log(extraDamage);
+    }
+
+    public static void SetCoin()
+    {
+        coinProbability = DataInfo.GetCoin();
+        Debug.Log(coinProbability);
     }
 
     public void Awake()
@@ -211,7 +223,7 @@ public class Player : MonoBehaviour
                 if (weapon != null)
                 {
                     weapon.UpdateFiring(Time.deltaTime);
-                    weapon.UpdateBullets(Time.deltaTime);
+                    //weapon.UpdateBullets(Time.deltaTime);
                 }
 
             }
@@ -231,10 +243,12 @@ public class Player : MonoBehaviour
                 if (weapon != null)
                 {
                     weapon.UpdateFiring(Time.deltaTime);
-                    weapon.UpdateBullets(Time.deltaTime);
+                    //weapon.UpdateBullets(Time.deltaTime);
                 }
             }
         }
+
+        if (weapon != null) weapon.UpdateBullets(Time.deltaTime);
 
         //if (weapon != null)
         //{
@@ -339,7 +353,11 @@ public class Player : MonoBehaviour
     public void PlayerHealth(float health)
     {
         hp = Mathf.Min(100, hp + health);
-        if (vidaUi != null) vidaUi.fill.fillAmount = hp / hpMax;
+        if (vidaUi != null)
+        {
+            vidaUi.fill.fillAmount = hp / hpMax;
+            vidaUi.Text.text = hp.ToString() + "/" + hpMax.ToString();
+        }
         if (hp >= (hpMax * hpMultiplier) && lowHp && lowPower)
         {
             weapon.totalDamage = defaultdamage;
@@ -380,7 +398,11 @@ public class Player : MonoBehaviour
         {
             Death();
         }
-        if (vidaUi != null) vidaUi.fill.fillAmount = hp/hpMax;
+        if (vidaUi != null)
+        {
+            vidaUi.fill.fillAmount = hp / hpMax;
+            vidaUi.Text.text = hp.ToString() + "/" + hpMax.ToString();
+        }
         if (hp <= (hpMax * hpMultiplier) && !lowHp && lowPower)
         {
             weapon.totalDamage = defaultdamage * damageMultiplier;

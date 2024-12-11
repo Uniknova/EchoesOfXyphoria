@@ -19,7 +19,8 @@ public enum SoundType
     PASOS2,
     SONIDO_NOCHE,
     SONIDO_DIA,
-    DIBUJAR
+    DIBUJAR,
+    COMPRAR
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]

@@ -28,6 +28,9 @@ public class EnemyScriptableObject : ScriptableObject
 
     public int defaultscore = 1;
 
+    public int minCoin = 1;
+    public int maxCoin = 1;
+
     public void ResetStats()
     {
         health = defaulthealth;

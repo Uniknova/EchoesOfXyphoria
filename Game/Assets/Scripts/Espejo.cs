@@ -168,6 +168,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     {
         if (DataInfo.GetMoney() >= precios[indexSkin])
         {
+            AudioManager.PlaySound(SoundType.COMPRAR, 1f);
             lastindex = indexSkin;
             unlockedSkin[indexSkin] = true;
             player.SetMaterial(skinList[indexSkin]);

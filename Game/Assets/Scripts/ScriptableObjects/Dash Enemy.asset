@@ -15,15 +15,13 @@ MonoBehaviour:
   health: 100
   damage: 10
   speed: 4.5
-  speedDown: 2.5
-  fireDamage: 0.5
   armor: 0
   score: 30
   tipo: 1
   defaulthealth: 100
   defaultdamage: 10
   defaultspeed: 4.5
-  defaultspeedDown: 2.5
-  defaultfireDamage: 0.5
   defaultarmor: 0
   defaultscore: 30
+  minCoin: 1
+  maxCoin: 4
