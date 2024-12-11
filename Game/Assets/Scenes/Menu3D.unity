@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9f69d571a9cb54943b5a80ccd6b19e96, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.19584495, g: 0.09800237, b: 0.12000013, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 5e031e9a9bb02c643bb0d50bf9594df7, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 542c2c3a886da2d48b872ece44734061, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1281,6 +1281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3314738245002309920, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -1698215504171738276, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.68
@@ -1293,25 +1297,65 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.05
       objectReference: {fileID: 0}
+    - target: {fileID: -445137649591765684, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
       propertyPath: m_Name
       value: MenuInicioMax
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 951011102456138778, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463706537061040287, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444558461230370346, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.19
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.19
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.19
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0513
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1212
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.07084551
       objectReference: {fileID: 0}
     - target: {fileID: 4758970445588001700, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409879660560474145, guid: ee811e8a55f252b4da4e7e3f72cd4310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1621,6 +1665,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AjustesMax
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6182c30bb374aaa46845bce62a039f59, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463706537061040287, guid: 6182c30bb374aaa46845bce62a039f59, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742780737561719692, guid: 6182c30bb374aaa46845bce62a039f59, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1642,6 +1698,14 @@ PrefabInstance:
     - target: {fileID: 98989280315884015, guid: 748a46d195f9e5e4bb7cd1a1d280f3f7, type: 3}
       propertyPath: m_Name
       value: Arma_Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 98989280315884015, guid: 748a46d195f9e5e4bb7cd1a1d280f3f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 98989280315884015, guid: 748a46d195f9e5e4bb7cd1a1d280f3f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 726344619460959061, guid: 748a46d195f9e5e4bb7cd1a1d280f3f7, type: 3}
       propertyPath: m_LocalScale.x
@@ -1925,7 +1989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &430960072
 Transform:
   m_ObjectHideFlags: 0
@@ -2052,7 +2116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &497170462
 Transform:
   m_ObjectHideFlags: 0
@@ -2330,6 +2394,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 564247742a6675a4896a31361a2f92e5, type: 3}
       propertyPath: m_Name
       value: GafasVR3D
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 564247742a6675a4896a31361a2f92e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2803,6 +2871,10 @@ PrefabInstance:
     - target: {fileID: 8804976504452724763, guid: f838d5530fdf6184c9aca713d0c98a69, type: 3}
       propertyPath: m_Name
       value: Arma_Garras
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804976504452724763, guid: f838d5530fdf6184c9aca713d0c98a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3886,7 +3958,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5035,6 +5107,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteoros
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ddf27a8af7f24aa41a82458127ace116, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842000793230333041, guid: ddf27a8af7f24aa41a82458127ace116, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409896896793660112, guid: ddf27a8af7f24aa41a82458127ace116, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.03
@@ -5490,7 +5570,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5859,7 +5939,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232395169}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.008455346, y: 0.09384186, z: 0.00079701137, w: 0.99555093}
+  m_LocalRotation: {x: -0.008455359, y: 0.09384186, z: 0.00079701265, w: 0.99555093}
   m_LocalPosition: {x: 0.0298, y: 0.0161, z: 0.0539}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6072,7 +6152,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6811,7 +6891,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6847,7 +6927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437723039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007964167, y: 0.97827053, z: -0.038263842, w: 0.20361546}
+  m_LocalRotation: {x: 0.007964168, y: 0.97827053, z: -0.038263857, w: 0.20361544}
   m_LocalPosition: {x: -0.0152, y: 0.0253, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8228,7 +8308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1635431804
 Transform:
   m_ObjectHideFlags: 0
@@ -9500,7 +9580,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -9756,7 +9836,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -10479,9 +10559,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6489630171584070081, guid: fbc29f6ddfa546e409010dda3c6f1868, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fbc29f6ddfa546e409010dda3c6f1868, type: 3}
       propertyPath: m_Name
       value: Aros
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbc29f6ddfa546e409010dda3c6f1868, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662128955366029306, guid: fbc29f6ddfa546e409010dda3c6f1868, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

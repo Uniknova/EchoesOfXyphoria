@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 9d733cecb42ebf54fbfdd36a727f5875, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 49abb38a787221440a24077b56f5008f, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 9e954d8c9c0538141b53bcbca908e92a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1605,7 +1605,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 3
   m_Range: 18.34
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2840,7 +2840,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 3
   m_Range: 18.34
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2916,7 +2916,7 @@ Transform:
   m_GameObject: {fileID: 388524108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.59, y: 2.5, z: 20.6}
+  m_LocalPosition: {x: -41.59, y: 7.37, z: 20.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2934,7 +2934,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 2.03
+  m_Intensity: 2
   m_Range: 32
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6769,7 +6769,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 4
   m_Range: 32
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6863,7 +6863,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 4
   m_Range: 18.34
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9928,7 +9928,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 3
   m_Range: 18.34
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -10085,7 +10085,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 3
   m_Range: 18.34
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -10249,7 +10249,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.8369601, a: 1}
-  m_Intensity: 4.6
+  m_Intensity: 3
   m_Range: 18.34
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
