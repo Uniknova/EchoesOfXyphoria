@@ -118,7 +118,6 @@
 - [Ilustración 5: Escenario Lobby](#ilustración-5-escenario-lobby)
 - [Ilustración 6: Escenario Ruinas](#ilustración-6-escenario-ruinas)
 - [Ilustración 7: Escenario Ciudad Flotante](#ilustración-7-escenario-ciudad-flotante)
-- 
 - [Ilustración 8: Beauty escenario mercader](#ilustración-8-beauty-escenario-mercader)
 - [Ilustración 9: Concept primer enemigo](#ilustración-9-concept-primer-enemigo)
 - [Ilustración 10: Enemigo Rápido](#ilustración-10-enemigo-rápido)
