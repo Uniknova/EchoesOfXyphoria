@@ -183,6 +183,10 @@ MonoBehaviour:
     m_Key: G042
     m_Metadata:
       m_Items: []
+  - m_Id: 7233551026823168
+    m_Key: G043
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
