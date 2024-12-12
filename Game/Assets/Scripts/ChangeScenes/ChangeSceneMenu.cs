@@ -198,8 +198,14 @@ public class ChangeSceneMenu : MonoBehaviour
     public void LoadTutorial()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(3);
-        //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_TUTORIAL);
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_TUTORIAL);
+
+    }
+
+    public void LoadCredits()
+    {
+        Time.timeScale = 1f;
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_CREDITS);
 
     }
 
@@ -214,7 +220,13 @@ public class ChangeSceneMenu : MonoBehaviour
         //SceneManager.LoadScene(TransitionManager.SCENE_MENU);
     }
 
-    public void PauseMenu()
+    public void LoadMenuT()
+    {
+        Time.timeScale = 1f;
+        TransitionManager.Instance.LoadScene(TransitionManager.SCENE_MENU);
+    }
+    
+        public void PauseMenu()
     {
         if (DataInfo.Instance.GetPlatform() == 0)
         {

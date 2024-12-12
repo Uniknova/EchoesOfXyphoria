@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Comportamientos/Mercader_Interior 1.unity
     guid: 39c93766c38b9ed4ab957372edc79a1f
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 0b3afa4525ac9f540a4cd82488406b7c
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 76b039ee3c69ddd48b4a4a6ad26d673e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 451b0aebe1304c04abac9a91400979c3, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: f1714e3b0435dd54c94cefe9684e481e, type: 2}
