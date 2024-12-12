@@ -7,17 +7,11 @@ using static DataInfo;
 
 public class UI_Ranking : MonoBehaviour
 {
-    [SerializeField] private GameObject fondo;
     [SerializeField] private Sprite fondoImage;
-    [SerializeField] private GameObject terry;
     [SerializeField] private Sprite terryImage;
-    [SerializeField] private GameObject estrella;
     [SerializeField] private Sprite estrellaImage;
-    [SerializeField] private GameObject primero;
     [SerializeField] private Sprite primeroImage;
-    [SerializeField] private GameObject segundo;
     [SerializeField] private Sprite segundoImage;
-    [SerializeField] private GameObject tercero;
     [SerializeField] private Sprite terceroImage;
     [SerializeField] private GameObject texto;
     [SerializeField] private Button volver;
