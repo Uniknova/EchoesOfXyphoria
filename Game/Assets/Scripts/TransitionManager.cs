@@ -39,6 +39,7 @@ public class TransitionManager : MonoBehaviour
     public const string SCENE_NEXT = "Proximamente";
     public const string SCENE_TUTORIAL = "Tutorial";
     public const string SCENE_MERCADER = "Mercader_Interior 1";
+    public const string SCENE_CREDITS = "Creditos";
 
     public Image imageProgress;
     public Slider progressSlider;
