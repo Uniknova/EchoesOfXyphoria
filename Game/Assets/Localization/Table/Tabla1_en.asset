@@ -192,6 +192,166 @@ MonoBehaviour:
     m_Localized: See
     m_Metadata:
       m_Items: []
+  - m_Id: 7241267883483136
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241264280576000
+    m_Localized: Hello, I am your ship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241265085882368
+    m_Localized: I will teach you everything you need
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241265782136832
+    m_Localized: What do you want information about?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241266486779904
+    m_Localized: What race do you want information about?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241267195617280
+    m_Localized: What weapon do you want information about?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241268604903424
+    m_Localized: Shotgun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242444062793728
+    m_Localized: Sniper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242447313379328
+    m_Localized: Claws
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242452380098560
+    m_Localized: Pistol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242465424384000
+    m_Localized: Rifle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242469237006336
+    m_Localized: Which enemy do you want me to talk about?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242472022024192
+    m_Localized: Basic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242473888489472
+    m_Localized: Fast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242475587182592
+    m_Localized: Heavy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242477143269376
+    m_Localized: Toxic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242478674190336
+    m_Localized: The Boss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242480213499904
+    m_Localized: '"Ideal for close-range combat. Fires multiple bullets and eliminates
+      enemies as they try to surround you"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242481677312000
+    m_Localized: '"Pick your shots carefully and make them count. Every bullet can
+      be lethal. The sniper will be your best ally for long-range combat"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242483141124096
+    m_Localized: '"Its great damage at close range makes you invincible in melee
+      combat. Perfect for cutting enemies into pieces"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242484659462144
+    m_Localized: '"It''s the perfect weapon for quick and precise combat. While its
+      damage is not particularly high, its rate of fire compensates for it"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242486492372992
+    m_Localized: '"It stands out for its versatility. Its low rate of fire allows
+      you to maintain pressure on your enemies at medium range"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243435550121984
+    m_Localized: '"Normal Tyrnaxians are balanced enemies that pose a moderate threat.
+      Use their predictable patterns to your advantage"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243439807340544
+    m_Localized: '"With fast movements and agile attacks, fast Tyrnaxians can easily
+      surround you if you don''t react in time"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243443187949568
+    m_Localized: '"Their resilience is imposing, but their slowness can be exploited.
+      Prepare your best arsenal to defeat them"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243445587091456
+    m_Localized: '"These enemies release harmful toxins with every attack, inflicting
+      prolonged damage. Keep your distance and avoid being trapped"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243448149811200
+    m_Localized: '"The Tyrnaxian boss is an unstoppable force with unique abilities
+      reminiscent of its minions. Master your strategy to overcome this great challenge"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243450557341696
+    m_Localized: '"These small creatures use the power of sunlight to burn their
+      enemies"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243453031981056
+    m_Localized: '"The Valkii use nanotechnology to subdue their enemies. Their attacks
+      release small nanobots that hinder enemy movement"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243455590506496
+    m_Localized: '"Although they may not seem like it, the Oranii are the most calculating
+      beings in Xyphoria. Once they hit their calculations, there''s no escaping
+      them"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243458186780672
+    m_Localized: '"These cute little creatures have a great temper. When threatened
+      and angered, they show their true potential"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243460489453568
+    m_Localized: '"They live in nature and know all its secrets. They use shamanic
+      rites to absorb the vitality of every defeated enemy"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243468924198912
+    m_Localized: Go Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7248975407816704
+    m_Localized: Races
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7248981669912576
+    m_Localized: Weapons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7248985209905152
+    m_Localized: Enemies
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

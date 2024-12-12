@@ -193,6 +193,167 @@ MonoBehaviour:
     m_Localized: Ver
     m_Metadata:
       m_Items: []
+  - m_Id: 7241264280576000
+    m_Localized: "Hola, soy t\xFA nave"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241265085882368
+    m_Localized: "Te ense\xF1ar\xE9 todo lo que necesites"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241265782136832
+    m_Localized: "\xBFDe qu\xE9 quieres informaci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241266486779904
+    m_Localized: "\xBFDe qu\xE9 raza quieres informaci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241267195617280
+    m_Localized: "\xBFDe que arma quieres informaci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241267883483136
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7241268604903424
+    m_Localized: Escopeta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242444062793728
+    m_Localized: Francotirador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242447313379328
+    m_Localized: Garras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242452380098560
+    m_Localized: Pistola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242465424384000
+    m_Localized: Rifle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242469237006336
+    m_Localized: "\xBFSobre qu\xE9 enemigo quieres que te hable?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242472022024192
+    m_Localized: "B\xE1sico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242473888489472
+    m_Localized: "R\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242475587182592
+    m_Localized: Pesado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242477143269376
+    m_Localized: "T\xF3xico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242478674190336
+    m_Localized: El Jefe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242480213499904
+    m_Localized: "\u201CIdeal para combates de corta distancia. Dispara varias balas
+      y elimina a los enemigos mientras intentan rodearte\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242481677312000
+    m_Localized: "\u201CElige tus disparos con cuidado y aseg\xFArate acertar, cada
+      bala puede  ser letal. El francotirador ser\xE1 tu mejor aliado para combates
+      de larga distancia\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242483141124096
+    m_Localized: "\u201CSu gran da\xF1o a corta distancia te hace invencible en combates
+      cuerpo a cuerpo. Perfectas para cortar a los enemigos en cachitos\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242484659462144
+    m_Localized: "\u201CEs el arma perfecta para combates r\xE1pidos y precisos.
+      Aunque su da\xF1o no sea especialmente elevado, su cadencia lo compensa\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7242486492372992
+    m_Localized: "\u201CDestaca por su versatilidad. Su cadencia tan baja te permite
+      mantener la presi\xF3n sobre tus enemigos a media distancia\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243435550121984
+    m_Localized: "\u201CLos Tyrnaxianos normales son enemigos balanceados que representan
+      una amenaza moderada. Usa sus patrones predecibles a t\xFA favor\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243439807340544
+    m_Localized: "\u201CCon movimientos veloces y ataques \xE1giles, los Tyrnaxianos
+      r\xE1pidos pueden rodearte f\xE1cilmente si no reaccionas a tiempo.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243443187949568
+    m_Localized: "\u201CSu resistencia es imponente, pero su lentitud puede ser explotada.
+      Prepara tu mejor arsenal para derrotarlos.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243445587091456
+    m_Localized: "\u201CEstos enemigos liberan toxinas da\xF1inas con cada ataque,
+      infligiendo da\xF1o prolongado. Mant\xE9n la distancia y evita quedar atrapado.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243448149811200
+    m_Localized: "\"El jefe Tyrnaxiano es una fuerza implacable con habilidades \xFAnicas
+      que recuerdan a sus secuaces. Domina tu estrategia para superar este gran desaf\xEDo.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243450557341696
+    m_Localized: "\u201CEstos peque\xF1os seres usan el poder de la luz solar para
+      quemar a sus enemigos\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243453031981056
+    m_Localized: "\u201CLos valkii usan nanotecnolog\xEDa para someter a sus enemigos.
+      Sus ataques lanzan peque\xF1os nanobots que entorpecen el movimiento de los
+      enemigos\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243455590506496
+    m_Localized: "\"Aunque no lo parezcan, los Oranii son los seres m\xE1s calculadores
+      de Xyphoria. Una vez aciertan en sus c\xE1lculos ya no hay quien los pare\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243458186780672
+    m_Localized: "\"Estos peque\xF1ines tan monos tienen un gran temperamento. Cuando
+      se sienten amenazados y se enfadan dejan ver su verdadero potencial\"  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243460489453568
+    m_Localized: "\"Viven en la naturaleza y conocen todos sus secretos. Usan ritos
+      cham\xE1nicos para absorber la vitalidad de cada enemigo derrotado\"  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7243468924198912
+    m_Localized: "Atr\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7248975407816704
+    m_Localized: Razas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7248981669912576
+    m_Localized: Armas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7248985209905152
+    m_Localized: Enemigos
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
