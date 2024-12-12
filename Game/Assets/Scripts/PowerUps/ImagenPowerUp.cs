@@ -9,4 +9,5 @@ public class ImagenPowerUp : MonoBehaviour
     public Image imagen;
     public TextMeshProUGUI titulo;
     public TextMeshProUGUI descripcion;
+    public TextMeshProUGUI Level;
 }

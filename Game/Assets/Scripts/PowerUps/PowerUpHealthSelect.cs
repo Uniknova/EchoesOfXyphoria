@@ -20,6 +20,7 @@ public class PowerUpHealthSelect : IPowerSelect
 
     public override void Init()
     {
+        level = 1;
         powerEnemy = new HealthDeathPower();
     }
 
@@ -32,6 +33,7 @@ public class PowerUpHealthSelect : IPowerSelect
 
             button.onClick.AddListener(() =>
             {
+                level++;
                 p.Restart();
             });
         }
@@ -45,6 +47,7 @@ public class PowerUpHealthSelect : IPowerSelect
 
                 button.onClick.AddListener(() =>
                 {
+                    level++;
                     select[idx] = true;
                     p.Restart();
                 });
@@ -54,6 +57,7 @@ public class PowerUpHealthSelect : IPowerSelect
             {
                 button.onClick.AddListener(() =>
                 {
+                    level++;
                     p.Restart();
                 });
             }

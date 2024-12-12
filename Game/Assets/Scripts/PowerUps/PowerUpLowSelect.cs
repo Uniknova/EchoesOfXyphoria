@@ -9,13 +9,18 @@ public class PowerUpLowSelect : IPowerSelect
     // Start is called before the first frame update
     void Start()
     {
-        
+        level = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public override void Init()
+    {
+        level = 1;
     }
 
     public override void SetButt(Button button, List<bool> select, int idx, PowerUpsCanvas p)
@@ -26,6 +31,7 @@ public class PowerUpLowSelect : IPowerSelect
 
             button.onClick.AddListener(() =>
             {
+                level++;
                 p.Restart();
             });
         }
@@ -39,6 +45,7 @@ public class PowerUpLowSelect : IPowerSelect
 
                 button.onClick.AddListener(() =>
                 {
+                    level++;
                     select[idx] = true;
                     p.Restart();
                 });
@@ -48,6 +55,7 @@ public class PowerUpLowSelect : IPowerSelect
             {
                 button.onClick.AddListener(() =>
                 {
+                    level++;
                     p.Restart();
                 });
             }

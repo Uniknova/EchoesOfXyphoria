@@ -92,6 +92,7 @@ public class PowerUpsCanvas : MonoBehaviour
                 powerUpsImage[i].imagen.sprite = powerUpsTexture[idx].sprite;
                 powerUpsImage[i].titulo.text = powerUpsTexture[idx].titulo.text;
                 powerUpsImage[i].descripcion.text = powerUpsTexture[idx].descripcion.text;
+                powerUpsImage[i].Level.text = "LVL " + powerUpsTexture[idx].level.ToString();
                 powerUpsTexture[idx].SetButt(powerUpsImage[i].GetComponent<Button>(), powerSelected, allPowers.IndexOf(powerUpsTexture[idx]), this);
                 powerUpsTexture.RemoveAt(idx);
             }

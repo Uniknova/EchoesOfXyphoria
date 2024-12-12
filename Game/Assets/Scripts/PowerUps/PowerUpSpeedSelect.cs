@@ -20,6 +20,7 @@ public class PowerUpSpeedSelect : IPowerSelect
 
     public override void Init()
     {
+        level = 1;
         powerEnemy = new SpeedDownPower();
     }
 
@@ -31,7 +32,9 @@ public class PowerUpSpeedSelect : IPowerSelect
             button.onClick.AddListener(powerEnemy.AddPower);
             button.onClick.AddListener(() =>
             {
+                level++;
                 p.Restart();
+                
             });
         }
 
@@ -44,6 +47,7 @@ public class PowerUpSpeedSelect : IPowerSelect
 
                 button.onClick.AddListener(() =>
                 {
+                    level++;
                     select[idx] = true;
                     p.Restart();
                 });
@@ -53,6 +57,7 @@ public class PowerUpSpeedSelect : IPowerSelect
             {
                 button.onClick.AddListener(() =>
                 {
+                    level++;
                     p.Restart();
                 });
             }
