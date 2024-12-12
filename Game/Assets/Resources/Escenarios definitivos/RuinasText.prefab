@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1344865271907041670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3520880609080357773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 3353357482368469959}
   - component: {fileID: 7963658317721040256}
   - component: {fileID: 1591222826297376524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178620407095867143}
   - component: {fileID: 7258595142568715079}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muro (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 408340712212255892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 7318371169362069674}
   - component: {fileID: 1756840678991643355}
   - component: {fileID: 8334955257351225186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 7161929841717888889}
   - component: {fileID: 595336680193742403}
   - component: {fileID: 3682772824065476258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh1 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 6869940338767512786}
   - component: {fileID: 4500996740463363971}
   - component: {fileID: 4778029877795180436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 1251023745214333071}
   - component: {fileID: 8042733209253731359}
   - component: {fileID: 3304550650154394178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 5256267906522788034}
   - component: {fileID: 2086435290832324749}
   - component: {fileID: 7841551612077044061}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 6590398089256654523}
   - component: {fileID: 87446781515747620}
   - component: {fileID: 1810073744083323500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh1 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973587289786633020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1253,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3277688162919921414}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 15.7}
   m_LocalScale: {x: 1.15, y: 1.2, z: 1.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1312,7 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307138660998490342}
   - component: {fileID: 4016879327551232836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NavmeshNotWalkable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,7 +1419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8253783175263041440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 2726349035587858176}
   - component: {fileID: 6084115021038695727}
   - component: {fileID: 7169341292411578347}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IconoVisitando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1498,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5092081315191411216}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 15.7}
   m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 8764077447046363718}
   - component: {fileID: 4115460800160387109}
   - component: {fileID: 8345499401902233739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1646,7 @@ GameObject:
   - component: {fileID: 5024597502031456548}
   - component: {fileID: 7688964215330299615}
   - component: {fileID: 6592513094514025145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1780,7 +1780,7 @@ GameObject:
   - component: {fileID: 4591152488272971789}
   - component: {fileID: 5922871536910221400}
   - component: {fileID: 3465655778374726847}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,7 +1869,7 @@ GameObject:
   - component: {fileID: 3119283248663797497}
   - component: {fileID: 1204986790662052444}
   - component: {fileID: 8395367896387782560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485107129876423306}
   - component: {fileID: 7748245953879136149}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muro (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2080,7 +2080,7 @@ GameObject:
   - component: {fileID: 8664788884731434879}
   - component: {fileID: 592893936405475527}
   - component: {fileID: 5785263928341534717}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2212,7 +2212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758003990729011210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,7 +2275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3384332991611972462}
   - component: {fileID: 3381141842151784785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2329,7 +2329,7 @@ GameObject:
   - component: {fileID: 2420356776302575079}
   - component: {fileID: 3552460243390109850}
   - component: {fileID: 1322833482818201570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2410,7 +2410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4068197753911488051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2441,7 +2441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 818443420912032776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2474,7 +2474,7 @@ GameObject:
   - component: {fileID: 5710758540145253511}
   - component: {fileID: 2694473938982006721}
   - component: {fileID: 5701163990536282609}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh1 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2590,7 +2590,7 @@ GameObject:
   - component: {fileID: 1655331169269186716}
   - component: {fileID: 9079241597487957814}
   - component: {fileID: 6468975968933865498}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IconoVisitado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2605,7 +2605,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8774039665678682272}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 15.7}
   m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2664,7 +2664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4528880842260371216}
   - component: {fileID: 5074100996505682899}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Muro (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2749,7 +2749,7 @@ GameObject:
   - component: {fileID: 5751179674982485267}
   - component: {fileID: 2057572726863768659}
   - component: {fileID: 1259160058320668623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh1 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2841,7 +2841,7 @@ GameObject:
   - component: {fileID: 6037757039751596744}
   - component: {fileID: 4539508583166876758}
   - component: {fileID: 5392246041428593900}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

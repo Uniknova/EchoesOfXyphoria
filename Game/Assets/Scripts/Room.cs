@@ -72,6 +72,9 @@ public class Room : MonoBehaviour
 
     public void ActiveTriggers()
     {
+        iconoNoVisitado.SetActive(false);
+        iconoVisitado.SetActive(false);
+        iconoVisitando.SetActive(true);
         if (runSpawn == null) runSpawn = FindAnyObjectByType<RunSpawn>();
         if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x + 1, y)))
         {
@@ -124,7 +127,9 @@ public class Room : MonoBehaviour
     public void RespawnBoss()
     {
         NavMeshHit Hit;
-
+        iconoNoVisitado.SetActive(false);
+        iconoVisitado.SetActive(false);
+        iconoVisitando.SetActive(true);
         if (NavMesh.SamplePosition(bossRespawn.position, out Hit, 2f, -1))
         {
             Boss bossI = Instantiate(boss);
