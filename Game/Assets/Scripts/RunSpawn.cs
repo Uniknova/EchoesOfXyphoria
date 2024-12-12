@@ -166,6 +166,7 @@ public class RunSpawn : MonoBehaviour
             roomsDictionary.Add(v, roomInstance);
         }
         ActiveRoom(new Vector2Int(0, 0));
+        roomsDictionary[actualRoom].GetComponent<Room>().ActiveTriggers();
 
     }
 
@@ -251,7 +252,10 @@ public class RunSpawn : MonoBehaviour
             roomsDictionary[aux].SetActive(false);
         }
 
-        roomsDictionary[actualRoom].GetComponent<NavMeshModifier>().enabled = true;
+        if (roomsDictionary[actualRoom].GetComponent<NavMeshModifier>())
+        {
+            roomsDictionary[actualRoom].GetComponent<NavMeshModifier>().enabled = true;
+        }
         //if (roomsDictionary.ContainsKey(actualRoom))
         //{
         //    roomsDictionary[aux].SetActive(false);

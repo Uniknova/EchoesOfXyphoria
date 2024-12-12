@@ -164,6 +164,7 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         hp -= aux;
         if (hp <= 0)
         {
+            //animator.SetBool("Muerte", true);
             Death();
         }
     }

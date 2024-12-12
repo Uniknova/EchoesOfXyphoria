@@ -72,6 +72,7 @@ public class Room : MonoBehaviour
 
     public void ActiveTriggers()
     {
+        if (runSpawn == null) runSpawn = FindAnyObjectByType<RunSpawn>();
         if (runSpawn.roomsDictionary.ContainsKey(new Vector2Int(x + 1, y)))
         {
             triggerRight.gameObject.SetActive(true);

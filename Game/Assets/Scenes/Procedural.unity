@@ -514,7 +514,7 @@ MonoBehaviour:
   - {fileID: 5418427062830490721, guid: 250d123fb4dd42649be1dc68d372ba55, type: 3}
   - {fileID: 175386832282015633, guid: 221cebacccbd5d44a86566a2e82951f4, type: 3}
   - {fileID: 3321874283062352316, guid: aaae2f2540367d9459fa193c9034ead6, type: 3}
-  roomInit: {fileID: 2065516122416468308, guid: 7c0d983060247194ba4b4387f5f02ff1, type: 3}
+  roomInit: {fileID: 4642026674531273126, guid: bd7695867bcd6f64799d314e2811de70, type: 3}
   roomBoss: {fileID: 9143677417245187774, guid: af0cf027fbf43344380dd16f8fa10ff7, type: 3}
   world: {fileID: 1348960232}
   rooms: []
