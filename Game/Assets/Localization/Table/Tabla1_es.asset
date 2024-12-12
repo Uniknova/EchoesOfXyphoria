@@ -185,6 +185,10 @@ MonoBehaviour:
     m_Localized: Armadura
     m_Metadata:
       m_Items: []
+  - m_Id: 7194038690848768
+    m_Localized: Nombre
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
