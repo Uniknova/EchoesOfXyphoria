@@ -15,6 +15,7 @@ public class UI_Ranking : MonoBehaviour
     [SerializeField] private GameObject tercero;
     [SerializeField] private GameObject texto;
     [SerializeField] private Button volver;
+    [SerializeField] private List<GameObject> casillas;
 
     private float posCasilla;
     private float posCasillaX = 3.4f;

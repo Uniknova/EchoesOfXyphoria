@@ -88,6 +88,7 @@ public class PowerUpsCanvas : MonoBehaviour
         {
             if (powerUpsTexture.Count > 0)
             {
+                Debug.Log("Power");
                 idx = Random.Range(0, powerUpsTexture.Count);
                 powerUpsImage[i].imagen.sprite = powerUpsTexture[idx].sprite;
                 powerUpsImage[i].titulo.text = powerUpsTexture[idx].titulo.text;
