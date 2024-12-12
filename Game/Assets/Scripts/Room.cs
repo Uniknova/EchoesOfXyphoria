@@ -20,6 +20,9 @@ public class Room : MonoBehaviour
     public GameObject wallDown;
     public Boss boss;
     public Transform bossRespawn;
+    public GameObject iconoNoVisitado;
+    public GameObject iconoVisitado;
+    public GameObject iconoVisitando;
     int x, y;
     public void Start()
     {
@@ -29,10 +32,22 @@ public class Room : MonoBehaviour
 
     public void StartRespawn()
     {
+        if (iconoVisitando != null)
+        {
+            iconoNoVisitado.SetActive(false);
+            iconoVisitado.SetActive(false);
+            iconoVisitando.SetActive(true);
+        }
         spawner.StartRespawn();
     }
     public void ChangeRoom(int newX, int newY)
     {
+        if (iconoVisitando != null)
+        {
+            iconoNoVisitado.SetActive(false);
+            iconoVisitado.SetActive(true);
+            iconoVisitando.SetActive(false);
+        }
         runSpawn.ActiveRoom(new Vector2Int(x + newX, y + newY));
     }
 

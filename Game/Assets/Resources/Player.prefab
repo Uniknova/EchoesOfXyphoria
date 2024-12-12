@@ -49,7 +49,6 @@ MonoBehaviour:
   speed: 10
   controller: {fileID: 2435545621110175312}
   hp: 100
-  hpMax: 100
   collision: {fileID: 6153905586709476734}
   collisionMask:
     serializedVersion: 2
@@ -140,7 +139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -973, y: -548}
+  m_AnchoredPosition: {x: -973, y: -460.9}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6155728799153073429
