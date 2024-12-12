@@ -150,6 +150,7 @@ public class TransitionManager : MonoBehaviour
             }
             match.ResetEnemies();
             Destroy(match.gameObject);
+            Player.Instance.gameObject.SetActive(true);
             Player.Instance.RestartPlayer();
             if (_PowerUpsCanvas != null) Destroy(_PowerUpsCanvas.gameObject);
             MiniMap.Instance.SetLobbySize();
@@ -157,6 +158,7 @@ public class TransitionManager : MonoBehaviour
 
         if (sceneName == SCENE_GAME)
         {
+            Player.Instance.gameObject.SetActive(true);
             player.vidaUi = Uivida.Instance;
             player.vidaUi.fill.fillAmount = player.hp / Player.hpMax;
             player.vidaUi.Text.text = player.hp.ToString() + "/" + Player.hpMax.ToString();

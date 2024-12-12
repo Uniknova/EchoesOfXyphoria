@@ -487,6 +487,7 @@ public class Player : MonoBehaviour
     {
         AudioManager.PlaySound(SoundType.MUERTEPJ, 2f);
         MatchInfo.Instance.SetGameOver();
+        gameObject.SetActive(false);
         
         //TransitionManager.Instance.LoadScene(TransitionManager.SCENE_LOBBY);
     }
