@@ -259,7 +259,7 @@ public class Boss : MonoBehaviour, IEnemy
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.transform.GetChild(0).transform.position, agent.transform.position) < (agent.stoppingDistance + 1))
+        if (Vector3.Distance(player.transform.GetChild(0).transform.position, agent.transform.position) < (agent.stoppingDistance + 2))
         {
             StartRotating();
             if (AttackC == null)

@@ -48,6 +48,7 @@ public class GameOver : MonoBehaviour
 
     public void SetRank()
     {
+        if (nombre.text.Equals("")) nombre.text = "Anónimo";
         DataInfo.AddRank(new DataInfo.Ranking(nombre.text, salas, puntuacion, enemigos));
         UI_Ranking.Instance.ShowRank();
     }

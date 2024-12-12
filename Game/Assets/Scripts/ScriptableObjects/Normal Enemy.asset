@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damage: 5
-  speed: 3.5
+  speed: 3.8
   armor: 0
   score: 1
   tipo: 0
   defaulthealth: 100
   defaultdamage: 5
-  defaultspeed: 3.5
+  defaultspeed: 3.8
   defaultarmor: 0
   defaultscore: 1
   minCoin: 1

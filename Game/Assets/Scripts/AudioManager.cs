@@ -20,7 +20,8 @@ public enum SoundType
     SONIDO_NOCHE,
     SONIDO_DIA,
     DIBUJAR,
-    COMPRAR
+    COMPRAR,
+    ERROR
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]

@@ -118,7 +118,8 @@ public class MatchInfo : MonoBehaviour
     {
         enemy.health += health;
         enemy.damage += damage;
-        enemy.speed += speed;
+        enemy.speed = Mathf.Min(6, enemy.speed + speed);
+        //enemy.speed += speed;
         enemy.armor += armor;
         enemy.score += score;
     }

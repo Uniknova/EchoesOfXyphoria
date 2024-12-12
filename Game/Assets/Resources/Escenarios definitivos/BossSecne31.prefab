@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 1864849803034790007}
   m_Layer: 9
   m_Name: Muro (2)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5169,7 +5169,7 @@ GameObject:
   - component: {fileID: 1446935749942115299}
   m_Layer: 9
   m_Name: Muro (5)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11765,7 +11765,7 @@ GameObject:
   - component: {fileID: 2697104206746550405}
   m_Layer: 9
   m_Name: Muro (4)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12856,7 +12856,7 @@ GameObject:
   - component: {fileID: 3618814294025674183}
   m_Layer: 9
   m_Name: Muro (3)
-  m_TagString: Untagged
+  m_TagString: Muro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

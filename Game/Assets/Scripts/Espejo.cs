@@ -179,5 +179,10 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
             Monedas.AddMoney(-precios[indexSkin]);
             DataInfo.SetUnlocked(indexSkin);
         }
+
+        else
+        {
+            AudioManager.PlaySound(SoundType.ERROR, 1f);
+        }
     }
 }

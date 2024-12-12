@@ -33,8 +33,18 @@ public class Bullet : MonoBehaviour, IPooleableObject
             player.TakeDamage(damage);
         }
 
+
+
         
         //Disable();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Pared")
+        {
+            pool?.Release(this);
+        }
     }
 
     private void Disable()
