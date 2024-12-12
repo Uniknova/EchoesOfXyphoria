@@ -65,7 +65,10 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
         maxhp = enemyScriptableObject.health;
         hp = maxhp;
         damage = enemyScriptableObject.damage;
@@ -127,15 +130,15 @@ public class Alien : MonoBehaviour, IEnemy, IPooleableObject
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponentInParent<Player>() && other.gameObject.GetComponent<DamageTrigger>() == null)
-        {
-            other.gameObject.GetComponentInParent<Player>().TakeDamage(damage);
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.GetComponentInParent<Player>() && other.gameObject.GetComponent<DamageTrigger>() == null)
+    //    {
+    //        other.gameObject.GetComponentInParent<Player>().TakeDamage(damage);
 
-            if (tipo == type.Poison) other.gameObject.GetComponentInParent<Player>().PoisonPlayer(damage);
-        }
-    }
+    //        if (tipo == type.Poison) other.gameObject.GetComponentInParent<Player>().PoisonPlayer(damage);
+    //    }
+    //}
     //private void OnCollisionEnter(Collision collision)
     //{
     //    if (collision.gameObject.GetComponentInParent<Player>())

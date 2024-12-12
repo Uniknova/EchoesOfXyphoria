@@ -538,7 +538,7 @@ MonoBehaviour:
   wallRight: {fileID: 0}
   wallUp: {fileID: 0}
   wallDown: {fileID: 0}
-  boss: {fileID: -5850420701585912626, guid: aa0fc9574574b0448b3b2589b424aa39, type: 3}
+  boss: {fileID: 8664787329622710899, guid: e68af60b31410004d9b0577a39975928, type: 3}
   bossRespawn: {fileID: 3294256963665276255}
 --- !u!1 &2232799315114573702
 GameObject:

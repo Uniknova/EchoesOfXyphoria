@@ -1770,8 +1770,8 @@ MonoBehaviour:
   Enemies:
   - {fileID: 2792548238891173831, guid: 731f0310b5af03249bba773d5bdf2a90, type: 3}
   - {fileID: 8554775652635753401, guid: 8ab1bdea9a86593429b902274d9dc132, type: 3}
-  - {fileID: 1443542692739196298, guid: 7a4260cc480edef4e8ffe17aca590fac, type: 3}
-  - {fileID: 4262528655761840814, guid: 63aab77452efb374ca437b3e4b98fbbd, type: 3}
+  - {fileID: 1995709589856762887, guid: 6997cf568a784e44c91d90ecc6389853, type: 3}
+  - {fileID: 8926867373492422240, guid: fed589fb81a416f4ab2cf7af9b3a7925, type: 3}
   EnemySpawn: 1
   spawn: 0
 --- !u!1 &3672352683035056337

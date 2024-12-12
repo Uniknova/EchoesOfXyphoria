@@ -23,6 +23,7 @@ public class Boss : MonoBehaviour, IEnemy
     Coroutine SpeedDownC;
     Coroutine DashC;
     MeshRenderer render;
+    public SkinnedMeshRenderer rend;
     Color color;
 
     public EnemyScriptableObject enemyScriptableObject;
@@ -42,6 +43,7 @@ public class Boss : MonoBehaviour, IEnemy
     public Coroutine LookC;
     public float attackDelay = 1f;
     public MatchInfo matchInfo;
+    public Animator animator;
 
     public float speedRotation = 1f;
     public bool Active { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
@@ -92,12 +94,14 @@ public class Boss : MonoBehaviour, IEnemy
         //speedDown = enemyScriptableObject.speedDown;
         //fireDamage = enemyScriptableObject.fireDamage;
         armor = enemyScriptableObject.armor;
-        render = GetComponent<MeshRenderer>();
-        color = render.material.color;
+        //render = GetComponent<MeshRenderer>();
+        //color = render.material.color;
 
         bulletPool = new ObjectPool(bulletPrefab, 0, true, 30);
         player = FindAnyObjectByType<Player>();
         col = GetComponent<SphereCollider>();
+        if (rend != null)
+            color = rend.material.color;
         agent = GetComponent<NavMeshAgent>();
         matchInfo = FindObjectOfType<MatchInfo>();
     }
@@ -175,12 +179,12 @@ public class Boss : MonoBehaviour, IEnemy
     {
         for (int i = 0; i < 3; i++)
         {
-            if (render != null)
-                render.material.color = Color.red;
+            if (rend != null)
+                rend.material.color = Color.red;
             TakeDamage(fire);
             yield return new WaitForSeconds(0.5f);
-            if (render != null)
-                render.material.color = color;
+            if (rend != null)
+                rend.material.color = color;
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -188,10 +192,12 @@ public class Boss : MonoBehaviour, IEnemy
     IEnumerator SpeedDownCoroutine(int duration, float downSpeed)
     {
         agent.speed = speed * downSpeed;
-        render.material.color = Color.cyan;
+        if (rend != null)
+            rend.material.color = Color.cyan;
         yield return new WaitForSeconds(duration);
         agent.speed = speed;
-        render.material.color = color;
+        if (rend != null)
+            rend.material.color = color;
     }
 
     public void Death()
@@ -258,6 +264,7 @@ public class Boss : MonoBehaviour, IEnemy
             StartRotating();
             if (AttackC == null)
             {
+                animator.SetBool("Atacar", true);
                 Debug.Log("Hola");
                 AttackC = StartCoroutine(Attack());
             }
@@ -265,6 +272,7 @@ public class Boss : MonoBehaviour, IEnemy
 
         else if (AttackC != null)
         {
+            animator.SetBool("Atacar", false);
             StopCoroutine(AttackC);
             AttackC = null;
         }

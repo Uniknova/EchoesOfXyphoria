@@ -36,7 +36,7 @@ public class MatchInfo : MonoBehaviour
                 instance = Instantiate(Resources.Load<MatchInfo>("MatchManager"));
                 instance.surprassedRooms = 0;
                 instance.enemiesToSpawn = 5;
-                instance.instancerooms = 10;
+                instance.instancerooms = 3;
                 instance.totalEnemies = 0;
             }
             return instance;
@@ -61,7 +61,7 @@ public class MatchInfo : MonoBehaviour
     {
         surprassedRooms = 0;
         enemiesToSpawn = 5;
-        instancerooms = 10;
+        instancerooms = 3;
         Init();
     }
 

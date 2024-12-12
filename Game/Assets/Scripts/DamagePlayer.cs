@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamagePlayer : MonoBehaviour
 {
     private float damage;
+    
     private void Start()
     {
         damage = GetComponentInParent<Alien>().damage;
@@ -15,6 +16,7 @@ public class DamagePlayer : MonoBehaviour
         {
             Debug.Log("Dano enemigo");
             other.GetComponentInParent<Player>().TakeDamage(damage);
+            if (GetComponentInParent<Alien>().tipo == Alien.type.Poison) other.gameObject.GetComponentInParent<Player>().PoisonPlayer(damage);
         }
     }
 }
