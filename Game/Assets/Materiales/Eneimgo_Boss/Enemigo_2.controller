@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7772878954472838097
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f665698b259b388458b07fa2e2762e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1102 &-7396642399933200370
 AnimatorState:
   serializedVersion: 6
@@ -81,18 +93,6 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!114 &3223574075257705011
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a1b2a985f490444e9b6da0836e6e046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1102 &4710158597185443589
 AnimatorState:
   serializedVersion: 6
@@ -154,7 +154,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 5458248871424720089}
   m_StateMachineBehaviours:
-  - {fileID: 3223574075257705011}
+  - {fileID: -7772878954472838097}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

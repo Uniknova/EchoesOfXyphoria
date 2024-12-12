@@ -512,7 +512,7 @@ MonoBehaviour:
   - 0.7
   roomPrefabs:
   - {fileID: 8061585118552977000, guid: 96883fd945011f64d9ee5c95d7c991a3, type: 3}
-  - {fileID: 4195390960313716086, guid: c2266512becfee24099fab641f88265a, type: 3}
+  - {fileID: 175386832282015633, guid: 221cebacccbd5d44a86566a2e82951f4, type: 3}
   roomInit: {fileID: 2065516122416468308, guid: 7c0d983060247194ba4b4387f5f02ff1, type: 3}
   roomBoss: {fileID: 2065516122416468308, guid: faa9400d86ed61d4b9ecf0d4ab60a616, type: 3}
   world: {fileID: 1348960232}
