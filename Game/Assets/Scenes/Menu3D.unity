@@ -1442,6 +1442,7 @@ GameObject:
   - component: {fileID: 342707751}
   - component: {fileID: 342707753}
   - component: {fileID: 342707752}
+  - component: {fileID: 342707754}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1565,6 +1566,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342707750}
   m_CullTransparentMesh: 1
+--- !u!114 &342707754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342707750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:ef8780a9d395e474b9a1a547503ff264
+    m_TableEntryReference:
+      m_KeyId: 7233551026823168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 342707752}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &351314412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6548,7 +6589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232395169}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.008455359, y: 0.09384186, z: 0.00079701265, w: 0.99555093}
+  m_LocalRotation: {x: -0.0084553305, y: 0.09384184, z: 0.0007970098, w: 0.99555093}
   m_LocalPosition: {x: 0.0298, y: 0.0161, z: 0.0539}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7657,7 +7698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437723039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007964173, y: 0.97827053, z: -0.038263876, w: 0.20361546}
+  m_LocalRotation: {x: 0.00796417, y: 0.97827053, z: -0.03826386, w: 0.20361544}
   m_LocalPosition: {x: -0.0152, y: 0.0253, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

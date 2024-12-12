@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6614655115264
-    m_Localized: Adquerido
+    m_Localized: Adquirido
     m_Metadata:
       m_Items: []
   - m_Id: 6615393312768
@@ -174,19 +174,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6787094599639040
-    m_Localized: "Da\xF1o"
+    m_Localized: "DA\xD1O"
     m_Metadata:
       m_Items: []
   - m_Id: 6787098601005056
-    m_Localized: Vida
+    m_Localized: VIDA
     m_Metadata:
       m_Items: []
   - m_Id: 6787102312964096
-    m_Localized: Armadura
+    m_Localized: ARMADURA
     m_Metadata:
       m_Items: []
   - m_Id: 7194038690848768
     m_Localized: Nombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7233551026823168
+    m_Localized: Ver
     m_Metadata:
       m_Items: []
   references:

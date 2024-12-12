@@ -32,6 +32,8 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
     public Transform TargetLookAt;
     private int lastindex;
 
+    public GameObject pauseButton; 
+
     private void Start()
     {
         unlockedSkin = DataInfo.GetDesbloqueado();
@@ -122,6 +124,7 @@ public class Espejo : MonoBehaviour,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        pauseButton.SetActive(false);
         player.enabled = false;
         player.animatorPlayer.SetBool("Andar", false);
         mouse.enabled = false;
