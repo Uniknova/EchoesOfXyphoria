@@ -152,7 +152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 86bf49a4da34e2e45a00bc5654957dc4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 190579451dc7e294aad19c5401336161, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -448,7 +448,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 255
+    m_Bits: 767
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
